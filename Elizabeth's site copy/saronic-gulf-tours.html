@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athens Tours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+        </div>
+        <h1>Saronic Gulf Tours</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="back-button-container">
+        <img src="backbutton3.png" alt="Back to Tours" class="back-button" onclick="goBack()">
+    </section>
+
+    <section class="athens-tours">
+        <a href="spetses.html" class="tour-card">
+            <img src="spetses.HEIC" alt="Acropolis & Agora">
+            <h2>Spetses</h2>
+            <p>Discover the charm of Spetses on a guided tour through its elegant mansions, pine-covered paths, and rich naval history.</p>
+         </a>
+        
+        <a href="aegina.html" class="tour-card">
+            <img src="aegina.heic" alt="Walking Tour of Athens">
+            <h2>Aegina</h2>
+            <p>Explore Aegina's timeless beauty—from ancient temples to pistachio groves—just a stone’s throw from Athens.</p>
+        </a>
+        
+        <a href="Hydra.html" class="tour-card">
+            <img src="hydraa.heic" alt="Philosophical Tour">
+            <h2>Hydra</h2>
+            <p>Step into a world without cars on Hydra, where stone mansions, seaside paths, and artistic heritage create a uniquely serene escape.</p>
+        </a>
+    </section>
+
+   
+    
+    <footer>
+        <div class="footer-info">
+            <p>Elisavet Makri</p>
+            <p>Art Historian - Licensed Tour Guide</p>
+            <p>elisavetmakri@hotmail.com</p>
+            <p>+30 69429190805</p>
+            <p>Athens, Greece</p>
+        </div>
+        <div class="footer-logo">
+            <img src="logo.jpg" alt="Logo" class="footer-logo-image">
+            <p id="footer-text">&copy; 2025 Tour Agency. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.location.href = "tours.html"; // Navigate back to tours.html
+        }
+    </script>
+</body>
+</html>
