@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athens Tours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+        </div>
+        <h1>Peloponnese Tours</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="back-button-container">
+        <img src="backbutton3.png" alt="Back to Tours" class="back-button" onclick="goBack()">
+    </section>
+
+    <section class="athens-tours">
+        <a href="Mycenae, Nafplion & Epidaurus.html" class="tour-card">
+            <img src="nauf.heic" alt="Mycenae, Nafplion & Epidaurus: A One-Day Itinerary through Classical Greece">
+            <h2>Mycenae, Nafplion & Epidaurus</h2>
+            <p>A day through myth and beauty—ancient ruins, a seaside town, and a theater echoing with history.</p>
+         </a>
+        
+        <a href="corinth.html" class="tour-card">
+            <img src="acorinth.heic" alt="Walking Tour of Athens">
+            <h2>Corinth & the Canal</h2>
+            <p>Marvel at the dramatic Corinth Canal, a feat of 19th-century engineering slicing through centuries of history and stone.</p>
+        </a>
+        
+    </section>
+
+   
+    
+    <footer>
+        <div class="footer-info">
+            <p>Elisavet Makri</p>
+            <p>Art Historian - Licensed Tour Guide</p>
+            <p>elisavetmakri@hotmail.com</p>
+            <p>+30 69429190805</p>
+            <p>Athens, Greece</p>
+        </div>
+        <div class="footer-logo">
+            <img src="logo.jpg" alt="Logo" class="footer-logo-image">
+            <p id="footer-text">&copy; 2025 Tour Agency. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.location.href = "tours.html"; // Navigate back to tours.html
+        }
+    </script>
+</body>
+</html>

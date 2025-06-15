@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="el">Ελληνικά</option>
+            </select>
+        </div>
+        <h1 id="header-title">Your Licensed Tour Guide Through Greece</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="tours.html" id="nav-tours">Tours</a></li>
+                <li><a href="aboutme.html" id="nav-about">About me</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="homepage">
+        <div class="homepage-content">
+            <div class="text-content">
+                <h2 id="homepage-title">Private & Custom Tours</h2>
+                <h3 id="homepage-subtitle">Your Adventure Awaits</h3>
+                <p id="homepage-description"> It's <strong>Elisavet Makri</strong>, a licensed tour guide in Athens, offering a diverse range of tours across Greece, with the possibility to tailor the tours to your preferences. With over 10 years of experience in the tourism industry, I specialize in providing personalized, engaging, and insightful tours that cater to each client’s needs. My goal is to create a welcoming and enriching environment, ensuring you make the most of your time in Greece.
+                     For more information, feel free to <a href="mailto:elisavetmakri@hotmail.com">email</a> me.</p>
+            </div>
+            <div class="image-content">
+                <div class="slideshow-container">
+                    <img src="01.2.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="slide2.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="slide3.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="slide 4.heic" alt="Homepage Image" class="homepage-image">
+                </div>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="info-box">
+                <img src="swirl.png" alt="Symbol 1" class="symbol">
+                <img src="swirl.png" alt="Symbol 1" class="symbol animate-on-scroll">
+                <p id="info-box-1">Greek, English & French guide</p>
+            </div>
+            <div class="info-box">
+                <img src="swirl.png" alt="Symbol 2" class="symbol">
+                <img src="swirl.png" alt="Symbol 2" class="symbol animate-on-scroll">
+                <p id="info-box-2">Interactive</p>
+            </div>
+            <div class="info-box">
+                <img src="swirl.png" alt="Symbol 3" class="symbol">
+                <img src="swirl.png" alt="Symbol 4" class="symbol animate-on-scroll">
+                <p id="info-box-3">Can cater to the needs of all ages</p>
+            </div>
+        </div>
+    </section>
+    <div class="horizontal-carousel-section">
+        <h2 class="carousel-title animate-on-scroll">Find your desired location</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <a href="athens-tours.html"> 
+                    <img src="athenspic.webp" alt="Athens" class="carousel-image">
+                </a>
+                    <h3 class="carousel-caption">Attica</h3>
+                    <p class="carousel-caption">Visit the Acropolis and the museum, take a Walking Tour or a Philosphical Tour .</p></p>
+                </div>
+                <div class="carousel-item">
+                    <a href="Peloponnese.html"> 
+                    <img src="pelopelo.webp" alt="Santorini" class="carousel-image">
+                </a>
+                    <h3 class="carousel-caption">Peloponnese</h3>
+                    <p class="carousel-caption">Take a tour to Mycenae, Nauplio & Epidaurus Or Visit Corinth and its canal.</p></p>
+                </div>
+                <div class="carousel-item">
+                    <a href="centralgreece.html"> 
+                    <img src="centralgreece.webp" alt="Delphi" class="carousel-image">
+                </a>
+                    <h3 class="carousel-caption">Central Greece</h3>
+                    <p class="carousel-caption"> Visit Delphi or the Holy Monastery of Hosios Loukas</p></p>
+               
+                </div>
+                <div class="carousel-item">
+                    <a href="saronic-gulf-tours.html"> 
+                    <img src="saronic.webp" alt="Meteora" class="carousel-image"> </a>
+                    <h3 class="carousel-caption">Saronic Gulf</h3>
+                    <p class="carousel-caption">Visit Aegina, Spetses or Hydra.</p></p>
+                </div>
+                <div class="carousel-item">
+                    <a href="cyclades.html"> 
+                    <img src="cyclades.webp" alt="Cyclades" class="carousel-image">
+                </a>
+                    <h3 class="carousel-caption">Cyclades</h3>
+                    <p class="carousel-caption">Visit Mykonos or Santorini.</p></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-navigation">
+            <button class="carousel-button left" onclick="scrollCarousel(-1, event)">
+                <img src="arrowr copy.png" alt="Left Arrow" class="arrow-image">
+            </button>
+            <div class="progress-bar">
+                <div class="progress-indicator"></div>
+            </div>
+            <button class="carousel-button right" onclick="scrollCarousel(1, event)">
+                <img src="arrowr.png" alt="Right Arrow" class="arrow-image">
+            </button>
+        </div>
+    </div>
+    <section class="image-text-section reverse-layout">
+        <div class="text-container">
+            <h2>Haven't found your ideal trip?</h2>
+            <p>
+                Don't worry! We can create a custom tour just for you. Whether you're interested in exploring ancient ruins, enjoying scenic landscapes, or experiencing local culture, we can tailor a tour to fit your interests and schedule.
+            </p>
+            <p>
+                Contact us today to plan your perfect adventure!
+            </p>
+            <a href="#contact" class="contact-button">Contact Us</a>
+        </div>
+        <div class="image-container">
+            <img src="no.heic" alt="Custom Image" class="custom-image">
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-info">
+            <p>Elisavet Makri</p>
+            <p>Art Historian - Licensed Tour Guide</p>
+            <p>elisavetmakri@hotmail.com</p>
+            <p>+30 69429190805</p>
+            <p>Athens, Greece</p>
+        </div>
+        <div class="footer-logo">
+            <img src="logo.jpg" alt="Logo" class="footer-logo-image">
+            <p id="footer-text">&copy; 2025 Tour Agency. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("homepage-image");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+let currentIndex = 0;
+
+function scrollCarousel(direction, event) {
+    if (event) {
+        event.preventDefault(); // Prevent default behavior
+    }
+
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    // Calculate the number of items visible at a time
+    const visibleItems = 3;
+
+    // Update the current index
+    currentIndex += direction;
+
+    // Prevent scrolling beyond the first or last set of items
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > totalItems - visibleItems) {
+        currentIndex = totalItems - visibleItems;
+    }
+
+    // Calculate the offset for scrolling
+    const offset = -currentIndex * (100 / visibleItems); // Adjust for 3 items visible
+    carousel.style.transform = `translateX(${offset}%)`;
+
+    // Update the progress bar
+    const progressIndicator = document.querySelector('.progress-indicator');
+    const progressWidth = (visibleItems / totalItems) * 100; // Width of the moving line
+    const progressLeft = (currentIndex / totalItems) * 100; // Position of the moving line
+    progressIndicator.style.width = `${progressWidth}%`;
+    progressIndicator.style.left = `${progressLeft}%`;
+}
+
+document.addEventListener('scroll', function () {
+    const carouselSection = document.querySelector('.horizontal-carousel-section');
+    const sectionTop = carouselSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Check if the section is in the viewport
+    if (sectionTop < windowHeight && sectionTop > 0) {
+        const scrollAmount = (windowHeight - sectionTop) / windowHeight;
+        carouselSection.style.transform = `translateY(${scrollAmount * -100}px)`; // Push up as you scroll
+    }
+});
+    </script>
+    <script>
+        // Function to observe elements and add animation class
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll'); // Select elements with this class
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated'); // Add the animation class
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+    
+            elements.forEach(element => observer.observe(element));
+        }
+    
+        // Run the function when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll('.animate-on-scroll'); // Select elements with the animate-on-scroll class
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated'); // Add the animated class when in view
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+    
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html>

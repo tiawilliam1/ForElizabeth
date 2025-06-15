@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+        </div>
+        <h1>About me</h1>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="about-me-section">
+        <div class="about-me-header">
+            <h1>Elisavet Makri</h1>
+            <p>Art Historian - Licensed Tour Guide</p>
+        </div>
+        <div class="about-me-content">
+            <div class="about-me-text">
+                <h2>My background & Education</h2>
+                <p>
+                    An officially licensed tourist guide since 2016, I conduct tours throughout Greece and in Athens, the city where I was born and raised. 
+                    After completing my studies in History and Archaeology at the <strong>National and Kapodistrian University of Athens</strong>, I continued my education in France at <strong>Bordeaux Montaigne University</strong> (Management of Cultural Heritage), and at the <strong>Sorbonne-INHA Art Institute</strong> (Modern Art). Afterwards, I lived in France for eight years, gaining experience in art galleries, auction houses, and museums. 
+
+                </p>
+            
+            </div>
+                <img src="elli.HEIC" alt="Gallery Image" class="about-me-image-left">
+            </div>
+            <div class="about-me-images">
+                <img src="elizabeth.HEIC" alt="Elisavet Makri" class="about-me-image-right scroll-animate">
+                
+                <div class="text-next-to-image scroll-animate">
+                    <h2>My Vision...</h2>
+                    <p>
+                        For me, discovering a place is a shared experience: you see the city through my eyes, and I see it through yours. Wandering is an art, and art is all around us in many forms. I enjoy connecting different periods and artists—whether it’s a <strong>Cycladic statue</strong> that reminds us of a <strong>Giacometti sculpture</strong>, or a <strong>Minoan bull</strong> from a Cretan fresco that evokes a <strong>Picasso drawing</strong>. Curiosity and imagination have no limits, and this is what I aim to inspire in my visitors.
+                    </p>
+                    <p>
+                        Whether you're interested in ancient ruins, modern art, or local cuisine, I can tailor a tour to suit your interests. 
+                        Let's explore Greece together and create unforgettable memories!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about-me-footer">
+            <ul>
+                <li><em>“Cities also believe they are the work of the mind or of chance, but neither the one nor the other suffices to hold up their walls. You take delight not in a city's seven or seventy wonders, but in the answer it gives to a question of yours. or to the question it asks you, forcing you to answer, like Thebes through the mouth of the Sphinx”</em></li>
+            </ul>
+            <p>
+                <strong>Invisible Cities, Italo Calvino.</strong>
+            </p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-info">
+            <p>Elisavet Makri</p>
+            <p>Art Historian - Licensed Tour Guide</p>
+            <p>elisavetmakri@hotmail.com</p>
+            <p>+30 69429190805</p>
+            <p>Athens, Greece</p>
+        </div>
+        <div class="footer-logo">
+            <img src="logo.jpg" alt="Logo" class="footer-logo-image">
+            <p id="footer-text">&copy; 2025 Tour Agency. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll('.scroll-animate'); // Select elements with the scroll-animate class
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated'); // Add the animated class when in view
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        elements.forEach(element => observer.observe(element));
+    });
+    
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select elements with the scroll-animate class
+        const elements = document.querySelectorAll('.scroll-animate');
+
+        // Intersection Observer to trigger animations on scroll
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated'); // Add the animated class
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        // Observe each scroll-animate element
+        elements.forEach(element => observer.observe(element));
+    });
+</script>
