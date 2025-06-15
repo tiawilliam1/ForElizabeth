@@ -1671,12 +1671,16 @@ footer {
 
 .contact-text h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+
     color: #333;
+    margin-bottom: 200px;
+    margin-right: 100px;
+    margin-left: -60px;
+    text-align: left;
 }
 
 .contact-text p {
-    font-size: 1.5rem;
+    font-size: 3.0 rem;
     margin-bottom: 20px;
     color: #555;
 }
@@ -1684,16 +1688,19 @@ footer {
 .contact-text ul {
     list-style: none;
     padding: 0;
+    text-align: left;
+    margin-top: -100px;
 }
 
 .contact-text li {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     color: #555;
+    Margin-left: -50px;
 }
 
 .contact-text a {
-    color: #007BFF;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -1716,4 +1723,153 @@ footer {
     height: auto;
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Media Query for Small Screens */
+@media (max-width: 768px) {
+    /* General Body Styling */
+    body {
+        font-size: 14px; /* Adjust font size for readability */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    /* Header */
+    header {
+        padding: 20px; /* Reduce padding in the header */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center-align the links */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Add spacing between links */
+    }
+
+    /* About Me Section */
+    .about-me-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .about-me-text,
+    .about-me-images {
+        max-width: 100%; /* Allow full width */
+        margin: 0; /* Remove unnecessary margins */
+        text-align: center; /* Center-align text */
+    }
+
+    .about-me-image-left,
+    .about-me-image-right {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin: 20px 0; /* Add spacing around images */
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .contact-text {
+        text-align: center; /* Center-align text */
+        margin-bottom: 20px;
+    }
+
+    .contact-image img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center-align footer text */
+    }
+
+    .footer-info {
+        margin-bottom: 20px; /* Add spacing between footer sections */
+    }
+
+    /* Tour Cards */
+    .tour-gallery {
+        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
+    }
+
+    .tour-card {
+        width: 100%; /* Make cards take full width */
+        margin: 10px 0; /* Add spacing between cards */
+    }
+
+    /* Carousel */
+    .carousel-item {
+        flex: 0 0 100%; /* Show one item at a time */
+    }
+
+    /* General Image Responsiveness */
+    img {
+        max-width: 100%; /* Scale images to fit within their container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Homepage Section */
+    .homepage-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center;
+    }
+
+    .text-content,
+    .image-content {
+        max-width: 100%; /* Allow full width */
+        text-align: center; /* Center-align text */
+    }
+
+    .homepage-image {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+    }
+
+    /* Info Section */
+    .info-section {
+        flex-direction: column; /* Stack info boxes vertically */
+        align-items: center;
+    }
+
+    .info-box {
+        max-width: 100%; /* Allow full width */
+        margin-bottom: 20px;
+    }
+
+    /* Carousel */
+    .carousel-item {
+        flex: 0 0 100%; /* Show one item at a time */
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+    }
 }
