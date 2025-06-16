@@ -2056,7 +2056,7 @@ footer {
 
 .gallery-heading {
     text-align: left;
-    font-size: 1.2rem; /* Reduced font size */
+    font-size: 1.2irem; /* Reduced font size */
     font-weight: bold;
     margin: 20px 0 10px; /* Adjusted spacing above and below the heading */
     color: #333; /* Dark text color */
