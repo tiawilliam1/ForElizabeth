@@ -24,13 +24,61 @@
             </ul>
         </nav>
     </header>
-
-    <section class="back-button-container">
-        <a href="athens-tours.html">
-            <img src="backbutton3.png" alt="Back to Athens Tours" class="back-button">
-        </a>
+    <section class="hero-section">
+        <section class="back-button-container">
+            <a href="athens-tours.html">
+                <img src="backbutton3.png" alt="Back to Athens Tours" class="back-button">
+            </a>
+        </section>
+        <div class="hero-content">
+            <!-- Left: Title and Subtitle -->
+            <div class="hero-text">
+                <h2>The Acropolis & Ancient Agora Tour</h2>
+                <p><strong>Explore the Foundations of Ancient Athens.</strong></p>
+            </div>
+            <!-- Right: Image -->
+            <div class="hero-image">
+                <img src="acroopolis.jpg" alt="Acropolis">
+            </div>
+        </div>
     </section>
-    
+
+    <section class="tour-details">
+        <div class="tour-details-content">
+            <!-- First Row: Three Boxes -->
+            <div class="info-row">
+                <div class="info-box">
+                    <h3>Duration</h3>
+                    <p>4 hours</p>
+                </div>
+                <div class="info-box">
+                    <h3>Venues</h3>
+                    <p>Acropolis, Ancient Agora</p>
+                </div>
+                <div class="info-box">
+                    <h3>Meeting Point</h3>
+                    <p>Acropolis Metro Station</p>
+                </div>
+            </div>
+            
+            <hr class="divider">
+            <h3 class="gallery-heading">Photos & Highlights</h3>
+            <!-- Second Row: Four Images -->
+            <div class="gallery-row">
+                <img src="acro1.heic" alt="Venue 1" class="gallery-image">
+                <img src="acro2.heic" alt="Venue 2" class="gallery-image">
+                <img src="acro3.jpg" alt="Venue 3" class="gallery-image">
+                <img src="acro4.jpg" alt="Venue 4" class="gallery-image">
+
+            </div>
+        </div>
+        
+        <div id="fullscreen-container" class="fullscreen-container">
+            <img id="fullscreen-image" src="" alt="Fullscreen Image">
+        </div>
+    </section>
+
+
     <section class="about-me">
   
         <section class="tour-details">
@@ -97,3 +145,46 @@
     </footer>
 </body>
 </html>
+
+<script>
+    // Get the fullscreen container and image elements
+    const fullscreenContainer = document.getElementById('fullscreen-container');
+    const fullscreenImage = document.getElementById('fullscreen-image');
+
+    // Add event listeners to all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    galleryImages.forEach(image => {
+        image.addEventListener('click', () => {
+            fullscreenImage.src = image.src; // Set the fullscreen image source
+            fullscreenContainer.style.display = 'flex'; // Show the fullscreen container
+        });
+    });
+
+    // Close the fullscreen view when clicking on the container
+    fullscreenContainer.addEventListener('click', () => {
+        fullscreenContainer.style.display = 'none'; // Hide the fullscreen container
+    });
+
+</script>
+<script>
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Add scroll event listener
+    document.addEventListener('scroll', () => {
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        galleryImages.forEach(image => {
+            if (isInViewport(image)) {
+                image.classList.add('animated'); // Add the animated class when in viewport
+            }
+        });
+    });
+</script>
