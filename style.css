@@ -258,18 +258,7 @@ nav ul li a:hover {
     font-family: 'Playfair Display', serif; /* Use Playfair Display for the paragraphs */
 }
 
-/* Initial state for swirl animation */
-.symbol {
-    opacity: 0; /* Initially hidden */
-    transform: scale(0.8); /* Start slightly smaller */
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Smooth transition */
-}
 
-/* Final state when the animation is triggered */
-.symbol.animated {
-    opacity: 1; /* Fully visible */
-    transform: scale(1); /* Scale to normal size */
-}
 
 .horizontal-carousel-section {
     margin: 50px 0;
@@ -678,7 +667,7 @@ section h2 {
 /* Style for the About Me section */
 .about-me {
     padding: 20px; /* Add padding to give space inside the section */
-    margin-top: 20px; /* Add some margin to push it down from the top */
+    margin-top: -70px; /* Add some margin to push it down from the top */
 }
 
 /* Flexbox layout for the content */
@@ -1998,7 +1987,7 @@ footer {
 }
 
 /* Divider Line */
-.divider {
+.divider1 {
     border: none;
     border-top: 1px solid #ccc; /* Thin grey line */
     margin: 20px 0; /* Add spacing above and below the line */
@@ -2060,4 +2049,104 @@ footer {
     font-weight: bold;
     margin: 20px 0 10px; /* Adjusted spacing above and below the heading */
     color: #333; /* Dark text color */
+}
+
+/* Homepage Info Boxes */
+
+
+/* Acropolis Info Boxes */
+/* Acropolis Info Boxes */
+.acropolis-info-box {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    flex: 1; /* Ensure all boxes take up equal space */
+    min-width: 200px; /* Set a minimum width for smaller screens */
+    height: 100px; /* Set a fixed height for uniformity */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Tour Details Section */
+.tour-content {
+    display: flex;
+    gap: 30px; /* Space between the two sides */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.tour-text {
+    flex: 2; /* Left side takes more space */
+    max-width: 600px; /* Limit the width of the text */
+}
+
+.tour-extra-info {
+    flex: 1; /* Right side takes less space */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounded corners */
+    text-align: left;
+    margin-right: 180px;
+}
+
+.tour-extra-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.info-item li {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Thin Grey Line */
+.divider {
+    width: 1px; /* Thin vertical line */
+    background-color: #ccc; /* Grey color */
+    height: auto; /* Full height of the content */
+    align-self: stretch; /* Ensure it spans the full height */
+}
+
+/* Contact Me Section */
+.contact-me {
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #000;
+    margin-left: -10px;
+    text-align: justify;
+    margin-right: -30px;
+}
+
+.contact-me h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-me p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-me a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-me a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }
