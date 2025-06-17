@@ -1358,15 +1358,15 @@ footer {
     justify-content: space-between; /* Distribute space between elements */
     align-items: center; /* Center align items vertically */
     position: relative;
-    margin-left: -30px;
-    margin-right: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
     margin-bottom: -50px;
    
 
 }
 
 #footer-text {
-    text-align: center; /* Center align the footer text */
+    text-align: right; /* Center align the footer text */
     margin: 10px 0 0 0; /* Add margin to the top */
 }
 
