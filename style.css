@@ -949,6 +949,7 @@ main {
     font-size: 1em;
     color: #666;
     margin: 10px 0;
+   
 }
 
 .tour-details ul {
@@ -990,6 +991,7 @@ main {
     font-size: 1em;
     color: #666;
     margin: 10px 0;
+    
 }
 
 .tour-details ul {
@@ -2175,3 +2177,83 @@ footer {
 .back-button1:hover {
     transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
+
+/* Quote Slideshow Section */
+.quote-slideshow-section {
+    padding: 50px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+    margin-top: -150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.quote-slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflowing slides */
+}
+
+.quote-slide {
+    display: none; /* Hide all slides initially */
+    padding: 20px;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+}
+
+.quote-slide.active {
+    display: block; /* Show the active slide */
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Circular Progress Indicators */
+.quote-progress-circles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ccc; /* Grey border for inactive circles */
+    border-radius: 50%;
+    background-color: transparent; /* Transparent background for inactive circles */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.circle.active {
+    background-color: #000000; /* Blue background for active circles */
+    border-color: #000000; /* Blue border for active circles */
+}
+/* Swirl Image Container */
+.swirl-container {
+    text-align: center; /* Center the container */
+    margin-bottom: 20px; /* Add spacing below the swirls */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the swirls horizontally */
+    align-items: center; /* Align swirls vertically */
+    gap: 20px; /* Add space between the swirls */
+}
+
+.swirl-image {
+    width: 50px; /* Set the width of the swirl image */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure proper alignment */
+    padding-top: 120px;
+    padding-right: 30px;
+}
+

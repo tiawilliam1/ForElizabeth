@@ -115,19 +115,32 @@
             </button>
         </div>
     </div>
-    <section class="image-text-section reverse-layout">
-        <div class="text-container">
-            <h2>Haven't found your ideal trip?</h2>
-            <p>
-                Don't worry! We can create a custom tour just for you. Whether you're interested in exploring ancient ruins, enjoying scenic landscapes, or experiencing local culture, we can tailor a tour to fit your interests and schedule.
-            </p>
-            <p>
-                Contact us today to plan your perfect adventure!
-            </p>
-            <a href="#contact" class="contact-button">Contact Us</a>
+    <section class="quote-slideshow-section">
+        <img src="swirl1.png" alt="Left Swirl Icon" class="swirl-image left-swirl">
+        <img src="swirl1.png" alt="Center Swirl Icon" class="swirl-image center-swirl">
+        <img src="swirl1.png" alt="Right Swirl Icon" class="swirl-image right-swirl">
+    </div>
+        <div class="quote-slideshow-container">
+            <div class="quote-slide">
+                <p class="quote-text">“...travel must be an extravagance, a sacrifice to the rules of chance, of daily life to the extraordinary ; it must represent the most intimate and original form of our taste.” -  Stefan Zweig (1926)</p>
+            </div>
+            <div class="quote-slide">
+                <p class="quote-text">“What is that feeling when you’re driving away from people and they recede on the plain till you see their specks dispersing?—It’s the too-huge world vaulting us, and it’s good-bye. But we lean forward to the next crazy venture beneath the skies.”
+                     - Jack Kerouac</p>
+            </div>
+            <div class="quote-slide">
+                <p class="quote-text">"Wonder is the beginning of wisdom." - Plato</p>
+            </div>
+            <div class="quote-slide">
+                <p class="quote-text">"Man is the measure of all things." - Protagoras</p>
+            </div>
         </div>
-        <div class="image-container">
-            <img src="no.jpeg" alt="Custom Image" class="custom-image">
+        <!-- Circular Progress Indicators -->
+        <div class="quote-progress-circles">
+            <div class="circle" data-index="0"></div>
+            <div class="circle" data-index="1"></div>
+            <div class="circle" data-index="2"></div>
+            <div class="circle" data-index="3"></div>
         </div>
     </section>
     
@@ -142,7 +155,6 @@
         <div class="footer-logo">
             <img src="logo.jpg" alt="Logo" class="footer-logo-image">
             <p id="footer-text">&copy; 2025 Tour Guide. All rights reserved.</p>
-            <p id="footer-credits">Site made by Tia William (+30 698 941 5211)</p>
         </div>
     </footer>
     <script>
@@ -244,6 +256,52 @@ document.addEventListener('scroll', function () {
     
             elements.forEach(element => observer.observe(element));
         });
+        
     </script>
+<script>
+    let quoteIndex = 0;
+
+    function showQuotes(index = null) {
+        const quotes = document.querySelectorAll('.quote-slide');
+        const circles = document.querySelectorAll('.circle');
+        const totalQuotes = quotes.length;
+
+        // If an index is provided (circle click), update the quoteIndex
+        if (index !== null) {
+            quoteIndex = index;
+        } else {
+            quoteIndex++;
+            if (quoteIndex >= totalQuotes) {
+                quoteIndex = 0; // Reset to the first quote
+            }
+        }
+
+        // Hide all quotes and remove active class from circles
+        quotes.forEach((quote) => quote.classList.remove('active'));
+        circles.forEach((circle) => circle.classList.remove('active'));
+
+        // Show the current quote and activate the corresponding circle
+        quotes[quoteIndex].classList.add('active');
+        circles[quoteIndex].classList.add('active');
+
+        // Automatically change quote every 4 seconds
+        if (index === null) {
+            setTimeout(showQuotes, 4000);
+        }
+    }
+
+    // Add click event listeners to circles
+    document.querySelectorAll('.circle').forEach((circle) => {
+        circle.addEventListener('click', () => {
+            const index = parseInt(circle.getAttribute('data-index'));
+            showQuotes(index); // Navigate to the clicked quote
+        });
+    });
+
+    // Initialize the slideshow
+    document.addEventListener('DOMContentLoaded', () => {
+        showQuotes(); // Start the slideshow
+    });
+</script>
 </body>
 </html>
