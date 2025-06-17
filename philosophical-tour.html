@@ -24,21 +24,70 @@
             </ul>
         </nav>
     </header>
-
-    <section class="back-button-container">
-        <a href="athens-tours.html">
-            <img src="backbutton3.png" alt="Back to Athens Tours" class="back-button">
-        </a>
+    <section class="hero-section">
+        <section class="back-button-container1">
+            <a href="athens-tours.html">
+                <img src="backbutton3.png" alt="Back to Athens Tours" class="back-button1">
+            </a>
+        </section>
+        <div class="hero-content">
+            <!-- Left: Title and Subtitle -->
+            <div class="hero-text">
+                <h2>Philosophical Walking Tour of Athens</h2>
+                <p><strong>Explore Athens from Presocratics to Diogenes.</strong></p>
+            </div>
+            <!-- Right: Image -->
+            <div class="hero-image">
+                <img src="philo12.jpg" alt="Acropolis">
+            </div>
+        </div>
     </section>
-    
+
+    <section class="tour-details">
+        <div class="tour-details-content">
+            <!-- First Row: Three Boxes -->
+            <div class="info-row">
+                <div class="acropolis-info-box">
+                    <h3>Duration</h3>
+                    <p>3-4 hours</p>
+                </div>
+                <div class="acropolis-info-box">
+                    <h3>Venues</h3>
+                    <p>Acropolis, Ancient Agora</p>
+                </div>
+                <div class="acropolis-info-box">
+                    <h3>Meeting Point</h3>
+                    <p>Rovertou Galli 43</p>
+                </div>
+            </div>
+            
+            <hr class="divider1">
+
+            <h3 class="gallery-heading">Photos & Highlights</h3>
+            <!-- Second Row: Four Images -->
+            <div class="gallery-row">
+                <img src="philosophy2.jpg" alt="Venue 1" class="gallery-image">
+                <img src="philosophy22.jpg" alt="Venue 2" class="gallery-image">
+                <img src="philosophy32.jpg" alt="Venue 3" class="gallery-image">
+                <img src="philo1 copy.jpg" alt="Venue 4" class="gallery-image">
+
+            </div>
+        </div>
+        
+        <div id="fullscreen-container" class="fullscreen-container">
+            <img id="fullscreen-image" src="" alt="Fullscreen Image">
+        </div>
+    </section>
+
+
     <section class="about-me">
   
         <section class="tour-details">
             <div class="tour-content">
                 <!-- Left: Text Content -->
                 <div class="tour-text">
-                    <h2>Philosophical Walking Tour of Athens: From Presocratics to Diogenes</h2>
-                    
+                    <h3>Tour Description</h3>
+                    <p><strong>Explore the Foundations of Ancient Athens.</strong></p>
                     <p>
                         We begin on <strong>Philopappos Hill</strong>, also known as <strong>the Hill of the Muses</strong>. 
                         With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. 
@@ -73,16 +122,36 @@
                         to <strong>question deeply</strong>, and to <strong>live more wisely</strong>.
                     </p>
                 </div>
+                <div class="divider"></div>
+
+        <!-- Right: Additional Information -->
+        <div class="tour-extra-info">
+            <h3>Additional Information</h3>
+            <div class="info-item">
+                <h4>Type</h4>
+                <p>Private Walking Tour</p>
+            </div>
+            <div class="info-item">
+                <h4>Not Included</h4>
+                <p>Entrance fees to venues</p>
+            </div>
+            <div class="info-item">
+                <h4>Included</h4>
+                <p>Private licensed guide</p>
+            </div>
+            <div class="info-item">
+                <h4>Cancellation Fee</h4>
+                <li>Free cancellation up to 24 hours before the tour.</li>
+                <li>You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid</li>
+            </div>
+            <div class="contact-me">
+                <h3>Contact Me</h3>
+                <p>If you have any questions or would like to book this tour, feel free to reach out:</p>
+                <p><strong>Email:</strong> <a href="mailto:elisavetmakri@hotmail.com">elisavetmakri@hotmail.com</a></p>
+                <p><strong>Phone:</strong> +30 69429190805</p>
+            </div>
+        </div>
         
-                <!-- Right: Images -->
-                <div class="tour-images">
-                    <div class="tour-image1">
-                        <img src="philo1.heic" alt="Acropolis">
-                    </div>
-                    <div class="tour-image2">
-                        <img src="philo2.heic" alt="Agora">
-                    </div>
-                </div>
             </div>
     </section>
     
@@ -102,3 +171,46 @@
     </footer>
 </body>
 </html>
+
+<script>
+    // Get the fullscreen container and image elements
+    const fullscreenContainer = document.getElementById('fullscreen-container');
+    const fullscreenImage = document.getElementById('fullscreen-image');
+
+    // Add event listeners to all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    galleryImages.forEach(image => {
+        image.addEventListener('click', () => {
+            fullscreenImage.src = image.src; // Set the fullscreen image source
+            fullscreenContainer.style.display = 'flex'; // Show the fullscreen container
+        });
+    });
+
+    // Close the fullscreen view when clicking on the container
+    fullscreenContainer.addEventListener('click', () => {
+        fullscreenContainer.style.display = 'none'; // Hide the fullscreen container
+    });
+
+</script>
+<script>
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Add scroll event listener
+    document.addEventListener('scroll', () => {
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        galleryImages.forEach(image => {
+            if (isInViewport(image)) {
+                image.classList.add('animated'); // Add the animated class when in viewport
+            }
+        });
+    });
+</script>
