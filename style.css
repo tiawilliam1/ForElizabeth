@@ -2257,3 +2257,16 @@ footer {
     padding-right: 30px;
 }
 
+.text-container ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align text to the left */
+}
+
+.text-container ul li {
+    font-size: 1rem;
+    color: #555; /* Grey text color */
+    margin-bottom: 5px;
+}
+
