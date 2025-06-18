@@ -17,6 +17,7 @@ header {
     color: #333; /* Change text color to dark grey for better contrast */
     padding: 60px 20px 40px;
     position: relative;
+    padding: 5vw;
 }
 
 header h1 {
@@ -2370,38 +2371,135 @@ footer {
     background-color: #000; /* Line color for the active language */
 }
 
-
-/* Media Queries */
+/* Media Queries for Small Screens */
 @media (max-width: 768px) {
+    /* Header */
     header {
-        padding: 20px;
+        padding: 10px; /* Reduce padding for smaller screens */
     }
 
     .logo-container {
-        padding: 10px;
-        position: absolute; /* Ensure the logo stays fixed */
-        left: 40px; /* Move the logo towards the left */
-        top: 50px; /* Adjust the top position */
-        transform: translateX(0); /* Reset any horizontal translation */
+        left: 20px; /* Move the logo closer to the left edge */
+        top: 10px; /* Adjust the top position */
+        width: 120px; /* Reduce logo size */
     }
 
+    .language-selector {
+        font-size: 0.8rem; /* Reduce font size for language options */
+        margin-top: 5px; /* Adjust spacing */
+        margin-right: 10px; /* Move closer to the edge */
+    }
+
+    /* Homepage Content */
     .homepage-content {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; /* Stack text and images vertically */
+        gap: 15px; /* Reduce spacing between elements */
+        padding: 10px; /* Add padding around the content */
     }
 
+    .text-content,
+    .image-content {
+        max-width: 100%; /* Allow full width */
+        text-align: center; /* Center-align text */
+    }
+
+    .homepage-image {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Info Section */
     .info-section {
         flex-direction: column; /* Stack info boxes vertically */
+        gap: 10px; /* Reduce spacing between info boxes */
     }
 
+    .info-box {
+        max-width: 100%; /* Allow full width */
+        margin-bottom: 10px; /* Add spacing below each box */
+    }
+
+    /* Carousel */
     .carousel-item {
-        flex: 0 0 100%; /* Full width for carousel items */
+        flex: 0 0 100%; /* Show one item at a time */
+        padding: 10px; /* Reduce padding */
     }
 
+    .carousel-image {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem; /* Reduce font size for captions */
+    }
+
+    /* Quote Slideshow Section */
     .quote-slideshow-section {
-        padding: 10px;
+        padding: 10px; /* Reduce padding */
     }
 
+    .quote-text {
+        font-size: 1rem; /* Reduce font size for quotes */
+        line-height: 1.4; /* Adjust line height */
+    }
+
+    /* Footer */
     footer {
-        padding: 10px;
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center-align footer text */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .footer-info {
+        margin-bottom: 10px; /* Add spacing between footer sections */
+    }
+
+    .footer-logo-image {
+        width: 80px; /* Reduce logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5rem; /* Reduce font size for header title */
+    }
+
+    .language-selector {
+        font-size: 0.7rem; /* Further reduce font size */
+    }
+
+    /* Homepage Content */
+    .text-content h2 {
+        font-size: 1.5rem; /* Reduce font size for homepage title */
+    }
+
+    .text-content h3 {
+        font-size: 1.2rem; /* Reduce font size for homepage subtitle */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Reduce font size for homepage description */
+    }
+
+    /* Info Section */
+    .info-box p {
+        font-size: 0.9rem; /* Reduce font size for info box text */
+    }
+
+    /* Carousel */
+    .carousel-caption {
+        font-size: 0.8rem; /* Further reduce font size for captions */
+    }
+
+    /* Quote Slideshow Section */
+    .quote-text {
+        font-size: 0.9rem; /* Further reduce font size for quotes */
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 0.8rem; /* Reduce font size for footer text */
     }
 }
