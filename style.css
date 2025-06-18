@@ -2270,3 +2270,46 @@ footer {
     margin-bottom: 5px;
 }
 
+footer {
+    background-color: #fff; /* Change background color to white */
+    color: #333; /* Change text color to dark grey for better contrast */
+    padding: 50px; /* Increase padding to make the footer bigger */
+    padding-top: 40px; /* Increase the space above the footer content */
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: center; /* Center align items vertically */
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -50px;
+   
+
+}
+
+#footer-text1 {
+    text-align: center; /* Center align the footer text */
+    margin: 10px 0 0 0; /* Add margin to the top */
+    margin-left: -200px;
+}
+
+.footer-info1 {
+    font-size: 1.0em;
+    color: #333; /* Change text color to dark grey for better contrast */
+    text-align: left; /* Align personal information to the left */
+    line-height: 0.4; /* Decrease line height to bring lines closer together */
+    margin: 0; /* Remove default margin */
+    padding-right: 400px;
+    width: 900px;
+}
+
+.footer-logo1 {
+    text-align: center; /* Center align the logo and text */
+}
+
+.footer-logo1-image {
+    width: 100px; /* Set the width of the logo image */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the logo image */
+}
