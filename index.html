@@ -13,11 +13,9 @@
             <img src="logo.png" alt="Logo" class="logo">
         </div>
         <div class="language-selector">
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-                <option value="el">Ελληνικά</option>
-            </select>
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
         </div>
         <h1 id="header-title">Your Licensed Tour Guide Through Greece</h1>
         <nav>
@@ -63,7 +61,7 @@
         </div>
     </section>
     <div class="horizontal-carousel-section">
-        <h2 class="carousel-title animate-on-scroll">Find your desired location</h2>
+        <h2 class="carousel-title animate-on-scroll">Find your desired destination</h2>
         <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-item">
@@ -71,14 +69,14 @@
                     <img src="athenspic.webp" alt="Athens" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption">Attica</h3>
-                    <p class="carousel-caption">Visit the Acropolis and the museum, take a Walking Tour or a Philosphical Tour .</p></p>
+                    <p class="carousel-caption">Visit the Acropolis, take a Walking Tour or a Philosphical Tour .</p></p>
                 </div>
                 <div class="carousel-item">
                     <a href="Peloponnese.html"> 
                     <img src="pelopelo.webp" alt="Santorini" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption">Peloponnese</h3>
-                    <p class="carousel-caption">Take a tour to Mycenae, Nauplio & Epidaurus Or Visit Corinth and its canal.</p></p>
+                    <p class="carousel-caption">Take a tour to Mycenae, Nauplio & Epidaurus Or Visit Corinth.</p></p>
                 </div>
                 <div class="carousel-item">
                     <a href="centralgreece.html"> 
@@ -307,6 +305,81 @@ document.addEventListener('scroll', function () {
     document.addEventListener('DOMContentLoaded', () => {
         showQuotes(); // Start the slideshow
     });
+    function changeLanguage(lang) {
+    // Update active language
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+        option.classList.remove('active'); // Remove active class from all options
+        if (option.dataset.lang === lang) {
+            option.classList.add('active'); // Add active class to the selected language
+        }
+    });
+
+    // Switch language content
+    const headerTitle = document.getElementById('header-title');
+    const homepageTitle = document.getElementById('homepage-title');
+    const homepageSubtitle = document.getElementById('homepage-subtitle');
+    const homepageDescription = document.getElementById('homepage-description');
+    const infoBox1 = document.getElementById('info-box-1');
+    const infoBox2 = document.getElementById('info-box-2');
+    const infoBox3 = document.getElementById('info-box-3');
+    const navHome = document.getElementById('nav-home');
+    const navTours = document.getElementById('nav-tours');
+    const navAbout = document.getElementById('nav-about');
+    const navContact = document.getElementById('nav-contact');
+
+    if (lang === 'en') {
+        headerTitle.textContent = 'Your Licensed Tour Guide Through Greece';
+        homepageTitle.textContent = 'Private & Custom Tours';
+        homepageSubtitle.textContent = 'Your Adventure Awaits';
+        homepageDescription.innerHTML = "It's <strong>Elisavet Makri</strong>, a licensed tour guide in Athens, offering a diverse range of tours across Greece, with the possibility to tailor the tours to your preferences. With over 10 years of experience in the tourism industry, I specialize in providing personalized, engaging, and insightful tours that cater to each client’s needs. My goal is to create a welcoming and enriching environment, ensuring you make the most of your time in Greece. For more information, feel free to <a href='mailto:elisavetmakri@hotmail.com'>email</a> me.";
+        infoBox1.textContent = 'Greek, English & French guide';
+        infoBox2.textContent = 'Interactive';
+        infoBox3.textContent = 'Can cater to the needs of all ages';
+        navHome.textContent = 'Home';
+        navTours.textContent = 'Tours';
+        navAbout.textContent = 'About me';
+        navContact.textContent = 'Contact';
+    } else if (lang === 'fr') {
+        headerTitle.textContent = 'Votre guide touristique agréé en Grèce';
+        homepageTitle.textContent = 'Tours privés et personnalisés';
+        homepageSubtitle.textContent = 'Votre aventure vous attend';
+        homepageDescription.innerHTML = "C'est <strong>Elisavet Makri</strong>, une guide touristique agréée à Athènes, offrant une gamme variée de tours à travers la Grèce, avec la possibilité d'adapter les tours à vos préférences. Avec plus de 10 ans d'expérience dans l'industrie du tourisme, je me spécialise dans la création de tours personnalisés, engageants et enrichissants qui répondent aux besoins de chaque client. Mon objectif est de créer un environnement accueillant et enrichissant, vous assurant de profiter pleinement de votre séjour en Grèce. Pour plus d'informations, n'hésitez pas à <a href='mailto:elisavetmakri@hotmail.com'>m'envoyer un email</a>.";
+        infoBox1.textContent = 'Guide en grec, anglais et français';
+        infoBox2.textContent = 'Interactif';
+        infoBox3.textContent = 'Peut répondre aux besoins de tous les âges';
+        navHome.textContent = 'Accueil';
+        navTours.textContent = 'Tours';
+        navAbout.textContent = 'À propos de moi';
+        navContact.textContent = 'Contact';
+    } else if (lang === 'el') {
+        headerTitle.textContent = 'Ο αδειούχος ξεναγός σας στην Ελλάδα';
+        homepageTitle.textContent = 'Ιδιωτικές και Προσαρμοσμένες Ξεναγήσεις';
+        homepageSubtitle.textContent = 'Η περιπέτειά σας σας περιμένει';
+        homepageDescription.innerHTML = "Είναι η <strong>Ελισάβετ Μακρή</strong>, αδειούχος ξεναγός στην Αθήνα, προσφέροντας μια ποικιλία ξεναγήσεων σε όλη την Ελλάδα, με τη δυνατότητα να προσαρμόσετε τις ξεναγήσεις στις προτιμήσεις σας. Με πάνω από 10 χρόνια εμπειρίας στον τουριστικό τομέα, ειδικεύομαι στη δημιουργία εξατομικευμένων, ενδιαφερόντων και εμπνευσμένων ξεναγήσεων που ανταποκρίνονται στις ανάγκες κάθε πελάτη. Στόχος μου είναι να δημιουργήσω ένα φιλόξενο και εμπλουτισμένο περιβάλλον, διασφαλίζοντας ότι θα αξιοποιήσετε στο έπακρο τον χρόνο σας στην Ελλάδα. Για περισσότερες πληροφορίες, μη διστάσετε να <a href='mailto:elisavetmakri@hotmail.com'>στείλετε email</a>.";
+        infoBox1.textContent = 'Ξεναγός σε ελληνικά, αγγλικά και γαλλικά';
+        infoBox2.textContent = 'Διαδραστικό';
+        infoBox3.textContent = 'Μπορεί να ανταποκριθεί στις ανάγκες όλων των ηλικιών';
+        navHome.textContent = 'Αρχική';
+        navTours.textContent = 'Ξεναγήσεις';
+        navAbout.textContent = 'Σχετικά με εμένα';
+        navContact.textContent = 'Επικοινωνία';
+    }
+}
+
+// Add event listeners to language options
+document.querySelectorAll('.language-option').forEach(option => {
+    option.addEventListener('click', () => {
+        const lang = option.dataset.lang;
+        changeLanguage(lang); // Switch to the selected language
+    });
+});
+
+// Set default language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('en'); // Default to English
+});
 </script>
+
 </body>
 </html>

@@ -189,7 +189,7 @@ nav ul li a:hover {
 .info-section {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 70px;
     margin-top: 20px;
     margin-bottom: 50px;
 }
@@ -1389,6 +1389,7 @@ footer {
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto; /* Center the logo image */
+    margin-bottom: 20px;
 }
 
 .about-me-section {
@@ -2312,4 +2313,59 @@ footer {
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto; /* Center the logo image */
+}
+
+/* Language Selector */
+
+/* Language Selector */
+.language-selector {
+    font-size: 1rem;
+    color: #555; /* Grey text color */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between options */
+    cursor: pointer;
+    background-color: #fff; /* White background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove shadow */
+    margin-right: 80px;
+    margin-top: 40px;
+}
+
+
+.language-option {
+    text-decoration: none; /* Remove underline by default */
+    color: #555; /* Grey text color */
+    font-weight: bold;
+    position: relative; /* Required for the pseudo-element */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.language-option:hover {
+    color: #333; /* Slightly darker grey on hover */
+}
+
+.language-option:hover::after {
+    content: ""; /* Empty content for the line */
+    position: absolute;
+    bottom: -2px; /* Position the line slightly below the text */
+    left: 0;
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Thickness of the line */
+    background-color: #333; /* Line color */
+}
+
+.language-option.active {
+    color: #000; /* Black color for the active language */
+}
+
+.language-option.active::after {
+    content: ""; /* Empty content for the line */
+    position: absolute;
+    bottom: -2px; /* Position the line slightly below the text */
+    left: 0;
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Thickness of the line */
+    background-color: #000; /* Line color for the active language */
 }
