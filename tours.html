@@ -11,6 +11,11 @@
         <div class="logo-container">
             <img src="logo.jpg" alt="Logo" class="logo">
         </div>
+        <div class="language-selector">
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
+        </div>
         <h1>Our Tours</h1>
         <nav>
             <ul>
@@ -34,11 +39,11 @@
             <div class="text-container">
                 <h2>Attica</h2>
                 <ul>
-                    <li>->Acropolis + Ancient Agora Tour</li>
-                    <li>->Walking Tour of the Center of Athens</li>
-                    <li>->Philosophical Tour</li>
-                    <li>->National Archaeological Museum Tour</li>
-                    <li>->Cape Sounio Tour</li>
+                    <li>->  Acropolis & Ancient Agora Tour</li>
+                    <li>->  Walking Tour of the Center of Athens</li>
+                    <li>->  Philosophical Tour</li>
+                    <li>->  National Archaeological Museum Tour</li>
+                    <li>->  Cape Sounion Tour</li>
                 </ul>
                 <hr class="thin-line">
                 <a href="athens-tours.html" class="view-details-button">View Tours →</a>
@@ -55,10 +60,8 @@
             <div class="text-container">
                 <h2>Peloponnese</h2>
                 <ul>
-                    <li>->Corinth</li>
-                    <li>->Mycenae</li>
-                    <li>->Epidaurus</li>
-                    <li>->Olympia</li>
+                    <li>-> Mycenae, Epidaurus & Nauplio</li>
+                    <li>-> Corinth & the Canal</li>
                 </ul>
                 <hr class="thin-line">
                 <a href="Peloponnese.html" class="view-details-button">View Tours →</a>
@@ -74,9 +77,9 @@
             <div class="text-container">
                 <h2>Central Greece</h2>
                 <ul>
-                    <li>->Delphi</li>
-                    <li>->Holy Monastery of Hosios Loukas</li>
-                    <li>->Thebes</li>
+                    <li>-> Delphi</li>
+                    <li>-> Holy Monastery of Hosios Loukas</li>
+                    <li>-> Thebes</li>
                 </ul>
                 <hr class="thin-line">
                 <a href="centralgreece.html" class="view-details-button">View Tours →</a>
@@ -91,9 +94,9 @@
             <div class="text-container">
                 <h2>Saronic Gulf Islands</h2>
                 <ul>
-                    <li>->Aegina</li>
-                    <li>->Hydra</li>
-                    <li>->Spetses</li>
+                    <li>-> Aegina</li>
+                    <li>-> Hydra</li>
+                    <li>-> Spetses</li>
                 </ul>
                 <hr class="thin-line">
                 <a href="saronic-gulf-tours.html" class="view-details-button">View Tours →</a>
@@ -108,8 +111,8 @@
             <div class="text-container">
                 <h2>Cyclades</h2>
                 <ul>
-                    <li>->Mykonos</li>
-                    <li>->Santorini</li>
+                    <li>-> Mykonos</li>
+                    <li>-> Santorini</li>
                 </ul>
                 <hr class="thin-line">
                 <a href="cyclades.html" class="view-details-button">View Tours →</a>
@@ -135,6 +138,121 @@
         function goBack() {
             window.location.href = "tours.html"; // Navigate back to tours.html
         }
+    </script>
+    <script>
+        // Function to change language
+        function changeLanguage(lang) {
+            // Save the selected language in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+    
+            // Update active language
+            const languageOptions = document.querySelectorAll('.language-option');
+            languageOptions.forEach(option => {
+                option.classList.remove('active'); // Remove active class from all options
+                if (option.dataset.lang === lang) {
+                    option.classList.add('active'); // Add active class to the selected language
+                }
+            });
+    
+            // Translate content based on the selected language
+            const pageTitle = document.querySelector('title');
+            const headerTitle = document.querySelector('h1');
+            const atticaTours = document.querySelector('.athens-tours .text-container h2');
+            const atticaList = document.querySelectorAll('.athens-tours .text-container ul li');
+            const peloponneseTours = document.querySelector('.tour-card:nth-child(2) .text-container h2');
+            const peloponneseList = document.querySelectorAll('.tour-card:nth-child(2) .text-container ul li');
+            const centralGreeceTours = document.querySelector('.tour-card:nth-child(3) .text-container h2');
+            const centralGreeceList = document.querySelectorAll('.tour-card:nth-child(3) .text-container ul li');
+            const saronicGulfTours = document.querySelector('.tour-card:nth-child(4) .text-container h2');
+            const saronicGulfList = document.querySelectorAll('.tour-card:nth-child(4) .text-container ul li');
+            const cycladesTours = document.querySelector('.tour-card:nth-child(5) .text-container h2');
+            const cycladesList = document.querySelectorAll('.tour-card:nth-child(5) .text-container ul li');
+    
+            if (lang === 'en') {
+                pageTitle.textContent = 'Athens Tours';
+                headerTitle.textContent = 'Our Tours';
+                atticaTours.textContent = 'Attica';
+                atticaList[0].textContent = 'Acropolis & Ancient Agora Tour';
+                atticaList[1].textContent = 'Walking Tour of the Center of Athens';
+                atticaList[2].textContent = 'Philosophical Tour';
+                atticaList[3].textContent = 'National Archaeological Museum Tour';
+                atticaList[4].textContent = 'Cape Sounion Tour';
+                peloponneseTours.textContent = 'Peloponnese';
+                peloponneseList[0].textContent = 'Mycenae, Epidaurus & Nauplio';
+                peloponneseList[1].textContent = 'Corinth & the Canal';
+                centralGreeceTours.textContent = 'Central Greece';
+                centralGreeceList[0].textContent = 'Delphi';
+                centralGreeceList[1].textContent = 'Holy Monastery of Hosios Loukas';
+                centralGreeceList[2].textContent = 'Thebes';
+                saronicGulfTours.textContent = 'Saronic Gulf Islands';
+                saronicGulfList[0].textContent = 'Aegina';
+                saronicGulfList[1].textContent = 'Hydra';
+                saronicGulfList[2].textContent = 'Spetses';
+                cycladesTours.textContent = 'Cyclades';
+                cycladesList[0].textContent = 'Mykonos';
+                cycladesList[1].textContent = 'Santorini';
+            } else if (lang === 'fr') {
+                pageTitle.textContent = 'Tours d\'Athènes';
+                headerTitle.textContent = 'Nos Tours';
+                atticaTours.textContent = 'Attique';
+                atticaList[0].textContent = 'Tour de l\'Acropole et de l\'Agora Antique';
+                atticaList[1].textContent = 'Tour à pied du centre d\'Athènes';
+                atticaList[2].textContent = 'Tour Philosophique';
+                atticaList[3].textContent = 'Tour du Musée Archéologique National';
+                atticaList[4].textContent = 'Tour du Cap Sounion';
+                peloponneseTours.textContent = 'Péloponnèse';
+                peloponneseList[0].textContent = 'Mycènes, Épidaure et Nauplie';
+                peloponneseList[1].textContent = 'Corinthe et le Canal';
+                centralGreeceTours.textContent = 'Grèce Centrale';
+                centralGreeceList[0].textContent = 'Delphes';
+                centralGreeceList[1].textContent = 'Monastère Saint-Luc';
+                centralGreeceList[2].textContent = 'Thèbes';
+                saronicGulfTours.textContent = 'Îles du Golfe Saronique';
+                saronicGulfList[0].textContent = 'Égine';
+                saronicGulfList[1].textContent = 'Hydra';
+                saronicGulfList[2].textContent = 'Spetses';
+                cycladesTours.textContent = 'Cyclades';
+                cycladesList[0].textContent = 'Mykonos';
+                cycladesList[1].textContent = 'Santorin';
+            } else if (lang === 'el') {
+                pageTitle.textContent = 'Ξεναγήσεις στην Αθήνα';
+                headerTitle.textContent = 'Οι Ξεναγήσεις μας';
+                atticaTours.textContent = 'Αττική';
+                atticaList[0].textContent = 'Ξενάγηση στην Ακρόπολη και την Αρχαία Αγορά';
+                atticaList[1].textContent = 'Περιπατητική Ξενάγηση στο Κέντρο της Αθήνας';
+                atticaList[2].textContent = 'Φιλοσοφική Ξενάγηση';
+                atticaList[3].textContent = 'Ξενάγηση στο Εθνικό Αρχαιολογικό Μουσείο';
+                atticaList[4].textContent = 'Ξενάγηση στο Σούνιο';
+                peloponneseTours.textContent = 'Πελοπόννησος';
+                peloponneseList[0].textContent = 'Μυκήνες, Επίδαυρος και Ναύπλιο';
+                peloponneseList[1].textContent = 'Κόρινθος και Διώρυγα';
+                centralGreeceTours.textContent = 'Κεντρική Ελλάδα';
+                centralGreeceList[0].textContent = 'Δελφοί';
+                centralGreeceList[1].textContent = 'Μονή Οσίου Λουκά';
+                centralGreeceList[2].textContent = 'Θήβα';
+                saronicGulfTours.textContent = 'Νησιά Σαρωνικού';
+                saronicGulfList[0].textContent = 'Αίγινα';
+                saronicGulfList[1].textContent = 'Ύδρα';
+                saronicGulfList[2].textContent = 'Σπέτσες';
+                cycladesTours.textContent = 'Κυκλάδες';
+                cycladesList[0].textContent = 'Μύκονος';
+                cycladesList[1].textContent = 'Σαντορίνη';
+            }
+        }
+    
+        // Add event listeners to language options
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.dataset.lang;
+                changeLanguage(lang); // Switch to the selected language
+            });
+        });
+    
+        // Set default or previously selected language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
+            changeLanguage(savedLanguage);
+        });
     </script>
 </body>
 </html>

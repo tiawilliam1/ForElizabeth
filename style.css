@@ -2369,3 +2369,39 @@ footer {
     height: 2px; /* Thickness of the line */
     background-color: #000; /* Line color for the active language */
 }
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .logo-container {
+        padding: 10px;
+        position: absolute; /* Ensure the logo stays fixed */
+        left: 40px; /* Move the logo towards the left */
+        top: 50px; /* Adjust the top position */
+        transform: translateX(0); /* Reset any horizontal translation */
+    }
+
+    .homepage-content {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .info-section {
+        flex-direction: column; /* Stack info boxes vertically */
+    }
+
+    .carousel-item {
+        flex: 0 0 100%; /* Full width for carousel items */
+    }
+
+    .quote-slideshow-section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
