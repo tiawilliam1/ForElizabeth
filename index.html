@@ -9,23 +9,29 @@
 </head>
 <body>
     <header>
+        <button class="nav-button" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
         </div>
+        <h1 id="header-title">Your Licensed Tour Guide Through Greece</h1>
         <div class="language-selector">
             <span class="language-option" data-lang="en">EN</span> /
             <span class="language-option" data-lang="fr">FR</span> /
             <span class="language-option" data-lang="el">GR</span>
         </div>
-        <h1 id="header-title">Your Licensed Tour Guide Through Greece</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" id="nav-home">Home</a></li>
-                <li><a href="tours.html" id="nav-tours">Tours</a></li>
-                <li><a href="aboutme.html" id="nav-about">About me</a></li>
-                <li><a href="contact.html" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="tours.html" id="nav-tours">Tours</a></li>
+            <li><a href="aboutme.html" id="nav-about">About me</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     
     <section id="homepage">
@@ -389,6 +395,11 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('en'); // Default to English
 });
 </script>
-
+<script>
+    function toggleNav() {
+        const navMenu = document.querySelector('nav ul');
+        navMenu.classList.toggle('show'); // Toggle the "show" class
+    }
+</script>
 </body>
 </html>

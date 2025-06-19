@@ -2371,40 +2371,118 @@ footer {
     background-color: #000; /* Line color for the active language */
 }
 
-/* Media Queries for Small Screens */
+
+
+/* Media Queries for INDEX Screens */
 @media (max-width: 768px) {
     /* Header */
     header {
-        padding: 10px; /* Reduce padding for smaller screens */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 100px;
+        margin-top: -40px;
+        margin-right: -40px;
+        margin-left: -40px;
     }
 
     .logo-container {
-        left: 20px; /* Move the logo closer to the left edge */
-        top: 10px; /* Adjust the top position */
-        width: 120px; /* Reduce logo size */
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .logo {
+        width: 50px; /* Smaller logo size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #header-title {
+        font-size: 1.2rem; /* Reduce font size for the title */
+        text-align: center;
+        flex-grow: 1; /* Center the title */
+        margin: 0;
     }
 
     .language-selector {
         font-size: 0.8rem; /* Reduce font size for language options */
-        margin-top: 5px; /* Adjust spacing */
-        margin-right: 10px; /* Move closer to the edge */
+        margin-right: 10px;
     }
 
-    /* Homepage Content */
+    /* Navigation Button */
+    .nav-button {
+        display: block; /* Show the button */
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .nav-button div {
+        width: 100%;
+        height: 4px;
+        background-color: #333; /* Color of the lines */
+        margin: 4px 0; /* Spacing between lines */
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation links */
+        flex-direction: column; /* Stack links vertically when revealed */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #fff; /* Background for the dropdown */
+        width: 100%; /* Full width dropdown */
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for links */
+        color: #333; /* Link color */
+        text-decoration: none;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navigation links when toggled */
+    }
+
+    /* Homepage Section */
+    #homepage {
+        padding: 10px; /* Add padding around the homepage content */
+    }
+
     .homepage-content {
         flex-direction: column; /* Stack text and images vertically */
         gap: 15px; /* Reduce spacing between elements */
-        padding: 10px; /* Add padding around the content */
     }
 
-    .text-content,
+    .text-content h2 {
+        font-size: 1.8rem; /* Reduce font size for homepage title */
+    }
+
+    .text-content h3 {
+        font-size: 1.5rem; /* Reduce font size for homepage subtitle */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Reduce font size for homepage description */
+        line-height: 1.4; /* Adjust line height */
+    }
+
     .image-content {
-        max-width: 100%; /* Allow full width */
-        text-align: center; /* Center-align text */
+        width: 100%; /* Make images responsive */
+        text-align: center; /* Center-align images */
     }
 
-    .homepage-image {
-        max-width: 100%; /* Make images responsive */
+    .slideshow-container img {
+        width: 100%; /* Full width for smaller screens */
         height: auto; /* Maintain aspect ratio */
     }
 
@@ -2414,15 +2492,34 @@ footer {
         gap: 10px; /* Reduce spacing between info boxes */
     }
 
-    .info-box {
+    .homepage-info-box {
         max-width: 100%; /* Allow full width */
-        margin-bottom: 10px; /* Add spacing below each box */
+        text-align: center; /* Center-align info box content */
     }
 
-    /* Carousel */
+    .homepage-info-box img {
+        width: 50px; /* Reduce symbol size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .homepage-info-box p {
+        font-size: 0.9rem; /* Reduce font size for info box text */
+    }
+
+    /* Carousel Section */
+    .carousel-container {
+        overflow: hidden;
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .carousel {
+        display: flex;
+        gap: 10px; /* Reduce spacing between carousel items */
+    }
+
     .carousel-item {
         flex: 0 0 100%; /* Show one item at a time */
-        padding: 10px; /* Reduce padding */
+        text-align: center; /* Center-align carousel content */
     }
 
     .carousel-image {
@@ -2437,69 +2534,128 @@ footer {
     /* Quote Slideshow Section */
     .quote-slideshow-section {
         padding: 10px; /* Reduce padding */
+        text-align: center; /* Center-align quotes */
     }
 
     .quote-text {
-        font-size: 1rem; /* Reduce font size for quotes */
+        font-size: 0.9rem; /* Reduce font size for quotes */
         line-height: 1.4; /* Adjust line height */
+    }
+
+    .quote-progress-circles .circle {
+        width: 10px; /* Reduce circle size */
+        height: 10px; /* Maintain aspect ratio */
     }
 
     /* Footer */
     footer {
-        flex-direction: column; /* Stack footer content vertically */
-        text-align: center; /* Center-align footer text */
         padding: 10px; /* Reduce padding */
+        text-align: center; /* Center-align footer content */
     }
 
-    .footer-info {
-        margin-bottom: 10px; /* Add spacing between footer sections */
+    .footer-info p {
+        font-size: 0.8rem; /* Reduce font size for footer text */
     }
 
-    .footer-logo-image {
+    .footer-logo img {
         width: 80px; /* Reduce logo size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #footer-text {
+        font-size: 0.8rem; /* Reduce font size for footer copyright text */
     }
 }
 
 @media (max-width: 480px) {
-    /* Header */
-    header h1 {
-        font-size: 1.5rem; /* Reduce font size for header title */
+    /* Further adjustments for very small screens */
+    #header-title {
+        margin-top: -60px;
+        font-size: 1.2rem; /* Further reduce font size for header title */
     }
 
-    .language-selector {
-        font-size: 0.7rem; /* Further reduce font size */
-    }
-
-    /* Homepage Content */
     .text-content h2 {
-        font-size: 1.5rem; /* Reduce font size for homepage title */
+        font-size: 1.5rem; /* Further reduce font size for homepage title */
     }
 
     .text-content h3 {
-        font-size: 1.2rem; /* Reduce font size for homepage subtitle */
+        font-size: 1.2rem; /* Further reduce font size for homepage subtitle */
     }
 
     .text-content p {
-        font-size: 0.9rem; /* Reduce font size for homepage description */
+        font-size: 0.8rem; /* Further reduce font size for homepage description */
     }
 
-    /* Info Section */
-    .info-box p {
-        font-size: 0.9rem; /* Reduce font size for info box text */
+    .homepage-info-box p {
+        font-size: 0.8rem; /* Further reduce font size for info box text */
     }
 
-    /* Carousel */
-    .carousel-caption {
-        font-size: 0.8rem; /* Further reduce font size for captions */
-    }
-
-    /* Quote Slideshow Section */
     .quote-text {
-        font-size: 0.9rem; /* Further reduce font size for quotes */
+        font-size: 0.8rem; /* Further reduce font size for quotes */
     }
 
-    /* Footer */
     footer p {
-        font-size: 0.8rem; /* Reduce font size for footer text */
+        font-size: 0.7rem; /* Further reduce font size for footer text */
+    }
+}
+
+/* Default Navigation Styles */
+nav ul {
+    display: flex; /* Default display for larger screens */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide navigation menu by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #fff; /* Background for the dropdown */
+        width: 100%; /* Full width dropdown */
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for links */
+        color: #333; /* Link color */
+        text-decoration: none;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navigation links when toggled */
+    }
+
+    .nav-button {
+        display: block; /* Show the navigation button */
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .nav-button div {
+        width: 100%;
+        height: 4px;
+        background-color: #333; /* Color of the lines */
+        margin: 4px 0; /* Spacing between lines */
     }
 }
