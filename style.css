@@ -2380,20 +2380,23 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 100px;
+        padding-top: 120px;
         margin-top: -40px;
         margin-right: -40px;
         margin-left: -40px;
+        padding-bottom: 90px;
     }
 
     .logo-container {
         display: flex;
         align-items: center;
         margin-left: 10px;
+        margin-left: 90px;
+        margin-top: 80px;
     }
 
     .logo {
-        width: 50px; /* Smaller logo size */
+        width: 130px; /* Smaller logo size */
         height: auto; /* Maintain aspect ratio */
     }
 
@@ -2407,6 +2410,8 @@ footer {
     .language-selector {
         font-size: 0.8rem; /* Reduce font size for language options */
         margin-right: 10px;
+        margin-right: 50px;
+        margin-top: -40px;
     }
 
     /* Navigation Button */
@@ -2571,7 +2576,9 @@ footer {
     /* Further adjustments for very small screens */
     #header-title {
         margin-top: -60px;
-        font-size: 1.2rem; /* Further reduce font size for header title */
+        font-size: 1.1rem; /* Further reduce font size for header title */
+        margin-right: 30px;
+}
     }
 
     .text-content h2 {
