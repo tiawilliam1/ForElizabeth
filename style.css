@@ -2380,11 +2380,11 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 120px;
-        margin-top: -40px;
+        padding-top: 190px;
+        margin-top: -30px;
         margin-right: -40px;
-        margin-left: -40px;
-        padding-bottom: 90px;
+        margin-left: -30px;
+        padding-bottom: 30px;
     }
 
     .logo-container {
@@ -2392,7 +2392,7 @@ footer {
         align-items: center;
         margin-left: 10px;
         margin-left: 90px;
-        margin-top: 80px;
+        margin-top: 30px;
     }
 
     .logo {
@@ -2414,48 +2414,32 @@ footer {
         margin-top: -40px;
     }
 
-    /* Navigation Button */
-    .nav-button {
-        display: block; /* Show the button */
-        width: 30px;
-        height: 30px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        margin-left: 10px;
-    }
-
-    .nav-button div {
-        width: 100%;
-        height: 4px;
-        background-color: #333; /* Color of the lines */
-        margin: 4px 0; /* Spacing between lines */
+      /* Navigation */
+      nav {
+        width: 100%; /* Full width navigation */
+        background-color: #fff; /* White background for navigation */
+        padding: 10px 0; /* Add padding */
+        margin-top: -10px;
+        padding-right: 50px;
+    margin-left: -30px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+}
     }
 
     nav ul {
-        display: none; /* Hide the navigation links */
-        flex-direction: column; /* Stack links vertically when revealed */
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background-color: #fff; /* Background for the dropdown */
-        width: 100%; /* Full width dropdown */
-        padding: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Add spacing between links */
+        display: flex;
+        flex-direction: row; /* Stack links vertically */
+        align-items: center; /* Center-align links */
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul li a {
-        font-size: 1rem; /* Adjust font size for links */
-        color: #333; /* Link color */
         text-decoration: none;
-    }
-
-    nav ul.show {
-        display: flex; /* Show the navigation links when toggled */
+        color: #333; /* Link color */
+        font-size: 1rem; /* Adjust font size for links */
     }
 
     /* Homepage Section */
@@ -2572,97 +2556,5 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    #header-title {
-        margin-top: -60px;
-        font-size: 1.1rem; /* Further reduce font size for header title */
-        margin-right: 30px;
-}
-    }
 
-    .text-content h2 {
-        font-size: 1.5rem; /* Further reduce font size for homepage title */
-    }
 
-    .text-content h3 {
-        font-size: 1.2rem; /* Further reduce font size for homepage subtitle */
-    }
-
-    .text-content p {
-        font-size: 0.8rem; /* Further reduce font size for homepage description */
-    }
-
-    .homepage-info-box p {
-        font-size: 0.8rem; /* Further reduce font size for info box text */
-    }
-
-    .quote-text {
-        font-size: 0.8rem; /* Further reduce font size for quotes */
-    }
-
-    footer p {
-        font-size: 0.7rem; /* Further reduce font size for footer text */
-    }
-}
-
-/* Default Navigation Styles */
-nav ul {
-    display: flex; /* Default display for larger screens */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide navigation menu by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background-color: #fff; /* Background for the dropdown */
-        width: 100%; /* Full width dropdown */
-        padding: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Add spacing between links */
-    }
-
-    nav ul li a {
-        font-size: 1rem; /* Adjust font size for links */
-        color: #333; /* Link color */
-        text-decoration: none;
-    }
-
-    nav ul.show {
-        display: flex; /* Show the navigation links when toggled */
-    }
-
-    .nav-button {
-        display: block; /* Show the navigation button */
-        width: 30px;
-        height: 30px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        margin-left: 10px;
-    }
-
-    .nav-button div {
-        width: 100%;
-        height: 4px;
-        background-color: #333; /* Color of the lines */
-        margin: 4px 0; /* Spacing between lines */
-    }
-}

@@ -9,11 +9,6 @@
 </head>
 <body>
     <header>
-        <button class="nav-button" onclick="toggleNav()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
         </div>
@@ -394,12 +389,6 @@ document.querySelectorAll('.language-option').forEach(option => {
 document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('en'); // Default to English
 });
-</script>
-<script>
-    function toggleNav() {
-        const navMenu = document.querySelector('nav ul');
-        navMenu.classList.toggle('show'); // Toggle the "show" class
-    }
 </script>
 </body>
 </html>
