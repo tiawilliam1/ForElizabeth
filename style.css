@@ -2465,6 +2465,9 @@ footer {
         padding-right: 60px;
     }
     
+    .text-content {
+        padding-right: 30px;
+    }
 
     .text-content h2 {
         font-size: 1.8rem; /* Reduce font size for homepage title */
