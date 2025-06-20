@@ -586,17 +586,6 @@ body {
     margin-top: 20px; /* Add some spacing above the gallery */
 }
 
-@media (max-width: 1024px) {
-    .tour-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .tour-gallery {
-        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
-    }
-}
 
 section h2 {
     margin-top: 70px; /* Add space on top of the text */
@@ -1042,18 +1031,6 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
-
-
-@media (max-width: 768px) {
-    .tour-content {
-        flex-direction: column; /* Stack text and images vertically */
-    }
-
-    .tour-images {
-        flex-direction: row; /* Display images side by side */
-        gap: 10px; /* Add space between images */
-    }
-}
 
 
 
@@ -1721,154 +1698,6 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Global Media Query for Small Screens */
-@media (max-width: 768px) {
-    /* General Body Styling */
-    body {
-        font-size: 14px; /* Adjust font size for readability */
-        padding: 10px; /* Add padding for smaller screens */
-    }
-
-    /* Header */
-    header {
-        padding: 20px; /* Reduce padding in the header */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center; /* Center-align the links */
-    }
-
-    nav ul li {
-        margin-bottom: 10px; /* Add spacing between links */
-    }
-
-    /* About Me Section */
-    .about-me-content {
-        flex-direction: column; /* Stack text and image vertically */
-        align-items: center; /* Center-align content */
-    }
-
-    .about-me-text,
-    .about-me-images {
-        max-width: 100%; /* Allow full width */
-        margin: 0; /* Remove unnecessary margins */
-        text-align: center; /* Center-align text */
-    }
-
-    .about-me-image-left,
-    .about-me-image-right {
-        max-width: 100%; /* Make images responsive */
-        height: auto; /* Maintain aspect ratio */
-        margin: 20px 0; /* Add spacing around images */
-    }
-
-    /* Contact Section */
-    .contact-content {
-        flex-direction: column; /* Stack text and image vertically */
-        align-items: center; /* Center-align content */
-    }
-
-    .contact-text {
-        text-align: center; /* Center-align text */
-        margin-bottom: 20px;
-    }
-
-    .contact-image img {
-        max-width: 100%; /* Make the image responsive */
-        height: auto;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: column; /* Stack footer content vertically */
-        text-align: center; /* Center-align footer text */
-    }
-
-    .footer-info {
-        margin-bottom: 20px; /* Add spacing between footer sections */
-    }
-
-    /* Tour Cards */
-    .tour-gallery {
-        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
-    }
-
-    .tour-card {
-        width: 100%; /* Make cards take full width */
-        margin: 10px 0; /* Add spacing between cards */
-    }
-
-    /* Carousel */
-    .carousel-item {
-        flex: 0 0 100%; /* Show one item at a time */
-    }
-
-    /* General Image Responsiveness */
-    img {
-        max-width: 100%; /* Scale images to fit within their container */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    /* Homepage Section */
-    .homepage-content {
-        flex-direction: column; /* Stack text and image vertically */
-        align-items: center;
-    }
-
-    .text-content,
-    .image-content {
-        max-width: 100%; /* Allow full width */
-        text-align: center; /* Center-align text */
-    }
-
-    .homepage-image {
-        max-width: 100%; /* Make the image responsive */
-        height: auto;
-    }
-
-    /* Info Section */
-    .info-section {
-        flex-direction: column; /* Stack info boxes vertically */
-        align-items: center;
-    }
-
-    .info-box {
-        max-width: 100%; /* Allow full width */
-        margin-bottom: 20px;
-    }
-
-    /* Carousel */
-    .carousel-item {
-        flex: 0 0 100%; /* Show one item at a time */
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: column; /* Stack footer content vertically */
-        text-align: center;
-    }
-
-    .footer-info {
-        margin-bottom: 20px;
-    }
-}
 
 /* Hero Section */
 .hero-section {
@@ -2500,6 +2329,18 @@ footer {
         font-size: 0.7rem;
     }
 
+    #info-box-2 {
+        font-size: 1rem; /* Adjust font size */
+        padding: 10px; /* Add padding */
+        text-align: center; /* Center-align text */
+    }
+
+    #info-box-2 img {
+        width: 60px; /* Adjust image size */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add spacing below the image */
+    }
+
     .homepage-info-box {
         max-width: 100%; /* Allow full width */
         text-align: center; /* Center-align info box content */
@@ -2590,3 +2431,123 @@ html, body {
 
     /* Adjust padding and margins to avoid overflow */
  
+    @media (max-width: 768px) {
+        /* Carousel Section */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%; /* Full width for smaller screens */
+        }
+    
+        .carousel {
+            display: flex;
+            gap: 10px; /* Reduce spacing between carousel items */
+            transition: transform 0.5s ease-in-out; /* Smooth scrolling */
+        }
+    
+        .carousel-item {
+            flex: 0 0 100%; /* Show one item at a time */
+            text-align: center; /* Center-align carousel content */
+        }
+    
+        .carousel-image {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+    
+        .carousel-caption {
+            font-size: 0.9rem; /* Reduce font size for captions */
+        }
+    
+        /* Progress Bar */
+        .progress-bar {
+            position: relative;
+            width: 80%; /* Adjust width for smaller screens */
+            height: 5px; /* Adjust height of the progress bar */
+            background-color: #ddd; /* Static line color */
+            border-radius: 3px;
+            margin: 20px auto; /* Center the progress bar */
+        }
+    
+        .progress-indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%; /* Start with no progress */
+            background-color: #000; /* Moving line color */
+            transition: width 0.3s ease, left 0.3s ease; /* Smooth movement */
+            border-radius: 3px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        /* Header */
+        /* Tour Section */
+        .tour-section {
+            padding: 10px; /* Reduce padding */
+            text-align: center; /* Center-align content */
+        }
+    
+        .tour-title {
+            font-size: 1.5rem; /* Reduce font size for tour titles */
+            margin-bottom: 10px; /* Add spacing below the title */
+        }
+    
+        .tour-description {
+            font-size: 0.9rem; /* Reduce font size for descriptions */
+            line-height: 1.4; /* Improve readability */
+            margin-bottom: 15px; /* Add spacing below the description */
+        }
+    
+        .tour-image {
+            width: 80%; /* Reduce width of the images */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 15px; /* Add spacing below the image */
+            border-radius: 5px; /* Optional: Add rounded corners */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+        }
+    
+        .tour-card {
+            width: 80%; /* Reduce width of the tour cards */
+            max-width: 250px; /* Limit the maximum width */
+            height: auto; /* Let the height adjust dynamically */
+            padding: 15px; /* Reduce padding inside the cards */
+            margin: 10px auto; /* Center the cards and add spacing between them */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+        }
+    
+        .tour-card h2 {
+            font-size: 1.2rem; /* Reduce font size for titles inside the cards */
+            margin-bottom: 10px; /* Add spacing below the title */
+        }
+    
+        .tour-card p {
+            font-size: 0.9rem; /* Reduce font size for descriptions inside the cards */
+            margin-bottom: 10px; /* Add spacing below the text */
+        }
+    
+        .learn-more-btn {
+            font-size: 0.9rem; /* Reduce font size for the button text */
+            padding: 8px 15px; /* Reduce padding inside the button */
+        }
+    
+        /* Footer */
+        footer {
+            padding: 10px; /* Reduce padding */
+            text-align: center; /* Center-align footer content */
+        }
+    
+        .footer-info p {
+            font-size: 0.8rem; /* Reduce font size for footer text */
+        }
+    
+        .footer-logo img {
+            width: 80px; /* Reduce logo size */
+            height: auto; /* Maintain aspect ratio */
+        }
+    
+        #footer-text {
+            font-size: 0.8rem; /* Reduce font size for footer copyright text */
+        }
+    }
