@@ -2461,7 +2461,10 @@ footer {
     .homepage-content {
         flex-direction: column; /* Stack text and images vertically */
         gap: 15px; /* Reduce spacing between elements */
+        margin-right: -50px;
+        padding-right: 60px;
     }
+    
 
     .text-content h2 {
         font-size: 1.8rem; /* Reduce font size for homepage title */
@@ -2477,8 +2480,9 @@ footer {
     }
 
     .image-content {
-        width: 100%; /* Make images responsive */
+        width: 90%; /* Make images responsive */
         text-align: center; /* Center-align images */
+        margin-right: 60px;
     }
 
     .slideshow-container img {
@@ -2488,8 +2492,9 @@ footer {
 
     /* Info Section */
     .info-section {
-        flex-direction: column; /* Stack info boxes vertically */
+        flex-direction: row; /* Stack info boxes vertically */
         gap: 10px; /* Reduce spacing between info boxes */
+        font-size: 0.7rem;
     }
 
     .homepage-info-box {
