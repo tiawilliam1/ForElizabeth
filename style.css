@@ -2391,7 +2391,7 @@ footer {
         display: flex;
         align-items: center;
         margin-left: 10px;
-        margin-left: 80px;
+        margin-left: 100px;
         margin-top: 50px;
     }
 
@@ -2407,7 +2407,7 @@ footer {
         margin: 0;
         margin-top: -70px;
         margin-right: -400px;
-        margin-left: 25px;
+        margin-left: 50px;
         padding-top: 30px;
     }
 
