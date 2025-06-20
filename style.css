@@ -2391,8 +2391,8 @@ footer {
         display: flex;
         align-items: center;
         margin-left: 10px;
-        margin-left: 90px;
-        margin-top: 30px;
+        margin-left: 40px;
+        margin-top: 50px;
     }
 
     .logo {
@@ -2406,7 +2406,7 @@ footer {
         flex-grow: 1; /* Center the title */
         margin: 0;
         margin-top: -70px;
-        margin-right: -400px;
+        margin-right: -300px;
         margin-left: 30px;
         padding-top: 30px;
     }
@@ -2414,7 +2414,7 @@ footer {
     .language-selector {
         font-size: 0.8rem; /* Reduce font size for language options */
         margin-right: 10px;
-        margin-right: 50px;
+        margin-right: 20px;
         margin-top: -40px;
     }
 
@@ -2557,5 +2557,32 @@ footer {
     }
 }
 
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure the body takes up the full width of the viewport */
+}
+
+/* Ensure all sections fit within the viewport *
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    /* Prevent horizontal scrolling for smaller screens */
+    html, body {
+        overflow-x: hidden; /* Disable horizontal scrolling */
+    }
+
+    /* Ensure all sections fit within the viewport */
+
+    /* Adjust padding and margins to avoid overflow */
+    header, nav, .homepage-content, .info-section, .carousel-container {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 
 
