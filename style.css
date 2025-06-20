@@ -2423,26 +2423,35 @@ footer {
         width: 100%; /* Full width navigation */
         background-color: #fff; /* White background for navigation */
         padding: 10px 0; /* Add padding */
-    margin-top: 70px;
+        margin-top: 70px;
+   
    
 
     }
 
     nav ul {
-        display: flex;
-        flex-direction: row; /* Stack links vertically */
-        align-items: center; /* Center-align links */
-        list-style: none;
-        margin: 0;
-        padding: 0;
+        display: flex; /* Align navigation links horizontally */
+        flex-direction: row; /* Ensure links are in one line */
+        align-items: center; /* Center-align links vertically */
+        justify-content: center; /* Center-align links horizontally */
+        list-style: none; /* Remove bullet points */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        gap: 20px; /* Add spacing between links */
     }
-
+    
     nav ul li a {
-        text-decoration: none;
+        text-decoration: none; /* Remove underline */
         color: #333; /* Link color */
         font-size: 1rem; /* Adjust font size for links */
+        padding: 5px 10px; /* Add padding inside the links */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
     }
-
+    
+    nav ul li a:hover {
+        color: #fff; /* White text color on hover */
+        background-color: #555; /* Dark background on hover */
+    }
     /* Homepage Section */
     #homepage {
         padding: 10px; /* Add padding around the homepage content */
@@ -2577,12 +2586,6 @@ html, body {
     /* Ensure all sections fit within the viewport */
 
     /* Adjust padding and margins to avoid overflow */
-    header, nav, .homepage-content, .info-section, .carousel-container {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
+ 
 
 
