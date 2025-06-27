@@ -2296,6 +2296,14 @@ footer {
     
     .text-content {
         padding-right: 30px;
+        text-align: left;
+        padding-right: 20px;
+        padding-left: 40px;
+        max-width: 90%;
+        margin-right: 0px;
+        border-top: 2px solid #333;
+        border-bottom: 2px solid #333;
+        margin-top: 20px;
     }
 
     .text-content h2 {
@@ -2313,8 +2321,11 @@ footer {
 
     .image-content {
         width: 90%; /* Make images responsive */
-        text-align: center; /* Center-align images */
         margin-right: 60px;
+        flex: 1;
+        text-align: right;
+        padding-left: 20px;
+        margin-top: 20px;
     }
 
     .slideshow-container img {
@@ -2481,6 +2492,18 @@ html, body {
     }
 
     @media (max-width: 768px) {
+
+        .athens-tours-page .tour-card {
+            width: 90%; /* Full width for smaller screens */
+            max-width: none; /* Remove maximum width */
+            height: auto; /* Let the height adjust dynamically */
+            padding: 10px; /* Reduce padding inside the cards */
+            margin: 10px 0; /* Center the cards and add spacing between them */
+            
+
+
+
+        }
         /* Header */
         /* Tour Section */
         .tour-section {
@@ -2500,7 +2523,7 @@ html, body {
         }
     
         .tour-image {
-            width: 80%; /* Reduce width of the images */
+            width: 150%; /* Reduce width of the images */
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 15px; /* Add spacing below the image */
             border-radius: 5px; /* Optional: Add rounded corners */
