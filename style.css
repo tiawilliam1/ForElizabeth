@@ -1708,6 +1708,14 @@ footer {
     background-color: #f9f9f9;
 }
 
+.hero-section {
+    border: 0.5px solid rgb(8, 8, 8); /* Add a black border */
+    padding: 20px; /* Optional: Add padding inside the border */
+    margin: 20px; /* Optional: Add spacing around the hero section */
+    margin-right: -100px;
+    margin-left: -100px;
+}
+
 .hero-content {
     display: flex;
     flex-wrap: wrap;
@@ -1868,7 +1876,7 @@ footer {
 
 /* Scroll Animation: Initially hidden */
 .gallery-image {
-    opacity: 0; /* Initially hidden */
+    opacity: 1; /* Initially hidden */
     transform: translateY(20px); /* Start slightly below its final position */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
 }
@@ -1886,6 +1894,8 @@ footer {
     margin: 20px 0 10px; /* Adjusted spacing above and below the heading */
     color: #333; /* Dark text color */
 }
+
+
 
 /* Homepage Info Boxes */
 
@@ -2111,8 +2121,8 @@ footer {
     justify-content: space-between; /* Distribute space between elements */
     align-items: center; /* Center align items vertically */
     position: relative;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -20px;
+    margin-right: -30px;
     margin-bottom: -50px;
    
 
