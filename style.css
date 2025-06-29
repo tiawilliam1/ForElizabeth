@@ -18,7 +18,10 @@ header {
     padding: 60px 20px 40px;
     position: relative;
     padding: 5vw;
+    padding-bottom: 40px;
+padding-top: 70px;
 }
+
 
 header h1 {
     margin: 0;
@@ -27,6 +30,7 @@ header h1 {
     border-image: linear-gradient(to right, #333, #ccc); /* Adjust border color for better contrast */
     border-image-slice: 1;
     font-family: 'Didot', serif; /* Use Didot for the header */
+    margin-top: -10px;
 }
 
 nav {
@@ -60,6 +64,7 @@ nav ul li a:hover {
     font-family: 'Didot', serif; /* Use Didot for headings */
     letter-spacing: 0.07em;
     font-size: 1.3em;
+    margin-left: -50px;
 }
 
 #homepage-description {
@@ -123,6 +128,7 @@ nav ul li a:hover {
     max-width: 1200px; /* Adjust the max-width as needed */
     margin-top: 20px; /* Add space between the grey heading and the content */
     margin-bottom: 40px; /* Add space between the content and the icons */
+    padding-left: 30px;
 }
 #homepage-description {
     font-family: 'Georgia', 'Times New Roman', Times, serif; /* Use Georgia for the specific paragraph */
@@ -133,12 +139,13 @@ nav ul li a:hover {
     flex: 1;
     text-align: left;
     padding-right: 20px;
-    padding-left: 40px;
     max-width: 50%;
     margin-right: 0px; /* Add space between the text and the image */
     border-top: 2px solid #333; /* Add a thick line on top */
     border-bottom: 2px solid #333; /* Add a thick line under the body of text */
     margin-top: 20px;
+    margin-left: -100px;
+    padding-left: 100px;
 }
 
 .image-content {
@@ -171,7 +178,7 @@ nav ul li a:hover {
 
 .slideshow-container {
     position: relative;
-    width: 100%;
+    width: 110%;
     max-width: 500px; /* Adjust to match the size of your images */
     height: auto;
     overflow: hidden;
@@ -252,12 +259,14 @@ nav ul li a:hover {
     margin-bottom: 10px;
     margin-top: 20px;
     font-family: 'Playfair Display', serif; /* Use Playfair Display for the headings */
+    margin-left: -50px;
 }
 
 #homepage p {
     font-size: 1.2em;
     margin-bottom: 40px; /* Add space between the text and the info boxes */
     font-family: 'Playfair Display', serif; /* Use Playfair Display for the paragraphs */
+    margin-left: -50px;
 }
 
 
@@ -364,6 +373,8 @@ body {
     will-change: transform;
     padding-top: 20px; /* Add space above the heading */
     padding-bottom: 40px; /* Add space below the heading */
+    margin-right: -190px;
+    margin-left: -190px;
 }
 
 .carousel-title {
@@ -1806,6 +1817,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    
 }
 
 .gallery-image {
@@ -1905,18 +1917,16 @@ footer {
 /* Acropolis Info Boxes */
 /* Acropolis Info Boxes */
 .acropolis-info-box {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    flex: 1; /* Ensure all boxes take up equal space */
-    min-width: 200px; /* Set a minimum width for smaller screens */
-    height: 100px; /* Set a fixed height for uniformity */
-    display: flex; /* Use flexbox for content alignment */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    width: 30%; /* Reduce the width of each info box */
+    padding: 10px; /* Adjust padding for smaller size */
+    margin: 10px; /* Add spacing between boxes */
+    background-color: #f9f9f9; /* Optional: Light grey background for distinction */
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    text-align: center; /* Center-align the text */
+    font-size: 0.9rem; /* Reduce font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-top: -30px;
 }
 
 /* Tour Details Section */
@@ -2029,6 +2039,8 @@ footer {
     margin-top: -5px;
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-bottom: -300px;
+margin-top: 50px;
 }
 
 .quote-slideshow-container {
@@ -2036,6 +2048,7 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden; /* Hide overflowing slides */
+
 }
 
 .quote-slide {
@@ -2066,6 +2079,7 @@ footer {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    padding-bottom: 50px;
 }
 
 .circle {
@@ -2098,6 +2112,8 @@ footer {
     display: inline-block; /* Ensure proper alignment */
     padding-top: 120px;
     padding-right: 30px;
+    margin-bottom: 200px;
+    margin-top: -80px;
 }
 
 .text-container ul {
@@ -2262,11 +2278,14 @@ footer {
     padding: 50px 20px;
     background-color: #ffffff9f; /* Match the background color of section 2 */
     text-align: center;
+    margin-right: -200px;
+    margin-left: -200px;
 }
 
 .quote-slideshow-container {
     max-width: 800px;
     margin: 0 auto;
+    padding-bottom: 210px;
 }
 
 .quote-text {
@@ -2303,43 +2322,112 @@ footer {
     padding-bottom: 100px;
 }
 
+.main-wrapper {
+    max-width: 1100px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+html, body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure the body takes up the full width of the viewport */
+}
+
+
 /* Media Queries for INDEX Screens */
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+
+    .burger-menu-btn {
+        display: flex; /* Show the burger button */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it is above other elements */
+    }
+
+    .burger-line {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .burger-menu {
+        display: none; /* Hide the menu by default */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 900;
+    }
+
+    .burger-menu.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .burger-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .burger-menu ul li {
+        margin: 20px 0;
+    }
+
+    .burger-menu ul li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    /* Burger Button Active State */
+    .burger-menu-btn.active .burger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Top line becomes part of a cross */
+    }
+
+    .burger-menu-btn.active .burger-line:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+    }
+
+    .burger-menu-btn.active .burger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Bottom line becomes part of a cross */
+    }
+
+
+    .main-wrapper {
+        max-width: 1100px; /* Limit the width of the content */
+        width: 120px; /* Smaller logo size for tablets */
+        height: auto; 
+    }
+
+
     /* Header */
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 190px;
-        margin-top: -30px;
-        margin-right: -25px;
-        margin-left: -40px;
-        padding-bottom: 20px;
+        padding-top: 45px;
+        padding-left: 40px;
     }
 
-    .logo-container {
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-        margin-left: 100px;
-        margin-top: 50px;
-    }
 
     .logo {
-        width: 130px; /* Smaller logo size */
         height: auto; /* Maintain aspect ratio */
+        margin-left: -80px;
+        width: 70px;
     }
 
     #header-title {
-        font-size: 1.2rem; /* Reduce font size for the title */
-        text-align: center;
-        flex-grow: 1; /* Center the title */
-        margin: 0;
-        margin-top: -70px;
-        margin-right: -400px;
-        margin-left: 50px;
-        padding-top: 30px;
-        position: relative;
+       
+       
     }
 
     html[lang="en"] #header-title {
@@ -2372,16 +2460,13 @@ footer {
 
       /* Navigation */
       nav {
-        width: 100%;
-        background-color: #fff;
-        padding: 10px 0;
-        margin-top: 0px;
-        margin-right: 60px;
-        padding-bottom: 30px;
-   
+      
+        display: none;
    
 
     }
+
+    
 
     html[lang="en"] nav ul li a {
         font-family: 'Playfair Display', serif; /* Font for English */
@@ -2402,25 +2487,16 @@ footer {
 
     nav ul {
 
-        align-items: center; /* Center-align links vertically */
-        justify-content: center; /* Center-align links horizontally */
-        list-style: none; /* Remove bullet points */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
+       
 
     }
     
     nav ul li a {
-        text-decoration: none; /* Remove underline */
-        color: #333; /* Link color */
-        font-size: 1rem; /* Adjust font size for links */
-        padding: 5px 10px; /* Add padding inside the links */
-        transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+        
     }
     
     nav ul li a:hover {
-        color: #fff; /* White text color on hover */
-        background-color: #555; /* Dark background on hover */
+
     }
     
     
@@ -2428,53 +2504,36 @@ footer {
     
     /* Homepage Section */
     #homepage {
-        padding: 10px; /* Add padding around the homepage content */
+       
     }
 
     .homepage-content {
-        flex-direction: column; /* Stack text and images vertically */
-        gap: 15px; /* Reduce spacing between elements */
-        margin-right: -50px;
-        padding-right: 60px;
+       
+        
     }
     
     .text-content {
-        padding-right: 30px;
-        text-align: left;
-        padding-right: 20px;
-        padding-left: 40px;
-        max-width: 90%;
-        margin-right: 0px;
-        border-top: 2px solid #333;
-        border-bottom: 2px solid #333;
-        margin-top: 20px;
+      
     }
 
     .text-content h2 {
-        font-size: 1.8rem; /* Reduce font size for homepage title */
+      
     }
 
     .text-content h3 {
-        font-size: 1.5rem; /* Reduce font size for homepage subtitle */
+      
     }
 
     .text-content p {
-        font-size: 0.9rem; /* Reduce font size for homepage description */
-        line-height: 1.4; /* Adjust line height */
+  
     }
 
     .image-content {
-        width: 90%; /* Make images responsive */
-        margin-right: 60px;
-        flex: 1;
-        text-align: right;
-        padding-left: 25px;
-        margin-top: 20px;
+   
     }
 
     .slideshow-container img {
-        width: 100%; /* Full width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+
     }
 
     /* Info Section */
@@ -2569,15 +2628,12 @@ footer {
     #footer-text {
         font-size: 0.8rem; /* Reduce font size for footer copyright text */
     }
+
 }
 
+
 /* Prevent horizontal scrolling */
-html, body {
-    overflow-x: hidden; /* Disable horizontal scrolling */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    width: 100%; /* Ensure the body takes up the full width of the viewport */
-}
+
 
 /* Ensure all sections fit within the viewport *
 
@@ -2586,137 +2642,3 @@ html, body {
 
     /* Adjust padding and margins to avoid overflow */
  
-    @media (max-width: 768px) {
-        /* Carousel Section */
-        .carousel-container {
-            overflow: hidden;
-            width: 100%; /* Full width for smaller screens */
-        }
-    
-        .carousel {
-            display: flex;
-            gap: 10px; /* Reduce spacing between carousel items */
-            transition: transform 0.5s ease-in-out; /* Smooth scrolling */
-        }
-    
-        .carousel-item {
-            flex: 0 0 100%; /* Show one item at a time */
-            text-align: center; /* Center-align carousel content */
-        }
-    
-        .carousel-image {
-            width: 100%; /* Make images responsive */
-            height: auto; /* Maintain aspect ratio */
-        }
-    
-        .carousel-caption {
-            font-size: 0.9rem; /* Reduce font size for captions */
-        }
-    
-        /* Progress Bar */
-        .progress-bar {
-            position: relative;
-            width: 80%; /* Adjust width for smaller screens */
-            height: 5px; /* Adjust height of the progress bar */
-            background-color: #ddd; /* Static line color */
-            border-radius: 3px;
-            margin: 20px auto; /* Center the progress bar */
-        }
-    
-        .progress-indicator {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0%; /* Start with no progress */
-            background-color: #000; /* Moving line color */
-            transition: width 0.3s ease, left 0.3s ease; /* Smooth movement */
-            border-radius: 3px;
-        }
-    }
-
-    @media (max-width: 768px) {
-
-        .athens-tours-page .tour-card {
-            width: 90%; /* Full width for smaller screens */
-            max-width: none; /* Remove maximum width */
-            height: auto; /* Let the height adjust dynamically */
-            padding: 10px; /* Reduce padding inside the cards */
-            margin: 10px 0; /* Center the cards and add spacing between them */
-            
-
-
-
-        }
-        /* Header */
-        /* Tour Section */
-        .tour-section {
-            padding: 10px; /* Reduce padding */
-            text-align: center; /* Center-align content */
-        }
-    
-        .tour-title {
-            font-size: 1.5rem; /* Reduce font size for tour titles */
-            margin-bottom: 10px; /* Add spacing below the title */
-        }
-    
-        .tour-description {
-            font-size: 0.9rem; /* Reduce font size for descriptions */
-            line-height: 1.4; /* Improve readability */
-            margin-bottom: 15px; /* Add spacing below the description */
-        }
-    
-        .tour-image {
-            width: 150%; /* Reduce width of the images */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 15px; /* Add spacing below the image */
-            border-radius: 5px; /* Optional: Add rounded corners */
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-        }
-    
-        .tour-card {
-            width: 80%; /* Reduce width of the tour cards */
-            max-width: 250px; /* Limit the maximum width */
-            height: auto; /* Let the height adjust dynamically */
-            padding: 15px; /* Reduce padding inside the cards */
-            margin: 10px auto; /* Center the cards and add spacing between them */
-            border-radius: 10px; /* Optional: Add rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-        }
-    
-        .tour-card h2 {
-            font-size: 1.2rem; /* Reduce font size for titles inside the cards */
-            margin-bottom: 10px; /* Add spacing below the title */
-        }
-    
-        .tour-card p {
-            font-size: 0.9rem; /* Reduce font size for descriptions inside the cards */
-            margin-bottom: 10px; /* Add spacing below the text */
-        }
-    
-        .learn-more-btn {
-            font-size: 0.9rem; /* Reduce font size for the button text */
-            padding: 8px 15px; /* Reduce padding inside the button */
-        }
-    
-        /* Footer */
-        footer {
-            padding: 10px; /* Reduce padding */
-            text-align: center; /* Center-align footer content */
-        }
-    
-        .footer-info p {
-            font-size: 0.8rem; /* Reduce font size for footer text */
-        }
-    
-        .footer-logo img {
-            width: 80px; /* Reduce logo size */
-            height: auto; /* Maintain aspect ratio */
-        }
-    
-        #footer-text {
-            font-size: 0.8rem; /* Reduce font size for footer copyright text */
-        }
-    }
-
-    
