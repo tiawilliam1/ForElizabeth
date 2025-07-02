@@ -21,9 +21,24 @@
             <span class="language-option" data-lang="fr">FR</span> /
             <span class="language-option" data-lang="el">GR</span>
         </div>
-     
+    
+        <div class="burger-menu-btn" aria-label="Toggle Navigation">
+            <img src="menu.png" alt="Open Menu" class="burger-icon">
+            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
+        </div>
+    
+    
+        <!-- Navigation Menu -->
+        <nav class="burger-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
   
-         
+    
     <nav>
         <ul>
             <li><a href="index.html" id="nav-home">Home</a></li>
@@ -417,6 +432,38 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('en'); // Default to English
 });
 
+// Select the burger menu button, navigation menu, and icons
+// Select the burger menu button, navigation menu, and icons
+const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
+const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
+const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
+const closeIcon = document.querySelector('.close-icon'); // The x.png icon
+
+// Add a click event listener to the burger menu button
+burgerMenuBtn.addEventListener('click', () => {
+    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
+
+    // Toggle between the burger icon and the close icon
+    if (isMenuOpen) {
+        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
+        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
+    } else {
+        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
+        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
+    }
+});
+
+// Add a click event listener to the "X" button (close icon)
+closeIcon.addEventListener('click', () => {
+    // Close the menu by removing the 'active' class
+    burgerMenu.classList.remove('active');
+
+    // Show the burger icon (menu.png)
+    burgerIcon.style.display = 'block';
+
+    // Hide the "X" icon (x.png)
+    closeIcon.style.display = 'none';
+});
 
 </script>
 
