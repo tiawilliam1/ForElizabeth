@@ -15,6 +15,11 @@
         <div class="logo-container">
             <img src="logo.jpg" alt="Logo" class="logo">
         </div>
+        <div class="language-selector">
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -117,4 +122,96 @@
         // Observe each scroll-animate element
         elements.forEach(element => observer.observe(element));
     });
+    document.addEventListener("DOMContentLoaded", function () {
+    const langOptions = document.querySelectorAll('.language-option');
+    const elementsToTranslate = {
+        headerTitle: document.querySelector('h1'),
+        aboutMeText: document.querySelector('.about-me-text p'),
+        visionTitle: document.querySelector('.text-next-to-image h2'),
+        visionText: document.querySelectorAll('.text-next-to-image p'),
+        footerQuote: document.querySelector('.about-me-footer ul li em'),
+        footerAuthor: document.querySelector('.about-me-footer p strong'),
+        navHome: document.querySelector('nav ul li:nth-child(1) a'),
+        navTours: document.querySelector('nav ul li:nth-child(2) a'),
+        navAbout: document.querySelector('nav ul li:nth-child(3) a'),
+        navContact: document.querySelector('nav ul li:nth-child(4) a'),
+        footerName: document.querySelector('.footer-info p:nth-child(1)'),
+        footerTitle: document.querySelector('.footer-info p:nth-child(2)')
+    };
+
+    const translations = {
+        en: {
+            headerTitle: "About me",
+            aboutMeText: "An officially licensed tourist guide since 2016, I conduct tours throughout Greece and in Athens, the city where I was born and raised. After completing my studies in History and Archaeology at the National and Kapodistrian University of Athens, I continued my education in France at Bordeaux Montaigne University (Management of Cultural Heritage), and at the Sorbonne-INHA Art Institute (Modern Art). Afterwards, I lived in France for eight years, gaining experience in art galleries, auction houses, and museums.",
+            visionTitle: "My Vision...",
+            visionText: [
+                "For me, discovering a place is a shared experience: you see the city through my eyes, and I see it through yours. Wandering is an art, and art is all around us in many forms. I enjoy connecting different periods and artists—whether it’s a Cycladic statue that reminds us of a Giacometti sculpture, or a Minoan bull from a Cretan fresco that evokes a Picasso drawing. Curiosity and imagination have no limits, and this is what I aim to inspire in my visitors.",
+                "Whether you're interested in ancient ruins, modern art, or local cuisine, I can tailor a tour to suit your interests. Let's explore Greece together and create unforgettable memories!"
+            ],
+            footerQuote: "“Cities also believe they are the work of the mind or of chance, but neither the one nor the other suffices to hold up their walls. You take delight not in a city's seven or seventy wonders, but in the answer it gives to a question of yours. or to the question it asks you, forcing you to answer, like Thebes through the mouth of the Sphinx”",
+            footerAuthor: "Invisible Cities, Italo Calvino.",
+            navHome: "Home",
+            navTours: "Tours",
+            navAbout: "About me",
+            navContact: "Contact",
+            footerName: "Elisavet Makri",
+            footerTitle: "Art Historian - Licensed Tour Guide"
+        },
+        fr: {
+            headerTitle: "À propos de moi",
+            aboutMeText: "Guide touristique officiellement licenciée depuis 2016, je conduis des visites à travers la Grèce et à Athènes, la ville où je suis née et où j'ai grandi. Après avoir terminé mes études en Histoire et Archéologie à l'Université Nationale et Kapodistrienne d'Athènes, j'ai poursuivi mes études en France à l'Université Bordeaux Montaigne (Gestion du Patrimoine Culturel), et à l'Institut d'Art Sorbonne-INHA (Art Moderne). Ensuite, j'ai vécu en France pendant huit ans, acquérant de l'expérience dans les galeries d'art, les maisons de vente aux enchères et les musées.",
+            visionTitle: "Ma Vision...",
+            visionText: [
+                "Pour moi, découvrir un lieu est une expérience partagée : vous voyez la ville à travers mes yeux, et je la vois à travers les vôtres. Errer est un art, et l'art est tout autour de nous sous de nombreuses formes. J'aime connecter différentes périodes et artistes—qu'il s'agisse d'une statue cycladique qui nous rappelle une sculpture de Giacometti, ou d'un taureau minoen d'une fresque crétoise qui évoque un dessin de Picasso. La curiosité et l'imagination n'ont pas de limites, et c'est ce que je vise à inspirer chez mes visiteurs.",
+                "Que vous soyez intéressé par les ruines anciennes, l'art moderne ou la cuisine locale, je peux adapter une visite à vos intérêts. Explorons la Grèce ensemble et créons des souvenirs inoubliables !"
+            ],
+            footerQuote: "“Les villes croient aussi qu'elles sont l'œuvre de l'esprit ou du hasard, mais ni l'un ni l'autre ne suffit à soutenir leurs murs. Vous prenez plaisir non pas aux sept ou soixante-dix merveilles d'une ville, mais à la réponse qu'elle donne à une de vos questions. ou à la question qu'elle vous pose, vous obligeant à répondre, comme Thèbes par la bouche du Sphinx”",
+            footerAuthor: "Les Villes Invisibles, Italo Calvino.",
+            navHome: "Accueil",
+            navTours: "Visites",
+            navAbout: "À propos de moi",
+            navContact: "Contact",
+            footerName: "Elisavet Makri",
+            footerTitle: "Historienne de l'art - Guide touristique licenciée"
+        },
+        el: {
+            headerTitle: "Σχετικά με εμένα",
+            aboutMeText: "Επίσημα αδειοδοτημένη ξεναγός από το 2016, πραγματοποιώ ξεναγήσεις σε όλη την Ελλάδα και στην Αθήνα, την πόλη όπου γεννήθηκα και μεγάλωσα. Αφού ολοκλήρωσα τις σπουδές μου στην Ιστορία και Αρχαιολογία στο Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, συνέχισα τις σπουδές μου στη Γαλλία στο Πανεπιστήμιο Bordeaux Montaigne (Διαχείριση Πολιτιστικής Κληρονομιάς), και στο Ινστιτούτο Τέχνης Sorbonne-INHA (Μοντέρνα Τέχνη). Στη συνέχεια, έζησα στη Γαλλία για οκτώ χρόνια, αποκτώντας εμπειρία σε γκαλερί τέχνης, οίκους δημοπρασιών και μουσεία.",
+            visionTitle: "Το Όραμά μου...",
+            visionText: [
+                "Για μένα, η ανακάλυψη ενός τόπου είναι μια κοινή εμπειρία: βλέπετε την πόλη μέσα από τα μάτια μου, και εγώ τη βλέπω μέσα από τα δικά σας. Η περιπλάνηση είναι τέχνη, και η τέχνη είναι παντού γύρω μας σε πολλές μορφές. Μου αρέσει να συνδέω διαφορετικές περιόδους και καλλιτέχνες—είτε πρόκειται για ένα κυκλαδικό άγαλμα που μας θυμίζει ένα γλυπτό του Giacometti, είτε για έναν μινωικό ταύρο από μια κρητική τοιχογραφία που θυμίζει ένα σχέδιο του Picasso. Η περιέργεια και η φαντασία δεν έχουν όρια, και αυτό είναι που επιδιώκω να εμπνεύσω στους επισκέπτες μου.",
+                "Είτε ενδιαφέρεστε για αρχαία ερείπια, μοντέρνα τέχνη ή τοπική κουζίνα, μπορώ να προσαρμόσω μια ξενάγηση στις προτιμήσεις σας. Ας εξερευνήσουμε μαζί την Ελλάδα και ας δημιουργήσουμε αξέχαστες αναμνήσεις!"
+            ],
+            footerQuote: "“Οι πόλεις πιστεύουν επίσης ότι είναι έργο του νου ή της τύχης, αλλά ούτε το ένα ούτε το άλλο αρκεί για να στηρίξει τους τοίχους τους. Χαίρεστε όχι για τα επτά ή εβδομήντα θαύματα μιας πόλης, αλλά για την απάντηση που δίνει σε μια ερώτησή σας. ή στην ερώτηση που σας θέτει, αναγκάζοντάς σας να απαντήσετε, όπως η Θήβα μέσω του στόματος της Σφίγγας”",
+            footerAuthor: "Αόρατες Πόλεις, Ίταλο Καλβίνο.",
+            navHome: "Αρχική",
+            navTours: "Ξεναγήσεις",
+            navAbout: "Σχετικά με εμένα",
+            navContact: "Επικοινωνία",
+            footerName: "Ελισάβετ Μακρή",
+            footerTitle: "Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός"
+        }
+    };
+
+    langOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const lang = option.dataset.lang;
+            const translation = translations[lang];
+
+            elementsToTranslate.headerTitle.textContent = translation.headerTitle;
+            elementsToTranslate.aboutMeText.textContent = translation.aboutMeText;
+            elementsToTranslate.visionTitle.textContent = translation.visionTitle;
+            elementsToTranslate.visionText[0].textContent = translation.visionText[0];
+            elementsToTranslate.visionText[1].textContent = translation.visionText[1];
+            elementsToTranslate.footerQuote.textContent = translation.footerQuote;
+            elementsToTranslate.footerAuthor.textContent = translation.footerAuthor;
+            elementsToTranslate.navHome.textContent = translation.navHome;
+            elementsToTranslate.navTours.textContent = translation.navTours;
+            elementsToTranslate.navAbout.textContent = translation.navAbout;
+            elementsToTranslate.navContact.textContent = translation.navContact;
+            elementsToTranslate.footerName.textContent = translation.footerName;
+            elementsToTranslate.footerTitle.textContent = translation.footerTitle;
+        });
+    });
+});
 </script>

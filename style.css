@@ -209,7 +209,44 @@ nav ul li a:hover {
 .symbol {
     width: 70px;
     height: auto;
+    margin-right: 90px;
+   margin-left: 90px;
+   
 }
+
+
+/* Dedicated styles for homepage info boxes */
+.homepage-info-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align the info boxes */
+    gap: 50px; /* Add spacing between the boxes */
+    margin-top: 30px; /* Add space above the section */
+    margin-bottom: 50px; /* Add space below the section */
+}
+
+.homepage-info-box {
+    text-align: center; /* Center-align the text */
+    flex: 1; /* Allow equal space for each box */
+}
+
+.symbol {
+    width: 70px; /* Set the width of the swirl images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space below the swirl image */
+    margin-left: 30px;
+}
+
+.homepage-info-box p {
+    font-size: 1rem; /* Adjust font size */
+    color: #555; /* Set text color */
+    line-height: 1.5; /* Improve readability */
+    margin: 0; /* Remove default margins */
+}
+
+
+
+
+
 
 .language-selector {
     position: absolute;
@@ -1426,7 +1463,7 @@ footer {
 }
 
 .about-me-footer ul li {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     margin-top: 60px;
     margin-right: 60px;
@@ -1472,7 +1509,12 @@ footer {
     max-width: 400px; /* Limit the maximum width of the image */
     margin-right: 850px; /* Remove any extra margin on the left */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    
+    width: auto; /* Maintain the original width */
+    height: auto; /* Maintain the original height */
+    max-width: 400px; /* Limit the maximum width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: block; /* Ensure the image is displayed */
+    margin: 0 auto; /* 
 }
 
 .about-me-header h1 {
@@ -1547,6 +1589,7 @@ footer {
     font-weight: bold; /* Make the heading bold */
     color: #333; /* Set a dark color for the heading */
     margin-bottom: 20px; /* Add space below the heading */
+    margin-left: 0px;
    
 }
 
@@ -2397,6 +2440,15 @@ html, body {
 /* Media Queries for INDEX Screens */
 @media only screen and (max-width: 600px) {
 
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure it is above other elements */
+        background-color: #fff; /* Optional: Add a background color */
+    }
+
+
     .burger-menu-btn {
         display: flex; /* Show the burger button */
         flex-direction: column;
@@ -2478,8 +2530,8 @@ html, body {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        margin-right: -650px;
         margin-top: -80px;
+        margin-right: -690px;
     }
 
     .burger-menu {
@@ -2531,9 +2583,61 @@ html, body {
         display: flex; /* Show the menu when active */
     }
     
+        .burger-menu {
+            display: none; /* Hide the menu by default */
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff; /* White background */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            z-index: 900;
+        }
+    
+        .burger-menu.active {
+            display: flex; /* Show the menu when active */
+        }
+    
+        .burger-menu ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Center-align the text */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            gap: 20px; /* Add spacing between menu items */
+        }
+    
+        .burger-menu ul li {
+            margin: 0; /* Remove default margins */
+        }
+    
+        .burger-menu ul li a {
+            text-decoration: none; /* Remove underline */
+            font-size: 1.5rem; /* Adjust font size */
+            color: #333; /* Dark text color */
+            padding: 10px 20px; /* Add padding for clickable area */
+            transition: color 0.3s ease; /* Smooth hover effect */
+        }
+    
+        .burger-menu ul li a:hover {
+            color: #555; /* Slightly lighter color on hover */
+        }
+    
 
 
 
+
+
+
+
+
+
+
+        
 
 
     .main-wrapper {
@@ -2546,7 +2650,7 @@ html, body {
     /* Header */
     header {
         padding-top: 45px;
-        padding-left: 40px;
+        padding-left: 20px;
     }
 
 
@@ -2585,9 +2689,8 @@ html, body {
     .language-selector {
         font-size: 0.8rem; /* Reduce font size for language options */
         margin-right: 10px;
-     
-        margin-right: 150px;
     margin-top: 5px;
+    margin-right: 190px;
     }
 
       /* Navigation */
@@ -2602,7 +2705,7 @@ html, body {
 
     html[lang="en"] nav ul li a {
         font-family: 'Playfair Display', serif; /* Font for English */
-        font-size: 1rem; /* Adjust font size for English */
+        font-size: 1.9rem;
     }
 
     /* Navigation for French */
@@ -2636,9 +2739,25 @@ html, body {
     
     /* Homepage Section */
     #homepage {
+
+        margin-right: -500px;
+        margin-top: 130px;
+        margin-left: -90px;
        
     }
 
+    #homepage p {
+    margin-left: -70px;
+}
+
+
+#homepage h2{
+    font-size: 1.7rem;
+margin-left: -150px;
+margin-right: -10px;
+padding-left: 70px;
+
+}
     .homepage-content {
        
         

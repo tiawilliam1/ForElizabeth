@@ -67,7 +67,8 @@
                 </div>
             </div>
         </div>
-        <div class="info-section">
+
+        <div class="homepage-info-section">
             <div class="homepage-info-box">
                 <img src="swirl1.png" alt="Symbol 1" class="symbol">
                 <p id="info-box-1">Greek, English & French guide</p>
@@ -432,12 +433,13 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('en'); // Default to English
 });
 
-// Select the burger menu button, navigation menu, and icons
-// Select the burger menu button, navigation menu, and icons
+
+// Select the burger menu button, navigation menu, icons, and header
 const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
 const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
 const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
 const closeIcon = document.querySelector('.close-icon'); // The x.png icon
+const header = document.querySelector('header'); // The header element
 
 // Add a click event listener to the burger menu button
 burgerMenuBtn.addEventListener('click', () => {
@@ -447,23 +449,33 @@ burgerMenuBtn.addEventListener('click', () => {
     if (isMenuOpen) {
         burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
         closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
+        header.style.display = 'block'; // Ensure the header is visible
+        console.log('Menu opened'); // Debugging log
     } else {
         burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
         closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
+        header.style.display = 'block'; // Ensure the header remains visible
+        console.log('Menu closed'); // Debugging log
     }
 });
 
 // Add a click event listener to the "X" button (close icon)
 closeIcon.addEventListener('click', () => {
+    console.log('Close button clicked'); // Debugging log
+
     // Close the menu by removing the 'active' class
-    burgerMenu.classList.remove('active');
+    burgerMenu.classList.remove('hidden');
 
     // Show the burger icon (menu.png)
     burgerIcon.style.display = 'block';
 
     // Hide the "X" icon (x.png)
     closeIcon.style.display = 'none';
+
+    // Ensure the header is visible
+    header.style.display = 'block';
 });
+
 
 </script>
 
