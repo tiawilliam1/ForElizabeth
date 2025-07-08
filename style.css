@@ -2531,7 +2531,7 @@ html, body {
         height: 100%;
         object-fit: contain;
         margin-top: -80px;
-        margin-right: -690px;
+        margin-right: -620px;
     }
 
     .burger-menu {
@@ -2627,7 +2627,10 @@ html, body {
             color: #555; /* Slightly lighter color on hover */
         }
     
-
+        .text-content {
+            border-top: none; /* Remove the top border */
+            border-bottom: none; /* Remove the bottom border */
+        }
 
 
 
@@ -2756,18 +2759,72 @@ html, body {
 margin-left: -150px;
 margin-right: -10px;
 padding-left: 70px;
+margin-top: -10px;
 
 }
-
-
 
 #homepage h3{
     font-size: 1.4rem;
 margin-left: -145px;
 margin-right: -10px;
 padding-left: 70px;
-
 }
+
+.slideshow-container {
+    width: 130%;
+    max-width: 150%;
+    height: auto;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 10px;
+    margin-left: -460px;
+    margin-top: 550px;
+}
+
+.slideshow-container img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Slideshow Caption */
+.slideshow-caption {
+    font-size: 0.9rem; /* Reduce font size for captions */
+    text-align: center; /* Center-align captions */
+    margin-top: 10px; /* Add spacing above captions */
+}
+
+/* Navigation Buttons */
+.slideshow-navigation {
+    display: flex; /* Use flexbox for navigation */
+    justify-content: center; /* Center-align navigation buttons */
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 10px; /* Add spacing above navigation */
+}
+
+.slideshow-button {
+    width: 30px; /* Adjust button size */
+    height: 30px; /* Maintain aspect ratio */
+    background-color: #333; /* Dark background for buttons */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Make buttons circular */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.slideshow-button:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+
+
+
+
+
+
+
+
     .homepage-content {
        
         
