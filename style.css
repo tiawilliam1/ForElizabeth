@@ -2646,8 +2646,8 @@ html, body {
             display: block; /* Make it visible */
             margin-top: 20px; /* Add spacing above */
             text-align: center; /* Center-align the selector */
-            margin-right: 120px;
             font-size: 1.3rem;
+            margin-right: 32%;
         }
     
         .burger-menu .language-selector select {
@@ -2794,7 +2794,7 @@ html, body {
 margin-left: -150px;
 margin-right: -10px;
 padding-left: 70px;
-margin-top: 290px;
+margin-top: 310px;
 
 }
 
@@ -2806,14 +2806,14 @@ padding-left: 70px;
 }
 
 .slideshow-container {
-    width: 190%;
-    max-width: 160%;
+    width: 170%;
+    max-width: 170%;
     height: auto;
     overflow: hidden;
     margin: 20px auto;
     padding: 10px;
     margin-top: 550px;
-    margin-left: -497px;
+    margin-left: -500px;
 }
 
 .slideshow-container img {

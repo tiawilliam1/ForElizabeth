@@ -11,12 +11,35 @@
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
         </div>
-        <h1 id="header-title">  Our Tours</h1>
+        <h1 id="header-title">Greece Local Guide</h1>
         <div class="language-selector">
             <span class="language-option" data-lang="en">EN</span> /
             <span class="language-option" data-lang="fr">FR</span> /
             <span class="language-option" data-lang="el">GR</span>
         </div>
+    
+        <div class="burger-menu-btn" aria-label="Toggle Navigation">
+            <img src="menu.png" alt="Open Menu" class="burger-icon">
+            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
+        </div>
+    
+    
+        <!-- Navigation Menu -->
+        <nav class="burger-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                <li class="language-selector">
+                            <span class="language-option" data-lang="en">EN</span> /
+                            <span class="language-option" data-lang="fr">FR</span> /
+                            <span class="language-option" data-lang="el">GR</span>
+                </li>
+            </ul>
+    
+        </nav>
     <nav>
         <ul>
             <li><a href="index.html" id="nav-home">Home</a></li>
@@ -253,6 +276,50 @@
             const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
             changeLanguage(savedLanguage);
         });
+
+
+        // Select the burger menu button, navigation menu, icons, and header
+const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
+const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
+const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
+const closeIcon = document.querySelector('.close-icon'); // The x.png icon
+const header = document.querySelector('header'); // The header element
+
+// Add a click event listener to the burger menu button
+burgerMenuBtn.addEventListener('click', () => {
+    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
+
+    // Toggle between the burger icon and the close icon
+    if (isMenuOpen) {
+        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
+        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
+        header.style.display = 'block'; // Ensure the header is visible
+        console.log('Menu opened'); // Debugging log
+    } else {
+        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
+        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
+        header.style.display = 'block'; // Ensure the header remains visible
+        console.log('Menu closed'); // Debugging log
+    }
+});
+
+// Add a click event listener to the "X" button (close icon)
+closeIcon.addEventListener('click', () => {
+    console.log('Close button clicked'); // Debugging log
+
+    // Close the menu by removing the 'active' class
+    burgerMenu.classList.remove('hidden');
+
+    // Show the burger icon (menu.png)
+    burgerIcon.style.display = 'block';
+
+    // Hide the "X" icon (x.png)
+    closeIcon.style.display = 'none';
+
+    // Ensure the header is visible
+    header.style.display = 'block';
+});
+
     </script>
 </body>
 </html>
