@@ -2492,7 +2492,7 @@ html, body {
         text-align: center;
         margin-top: -260px;
         
-}
+
     }
 
     .burger-menu ul li {
@@ -2637,11 +2637,40 @@ html, body {
             border-bottom: none; /* Remove the bottom border */
         }
 
+        .language-selector {
+            display: none;
+        }
+    
+        /* Show the language selector inside the burger menu */
+        .burger-menu .language-selector {
+            display: block; /* Make it visible */
+            margin-top: 20px; /* Add spacing above */
+            text-align: center; /* Center-align the selector */
+            margin-right: 120px;
+            font-size: 1.3rem;
+        }
+    
+        .burger-menu .language-selector select {
+            padding: 5px 15px; /* Add padding inside the select element */
+            font-size: 14px; /* Adjust font size */
+            border: none; /* Remove border */
+            background: none; /* Remove background */
+            color: #333; /* Dark text color */
+            font-family: 'Playfair Display', serif;
+            cursor: pointer;
+            background-color: #f4f4f4; /* Light background */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+    
+        .burger-menu .language-selector select:hover {
+            background-color: #ddd; /* Slightly darker background on hover */
+        }
 
+        .close-icon {
 
-
-
-
+            width:50%;
+        }
 
 
 
@@ -2659,6 +2688,7 @@ html, body {
     header {
         padding-top: 45px;
         padding-left: 20px;
+        padding-bottom: 0px;
     }
 
 
@@ -2764,7 +2794,7 @@ html, body {
 margin-left: -150px;
 margin-right: -10px;
 padding-left: 70px;
-margin-top: -10px;
+margin-top: 260px;
 
 }
 
@@ -2776,20 +2806,19 @@ padding-left: 70px;
 }
 
 .slideshow-container {
-    width: 130%;
+    width: 190%;
     max-width: 150%;
     height: auto;
     overflow: hidden;
     margin: 20px auto;
     padding: 10px;
-    margin-left: -459px;
     margin-top: 550px;
+    margin-left: -480px;
 }
 
 .slideshow-container img {
     width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Add rounded corners */
+  
 }
 
 /* Slideshow Caption */
@@ -2825,17 +2854,27 @@ padding-left: 70px;
 
 
 
+.homepage-image {
+
+    max-width: 170%;
+    height: auto;
+    border-radius: 0px;
+}
 
 
 
 
 
     .homepage-content {
+
+        margin-bottom: -50px;
        
         
     }
     
+
     .text-content {
+        margin-bottom: -10px;
       
     }
 
@@ -2852,7 +2891,10 @@ padding-left: 70px;
     }
 
     .image-content {
-   
+        margin-top: -610px;
+        flex: 1;
+        text-align: right;
+        padding-left: 70px;
     }
 
     .slideshow-container img {
