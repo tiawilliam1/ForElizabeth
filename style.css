@@ -2434,6 +2434,9 @@ html, body {
 }
 
 
+.tour-regions {
+    display: none;
+}
 
 
 
@@ -2943,29 +2946,106 @@ padding-left: 70px;
     }
 
     /* Carousel Section */
-    .carousel-container {
-        overflow: hidden;
-        width: 100%; /* Full width for smaller screens */
-    }
 
-    .carousel {
-        display: flex;
-        gap: 10px; /* Reduce spacing between carousel items */
-    }
+        /* Hide the carousel for smaller screens */
+        .carousel-container {
+            display: none;
+        }
+    
+        /* Style the tour regions for media */
+        .tour-regions {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            gap: 20px; /* Add spacing between regions */
+            margin: 20px auto; /* Center the section horizontally */
+            padding: 10px; /* Add padding around the section */
+            text-align: center; /* Center-align the text */
+            margin-bottom: 100px;
+        }
+    
+        .tour-region {
+            display: flex;
+            flex-direction: column; /* Stack image and text vertically */
+            align-items: center; /* Center-align content */
+            gap: 10px; /* Add spacing between image and text */
+            text-decoration: none; /* Remove underline from links */
+        }
+    
+        .tour-region a {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+        }
+    
+        .region-image {
+            width: 100%; /* Make images responsive */
+            max-width: 300px; /* Limit the maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+    
+        .tour-region p {
+            font-size: 1.2rem; /* Adjust font size for readability */
+            font-family: 'Playfair Display', serif; /* Use a consistent font */
+            color: #333; /* Dark text color */
+            margin: 0; /* Remove default margin */
+        }
+    
+        .tour-region:hover .region-image {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+    
+ /* Adjust layout for the "Why Licensed Guide" section */
+        .why-guide-content {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center-align content */
+            text-align: center; /* Center-align text */
+            gap: 20px; /* Add spacing between text and image */
+        }
+    
+        .why-guide-text {
+            margin: 0; /* Remove margins */
+            max-width: 100%; /* Allow full width */
+            text-align: center; /* Center-align text */
+        }
+    
+        .why-guide-image {
+            margin: 0; /* Remove margins */
+            max-width: 100%; /* Allow full width */
+            text-align: center; /* Center-align image */
+        }
+    
+        .why-guide-img {
+            width: 100%; /* Make the image responsive */
+            max-width: 300px; /* Limit the maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+        }
 
-    .carousel-item {
-        flex: 0 0 100%; /* Show one item at a time */
-        text-align: center; /* Center-align carousel content */
-    }
+        .why-licensed-guide {
 
-    .carousel-image {
-        width: 100%; /* Make images responsive */
-        height: auto; /* Maintain aspect ratio */
-    }
+            padding-right: 20%;
+            padding-left: 20%;
+        }
 
-    .carousel-caption {
-        font-size: 0.9rem; /* Reduce font size for captions */
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* Quote Slideshow Section */
     .quote-slideshow-section {
