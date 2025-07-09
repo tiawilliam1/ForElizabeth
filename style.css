@@ -2490,6 +2490,9 @@ html, body {
         padding: 0;
         margin: 0;
         text-align: center;
+        margin-top: -260px;
+        
+}
     }
 
     .burger-menu ul li {
@@ -2609,6 +2612,8 @@ html, body {
             display: flex;
             flex-direction: column; /* Stack items vertically */
             gap: 20px; /* Add spacing between menu items */
+            margin-top: -260px;
+
         }
     
         .burger-menu ul li {
@@ -2750,7 +2755,7 @@ html, body {
     }
 
     #homepage p {
-    margin-left: -70px;
+    margin-left: -60px;
 }
 
 
@@ -2777,7 +2782,7 @@ padding-left: 70px;
     overflow: hidden;
     margin: 20px auto;
     padding: 10px;
-    margin-left: -460px;
+    margin-left: -459px;
     margin-top: 550px;
 }
 
