@@ -2530,7 +2530,7 @@ html, body {
 
     .burger-icon,
     .close-icon {
-        width: 100%;
+        width: 70%;
         height: 100%;
         object-fit: contain;
         margin-top: -80px;
@@ -2794,7 +2794,7 @@ html, body {
 margin-left: -150px;
 margin-right: -10px;
 padding-left: 70px;
-margin-top: 260px;
+margin-top: 290px;
 
 }
 
