@@ -2920,6 +2920,13 @@ padding-left: 70px;
         margin-bottom: 10px; /* Add spacing below the image */
     }
 
+    .homepage-info-section {
+
+    margin-bottom: 10px;
+    margin-right: 50%;
+    margin-top: 11%;
+    display: block;
+    }
     .homepage-info-box {
         max-width: 100%; /* Allow full width */
         text-align: center; /* Center-align info box content */
