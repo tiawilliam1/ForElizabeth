@@ -3176,6 +3176,59 @@ padding-left: 70px;
         margin-right: 15%;
     }
 
+
+/* TOUR.HTMLt */
+
+.athens-tours{
+
+    margin-top: 30%;
+    width: 100%;
+}
+    .tour-card {
+        width: 100%; /* Reduce the width of the cards */
+        height: auto; /* Let the height adjust dynamically */
+        padding: 10px; /* Reduce padding inside the cards */
+        margin: 10px auto; /* Center the cards and reduce spacing */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    }
+
+    .tour-card img {
+        height: 200px; /* Reduce the height of the images */
+        object-fit: cover; /* Ensure the images cover the area without distortion */
+    }
+
+    .tour-card h2 {
+        font-size: 1.2rem; /* Reduce the font size of the headings */
+        margin: 10px 0; /* Adjust spacing above and below the heading */
+    }
+
+    .tour-card p {
+        font-size: 0.9rem; /* Reduce the font size of the text */
+        margin: 5px 0; /* Adjust spacing between paragraphs */
+    }
+
+    .learn-more-btn {
+        padding: 8px 15px; /* Reduce button padding */
+        font-size: 0.9rem; /* Reduce button font size */
+    }
+
+    .tour-card ul { 
+display: none;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
