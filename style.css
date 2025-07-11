@@ -3237,7 +3237,29 @@ display: none;
 
 
 
-
+        footer {
+            padding: 10px; /* Reduce padding */
+            text-align: center; /* Center-align footer content */
+        }
+    
+        .footer-info1 p {
+            font-size: 0.7rem; /* Reduce font size for footer text */
+       
+            margin-left: 10%;
+         margin-right: -100%;
+        }
+    
+        .footer-logo1 img {
+            width: 80px; /* Reduce logo size */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: -4%;
+        }
+    
+        #footer-text1 {
+            font-size: 0.7rem; /* Reduce font size for footer copyright text */
+            margin-bottom: 10%;
+            margin-right: 15%;
+        }
 
 
 }
