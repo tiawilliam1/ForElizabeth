@@ -3128,11 +3128,11 @@ padding-left: 70px;
 
         
         margin-right: -50%;
-margin-left: -50%;
-padding-right: 60%;
-padding-left: 60%;
-margin-top: 20%;
-margin-bottom: -9%;
+        margin-left: -50%;
+        padding-right: 60%;
+        padding-left: 60%;
+        margin-top: 20%;
+        margin-bottom: -9%;
     }
 
  
@@ -3156,6 +3156,9 @@ margin-bottom: -9%;
 
     .footer-info p {
         font-size: 0.7rem; /* Reduce font size for footer text */
+   
+        margin-left: 15%;
+     margin-right: -100%;
     }
 
     .footer-logo img {
