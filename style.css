@@ -2440,6 +2440,8 @@ html, body {
 
 
 
+
+
 /* Media Queries for INDEX Screens */
 @media only screen and (max-width: 600px) {
 
@@ -2976,6 +2978,7 @@ padding-left: 70px;
             align-items: center; /* Center-align content */
             gap: 10px; /* Add spacing between image and text */
             text-decoration: none; /* Remove underline from links */
+            margin-left: -3%;
         }
     
         .tour-region a {
@@ -3155,7 +3158,7 @@ padding-left: 70px;
     }
 
     .footer-info p {
-        font-size: 0.8rem; /* Reduce font size for footer text */
+        font-size: 0.7rem; /* Reduce font size for footer text */
    
         margin-left: 10%;
      margin-right: -100%;
@@ -3164,6 +3167,7 @@ padding-left: 70px;
     .footer-logo img {
         width: 80px; /* Reduce logo size */
         height: auto; /* Maintain aspect ratio */
+        margin-bottom: -4%;
     }
 
     #footer-text {
