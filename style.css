@@ -3195,6 +3195,7 @@ padding-left: 70px;
     .tour-card img {
         height: 200px; /* Reduce the height of the images */
         object-fit: cover; /* Ensure the images cover the area without distortion */
+        flex: 1;
     }
 
     .tour-card h2 {
@@ -3218,11 +3219,21 @@ display: none;
 
     }
 
+    .athens-tours-page .tour-card .image-container {
+        flex: 2;
+        height: 100%;
+        overflow: hidden;
+        margin-left: 0px;
+        margin-top: -10px;
+        transform: translate(-10px, 10px);
+        }
 
-
-
-
-
+        .tour-card h2 {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+     
 
 
 
