@@ -3155,9 +3155,9 @@ padding-left: 70px;
     }
 
     .footer-info p {
-        font-size: 0.7rem; /* Reduce font size for footer text */
+        font-size: 0.8rem; /* Reduce font size for footer text */
    
-        margin-left: 15%;
+        margin-left: 10%;
      margin-right: -100%;
     }
 
@@ -3167,7 +3167,9 @@ padding-left: 70px;
     }
 
     #footer-text {
-        font-size: 0.8rem; /* Reduce font size for footer copyright text */
+        font-size: 0.7rem; /* Reduce font size for footer copyright text */
+        margin-bottom: 10%;
+        margin-right: 15%;
     }
 
 }
