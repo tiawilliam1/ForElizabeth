@@ -2301,7 +2301,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
-    text-align: JUSTIFY;
+    text-align: justify;
     margin-right: 50px;
 }
 
@@ -2951,6 +2951,13 @@ padding-left: 70px;
         .carousel-container {
             display: none;
         }
+
+        .carousel-navigation {
+
+            display: none;
+        }
+
+
     
         /* Style the tour regions for media */
         .tour-regions {
@@ -2995,7 +3002,61 @@ padding-left: 70px;
             transform: scale(1.05); /* Slight zoom effect on hover */
             transition: transform 0.3s ease; /* Smooth hover effect */
         }
-    
+
+     
+            /* Hide the carousel for smaller screens */
+            .carousel-container {
+                display: none; /* Hide the carousel */
+            }
+        
+            .carousel-navigation {
+                display: none; /* Hide the carousel navigation */
+            }
+        
+            /* Show the tour regions in the same section */
+            .horizontal-carousel-section {
+                display: flex;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center-align content */
+                gap: 20px; /* Add spacing between elements */
+                padding: 20px; /* Add padding around the section */
+                background-color: #f9f9f9; /* Match the carousel background */
+                border-radius: 10px; /* Optional: Add rounded corners */
+            }
+        
+            .tour-regions {
+                display: flex; /* Show the tour regions */
+                flex-direction: column; /* Stack items vertically */
+                gap: 20px; /* Add spacing between regions */
+                width: 100%; /* Make it take the full width of the section */
+                text-align: center; /* Center-align the text */
+            }
+        
+            .tour-region {
+                display: flex;
+                flex-direction: column; /* Stack image and text vertically */
+                align-items: center; /* Center-align content */
+                gap: 10px; /* Add spacing between image and text */
+                text-decoration: none; /* Remove underline from links */
+            }
+        
+            .region-image {
+                width: 100%; /* Make images responsive */
+                max-width: 300px; /* Limit the maximum width */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 10px; /* Add rounded corners */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+        
+            .tour-region p {
+                font-size: 1.2rem; /* Adjust font size for readability */
+                font-family: 'Playfair Display', serif; /* Use a consistent font */
+                color: #333; /* Dark text color */
+                margin: 0; /* Remove default margin */
+            }
+        
+
+        
  /* Adjust layout for the "Why Licensed Guide" section */
         .why-guide-content {
             display: flex;
@@ -3027,8 +3088,8 @@ padding-left: 70px;
 
         .why-licensed-guide {
 
-            padding-right: 15%;
-            padding-left: 15%;
+            margin-right: -100%;
+            margin-left: -100%;
         }
 
         .why-licensed-guide .section-title {
@@ -3057,8 +3118,25 @@ padding-left: 70px;
     /* Quote Slideshow Section */
     .quote-slideshow-section {
         padding: 10px; /* Reduce padding */
-        text-align: center; /* Center-align quotes */
+        text-align: justify; /* Center-align quotes */
+        padding-left: 120%;
+        padding-bottom: 10%;
+        
     }
+
+    .quote-slideshow-container {
+
+        
+        margin-right: -50%;
+margin-left: -50%;
+padding-right: 60%;
+padding-left: 60%;
+margin-top: 20%;
+margin-bottom: -9%;
+    }
+
+ 
+
 
     .quote-text {
         font-size: 0.9rem; /* Reduce font size for quotes */
@@ -3077,7 +3155,7 @@ padding-left: 70px;
     }
 
     .footer-info p {
-        font-size: 0.8rem; /* Reduce font size for footer text */
+        font-size: 0.7rem; /* Reduce font size for footer text */
     }
 
     .footer-logo img {
