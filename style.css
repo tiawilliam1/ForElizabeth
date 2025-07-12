@@ -3261,6 +3261,185 @@ display: none;
             margin-right: 15%;
         }
 
+/* Media Query for Screens Smaller than 768px */
+    /* General Section Styling */
+
+
+    header h1 {
+        font-size: 1.5rem; /* Reduce the font size of the header title */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Add spacing between links */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for navigation links */
+        padding: 5px 10px; /* Reduce padding for links */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        
+        flex-direction: column;
+        padding: 0px;
+        margin-bottom: 20%;
+        margin-right: -50%;
+    }
+
+    .hero-content {
+
+        margin-right: -50%;
+    }
+
+    .hero-text {
+        text-align: center; /* Center-align the text */
+        margin-bottom: 20px; /* Add spacing below the text */
+        margin-left: -6%;
+    }
+
+    .hero-text h2 {
+       
+        font-size: 1.9rem;
+        
+        margin-top: 40%;
+margin-bottom: 10%;
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Adjust font size for the paragraph */
+        margin-left: -12%;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+  
+
+    /* Tour Details Section */
+    .tour-details {
+        padding: 20px; /* Add padding around the section */
+
+
+
+        margin-right: -50%;
+margin-left: 10%;
+margin-top: -10%;
+    }
+
+
+    .info-row {
+        flex-direction: column; /* Stack info boxes vertically */
+      
+        gap: 30px;
+        margin-right: -50%;
+    }
+
+    .info-box {
+        width: 100%; /* Make info boxes take full width */
+        text-align: center; /* Center-align the text */
+    }
+
+    .info-box h3 {
+        font-size: 1.2rem; /* Adjust font size for headings */
+    }
+
+    .info-box p {
+        font-size: 1rem; /* Adjust font size for paragraphs */
+    }
+
+    /* Gallery Section */
+    .gallery-row {
+        flex-wrap: wrap;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        margin: 2px 20px;
+        padding: 10px;
+        margin-right: 35%;
+        margin-left: -12%;
+        }
+    }
+
+    .gallery-image {
+        max-width: 85%; /* Make images take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 20px; /* Add padding around the section */
+    }
+
+    .contact-box {
+        width: 100%; /* Make contact boxes take full width */
+        margin-bottom: 20px; /* Add spacing below each box */
+    }
+
+    .contact-box h2 {
+        font-size: 1.5rem; /* Adjust font size for headings */
+    }
+
+    .contact-box p {
+        font-size: 1rem; /* Adjust font size for paragraphs */
+    }
+
+   
+
+    .back-button-container1 {
+
+display: none;
+    }
+
+  .divider1 {
+
+display: none;
+
+  }
+
+  
+
+
+
+
+    /* Footer */
+    footer {
+        padding: 20px; /* Reduce padding for the footer */
+        text-align: center; /* Center-align footer content */
+    }
+
+    .footer-info p {
+        font-size: 0.8rem; /* Reduce font size for footer text */
+    }
+
+    .footer-logo img {
+        width: 60px; /* Reduce logo size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -3274,4 +3453,57 @@ display: none;
     /* Ensure all sections fit within the viewport */
 
     /* Adjust padding and margins to avoid overflow */
- 
+    .toggle-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .toggle-button:hover {
+        background-color: #555;
+    }
+    
+    .map-container {
+        margin-top: 20px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-container,
+.map-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: block; /* Ensure the carousel is visible by default */
+}
+
+.map-container {
+    display: none; /* Ensure the map is hidden by default */
+}
+
+.toggle-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #555;
+}
