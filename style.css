@@ -3363,7 +3363,7 @@ margin-top: -10%;
         margin-right: 35%;
         margin-left: -12%;
         }
-    }
+    
 
     .gallery-image {
         max-width: 85%; /* Make images take full width */
@@ -3392,15 +3392,53 @@ margin-top: -10%;
 
     .back-button-container1 {
 
-display: none;
+        display: none;
     }
 
   .divider1 {
 
-display: none;
+        display: none;
 
   }
 
+  .tour-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add spacing between the description and additional information */
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align text for smaller screens */
+}
+
+.tour-text {
+    width: 100%;
+    max-width: 600px;
+    text-align: justify;
+    margin: 0 auto;
+    margin-right: 10%;
+    margin-left: -10%;
+    margin-top: 10%;
+}
+
+.tour-extra-info {
+    width: 100%; /* Make the additional information take full width */
+    max-width: 600px; /* Limit the maximum width */
+    text-align: justify; /* Keep the text justified */
+    margin: 0 auto; /* Center the additional information */
+    margin-right: 10%;
+    margin-left: -10%;
+    margin-top: -10%;
+}
+
+.tour-details p{
+
+    margin-right: 25%;
+}
+  
+
+.info-item {
+
+    margin-right: 30%;
+}
   
 
 
