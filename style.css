@@ -3182,7 +3182,7 @@ padding-left: 70px;
 .athens-tours{
 
     margin-top: 30%;
-    width: 100%;
+    width: 110%;
 }
     .tour-card {
         width: 100%; /* Reduce the width of the cards */
@@ -3196,6 +3196,7 @@ padding-left: 70px;
         height: 200px; /* Reduce the height of the images */
         object-fit: cover; /* Ensure the images cover the area without distortion */
         flex: 1;
+        
     }
 
     .tour-card h2 {
@@ -3331,10 +3332,33 @@ margin-top: -10%;
 
 
     .info-row {
-        flex-direction: column; /* Stack info boxes vertically */
-      
-        gap: 30px;
-        margin-right: -50%;
+        display: grid; /* Use CSS Grid for layout */
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+        gap: 20px; /* Add spacing between the items */
+        justify-items: center; /* Center-align the items horizontally */
+        margin: 20px auto; /* Center the row horizontally */
+        padding: 10px; 
+    }
+
+
+    .acropolis-info-box {
+        text-align: center; /* Center-align the text inside each box */
+        padding: 10px; /* Add padding inside the boxes */
+        background-color: #fff; /* Optional: Add a white background */
+        border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+
+    .acropolis-info-box h3 {
+        font-size: 1.2rem; /* Adjust font size for headings */
+        margin-bottom: 10px; /* Add spacing below the heading */
+        color: #333; /* Dark text color */
+    }
+
+    .acropolis-info-box p {
+        font-size: 1rem; /* Adjust font size for paragraphs */
+        color: #555; /* Slightly lighter text color */
     }
 
     .info-box {
@@ -3362,6 +3386,8 @@ margin-top: -10%;
         padding: 10px;
         margin-right: 35%;
         margin-left: -12%;
+        margin-top: -5%;
+
         }
     
 
@@ -3440,26 +3466,21 @@ margin-top: -10%;
     margin-right: 30%;
 }
   
+.gallery-heading {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    text-align: center; /* Center-align the heading */
+    margin-top: 20px; /* Add spacing above the heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    color: #333; /* Optional: Change the color */
+    margin-right: 50%;
+    margin-left: -20%;
 
+}
 
+.contact-me {
 
-
-    /* Footer */
-    footer {
-        padding: 20px; /* Reduce padding for the footer */
-        text-align: center; /* Center-align footer content */
-    }
-
-    .footer-info p {
-        font-size: 0.8rem; /* Reduce font size for footer text */
-    }
-
-    .footer-logo img {
-        width: 60px; /* Reduce logo size */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-
+    margin-right: 25%;
+}
 
 
 
@@ -3467,11 +3488,118 @@ margin-top: -10%;
 
 
 
+/* Athens Tours */
+
+/* Tour Cards Section */
+
+
+.tour-card {
+    width: 70%; /* Make cards take full width */
+    max-width: 400px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the cards */
+    padding: 15px; /* Add padding inside the cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    text-align: center; /* Center-align the text inside the cards */
+    margin-left: 5%;
+}
+
+.tour-card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Add spacing below the image */
+}
+
+.tour-card h2 {
+    font-size: 1.2rem; /* Adjust font size for headings */
+    margin: 10px 0; /* Add spacing above and below the heading */
+}
+
+.tour-card p {
+    font-size: 1rem; /* Adjust font size for paragraphs */
+    text-align: justify; /* Justify the text */
+}
+
+.back-button-container {
+
+    Display: none;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px; /* Reduce padding for the footer */
+    text-align: center; /* Center-align footer content */
+}
+
+.footer-info p {
+    font-size: 0.8rem; /* Reduce font size for footer text */
+    margin: 5px 0; /* Add spacing between footer items */
+}
+
+.footer-logo img {
+    width: 60px; /* Reduce logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add spacing around the logo */
+}
+
+#footer-text {
+    font-size: 0.8rem; /* Adjust font size for footer copyright text */
+}
+
+.carousel {
+
+    display:none;
+}
+
+
+.tour-card p {
+
+    display: none;
+}
+
+
+footer {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center-align items horizontally */
+    text-align: center; /* Center-align text */
+    gap: 20px; /* Add spacing between footer sections */
+    padding: 20px; /* Add padding around the footer */
+}
+
+.footer-info {
+    text-align: center; /* Center-align the footer info */
+    margin: 0; /* Remove extra margins */
+    text-align: left;
+margin: 0;
+line-height: 1.2rem;
+margin-right: 25%;
+margin-top: 5%;
+}
+
+.footer-info p {
+
+    font-size: 1.1rem;
+}
+
+.footer-logo {
+    margin: 0 auto; /* Center the logo */
+}
+
+.footer-logo img {
+    width: 60px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 40%;
+}
+    
 
 
 
-
-
+#footer-text {
+    font-size: 0.9rem; /* Adjust font size for copyright text */
+    margin: 0; /* Remove extra margins */
+}
 
 
 
