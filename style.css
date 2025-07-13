@@ -3332,15 +3332,19 @@ margin-top: -10%;
 
 
     .info-row {
-        display: grid; /* Use CSS Grid for layout */
-        grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-        gap: 20px; /* Add spacing between the items */
-        justify-items: center; /* Center-align the items horizontally */
-        margin: 20px auto; /* Center the row horizontally */
-        padding: 10px; 
+        display: flex; /* Use Flexbox for layout */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Align items vertically in the center */
+        gap: 30px;
+        margin: -20px auto;
+        padding: 10px;
+        margin-left: -65%;
+        margin-right: 25%;
+        width: 180%;
     }
 
-
+  
     .acropolis-info-box {
         text-align: center; /* Center-align the text inside each box */
         padding: 10px; /* Add padding inside the boxes */
@@ -3600,7 +3604,6 @@ margin-top: 5%;
     font-size: 0.9rem; /* Adjust font size for copyright text */
     margin: 0; /* Remove extra margins */
 }
-
 
 
 
