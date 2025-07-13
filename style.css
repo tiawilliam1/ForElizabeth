@@ -3694,18 +3694,13 @@ margin-top: 5%;
 }
 
 .step-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #333; /* Dark background for the icon */
-    color: #fff; /* White text for the icon */
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* Make the icon circular */
+    width: 40px; /* Set the width of the icon */
+    height: 40px; /* Set the height of the icon */
+    background-image: url('swirl1.png'); /* Use swirl1.png as the background */
+    background-size: cover; /* Ensure the image covers the entire icon area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
     flex-shrink: 0; /* Prevent the icon from shrinking */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 .step-content {

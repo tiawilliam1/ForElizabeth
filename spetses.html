@@ -9,20 +9,45 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo.jpg" alt="Logo" class="logo">
+            <img src="logo.png" alt="Logo" class="logo">
         </div>
-        <h1>Saronic Gulf Tours</h1>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Logo" class="logo">
+        <h1 id="header-title">Greece Local Guide</h1>
+        <div class="language-selector">
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
         </div>
-        <nav>
+    
+        <div class="burger-menu-btn" aria-label="Toggle Navigation">
+            <img src="menu.png" alt="Open Menu" class="burger-icon">
+            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
+        </div>
+    
+    
+        <!-- Navigation Menu -->
+        <nav class="burger-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tours.html">Tours</a></li>
                 <li><a href="aboutme.html">About me</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                
+                <li class="language-selector">
+                            <span class="language-option" data-lang="en">EN</span> /
+                            <span class="language-option" data-lang="fr">FR</span> /
+                            <span class="language-option" data-lang="el">GR</span>
+                </li>
             </ul>
+    
         </nav>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="tours.html" id="nav-tours">Tours</a></li>
+            <li><a href="aboutme.html" id="nav-about">About me</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     <section class="hero-section">
         <section class="back-button-container1">
@@ -128,49 +153,49 @@
                 <h4>Itinerary</h4>
                 <div class="itinerary">
                     <div class="itinerary-step">
-                        <div class="step-icon">1</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>Piraeus Harbor</h5>
                             <p>Begin your day with a scenic ferry ride from Piraeus, gliding over the sparkling Saronic Gulf.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
-                        <div class="step-icon">2</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>Dapia</h5>
                             <p>Arrive at the central port of Spetses, lined with cafés, boutique shops, and historic cannons.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
-                        <div class="step-icon">3</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>Bouboulina Museum</h5>
                             <p>Visit the mansion of Laskarina Bouboulina, a naval commander during the Greek War of Independence.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
-                        <div class="step-icon">4</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>House of Hatzigiannis Mexis</h5>
                             <p>Explore this historic mansion, now a National Historical Museum showcasing Spetses' rich heritage.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
-                        <div class="step-icon">5</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>Monastery of Agios Nikolaos</h5>
                             <p>Visit the spiritual heart of Spetses, where the revolutionary flag was first raised in 1821.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
-                        <div class="step-icon">6</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>Palio Limani (Old Harbor)</h5>
                             <p>Enjoy a leisurely lunch at a waterfront taverna, surrounded by traditional fishing boats and modern yachts.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
-                        <div class="step-icon">7</div>
+                        <div class="step-icon"></div>
                         <div class="step-content">
                             <h5>Lighthouse of the Old Port</h5>
                             <p>Conclude your tour with a walk around the lighthouse, admiring bronze statues by Natalia Mela.</p>
@@ -258,4 +283,44 @@
             }
         });
     });
+    const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
+const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
+const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
+const closeIcon = document.querySelector('.close-icon'); // The x.png icon
+const header = document.querySelector('header'); // The header element
+
+// Add a click event listener to the burger menu button
+burgerMenuBtn.addEventListener('click', () => {
+    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
+
+    // Toggle between the burger icon and the close icon
+    if (isMenuOpen) {
+        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
+        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
+        header.style.display = 'block'; // Ensure the header is visible
+        console.log('Menu opened'); // Debugging log
+    } else {
+        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
+        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
+        header.style.display = 'block'; // Ensure the header remains visible
+        console.log('Menu closed'); // Debugging log
+    }
+});
+
+// Add a click event listener to the "X" button (close icon)
+closeIcon.addEventListener('click', () => {
+    console.log('Close button clicked'); // Debugging log
+
+    // Close the menu by removing the 'active' class
+    burgerMenu.classList.remove('hidden');
+
+    // Show the burger icon (menu.png)
+    burgerIcon.style.display = 'block';
+
+    // Hide the "X" icon (x.png)
+    closeIcon.style.display = 'none';
+
+    // Ensure the header is visible
+    header.style.display = 'block';
+});
 </script>
