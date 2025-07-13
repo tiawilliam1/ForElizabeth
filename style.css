@@ -3673,3 +3673,65 @@ margin-top: 5%;
 .toggle-button:hover {
     background-color: #555;
 }
+
+
+/* Itinerary Section */
+.itinerary {
+    display: flex;
+    flex-direction: column; /* Stack steps vertically */
+    gap: 20px; /* Add spacing between steps */
+    margin-top: 10px;
+}
+
+.itinerary-step {
+    display: flex;
+    align-items: flex-start; /* Align icons and content at the top */
+    gap: 15px; /* Add spacing between the icon and content */
+    position: relative;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333; /* Dark background for the icon */
+    color: #fff; /* White text for the icon */
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Make the icon circular */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.step-content {
+    flex: 1; /* Allow the content to take up remaining space */
+}
+
+.step-content h5 {
+    font-size: 1.1rem;
+    margin: 0 0 5px; /* Add spacing below the heading */
+    color: #333; /* Dark text color */
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    margin: 0; /* Remove default margins */
+    color: #555; /* Slightly lighter text color */
+}
+
+.itinerary-step::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 20px); /* Extend the line between steps */
+    background-color: #ddd; /* Light gray line */
+    left: 20px; /* Align with the center of the icon */
+    top: 40px; /* Start below the icon */
+    z-index: -1; /* Place the line behind the content */
+}
+
+.itinerary-step:last-child::before {
+    display: none; /* Remove the line for the last step */
+}
