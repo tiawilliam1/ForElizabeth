@@ -3183,6 +3183,7 @@ padding-left: 70px;
 
     margin-top: 30%;
     width: 110%;
+    margin-left: -3%;
 }
     .tour-card {
         width: 100%; /* Reduce the width of the cards */
@@ -3287,6 +3288,7 @@ display: none;
         padding: 0px;
         margin-bottom: 20%;
         margin-right: -50%;
+        border: 1.5px solid rgb(8, 8, 8);
     }
 
     .hero-content {
@@ -3732,4 +3734,42 @@ margin-top: 5%;
 
 .itinerary-step:last-child::before {
     display: none; /* Remove the line for the last step */
+}
+
+.acropolis-info-box {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center the icon and text vertically */
+    gap: 15px; /* Add spacing between the icon and text */
+    padding: 10px 0; /* Add vertical padding */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Optional: Add a subtle bottom border */
+    background-color: transparent; /* Remove the background color */
+    box-shadow: none; /* Remove any shadow */
+    border: none; /* Remove any border */
+}
+
+.acropolis-info-box h3 {
+    font-size: 1.2rem; /* Adjust font size for headings */
+    margin: 0; /* Remove default margins */
+    color: #333; /* Dark text color */
+}
+
+.acropolis-info-box p {
+    font-size: 1rem; /* Adjust font size for text */
+    margin: 0; /* Remove default margins */
+    color: #555; /* Slightly lighter text color */
+}
+
+/* Icon Styling */
+.acropolis-info-box::before {
+    content: ''; /* Add an empty content for the icon */
+    display: inline-block; /* Make it inline with the text */
+    width: 40px; /* Set the width of the icon */
+    height: 40px; /* Set the height of the icon */
+    background-image: url('swirl1.png'); /* Replace with your icon's path */
+    background-size: cover; /* Ensure the icon covers the area */
+    background-position: center; /* Center the icon */
+    background-repeat: no-repeat; /* Prevent the icon from repeating */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+    border-radius: 50%; /* Optional: Make the icon circular */
 }
