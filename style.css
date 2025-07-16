@@ -981,7 +981,7 @@ main {
 .tour-details h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: -5px;
 }
 
 .tour-details p {
@@ -1023,7 +1023,7 @@ main {
 .tour-details h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .tour-details p {
@@ -1860,6 +1860,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: -3%;
     
 }
 
@@ -2130,7 +2131,7 @@ margin-top: 50px;
     height: 10px;
     border: 2px solid #ccc; /* Grey border for inactive circles */
     border-radius: 50%;
-    background-color: transparent; /* Transparent background for inactive circles */
+    background-color: none; /* Transparent background for inactive circles */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -2790,7 +2791,8 @@ html, body {
     }
 
     #homepage p {
-    margin-left: -60px;
+
+    margin-left: -26%;
 }
 
 
@@ -3609,6 +3611,74 @@ margin-top: 5%;
 
 
 
+.about-me-content, .about-me-vision {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-me-header {
+    margin-top: 35%;
+    
+}
+.about-me-text {
+    max-width: 100%;
+}
+
+.about-me-image {
+    max-width: 300px;
+}
+
+.about-me-text h2 {
+ margin-top: 10%;
+
+
+
+}
+
+.about-me-image-right {
+    max-width: 100%; /* Make the image responsive */
+    margin: 20px auto; /* Add spacing above and below the image */
+}
+
+.text-next-to-image {
+    margin: 20px auto; /* Add spacing above and below the text */
+    text-align: justify; /* Justify the text */
+}
+
+.about-me-content, .about-me-vision {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center-align the content */
+}
+
+.about-me-images, .text-next-to-image {
+    margin: 0 auto; /* Center the content */
+}
+
+.text-next-to-image p {
+
+    margin-right: 10%;
+margin-left: 10%;
+
+
+}
+
+.text-next-to-image h2{
+
+    margin-left: 10%;
+}
+
+.about-me-image-right {
+
+
+   display:none;
+}
+
+.about-me-footer ul li {
+    margin-right: -3%;
+    margin-left: -3%;
+
+}
+
 
 
 
@@ -3772,4 +3842,170 @@ margin-top: 5%;
     background-repeat: no-repeat; /* Prevent the icon from repeating */
     flex-shrink: 0; /* Prevent the icon from shrinking */
     border-radius: 50%; /* Optional: Make the icon circular */
+}
+
+
+
+.footer-sitemap {
+    margin-top: 20px;
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add padding around the site map */
+
+}
+
+.footer-sitemap h4 {
+    font-size: 1.1rem; /* Slightly larger font size for the heading */
+    margin-bottom: 15px; /* Add spacing below the heading */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Make the heading bold */
+    text-transform: uppercase; /* Capitalize the heading */
+    border-bottom: 2px solid #ddd; /* Add a subtle underline */
+    padding-bottom: 5px; /* Add spacing below the underline */
+    text-align: center;
+}
+
+.footer-sitemap ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.footer-sitemap ul li {
+    margin-bottom: 10px; /* Add spacing between links */
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Center-align icons and text */
+    gap: 10px; /* Add spacing between the icon and text */
+}
+
+.footer-sitemap ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #555; /* Slightly lighter text color */
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add a hover effect */
+}
+
+.footer-sitemap ul li a:hover {
+    color: #000000; /* Change color on hover */
+    transform: translateX(5px); /* Slightly move the link on hover */
+}
+
+/* Styling for nested lists */
+.footer-sitemap ul li ul {
+    margin-left: 20px; /* Indent the sub-list */
+    padding-left: 10px; /* Add padding for better spacing */
+    border-left: 2px solid #ddd; /* Add a subtle vertical line */
+}
+
+.footer-sitemap ul li ul li {
+    margin-bottom: 5px; /* Add spacing between sub-links */
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Center-align icons and text */
+    gap: 10px; /* Add spacing between the icon and text */
+}
+
+.footer-sitemap ul li ul li a {
+    font-size: 0.9rem; /* Slightly smaller font for sub-links */
+    color: #666; /* Slightly lighter color for sub-links */
+}
+
+.footer-sitemap ul li ul li a:hover {
+    color: #000000; /* Darker hover color for sub-links */
+}
+
+/* Icon Styling */
+.footer-sitemap ul li::before {
+    content: '•'; /* Add a bullet point as the icon */
+    color: #000000; /* Blue color for the bullet */
+    font-size: 1.2rem; /* Adjust the size of the bullet */
+}
+
+.footer-sitemap ul li ul li::before {
+    content: '›'; /* Add an arrow for sub-links */
+    color: #666; /* Grey color for the arrow */
+    font-size: 1rem; /* Adjust the size of the arrow */
+}
+
+
+/* Recommended Tours Section */
+.recommended-tours {
+    padding: 70px 120px;
+    background-color: #f9f9f9; /* Light grey background */
+    text-align: center;
+  
+}
+
+.recommended-tours h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+.recommended-tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center; /* Center-align the grid items */
+}
+
+.recommended-tour-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%; /* Ensure the box takes full width of the grid column */
+    max-width: 350px; /* Limit the maximum width */
+}
+
+.recommended-tour-box:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.recommended-tour-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure the image covers the area */
+    border-bottom: 1px solid #ddd;
+}
+
+.tour-box-content {
+    padding: 15px;
+}
+
+.tour-box-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000000;
+    
+}
+
+.tour-box-content h4 a {
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+}
+
+.tour-box-content h4 a:hover {
+    text-decoration: underline;
+}
+
+.tour-box-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+.custom-underline {
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 2px solid #c1c1c1;
+    padding-bottom: 0px; /* Add spacing between text and underline */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.custom-underline:hover {
+    border-bottom-color: #000000; /* Change underline color on hover */
 }
