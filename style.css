@@ -3648,6 +3648,8 @@ margin-top: 5%;
 .about-me-content, .about-me-vision {
     flex-direction: column; /* Stack items vertically */
     text-align: center; /* Center-align the content */
+    margin-right: -5%;
+margin-left: -5%;
 }
 
 .about-me-images, .text-next-to-image {
@@ -3656,8 +3658,8 @@ margin-top: 5%;
 
 .text-next-to-image p {
 
-    margin-right: 10%;
-margin-left: 10%;
+    margin-right: 0%;
+margin-left: 0%;
 
 
 }
