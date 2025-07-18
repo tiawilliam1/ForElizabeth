@@ -160,6 +160,7 @@ nav ul li a:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
 }
 .logo-container {
     position: absolute; /* Fix the position relative to the viewport */
@@ -1704,8 +1705,9 @@ footer {
     color: #333;
     margin-bottom: 200px;
     margin-right: 100px;
-    margin-left: -60px;
-    text-align: left;
+
+    margin-left: 34px;
+    text-align: center;
 }
 
 .contact-text p {
@@ -1717,7 +1719,7 @@ footer {
 .contact-text ul {
     list-style: none;
     padding: 0;
-    text-align: left;
+    text-align: center;
     margin-top: -100px;
 }
 
@@ -1747,8 +1749,8 @@ footer {
 }
 
 .contact-image img {
-    width: 500%;
-    max-width: 600px;
+    width: 550%;
+    max-width: 550px;
     height: auto;
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -3667,6 +3669,8 @@ margin-left: 0%;
 .text-next-to-image h2{
 
     margin-left: 0%;
+    margin-top: 10%;
+
 }
 
 .about-me-image-right {
@@ -3681,8 +3685,62 @@ margin-left: 0%;
 
 }
 
+/* Media Query for Contact Page (Screens Smaller than 768px) */
+    /* Contact Section */
+    .contact-section {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
 
+    .contact-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align the content */
+        gap: 20px; /* Add spacing between items */
+    }
 
+    .contact-info {
+        max-width: 100%; /* Allow full width for the text */
+        text-align: center; /* Center-align the text */
+    }
+
+    .contact-info ul {
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center-align the list */
+    }
+
+    .contact-info ul li {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 10px; /* Add spacing between list items */
+    }
+
+    .contact-info ul li a {
+        font-size: 1rem; /* Adjust font size for links */
+    }
+
+    .contact-image {
+        max-width: 100%; /* Allow full width for the image */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .contact-image img {
+        max-width: 350px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10%;
+        
+        
+    }
+
+ .contact-text h2 {
+
+    margin-right: -20%;
+margin-left: -20%;
+margin-top: 60%;
+ }
+
+ .contact-text ul {
+
+    margin-right: -15%;
+ }
 
 }
 
@@ -4011,3 +4069,5 @@ margin-left: 0%;
 .custom-underline:hover {
     border-bottom-color: #000000; /* Change underline color on hover */
 }
+
+
