@@ -2331,7 +2331,7 @@ footer {
 .quote-slideshow-container {
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 210px;
+    padding-bottom: 300px;
 }
 
 .quote-text {
@@ -3134,12 +3134,7 @@ padding-left: 70px;
     .quote-slideshow-container {
 
         
-        margin-right: -50%;
-        margin-left: -50%;
-        padding-right: 60%;
-        padding-left: 60%;
-        margin-top: 20%;
-        margin-bottom: -9%;
+        
     }
 
  
@@ -3148,6 +3143,7 @@ padding-left: 70px;
     .quote-text {
         font-size: 0.9rem; /* Reduce font size for quotes */
         line-height: 1.4; /* Adjust line height */
+        margin-top: 20%;
     }
 
     .quote-progress-circles .circle {
