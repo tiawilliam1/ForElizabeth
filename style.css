@@ -3742,6 +3742,15 @@ margin-top: 60%;
     margin-right: -15%;
  }
 
+
+
+
+.attica-tour .image-container img {
+    content: url('attica1.jpg'); /* Replace with the Attica image */
+}
+
+ 
+
 }
 
 
@@ -4071,3 +4080,84 @@ margin-top: 60%;
 }
 
 
+
+/* Default Images for Larger Screens */
+.attica-image {
+    content: url('attica.jpg');
+}
+
+.peloponnese-image {
+    content: url('acorinth.jpeg');
+}
+
+.central-greece-image {
+    content: url('central.jpg');
+}
+
+.saronic-gulf-image {
+    content: url('spetses1.jpg');
+}
+
+.cyclades-image {
+    content: url('cyc1.jpg');
+}
+
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .attica-image {
+        content: url('attica.jpg'); /* Replace with the smaller image for Attica */
+    }
+
+    .peloponnese-image {
+        content: url('acorinth-phone.jpg'); /* Replace with the smaller image for Peloponnese */
+
+    }
+
+    .central-greece-image {
+        content: url('central-phone.jpg'); /* Replace with the smaller image for Central Greece */
+    }
+
+    .saronic-gulf-image {
+        content: url('spetses1-phone.jpg'); /* Replace with the smaller image for Saronic Gulf */
+    }
+
+    .cyclades-image {
+        content: url('cyc1-phone.jpg'); /* Replace with the smaller image for Cyclades */
+    }
+
+    .tour-card img {
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 0px;
+        }
+
+        .tour-card h2 {
+            font-size: 1.1rem; /* Adjust font size for smaller screens */
+            margin: 10px 0; /* Add spacing above and below the heading */
+        }
+
+
+        .footer-info1 {
+
+            margin-left: 57%;
+    
+
+        }
+
+        .footer-info1 p {
+
+            font-size: 1.0rem;
+        }
+
+        #footer-text1 {
+
+            font-size: 1.0rem;
+            margin-bottom: 10%;
+            margin-right: -210%;
+        }
+
+        
+}
