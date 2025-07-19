@@ -2217,6 +2217,7 @@ footer {
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto; /* Center the logo image */
+    margin-left: -80%;
 }
 
 /* Language Selector */
@@ -4155,5 +4156,9 @@ margin-top: 60%;
             margin-right: -210%;
         }
 
+    .footer-logo1 img {
+         
+            margin-left: 0%;
+        }
         
 }
