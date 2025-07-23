@@ -2108,6 +2108,7 @@ footer {
 margin-top: 50px;
 margin-top: -10%;
 margin-bottom: -25%;
+
 }
 
 .quote-slideshow-container {
@@ -2116,6 +2117,7 @@ margin-bottom: -25%;
     margin: 0 auto;
     overflow: hidden; /* Hide overflowing slides */
     margin-top: -5%;
+    margin-bottom: -5%;
     
 
 }
@@ -2213,6 +2215,7 @@ footer {
     margin-left: -20px;
     margin-right: -30px;
     margin-bottom: -50px;
+    margin-top: 10%;
    
 
 }
@@ -4223,7 +4226,7 @@ margin-top: 10%;
 
 .why-choose-description {
     font-size: 1.1rem;
-    color: #666;
+    color: #000000;
     max-width: 700px;
     margin: auto;
     font: didot; 
@@ -4287,7 +4290,7 @@ margin-top: 10%;
 
 .why-choose-description {
     font-size: 1.1rem;
-    color: #666;
+    color: #000000;
     max-width: 700px;
     margin: auto;
     margin-bottom: 40px;
