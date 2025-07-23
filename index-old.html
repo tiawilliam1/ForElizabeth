@@ -60,54 +60,33 @@
     <section id="homepage">
         <div class="homepage-content">
             <div class="text-content">
-                <h1 id="homepage-title"> Travel Greece With Insight</h1>
-                <h2 id="homepage-subtitle">Designed for curious travellers by your Greece local guide
-                </h2>
-                <p id="homepage-description">
-                    <span class="cursive-name">Elisavet Makri</span>, a licensed tour guide based in Athens, Greece, with over 10 years of experience in the tourism industry. As your guide, I offer private walking tours, museum visits, and explorations of ancient archaeological sites throughout Greece— all tailored to your interests. My goal is to provide insightful, engaging and personalized tours ensuring you make the most of your time in Greece.
-                </p>
+                <h2 id="homepage-title">Private & Custom Tours</h2>
+                <h3 id="homepage-subtitle">Your Adventure Awaits</h3>
+                <p id="homepage-description"> It's <strong>Elisavet Makri</strong>, a licensed tour guide in Athens, offering a diverse range of tours across Greece (walking tours, Musuem tours, ancient landmar), with the possibility to tailor the tours to your preferences. With over 10 years of experience in the tourism industry, I specialize in providing personalized, engaging, and insightful tours that cater to each client’s needs. My goal is to create a welcoming and enriching environment, ensuring you make the most of your time in Greece. 
+                     For more information, feel free to <a href="mailto:elisavetmakri@hotmail.com">email</a> me.</p>
             </div>
             <div class="image-content">
                 <div class="slideshow-container">
-                    <img src="h12.jpg" alt="Homepage Image" class="homepage-image">
-                    <img src="h22.jpg" alt="Homepage Image" class="homepage-image">
-                    <img src="h32.jpg" alt="Homepage Image" class="homepage-image">
-                    <img src="h42.jpg" alt="Homepage Image" class="homepage-image">
-                    <img src="h52.jpg" alt="Homepage Image" class="homepage-image">
-                    <img src="h62.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="01.2.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="slide2.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="slide3.jpg" alt="Homepage Image" class="homepage-image">
+                    <img src="slide4.jpeg" alt="Homepage Image" class="homepage-image">
                 </div>
             </div>
-
         </div>
-          <div class="cta-container">
-            <img src="trident1.png" alt="Trident Icon" class="cta-icon">
-            <a href="tours.html" class="cta-link">VIEW OUR TOURS</a>
-        </div>
-    </div>
-    </section>
 
-    <section id="why-choose">
-        <div class="why-choose-container">
-            <h2 class="why-choose-title">Why Choose A Liscensed Guide?</h2>
-            <p class="why-choose-description">
-                Hiring a licensed tourist guide ensures you receive accurate, knowledgeable commentary during your visit. Licensed guides in Greece are accredited by the Ministry of Tourism after completing specialized education and passing exams in history, archaeology, art history, gastronomy, geography, and tourism law.
-            </p>
-            <div class="why-choose-features">
-                <div class="feature-box">
-                    <img src="elly.jpg" alt="Feature Image" class="feature-image">
-                    <h3 class="feature-title">Personal Touch</h3>
-                    <p class="feature-description">I learn your pace, your style, your interests — and I shape the experience around that.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="elly1.jpg" alt="Feature Image" class="feature-image">
-                    <h3 class="feature-title">Local Soul, Insider Touch</h3>
-                    <p class="feature-description">I’m not just licensed — I’m local. Expect hidden gems, real conversations, and authentic food stops.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="elly2.jpg" alt="Feature Image" class="feature-image">
-                    <h3 class="feature-title">100% Tailored to You</h3>
-                    <p class="feature-description">Whether you're a solo traveler or a family with kids, every detail is shaped around your needs.</p>
-                </div>
+        <div class="homepage-info-section">
+            <div class="homepage-info-box">
+                <img src="swirl1.png" alt="Symbol 1" class="symbol">
+                <p id="info-box-1">Greek, English & French guide</p>
+            </div>
+            <div class="homepage-info-box">
+                <img src="swirl1.png" alt="Symbol 2" class="symbol">
+                <p id="info-box-2">Interactive & Adaptable</p>
+            </div>
+            <div class="homepage-info-box">
+                <img src="swirl1.png" alt="Symbol 3" class="symbol">
+                <p id="info-box-3">Can cater to the needs of all ages</p>
             </div>
         </div>
     </section>
@@ -273,23 +252,6 @@
     </footer>
 
     <script>
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const features = document.querySelectorAll('.feature-box'); // Select all feature boxes
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated'); // Add the animation class
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-
-    features.forEach((feature) => observer.observe(feature));
-});
         let slideIndex = 0;
 showSlides();
 
@@ -354,8 +316,6 @@ document.addEventListener('scroll', function () {
     }
 });
     </script>
-
-
     <script>
         // Function to observe elements and add animation class
         function animateOnScroll() {
@@ -391,98 +351,7 @@ document.addEventListener('scroll', function () {
             elements.forEach(element => observer.observe(element));
         });
         
-        document.addEventListener("DOMContentLoaded", () => {
-    let quoteIndex = 0;
-
-    function showQuotes(index = null) {
-        const quotes = document.querySelectorAll('.quote-slide');
-        const circles = document.querySelectorAll('.circle');
-        const totalQuotes = quotes.length;
-
-        // If an index is provided (circle click), update the quoteIndex
-        if (index !== null) {
-            quoteIndex = index;
-        } else {
-            quoteIndex++;
-            if (quoteIndex >= totalQuotes) {
-                quoteIndex = 0; // Reset to the first quote
-            }
-        }
-
-        // Hide all quotes and remove active class from circles
-        quotes.forEach((quote) => quote.style.display = "none");
-        circles.forEach((circle) => circle.classList.remove('active'));
-
-        // Show the current quote and activate the corresponding circle
-        quotes[quoteIndex].style.display = "block";
-        circles[quoteIndex].classList.add('active');
-
-        // Automatically change quote every 4 seconds
-        if (index === null) {
-            setTimeout(showQuotes, 4000);
-        }
-    }
-
-    // Add click event listeners to circles
-    document.querySelectorAll('.circle').forEach((circle) => {
-        circle.addEventListener('click', () => {
-            const index = parseInt(circle.getAttribute('data-index'));
-            showQuotes(index); // Navigate to the clicked quote
-        });
-    });
-
-    // Initialize the slideshow
-    showQuotes(); // Start the slideshow
-});
     </script>
-
-<script>
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const textContent = document.querySelector('.text-content'); // Select the text content
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                textContent.classList.add('animated'); // Add the animation class
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-
-    observer.observe(textContent);
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll('.feature-box img.feature-image'); // Select all feature images
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('animated'); // Add the animation class
-                }, index * 300); // Delay each image by 300ms
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-
-    images.forEach((image) => observer.observe(image));
-});
-
-
-
-
-
-
-</script>
-
-
-
-
-
 <script>
     let quoteIndex = 0;
 
@@ -537,8 +406,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    
-
     // Save the selected language in localStorage
 localStorage.setItem('selectedLanguage', lang);
 
@@ -548,7 +415,58 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLanguage(savedLanguage);
 });
 
+    // Switch language content
+    const headerTitle = document.getElementById('header-title');
+    const homepageTitle = document.getElementById('homepage-title');
+    const homepageSubtitle = document.getElementById('homepage-subtitle');
+    const homepageDescription = document.getElementById('homepage-description');
+    const infoBox1 = document.getElementById('info-box-1');
+    const infoBox2 = document.getElementById('info-box-2');
+    const infoBox3 = document.getElementById('info-box-3');
+    const navHome = document.getElementById('nav-home');
+    const navTours = document.getElementById('nav-tours');
+    const navAbout = document.getElementById('nav-about');
+    const navContact = document.getElementById('nav-contact');
 
+    if (lang === 'en') {
+        headerTitle.textContent = 'Greece Local Guide';
+        homepageTitle.textContent = 'Private & Custom Tours';
+        homepageSubtitle.textContent = 'Ready to Explore Greece?';
+        homepageDescription.innerHTML = 
+        "It's <strong>Elisavet Makri</strong>, a <strong>licensed tour guide in Athens</strong>, offering a diverse range of tours across Greece, including <span class='custom-underline'>Walking Tours</span>, <span class='custom-underline'>Museum Tours</span>, and <span class='custom-underline'>Ancient Landmark Tours</span>, with the possibility to tailor the tours to your preferences. With over <strong>10 years of experience</strong> in the tourism industry, I specialize in providing <strong>personalized</strong>, engaging, and <span class='custom-underline'>insightful tours</span> that cater to each client’s needs. My goal is to create a <strong>warm</strong> and enriching environment, ensuring you make the most of your time in Greece. For more information, feel free to <a href='mailto:elisavetmakri@hotmail.com'><strong>email</strong></a> me.";
+        infoBox1.textContent = 'Greek, English & French guide';
+        infoBox2.textContent = 'Interactive';
+        infoBox3.textContent = 'Can cater to the needs of all ages';
+        navHome.textContent = 'Home';
+        navTours.textContent = 'Tours';
+        navAbout.textContent = 'About me';
+        navContact.textContent = 'Contact';
+    } else if (lang === 'fr') {
+        headerTitle.textContent = 'Votre guide touristique agréé en Grèce';
+        homepageTitle.textContent = 'Tours privés et personnalisés';
+        homepageSubtitle.textContent = 'Votre aventure vous attend';
+        homepageDescription.innerHTML = "C'est <strong>Elisavet Makri</strong>, une guide touristique agréée à Athènes, offrant une gamme variée de tours à travers la Grèce, avec la possibilité d'adapter les tours à vos préférences. Avec plus de 10 ans d'expérience dans l'industrie du tourisme, je me spécialise dans la création de tours personnalisés, engageants et enrichissants qui répondent aux besoins de chaque client. Mon objectif est de créer un environnement accueillant et enrichissant, vous assurant de profiter pleinement de votre séjour en Grèce. Pour plus d'informations, n'hésitez pas à <a href='mailto:elisavetmakri@hotmail.com'>m'envoyer un email</a>.";
+        infoBox1.textContent = 'Guide en grec, anglais et français';
+        infoBox2.textContent = 'Interactif';
+        infoBox3.textContent = 'Peut répondre aux besoins de tous les âges';
+        navHome.textContent = 'Accueil';
+        navTours.textContent = 'Tours';
+        navAbout.textContent = 'À propos de moi';
+        navContact.textContent = 'Contact';
+    } else if (lang === 'el') {
+        headerTitle.textContent = 'Ο αδειούχος ξεναγός σας στην Ελλάδα';
+        homepageTitle.textContent = 'Ιδιωτικές και Προσαρμοσμένες Ξεναγήσεις';
+        homepageSubtitle.textContent = 'Η περιπέτειά σας σας περιμένει';
+        homepageDescription.innerHTML = "Είναι η <strong>Ελισάβετ Μακρή</strong>, αδειούχος ξεναγός στην Αθήνα, προσφέροντας μια ποικιλία ξεναγήσεων σε όλη την Ελλάδα, με τη δυνατότητα να προσαρμόσετε τις ξεναγήσεις στις προτιμήσεις σας. Με πάνω από 10 χρόνια εμπειρίας στον τουριστικό τομέα, ειδικεύομαι στη δημιουργία εξατομικευμένων, ενδιαφερόντων και εμπνευσμένων ξεναγήσεων που ανταποκρίνονται στις ανάγκες κάθε πελάτη. Στόχος μου είναι να δημιουργήσω ένα φιλόξενο και εμπλουτισμένο περιβάλλον, διασφαλίζοντας ότι θα αξιοποιήσετε στο έπακρο τον χρόνο σας στην Ελλάδα. Για περισσότερες πληροφορίες, μη διστάσετε να <a href='mailto:elisavetmakri@hotmail.com'>στείλετε email</a>.";
+        infoBox1.textContent = 'Ξεναγός σε ελληνικά, αγγλικά και γαλλικά';
+        infoBox2.textContent = 'Διαδραστικό';
+        infoBox3.textContent = 'Μπορεί να ανταποκριθεί στις ανάγκες όλων των ηλικιών';
+        navHome.textContent = 'Αρχική';
+        navTours.textContent = 'Ξεναγήσεις';
+        navAbout.textContent = 'Σχετικά με εμένα';
+        navContact.textContent = 'Επικοινωνία';
+    }
+}
 
 // Add event listeners to language options
 document.querySelectorAll('.language-option').forEach(option => {
@@ -605,7 +523,6 @@ closeIcon.addEventListener('click', () => {
     // Ensure the header is visible
     header.style.display = 'block';
 });
-
 
 
 </script>

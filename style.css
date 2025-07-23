@@ -112,11 +112,13 @@ nav ul li a:hover {
 
 #homepage {
     padding: 20px;
+    margin-bottom: -5%;
 }
 #homepage-title {
     font-family: 'Didot', serif; /* Use Didot for the title */
     letter-spacing: 0.07em;
-    font-size: 3.0em; /* Adjust the font size to make it smaller */
+    font-size: 2.2em; /* Adjust the font size to make it smaller */
+    margin-left:-12%
 }
 
 .homepage-content {
@@ -158,9 +160,9 @@ nav ul li a:hover {
 .homepage-image {
     max-width: 100%; /* Adjust the max-width to make the image smaller */
     height: auto;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 10%;
+    margin-top: 0%;
 }
 .logo-container {
     position: absolute; /* Fix the position relative to the viewport */
@@ -293,11 +295,22 @@ nav ul li a:hover {
 }
 
 #homepage h2 {
-    font-size: 2em;
+    font-size: 1.3em;
     margin-bottom: 10px;
     margin-top: 20px;
-    font-family: 'Playfair Display', serif; /* Use Playfair Display for the headings */
+    font-family: 'Didot', serif; /* Use Playfair Display for the headings */
     margin-left: -50px;
+    font-weight: bold;
+
+}
+
+/* Italic Text Styling */
+
+
+/* Styling for the highlighted text */
+.highlight-text {
+    font-style: italic; /* Italicize the text */
+    font-weight: bold; /* Make the text bold */
 }
 
 #homepage p {
@@ -305,6 +318,8 @@ nav ul li a:hover {
     margin-bottom: 40px; /* Add space between the text and the info boxes */
     font-family: 'Playfair Display', serif; /* Use Playfair Display for the paragraphs */
     margin-left: -50px;
+    margin-top: 10%;
+    margin-bottom: 17%;
 }
 
 
@@ -345,7 +360,9 @@ nav ul li a:hover {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth scrolling */
-    width: 100%;
+
+    width: 80%;
+margin-left: 10%;
 }
 
 .carousel-item {
@@ -436,6 +453,8 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .carousel-item {
@@ -526,11 +545,11 @@ body {
 }
 
 .carousel-button.left {
-    left: 200px; /* Adjust the distance from the left side of the progress bar */
+    left: 450px; /* Adjust the distance from the left side of the progress bar */
 }
 
 .carousel-button.right {
-    right: 200px; /* Adjust the distance from the right side of the progress bar */
+    right: 450px; /* Adjust the distance from the right side of the progress bar */
 }
 /* Progress bar container */
 .progress-bar {
@@ -2790,6 +2809,7 @@ html, body {
         margin-right: -500px;
         margin-top: 130px;
         margin-left: -90px;
+        margin-bottom: -5%;
        
     }
 
@@ -3145,6 +3165,7 @@ padding-left: 70px;
         font-size: 0.9rem; /* Reduce font size for quotes */
         line-height: 1.4; /* Adjust line height */
         margin-top: 20%;
+        
     }
 
     .quote-progress-circles .circle {
@@ -4161,4 +4182,271 @@ margin-top: 60%;
             margin-left: 0%;
         }
         
+}
+
+
+/* Why Choose Me Section */
+#why-choose {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-right: -19%;
+margin-left: -19%;
+margin-bottom: -10%;
+margin-top: 10%;
+}
+
+.why-choose-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+    
+}
+
+.why-choose-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    margin-top: -1%;
+
+    margin-right: -5%;
+    margin-bottom: 5%;
+}
+
+.why-choose-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+}
+
+.why-choose-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.feature-icon {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.feature-description {
+    color: #444;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+/* Why Choose Me Section */
+#why-choose {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.why-choose-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.why-choose-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    margin-bottom: 5%;
+}
+
+.why-choose-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.why-choose-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature-box img.feature-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Limit the maximum width */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 15px; /* Add spacing below the image */
+}
+
+.feature-box h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #444;
+}
+
+
+
+
+
+
+
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+    margin-top: 20px; /* Add spacing above the buttons */
+    display: flex;
+    gap: 15px; /* Add spacing between the buttons */
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; /* Blue background for the button */
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5%;
+margin-top: 10%;
+margin-right: 10%;
+margin-left: -5%;
+}
+
+.cta-button:hover {
+    background-color: #000000; /* Darker blue on hover */
+}
+
+/* Animation for text appearing from the bottom */
+@keyframes slideUp {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+.text-content {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.text-content.animated {
+    animation: slideUp 0.8s ease forwards; /* Trigger the slide-up animation */
+}
+
+/* Animation for images appearing one by one */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+.feature-box img.feature-image {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.feature-box img.feature-image.animated {
+    animation: fadeInUp 0.8s ease forwards; /* Trigger the fade-in animation */
+}
+
+
+
+
+/* CTA Container Styling */
+.cta-container {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Add spacing between the icon and the button */
+    margin-top: 20px; /* Add spacing above the CTA container */
+    margin-bottom: -5%;
+}
+
+/* Trident Icon Styling */
+.cta-icon {
+  
+    width: 30%;
+height: auto;
+margin-right: 0%;
+margin-left: -60%;
+}
+
+/* CTA Button Styling */
+.cta-link {
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: normal; /* Make the text bold */
+    color: #000000; /* Blue text color */
+    text-decoration: none; /* Remove underline */
+    position: relative; /* For the line animation */
+    display: inline-block; /* Ensure proper spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+    padding: 10px 20px; /* Add padding for a button-like appearance */
+margin-top: -3%;
+
+    
+}
+
+
+.cta-link:hover {
+    color: #000000; /* Change text color on hover */
+    background-color: #00000007; /* Add a blue background on hover */
+    border-color: #0056b3; /* Darker border on hover */
+}
+
+/* Import the Dancing Script font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Style for the cursive name */
+.cursive-name {
+    font-family: 'Great Vibes', cursive; /* Apply the Great Vibes font */
+    font-size: 1.5rem; /* Adjust the font size */
+    font-weight: 400; /* Use normal weight for a delicate look */
+    color: #000000; /* Black color for the text */
 }
