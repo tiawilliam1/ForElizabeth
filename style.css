@@ -4450,3 +4450,12 @@ margin-top: -3%;
     font-weight: 400; /* Use normal weight for a delicate look */
     color: #000000; /* Black color for the text */
 }
+
+/* Swirl Under H2 */
+.why-choose-swirl {
+    display: block;
+    margin: 10px auto;
+    width: 60px;
+    height: auto;
+    margin-top: -4%;
+}
