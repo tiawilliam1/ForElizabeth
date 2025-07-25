@@ -257,330 +257,231 @@ Hiring a licensed tourist guide ensures you receive accurate and knowledgeable c
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const features = document.querySelectorAll('.feature-box'); // Select all feature boxes
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated'); // Add the animation class
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-
-    features.forEach((feature) => observer.observe(feature));
-});
-        let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("homepage-image");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-let currentIndex = 0;
-
-function scrollCarousel(direction, event) {
-    if (event) {
-        event.preventDefault(); // Prevent default behavior
-    }
-
-    const carousel = document.querySelector('.carousel');
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-
-    // Calculate the number of items visible at a time
-    const visibleItems = 3;
-
-    // Update the current index
-    currentIndex += direction;
-
-    // Prevent scrolling beyond the first or last set of items
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    } else if (currentIndex > totalItems - visibleItems) {
-        currentIndex = totalItems - visibleItems;
-    }
-
-    // Calculate the offset for scrolling
-    const offset = -currentIndex * (100 / visibleItems); // Adjust for 3 items visible
-    carousel.style.transform = `translateX(${offset}%)`;
-
-    // Update the progress bar
-    const progressIndicator = document.querySelector('.progress-indicator');
-    const progressWidth = (visibleItems / totalItems) * 100; // Width of the moving line
-    const progressLeft = (currentIndex / totalItems) * 100; // Position of the moving line
-    progressIndicator.style.width = `${progressWidth}%`;
-    progressIndicator.style.left = `${progressLeft}%`;
-}
-
-document.addEventListener('scroll', function () {
-    const carouselSection = document.querySelector('.horizontal-carousel-section');
-    const sectionTop = carouselSection.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    // Check if the section is in the viewport
-    if (sectionTop < windowHeight && sectionTop > 0) {
-        const scrollAmount = (windowHeight - sectionTop) / windowHeight;
-        carouselSection.style.transform = `translateY(${scrollAmount * -100}px)`; // Push up as you scroll
-    }
-});
-    </script>
-
-
-    <script>
-        // Function to observe elements and add animation class
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll'); // Select elements with this class
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated'); // Add the animation class
-                        observer.unobserve(entry.target); // Stop observing once animated
-                    }
-                });
-            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-    
-            elements.forEach(element => observer.observe(element));
-        }
-    
-        // Run the function when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', animateOnScroll);
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll('.animate-on-scroll'); // Select elements with the animate-on-scroll class
-    
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated'); // Add the animated class when in view
-                        observer.unobserve(entry.target); // Stop observing once animated
-                    }
-                });
-            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-    
-            elements.forEach(element => observer.observe(element));
-        });
-        
-        document.addEventListener("DOMContentLoaded", () => {
-    let quoteIndex = 0;
-
-    function showQuotes(index = null) {
-        const quotes = document.querySelectorAll('.quote-slide');
-        const circles = document.querySelectorAll('.circle');
-        const totalQuotes = quotes.length;
-
-        // If an index is provided (circle click), update the quoteIndex
-        if (index !== null) {
-            quoteIndex = index;
-        } else {
-            quoteIndex++;
-            if (quoteIndex >= totalQuotes) {
-                quoteIndex = 0; // Reset to the first quote
-            }
-        }
-
-        // Hide all quotes and remove active class from circles
-        quotes.forEach((quote) => quote.style.display = "none");
-        circles.forEach((circle) => circle.classList.remove('active'));
-
-        // Show the current quote and activate the corresponding circle
-        quotes[quoteIndex].style.display = "block";
-        circles[quoteIndex].classList.add('active');
-
-        // Automatically change quote every 4 seconds
-        if (index === null) {
-            setTimeout(showQuotes, 4000);
-        }
-    }
-
-    // Add click event listeners to circles
-    document.querySelectorAll('.circle').forEach((circle) => {
-        circle.addEventListener('click', () => {
-            const index = parseInt(circle.getAttribute('data-index'));
-            showQuotes(index); // Navigate to the clicked quote
-        });
-    });
-
-    // Initialize the slideshow
-    showQuotes(); // Start the slideshow
-});
-    </script>
-
-<script>
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const textContent = document.querySelector('.text-content'); // Select the text content
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                textContent.classList.add('animated'); // Add the animation class
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
-
-    observer.observe(textContent);
+document.addEventListener("DOMContentLoaded", () => {
+    // Initialize all features
+    initFeatureAnimations();
+    initSlideshow();
+    initCarousel();
+    initQuoteSlideshow();
+    initLanguageSwitcher();
+    initBurgerMenu();
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll('.feature-box img.feature-image'); // Select all feature images
-
+// Function to initialize feature animations
+function initFeatureAnimations() {
+    const elements = document.querySelectorAll('.animate-on-scroll, .feature-box, .text-content, .feature-box img.feature-image');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
-                    entry.target.classList.add('animated'); // Add the animation class
-                }, index * 300); // Delay each image by 300ms
-                observer.unobserve(entry.target); // Stop observing once animated
+                    entry.target.classList.add('animated');
+                }, index * 300); // Delay for images
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+    }, { threshold: 0.1 });
 
-    images.forEach((image) => observer.observe(image));
-});
-
-
-
-
-
-
-    let quoteIndex = 0;
-
-    function showQuotes(index = null) {
-        const quotes = document.querySelectorAll('.quote-slide');
-        const circles = document.querySelectorAll('.circle');
-        const totalQuotes = quotes.length;
-
-        // If an index is provided (circle click), update the quoteIndex
-        if (index !== null) {
-            quoteIndex = index;
-        } else {
-            quoteIndex++;
-            if (quoteIndex >= totalQuotes) {
-                quoteIndex = 0; // Reset to the first quote
-            }
-        }
-
-        // Hide all quotes and remove active class from circles
-        quotes.forEach((quote) => quote.classList.remove('active'));
-        circles.forEach((circle) => circle.classList.remove('active'));
-
-        // Show the current quote and activate the corresponding circle
-        quotes[quoteIndex].classList.add('active');
-        circles[quoteIndex].classList.add('active');
-
-        // Automatically change quote every 4 seconds
-        if (index === null) {
-            setTimeout(showQuotes, 12000);
-        }
-    }
-
-    // Add click event listeners to circles
-    document.querySelectorAll('.circle').forEach((circle) => {
-        circle.addEventListener('click', () => {
-            const index = parseInt(circle.getAttribute('data-index'));
-            showQuotes(index); // Navigate to the clicked quote
-        });
-    });
-
-    // Initialize the slideshow
-    document.addEventListener('DOMContentLoaded', () => {
-        showQuotes(); // Start the slideshow
-    });
-
-    function changeLanguage(lang) {
-    // Update active language
-    const languageOptions = document.querySelectorAll('.language-option');
-    languageOptions.forEach(option => {
-        option.classList.remove('active'); // Remove active class from all options
-        if (option.dataset.lang === lang) {
-            option.classList.add('active'); // Add active class to the selected language
-        }
-    });
-
+    elements.forEach((element) => observer.observe(element));
 }
 
-    
+// Function to initialize the homepage slideshow
+function initSlideshow() {
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("homepage-image");
 
-    // Save the selected language in localStorage
-localStorage.setItem('selectedLanguage', lang);
-
-// Retrieve the saved language on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
-    changeLanguage(savedLanguage);
-});
-
-
-
-// Add event listeners to language options
-document.querySelectorAll('.language-option').forEach(option => {
-    option.addEventListener('click', () => {
-        const lang = option.dataset.lang;
-        changeLanguage(lang); // Switch to the selected language
-    });
-});
-
-// Set default language on page load
-document.addEventListener('DOMContentLoaded', () => {
-    changeLanguage('en'); // Default to English
-});
-
-
-const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
-const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
-const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
-const closeIcon = document.querySelector('.close-icon'); // The x.png icon
-const header = document.querySelector('header'); // The header element
-
-// Add a click event listener to the burger menu button
-burgerMenuBtn.addEventListener('click', () => {
-    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
-
-    // Toggle between the burger icon and the close icon
-    if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header is visible
-        console.log('Menu opened'); // Debugging log
-    } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header remains visible
-        console.log('Menu closed'); // Debugging log
+    function showSlides() {
+        Array.from(slides).forEach(slide => slide.style.display = "none");
+        slideIndex = (slideIndex + 1 > slides.length) ? 1 : slideIndex + 1;
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
-});
 
-// Add a click event listener to the "X" button (close icon)
-closeIcon.addEventListener('click', () => {
-    console.log('Close button clicked'); // Debugging log
+    showSlides();
+}
 
-    // Close the menu by removing the 'active' class
-    burgerMenu.classList.remove('hidden');
+// Function to initialize the carousel
+function initCarousel() {
+    let currentIndex = 0;
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const progressIndicator = document.querySelector('.progress-indicator');
+    const visibleItems = 3;
 
-    // Show the burger icon (menu.png)
-    burgerIcon.style.display = 'block';
+    function scrollCarousel(direction, event) {
+        if (event) event.preventDefault();
+        currentIndex = Math.max(0, Math.min(currentIndex + direction, items.length - visibleItems));
+        const offset = -currentIndex * (100 / visibleItems);
+        carousel.style.transform = `translateX(${offset}%)`;
 
-    // Hide the "X" icon (x.png)
-    closeIcon.style.display = 'none';
+        const progressWidth = (visibleItems / items.length) * 100;
+        const progressLeft = (currentIndex / items.length) * 100;
+        progressIndicator.style.width = `${progressWidth}%`;
+        progressIndicator.style.left = `${progressLeft}%`;
+    }
 
-    // Ensure the header is visible
-    header.style.display = 'block';
-});
+    document.querySelectorAll('.carousel-button').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const direction = button.classList.contains('left') ? -1 : 1;
+            scrollCarousel(direction, event);
+        });
+    });
+}
+
+// Function to initialize the quote slideshow
+function initQuoteSlideshow() {
+    let quoteIndex = 0;
+    const quotes = document.querySelectorAll('.quote-slide');
+    const circles = document.querySelectorAll('.circle');
+
+    function showQuotes(index = null) {
+        if (index !== null) quoteIndex = index;
+        else quoteIndex = (quoteIndex + 1 >= quotes.length) ? 0 : quoteIndex + 1;
+
+        quotes.forEach((quote, i) => {
+            quote.style.display = i === quoteIndex ? "block" : "none";
+            circles[i].classList.toggle('active', i === quoteIndex);
+        });
+
+        if (index === null) setTimeout(showQuotes, 12000); // Auto-change every 12 seconds
+    }
+
+    circles.forEach((circle, i) => {
+        circle.addEventListener('click', () => showQuotes(i));
+    });
+
+    showQuotes();
+}
+
+// Function to initialize the language switcher
+function initLanguageSwitcher() {
+    const languageOptions = document.querySelectorAll('.language-option');
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+
+    function applyLanguage(lang) {
+        languageOptions.forEach(option => {
+            option.classList.toggle('active', option.dataset.lang === lang);
+        });
+
+        const translations = {
+            en: {
+                headerTitle: 'Greece Local Guide',
+                homepageTitle: 'Travel Greece With Insight',
+                homepageSubtitle: 'Designed for curious travellers by your Greece local guide',
+                homepageDescription: `<span class='cursive-name'>Elisavet Makri</span>, a licensed tour guide based in Athens, Greece, with over 10 years of experience in the tourism industry. As your guide, I offer private walking tours, museum visits, and explorations of ancient archaeological sites throughout Greece— all tailored to your interests. My goal is to provide insightful, engaging and personalized tours ensuring you make the most of your time in Greece.`,
+                navHome: 'Home',
+                navTours: 'Tours',
+                navAbout: 'About me',
+                navContact: 'Contact',
+                whyChooseTitle: 'Why Choose A Licensed Guide?',
+                whyChooseDescription: `Hiring a licensed tourist guide ensures you receive accurate and knowledgeable commentary during your visit. Licensed guides in Greece are accredited by the Ministry of Tourism and are legally allowed to lead tours inside archaeological sites, museums, and historical landmarks. We carry an official badge with our ID number.`,
+                feature1Title: 'Multilingual',
+                feature1Description: 'Accredited to offer tours in English & French.',
+                feature2Title: 'Local Soul, Insider Touch',
+                feature2Description: 'Expect real conversations about history, archaeology, and art — plus authentic stops along the way.',
+                feature3Title: '100% Tailored to You',
+                feature3Description: 'Whether you\'re a solo traveler or a family with kids, every detail is shaped around your needs.',
+                carouselTitle: 'Find your desired destination',
+                footerText: '&copy; 2025 Tour Guide. All rights reserved.'
+            },
+            fr: {
+                headerTitle: 'Votre guide touristique en Grèce',
+                homepageTitle: 'Découvrez la Grèce avec perspicacité',
+                homepageSubtitle: 'Conçu pour les voyageurs curieux par votre guide local en Grèce',
+                homepageDescription: `<span class='cursive-name'>Elisavet Makri</span>, guide touristique agréée basée à Athènes, en Grèce, avec plus de 10 ans d'expérience dans le secteur du tourisme. En tant que guide, je propose des visites privées à pied, des visites de musées et des explorations de sites archéologiques anciens à travers la Grèce— toutes adaptées à vos intérêts. Mon objectif est de fournir des visites perspicaces, engageantes et personnalisées pour vous assurer de profiter au maximum de votre séjour en Grèce.`,
+                navHome: 'Accueil',
+                navTours: 'Visites',
+                navAbout: 'À propos de moi',
+                navContact: 'Contact',
+                whyChooseTitle: 'Pourquoi choisir un guide agréé ?',
+                whyChooseDescription: `Engager un guide touristique agréé garantit que vous recevrez des commentaires précis et informés lors de votre visite. Les guides agréés en Grèce sont accrédités par le Ministère du Tourisme et sont légalement autorisés à diriger des visites dans les sites archéologiques, les musées et les monuments historiques. Nous portons un badge officiel avec notre numéro d'identification.`,
+                feature1Title: 'Multilingue',
+                feature1Description: 'Accrédité pour offrir des visites en anglais et en français.',
+                feature2Title: 'Âme locale, touche d\'initié',
+                feature2Description: 'Attendez-vous à de vraies conversations sur l\'histoire, l\'archéologie et l\'art — ainsi que des arrêts authentiques en chemin.',
+                feature3Title: '100% adapté à vous',
+                feature3Description: 'Que vous soyez un voyageur solo ou une famille avec enfants, chaque détail est conçu autour de vos besoins.',
+                carouselTitle: 'Trouvez votre destination idéale',
+                footerText: '&copy; 2025 Guide touristique. Tous droits réservés.'
+            },
+            el: {
+                headerTitle: 'Ο αδειούχος ξεναγός σας στην Ελλάδα',
+                homepageTitle: 'Εξερευνήστε την Ελλάδα με διορατικότητα',
+                homepageSubtitle: 'Σχεδιασμένο για περίεργους ταξιδιώτες από τον τοπικό σας ξεναγό στην Ελλάδα',
+                homepageDescription: `<span class='cursive-name'>Ελισάβετ Μακρή</span>, αδειούχος ξεναγός με έδρα την Αθήνα, Ελλάδα, με πάνω από 10 χρόνια εμπειρίας στον τουριστικό τομέα. Ως ξεναγός σας, προσφέρω ιδιωτικές περιηγήσεις με τα πόδια, επισκέψεις σε μουσεία και εξερευνήσεις αρχαίων αρχαιολογικών χώρων σε όλη την Ελλάδα— όλα προσαρμοσμένα στα ενδιαφέροντά σας. Στόχος μου είναι να παρέχω διορατικές, ενδιαφέρουσες και εξατομικευμένες ξεναγήσεις, διασφαλίζοντας ότι θα αξιοποιήσετε στο έπακρο τον χρόνο σας στην Ελλάδα.`,
+                navHome: 'Αρχική',
+                navTours: 'Ξεναγήσεις',
+                navAbout: 'Σχετικά με εμένα',
+                navContact: 'Επικοινωνία',
+                whyChooseTitle: 'Γιατί να επιλέξετε έναν αδειούχο ξεναγό;',
+                whyChooseDescription: `Η πρόσληψη ενός αδειούχου ξεναγού εξασφαλίζει ότι θα λάβετε ακριβή και ενημερωμένα σχόλια κατά την επίσκεψή σας. Οι αδειούχοι ξεναγοί στην Ελλάδα είναι διαπιστευμένοι από το Υπουργείο Τουρισμού και έχουν νόμιμο δικαίωμα να καθοδηγούν ξεναγήσεις σε αρχαιολογικούς χώρους, μουσεία και ιστορικά μνημεία. Φέρουμε επίσημο σήμα με τον αριθμό ταυτότητάς μας.`,
+                feature1Title: 'Πολύγλωσσος',
+                feature1Description: 'Διαπιστευμένος για ξεναγήσεις στα αγγλικά και γαλλικά.',
+                feature2Title: 'Τοπική ψυχή, εσωτερική πινελιά',
+                feature2Description: 'Περιμένετε πραγματικές συζητήσεις για την ιστορία, την αρχαιολογία και την τέχνη — καθώς και αυθεντικές στάσεις στη διαδρομή.',
+                feature3Title: '100% προσαρμοσμένο σε εσάς',
+                feature3Description: 'Είτε είστε μοναχικός ταξιδιώτης είτε οικογένεια με παιδιά, κάθε λεπτομέρεια διαμορφώνεται γύρω από τις ανάγκες σας.',
+                carouselTitle: 'Βρείτε τον επιθυμητό προορισμό σας',
+                
+                footerText: '&copy; 2025 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.'
+
+            }
+        };
+
+   
+        const content = translations[lang];
+        document.getElementById('header-title').textContent = content.headerTitle;
+        document.getElementById('homepage-title').textContent = content.homepageTitle;
+        document.getElementById('homepage-subtitle').textContent = content.homepageSubtitle;
+        document.getElementById('homepage-description').innerHTML = content.homepageDescription;
+        document.getElementById('nav-home').textContent = content.navHome;
+        document.getElementById('nav-tours').textContent = content.navTours;
+        document.getElementById('nav-about').textContent = content.navAbout;
+        document.getElementById('nav-contact').textContent = content.navContact;
+        document.querySelector('.why-choose-title').textContent = content.whyChooseTitle;
+        document.querySelector('.why-choose-description').textContent = content.whyChooseDescription;
+        document.querySelector('.feature-box:nth-child(1) .feature-title').textContent = content.feature1Title;
+        document.querySelector('.feature-box:nth-child(1) .feature-description').textContent = content.feature1Description;
+        document.querySelector('.feature-box:nth-child(2) .feature-title').textContent = content.feature2Title;
+        document.querySelector('.feature-box:nth-child(2) .feature-description').textContent = content.feature2Description;
+        document.querySelector('.feature-box:nth-child(3) .feature-title').textContent = content.feature3Title;
+        document.querySelector('.feature-box:nth-child(3) .feature-description').textContent = content.feature3Description;
+        document.querySelector('.carousel-title').textContent = content.carouselTitle;
+        document.getElementById('footer-text').innerHTML = content.footerText;
+    }
+    function changeLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+        applyLanguage(lang);
+    }
+
+    languageOptions.forEach(option => {
+        option.addEventListener('click', () => changeLanguage(option.dataset.lang));
+    });
+
+    applyLanguage(savedLanguage);
+}
+
+// Function to initialize the burger menu
+function initBurgerMenu() {
+    const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const burgerIcon = document.querySelector('.burger-icon');
+    const closeIcon = document.querySelector('.close-icon');
+
+    burgerMenuBtn.addEventListener('click', () => {
+        const isMenuOpen = burgerMenu.classList.toggle('active');
+        burgerIcon.style.display = isMenuOpen ? 'none' : 'block';
+        closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+    });
+}
+
+
+
+
+
+
+
+
+
 
 
 
