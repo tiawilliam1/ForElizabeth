@@ -3859,11 +3859,48 @@ padding-left: 15%;
     padding-bottom: 6%;
     }
 
+
+
+
+    .feature-box:nth-child(1) img.feature-image {
+        content: url('ally1.jpg'); /* Replace with the mobile-specific image */
+    }
+
+    .feature-box:nth-child(2) img.feature-image {
+        content: url('ally2.jpg'); /* Replace with the mobile-specific image */
+    }
+
+    .feature-box:nth-child(3) img.feature-image {
+        content: url('ally3.jpg'); /* Replace with the mobile-specific image */
+    }
+
+    .feature-box img.feature-image {
+        width: 90%; /* Adjust image size for smaller screens */
+        margin: 0 auto; /* Center the image */
+        border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 }
 
 
 
-}
+
 
 
 /* Prevent horizontal scrolling */
