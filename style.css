@@ -3841,9 +3841,25 @@ padding-left: 15%;
 
 }
 
+.why-choose-description {
+
+    font-size: 1.3rem;
+}
+
+.why-choose-title {
 
 
+    margin-left: -3%;
+   
+}
 
+.why-choose-swirl {
+
+    padding-top: 6%;
+    padding-bottom: 6%;
+    }
+
+}
 
 
 
@@ -4294,7 +4310,7 @@ margin-top: 10%;
 }
 
 .why-choose-description {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #000000;
     max-width: 700px;
     margin: auto;
@@ -4359,7 +4375,7 @@ margin-top: 10%;
 }
 
 .why-choose-description {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #000000;
     max-width: 700px;
     margin: auto;
