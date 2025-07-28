@@ -3786,7 +3786,64 @@ margin-top: 60%;
 margin-left: 20%;
 text-align: justify;
 }
- 
+
+#homepage-title{
+
+    margin-left: -25%;
+    margin-top: 150%;
+    text-align: center;
+}
+
+#homepage h2 {
+
+    margin-top: 0%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#homepage p {
+
+    margin-top: 10%;
+}
+
+.cta-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the items */
+    gap: 10px; /* Add spacing between the icon and the link */
+}
+
+.cta-icon {
+width: 35%;
+height: auto;
+margin-right: 0%;
+margin-left: -60%;
+margin-top: 5%;
+margin-bottom: 3%;
+
+}
+
+.cta-link {
+    margin: 0; /* Reset margins */
+    font-size: 1.2rem; /* Adjust font size for better readability */
+    text-align: center; /* Center-align the link */
+    margin-top: 1%;
+margin-right: 60%;
+margin-bottom: 6%;
+}
+
+
+.why-choose-title {
+
+
+
+    
+}
+
+
+
+
+
+
 
 }
 
