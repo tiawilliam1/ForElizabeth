@@ -3832,11 +3832,13 @@ margin-bottom: 6%;
 }
 
 
-.why-choose-title {
+.why-choose-container {
+
+ 
+    padding-right: 15%;
+padding-left: 15%;
 
 
-
-    
 }
 
 
