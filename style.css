@@ -3553,6 +3553,7 @@ margin-top: -10%;
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: Add rounded corners */
     margin-bottom: 10px; /* Add spacing below the image */
+    margin-left: 5%;
 }
 
 .tour-card h2 {
