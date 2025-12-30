@@ -342,7 +342,7 @@ nav ul li a:hover {
 
 .carousel-title::after {
     content: ""; /* Empty content for the line */
-    display: block;
+    display: hide;
     width: 120px; /* Adjust the width to match the length of "Our Tour" */
     height: 2px; /* Thin line */
     background-color: #333; /* Line color */
