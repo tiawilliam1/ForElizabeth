@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Philosophical Tour</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,16 +11,18 @@
         <div class="logo-container">
             <img src="logo1.jpg" alt="Logo" class="logo">
         </div>
-        <h1>Attica Tours</h1>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Logo" class="logo">
+        <h1 id="header-title">Attica Tours</h1>
+        <div class="language-selector">
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-home">Home</a></li>
+                <li><a href="tours.html" class="nav-tours">Tours</a></li>
+                <li><a href="aboutme.html" class="nav-about">About me</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,8 +35,8 @@
         <div class="hero-content">
             <!-- Left: Title and Subtitle -->
             <div class="hero-text">
-                <h2>Philosophical Walking Tour of Athens</h2>
-                <p><strong>Explore Athens from Presocratics to Diogenes.</strong></p>
+                <h2 id="tour-title">Philosophical Walking Tour of Athens</h2>
+                <p id="tour-subtitle"><strong>Explore Athens from Presocratics to Diogenes.</strong></p>
             </div>
             <!-- Right: Image -->
             <div class="hero-image">
@@ -48,16 +50,16 @@
             <!-- First Row: Three Boxes -->
             <div class="info-row">
                 <div class="acropolis-info-box">
-                    <h3>Duration</h3>
-                    <p>3-4 hours</p>
+                    <h3 class="info-duration-label">Duration</h3>
+                    <p class="info-duration-text">3-4 hours</p>
                 </div>
                 <div class="acropolis-info-box">
-                    <h3>Type</h3>
-                    <p>Private Walking Tour</p>
+                    <h3 class="info-type-label">Type</h3>
+                    <p class="info-type-text">Private Walking Tour</p>
                 </div>
                 <div class="acropolis-info-box">
-                    <h3>Meeting Point</h3>
-                    <p>Rovertou Galli 43</p>
+                    <h3 class="info-meeting-label">Meeting Point</h3>
+                    <p class="info-meeting-text">Rovertou Galli 43</p>
                 </div>
             </div>
             
@@ -86,38 +88,38 @@
             <div class="tour-content">
                 <!-- Left: Text Content -->
                 <div class="tour-text">
-                    <h3>Tour Description</h3>
-                    <p><strong>Explore the Foundations of Ancient Athens.</strong></p>
-                    <p>
+                    <h3 class="desc-title">Tour Description</h3>
+                    <p class="desc-intro"><strong>Explore the Foundations of Ancient Athens.</strong></p>
+                    <p class="desc-1">
                         We begin on <strong>Philopappos Hill</strong>, also known as <strong>the Hill of the Muses</strong>. 
                         With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. 
                         Here we recall the <strong>Presocratic thinkers</strong>—like <strong>Thales</strong>, who believed everything comes from water, 
                         and <strong>Heraclitus</strong>, who saw all things in constant change. 
                         These early philosophers searched for the hidden principles behind nature, using reason rather than myth.
                     </p>
-                    <p>
+                    <p class="desc-2">
                         From here, we turn to <strong>Socrates</strong>, who shifted philosophy inward, from the cosmos to the soul. 
                         He was sentenced to death for corrupting the youth and questioning the gods, but he accepted the verdict calmly, 
                         choosing to die rather than abandon his pursuit of truth. 
                         We visit the site known as <strong>the Prison of Socrates</strong>, where we reflect on his final days. 
                         Then we climb <strong>Pnyka Hill</strong>, the birthplace of democracy, where citizens once gathered to speak and vote.
                     </p>
-                    <p>
+                    <p class="desc-3">
                         In the quiet of <strong>Kerameikos Cemetery</strong>, we consider the teachings of <strong>Plato</strong> and <strong>Aristotle</strong>. 
                         <strong>Plato</strong> believed our souls belong to a world of eternal <strong>Forms</strong>—pure and perfect truths behind everything we see. 
                         <strong>Aristotle</strong>, more practical, believed virtue is found through reason and purposeful action in daily life.
                     </p>
-                    <p>
+                    <p class="desc-4">
                         We continue to <strong>the Ancient Agora</strong>, the old center of public life. 
                         Among its ruins is the site of <strong>the Painted Stoa</strong>, where <strong>Zeno of Citium</strong> founded the Stoic school. 
                         The <strong>Stoics</strong> taught that peace of mind comes from accepting what we cannot control and living with wisdom, courage, and self-discipline—even in the middle of the city’s chaos.
                     </p>
-                    <p>
+                    <p class="desc-5">
                         We end at <strong>the Square of Diogenes</strong>. 
                         <strong>Diogenes the Cynic</strong> was the boldest of them all. He lived simply—some say in a barrel—and challenged society by example. 
                         With biting wit and radical honesty, he showed that true freedom means needing nothing and fearing no one.
                     </p>
-                    <p>
+                    <p class="desc-6">
                         This walk through Athens is more than a journey through ruins—it’s an invitation to <strong>think differently</strong>, 
                         to <strong>question deeply</strong>, and to <strong>live more wisely</strong>.
                     </p>
@@ -126,72 +128,72 @@
 
         <!-- Right: Additional Information -->
         <div class="tour-extra-info">
-            <h3>Additional Information</h3>
+            <h3 class="additional-title">Additional Information</h3>
             <div class="info-item">
-                <h4>Itinerary</h4>
+                <h4 class="itinerary-title">Itinerary</h4>
                 <div class="itinerary">
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Philopappos Hill (Hill of the Muses)</h5>
-                            <p>Begin your journey with wide views over Athens and the sea, reflecting on the Presocratic thinkers.</p>
+                            <h5 class="itinerary-1-title">Philopappos Hill (Hill of the Muses)</h5>
+                            <p class="itinerary-1-text">Begin your journey with wide views over Athens and the sea, reflecting on the Presocratic thinkers.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Prison of Socrates</h5>
-                            <p>Visit the site where Socrates spent his final days, reflecting on his pursuit of truth and philosophy.</p>
+                            <h5 class="itinerary-2-title">Prison of Socrates</h5>
+                            <p class="itinerary-2-text">Visit the site where Socrates spent his final days, reflecting on his pursuit of truth and philosophy.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Pnyka Hill</h5>
-                            <p>Explore the birthplace of democracy, where citizens gathered to speak and vote in ancient Athens.</p>
+                            <h5 class="itinerary-3-title">Pnyka Hill</h5>
+                            <p class="itinerary-3-text">Explore the birthplace of democracy, where citizens gathered to speak and vote in ancient Athens.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Kerameikos Cemetery</h5>
-                            <p>Reflect on the teachings of Plato and Aristotle in this serene and historic burial ground.</p>
+                            <h5 class="itinerary-4-title">Kerameikos Cemetery</h5>
+                            <p class="itinerary-4-text">Reflect on the teachings of Plato and Aristotle in this serene and historic burial ground.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Ancient Agora</h5>
-                            <p>Walk through the civic and commercial center of ancient Athens, home to the Painted Stoa and Stoic philosophy.</p>
+                            <h5 class="itinerary-5-title">Ancient Agora</h5>
+                            <p class="itinerary-5-text">Walk through the civic and commercial center of ancient Athens, home to the Painted Stoa and Stoic philosophy.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Square of Diogenes</h5>
-                            <p>End your tour at the square dedicated to Diogenes the Cynic, reflecting on his radical honesty and simple life.</p>
+                            <h5 class="itinerary-6-title">Square of Diogenes</h5>
+                            <p class="itinerary-6-text">End your tour at the square dedicated to Diogenes the Cynic, reflecting on his radical honesty and simple life.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="info-item">
-                <h4>Not Included</h4>
-                <p>Entrance fees to venues</p>
+                <h4 class="not-included-title">Not Included</h4>
+                <p class="not-included-text">Entrance fees to venues</p>
             </div>
             <div class="info-item">
-                <h4>Included</h4>
-                <p>Private licensed guide</p>
+                <h4 class="included-title">Included</h4>
+                <p class="included-text">Private licensed guide</p>
             </div>
             <div class="info-item">
-                <h4>Cancellation Fee</h4>
-                <li>Free cancellation up to 24 hours before the tour.</li>
-                <li>You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid</li>
+                <h4 class="cancel-title">Cancellation Fee</h4>
+                <li class="cancel-1">Free cancellation up to 24 hours before the tour.</li>
+                <li class="cancel-2">You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid</li>
             </div>
             <div class="contact-me">
-                <h3>Contact Me</h3>
-                <p>If you have any questions or would like to book this tour, feel free to reach out:</p>
-                <p><strong>Email:</strong> <a href="mailto:elisavetmakri@hotmail.com">elisavetmakri@hotmail.com</a></p>
-                <p><strong>Phone:</strong> +30 6942919085</p>
+                <h3 class="contact-me-title">Contact Me</h3>
+                <p class="contact-me-text">If you have any questions or would like to book this tour, feel free to reach out:</p>
+                <p class="contact-email"><strong>Email:</strong> <a href="mailto:elisavetmakri@hotmail.com">elisavetmakri@hotmail.com</a></p>
+                <p class="contact-phone"><strong>Phone:</strong> +30 6942919085</p>
             </div>
         </div>
         
@@ -201,59 +203,179 @@
     
     <footer>
         <div class="footer-info">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>elisavetmakri@hotmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
+            <p class="footer-name">Elisavet Makri</p>
+            <p class="footer-role">Art Historian - Licensed Tour Guide</p>
+            <p class="footer-email">elisavetmakri@hotmail.com</p>
+            <p class="footer-phone">+30 6942919085</p>
+            <p class="footer-location">Athens, Greece</p>
         </div>
         <div class="footer-logo">
             <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
             <p id="footer-text">&copy; 2025 Tour Guide. All rights reserved.</p>
         </div>
     </footer>
-</body>
-</html>
-
 <script>
-    // Get the fullscreen container and image elements
-    const fullscreenContainer = document.getElementById('fullscreen-container');
-    const fullscreenImage = document.getElementById('fullscreen-image');
-
-    // Add event listeners to all gallery images
-    const galleryImages = document.querySelectorAll('.gallery-image');
-    galleryImages.forEach(image => {
-        image.addEventListener('click', () => {
-            fullscreenImage.src = image.src; // Set the fullscreen image source
-            fullscreenContainer.style.display = 'flex'; // Show the fullscreen container
+    document.addEventListener('DOMContentLoaded', () => {
+        // Gallery fullscreen
+        const fullscreenContainer = document.getElementById('fullscreen-container');
+        const fullscreenImage = document.getElementById('fullscreen-image');
+        document.querySelectorAll('.gallery-image').forEach(image => {
+            image.addEventListener('click', () => {
+                fullscreenImage.src = image.src;
+                fullscreenContainer.style.display = 'flex';
+            });
         });
-    });
+        fullscreenContainer.addEventListener('click', () => fullscreenContainer.style.display = 'none');
 
-    // Close the fullscreen view when clicking on the container
-    fullscreenContainer.addEventListener('click', () => {
-        fullscreenContainer.style.display = 'none'; // Hide the fullscreen container
-    });
-
-</script>
-<script>
-    // Function to check if an element is in the viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Add scroll event listener
-    document.addEventListener('scroll', () => {
-        const galleryImages = document.querySelectorAll('.gallery-image');
-        galleryImages.forEach(image => {
-            if (isInViewport(image)) {
-                image.classList.add('animated'); // Add the animated class when in viewport
-            }
+        // Scroll animation
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top >= 0 && rect.left >= 0 &&
+                   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                   rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+        }
+        document.addEventListener('scroll', () => {
+            document.querySelectorAll('.gallery-image').forEach(img => {
+                if (isInViewport(img)) img.classList.add('animated');
+            });
         });
-    });
-</script>
+
+        // Language handling
+        const languageOptions = document.querySelectorAll('.language-option');
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        const elements = {
+            pageTitle: document.querySelector('title'),
+            headerTitle: document.getElementById('header-title'),
+            navHome: document.querySelectorAll('.nav-home'),
+            navTours: document.querySelectorAll('.nav-tours'),
+            navAbout: document.querySelectorAll('.nav-about'),
+            navContact: document.querySelectorAll('.nav-contact'),
+            tourTitle: document.getElementById('tour-title'),
+            tourSubtitle: document.getElementById('tour-subtitle'),
+            infoDurationLabel: document.querySelector('.info-duration-label'),
+            infoDurationText: document.querySelector('.info-duration-text'),
+            infoTypeLabel: document.querySelector('.info-type-label'),
+            infoTypeText: document.querySelector('.info-type-text'),
+            infoMeetingLabel: document.querySelector('.info-meeting-label'),
+            infoMeetingText: document.querySelector('.info-meeting-text'),
+            galleryHeading: document.querySelector('.gallery-heading'),
+            descTitle: document.querySelector('.desc-title'),
+            descIntro: document.querySelector('.desc-intro'),
+            descParas: [
+                document.querySelector('.desc-1'),
+                document.querySelector('.desc-2'),
+                document.querySelector('.desc-3'),
+                document.querySelector('.desc-4'),
+                document.querySelector('.desc-5'),
+                document.querySelector('.desc-6')
+            ],
+            additionalTitle: document.querySelector('.additional-title'),
+            itineraryTitle: document.querySelector('.itinerary-title'),
+            itineraryItems: [
+                { title: '.itinerary-1-title', text: '.itinerary-1-text' },
+                { title: '.itinerary-2-title', text: '.itinerary-2-text' },
+                { title: '.itinerary-3-title', text: '.itinerary-3-text' },
+                { title: '.itinerary-4-title', text: '.itinerary-4-text' },
+                { title: '.itinerary-5-title', text: '.itinerary-5-text' },
+                { title: '.itinerary-6-title', text: '.itinerary-6-text' }
+            ],
+            notIncludedTitle: document.querySelector('.not-included-title'),
+            notIncludedText: document.querySelector('.not-included-text'),
+            includedTitle: document.querySelector('.included-title'),
+            includedText: document.querySelector('.included-text'),
+            cancelTitle: document.querySelector('.cancel-title'),
+            cancelLines: [
+                document.querySelector('.cancel-1'),
+                document.querySelector('.cancel-2')
+            ],
+            contactTitle: document.querySelector('.contact-me-title'),
+            contactText: document.querySelector('.contact-me-text'),
+            contactEmail: document.querySelector('.contact-email'),
+            contactPhone: document.querySelector('.contact-phone'),
+            footerText: document.getElementById('footer-text'),
+            footerName: document.querySelector('.footer-name'),
+            footerRole: document.querySelector('.footer-role'),
+            footerEmail: document.querySelector('.footer-email'),
+            footerPhone: document.querySelector('.footer-phone'),
+            footerLocation: document.querySelector('.footer-location')
+        };
+
+        const translations = {
+            en: {
+                pageTitle: 'Philosophical Walking Tour of Athens',
+                headerTitle: 'Attica Tours',
+                navHome: 'Home',
+                navTours: 'Tours',
+                navAbout: 'About me',
+                navContact: 'Contact',
+                tourTitle: 'Philosophical Walking Tour of Athens',
+                tourSubtitle: 'Explore Athens from Presocratics to Diogenes.',
+                infoDurationLabel: 'Duration',
+                infoDurationText: '3-4 hours',
+                infoTypeLabel: 'Type',
+                infoTypeText: 'Private Walking Tour',
+                infoMeetingLabel: 'Meeting Point',
+                infoMeetingText: 'Rovertou Galli 43',
+                galleryHeading: 'Photos & Highlights',
+                descTitle: 'Tour Description',
+                descIntro: 'Explore the Foundations of Ancient Athens.',
+                descParas: [
+                    'We begin on Philopappos Hill, also known as the Hill of the Muses. With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. Here we recall the Presocratic thinkers—like Thales, who believed everything comes from water, and Heraclitus, who saw all things in constant change. These early philosophers searched for the hidden principles behind nature, using reason rather than myth.',
+                    'From here, we turn to Socrates, who shifted philosophy inward, from the cosmos to the soul. He was sentenced to death for corrupting the youth and questioning the gods, but he accepted the verdict calmly, choosing to die rather than abandon his pursuit of truth. We visit the site known as the Prison of Socrates, where we reflect on his final days. Then we climb Pnyka Hill, the birthplace of democracy, where citizens once gathered to speak and vote.',
+                    'In the quiet of Kerameikos Cemetery, we consider the teachings of Plato and Aristotle. Plato believed our souls belong to a world of eternal Forms—pure and perfect truths behind everything we see. Aristotle, more practical, believed virtue is found through reason and purposeful action in daily life.',
+                    'We continue to the Ancient Agora, the old center of public life. Among its ruins is the site of the Painted Stoa, where Zeno of Citium founded the Stoic school. The Stoics taught that peace of mind comes from accepting what we cannot control and living with wisdom, courage, and self-discipline—even in the middle of the city’s chaos.',
+                    'We end at the Square of Diogenes. Diogenes the Cynic was the boldest of them all. He lived simply—some say in a barrel—and challenged society by example. With biting wit and radical honesty, he showed that true freedom means needing nothing and fearing no one.',
+                    'This walk through Athens is more than a journey through ruins—it’s an invitation to think differently, to question deeply, and to live more wisely.'
+                ],
+                additionalTitle: 'Additional Information',
+                itineraryTitle: 'Itinerary',
+                itineraryItems: [
+                    { title: 'Philopappos Hill (Hill of the Muses)', text: 'Begin your journey with wide views over Athens and the sea, reflecting on the Presocratic thinkers.' },
+                    { title: 'Prison of Socrates', text: 'Visit the site where Socrates spent his final days, reflecting on his pursuit of truth and philosophy.' },
+                    { title: 'Pnyka Hill', text: 'Explore the birthplace of democracy, where citizens gathered to speak and vote in ancient Athens.' },
+                    { title: 'Kerameikos Cemetery', text: 'Reflect on the teachings of Plato and Aristotle in this serene and historic burial ground.' },
+                    { title: 'Ancient Agora', text: 'Walk through the civic and commercial center of ancient Athens, home to the Painted Stoa and Stoic philosophy.' },
+                    { title: 'Square of Diogenes', text: 'End your tour at the square dedicated to Diogenes the Cynic, reflecting on his radical honesty and simple life.' }
+                ],
+                notIncludedTitle: 'Not Included',
+                notIncludedText: 'Entrance fees to venues',
+                includedTitle: 'Included',
+                includedText: 'Private licensed guide',
+                cancelTitle: 'Cancellation Fee',
+                cancelLines: [
+                    'Free cancellation up to 24 hours before the tour.',
+                    'You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid'
+                ],
+                contactTitle: 'Contact Me',
+                contactText: 'If you have any questions or would like to book this tour, feel free to reach out:',
+                contactEmail: 'Email:',
+                contactPhone: 'Phone:',
+                footerText: '&copy; 2025 Tour Guide. All rights reserved.',
+                footerName: 'Elisavet Makri',
+                footerRole: 'Art Historian - Licensed Tour Guide',
+                footerEmail: 'elisavetmakri@hotmail.com',
+                footerPhone: '+30 6942919085',
+                footerLocation: 'Athens, Greece'
+            },
+            fr: {
+                pageTitle: 'Visite philosophique à pied d’Athènes',
+                headerTitle: 'Visites d’Attique',
+                navHome: 'Accueil',
+                navTours: 'Visites',
+                navAbout: 'À propos de moi',
+                navContact: 'Contact',
+                tourTitle: 'Visite philosophique à pied d’Athènes',
+                tourSubtitle: 'Explorez Athènes des Présocratiques à Diogène.',
+                infoDurationLabel: 'Durée',
+                infoDurationText: '3-4 heures',
+                infoTypeLabel: 'Type',
+                infoTypeText: 'Visite privée à pied',
+                infoMeetingLabel: 'Point de rendez-vous',
+                infoMeetingText: 'Rovertou Galli 43',
+                galleryHeading: 'Photos & Points forts',
+                descTitle: 'Description de la visite',
+                descIntro: 'Explorez les fondations de l’Athènes antique.',
+                descParas: [
+                    'Nous commençons sur la colline Philopappos, dite colline des Muses. Avec sa vue sur Athènes et la mer, c’est l’endroit idéal pour réfléchir aux débuts de la philosophie. Nous évoquons les penseurs présocratiques — Thalès, pour qui tout vient de l’eau, et Héraclite, qui voit tout en perpétuel changement. Ces premiers philosophes cherchaient les principes cachés de la nature en usant de la raison plutôt que du mythe.',
+                    'Nous passons ensuite à Socrate, qui déplaça la philosophie vers l’âme. Condamné à mort pour avoir corrompu la jeunesse et remis en cause les dieux, il accepta calmement le verdict, préférant mourir que renoncer à la vérité. Nous visitons le site de la « Prison de Socrate » puis gravissons la colline de la Pnyx, berceau de la démocratie où les citoyens débataient et votaient.',
+                    'Dans le calme du cimetière du Céramique, nous réfléchissons à Platon et Aristote. Platon pensait que nos âmes appartiennent au monde des Formes éternelles — des vérités pures derrière tout ce que nous voyons. Aristote, plus pratique, croyait ότι αρετή? nope?'
