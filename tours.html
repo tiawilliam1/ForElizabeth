@@ -27,10 +27,10 @@
         <!-- Navigation Menu -->
         <nav class="burger-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-home">Home</a></li>
+                <li><a href="tours.html" class="nav-tours">Tours</a></li>
+                <li><a href="aboutme.html" class="nav-about">About me</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
                 
                 <li class="language-selector">
                             <span class="language-option" data-lang="en">EN</span> /
@@ -42,10 +42,11 @@
         </nav>
     <nav>
         <ul>
-            <li><a href="index.html" id="nav-home">Home</a></li>
-            <li><a href="tours.html" id="nav-tours">Tours</a></li>
-            <li><a href="aboutme.html" id="nav-about">About me</a></li>
-            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="index.html" id="nav-home" class="nav-home">Home</a></li>
+            <li><a href="tours.html" id="nav-tours" class="nav-tours">Tours</a></li>
+            <li><a href="aboutme.html" id="nav-about" class="nav-about">About me</a></li>
+            <li><a href="contact.html" id="nav-contact" class="nav-contact">Contact</a></li>
+            
         </ul>
     </nav>
     </header>
@@ -190,10 +191,18 @@
             const saronicGulfList = document.querySelectorAll('.tour-card:nth-child(4) .text-container ul li');
             const cycladesTours = document.querySelector('.tour-card:nth-child(5) .text-container h2');
             const cycladesList = document.querySelectorAll('.tour-card:nth-child(5) .text-container ul li');
+            const navHomeLinks = document.querySelectorAll('.nav-home');
+            const navTourLinks = document.querySelectorAll('.nav-tours');
+            const navAboutLinks = document.querySelectorAll('.nav-about');
+            const navContactLinks = document.querySelectorAll('.nav-contact');
     
             if (lang === 'en') {
                 pageTitle.textContent = 'Athens Tours';
                 headerTitle.textContent = 'Our Tours';
+                navHomeLinks.forEach(link => link.textContent = 'Home');
+                navTourLinks.forEach(link => link.textContent = 'Tours');
+                navAboutLinks.forEach(link => link.textContent = 'About me');
+                navContactLinks.forEach(link => link.textContent = 'Contact');
                 atticaTours.textContent = 'Attica';
                 atticaList[0].textContent = '-> Acropolis & Ancient Agora Tour';
                 atticaList[1].textContent = '-> Walking Tour of the Center of Athens';
@@ -217,6 +226,10 @@
             } else if (lang === 'fr') {
                 pageTitle.textContent = 'Tours d\'Athènes';
                 headerTitle.textContent = 'Nos Tours';
+                navHomeLinks.forEach(link => link.textContent = 'Accueil');
+                navTourLinks.forEach(link => link.textContent = 'Visites');
+                navAboutLinks.forEach(link => link.textContent = 'À propos de moi');
+                navContactLinks.forEach(link => link.textContent = 'Contact');
                 atticaTours.textContent = 'Attique';
                 atticaList[0].textContent = '-> Tour de l\'Acropole et de l\'Agora Antique';
                 atticaList[1].textContent = '-> Tour à pied du centre d\'Athènes';
@@ -240,6 +253,10 @@
             } else if (lang === 'el') {
                 pageTitle.textContent = 'Ξεναγήσεις στην Αθήνα';
                 headerTitle.textContent = 'Οι Ξεναγήσεις μας';
+                navHomeLinks.forEach(link => link.textContent = 'Αρχική');
+                navTourLinks.forEach(link => link.textContent = 'Ξεναγήσεις');
+                navAboutLinks.forEach(link => link.textContent = 'Σχετικά με εμένα');
+                navContactLinks.forEach(link => link.textContent = 'Επικοινωνία');
                 atticaTours.textContent = 'Αττική';
                 atticaList[0].textContent = '-> Ξενάγηση στην Ακρόπολη και την Αρχαία Αγορά';
                 atticaList[1].textContent = '-> Περιπατητική Ξενάγηση στο Κέντρο της Αθήνας';
@@ -263,6 +280,7 @@
             }
         }
     
+        
         // Add event listeners to language options
         document.querySelectorAll('.language-option').forEach(option => {
             option.addEventListener('click', () => {
