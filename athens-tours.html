@@ -29,10 +29,10 @@
         <!-- Navigation Menu -->
         <nav class="burger-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-home">Home</a></li>
+                <li><a href="tours.html" class="nav-tours">Tours</a></li>
+                <li><a href="aboutme.html" class="nav-about">About me</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
                 
                 <li class="language-selector">
                             <span class="language-option" data-lang="en">EN</span> /
@@ -46,10 +46,10 @@
     
     <nav>
         <ul>
-            <li><a href="index.html" id="nav-home">Home</a></li>
-            <li><a href="tours.html" id="nav-tours">Tours</a></li>
-            <li><a href="aboutme.html" id="nav-about">About me</a></li>
-            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="index.html" id="nav-home" class="nav-home">Home</a></li>
+            <li><a href="tours.html" id="nav-tours" class="nav-tours">Tours</a></li>
+            <li><a href="aboutme.html" id="nav-about" class="nav-about">About me</a></li>
+            <li><a href="contact.html" id="nav-contact" class="nav-contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -111,46 +111,142 @@
             window.location.href = "tours.html"; // Navigate back to tours.html
         }
 
-        // Select the burger menu button, navigation menu, icons, and header
-const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
-const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
-const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
-const closeIcon = document.querySelector('.close-icon'); // The x.png icon
-const header = document.querySelector('header'); // The header element
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageOptions = document.querySelectorAll('.language-option');
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
 
-    burgerMenuBtn.addEventListener('click', () => {
-    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
+            const elements = {
+                pageTitle: document.querySelector('title'),
+                headerTitle: document.getElementById('header-title'),
+                navHome: document.querySelectorAll('.nav-home'),
+                navTours: document.querySelectorAll('.nav-tours'),
+                navAbout: document.querySelectorAll('.nav-about'),
+                navContact: document.querySelectorAll('.nav-contact'),
+                cards: document.querySelectorAll('.athens-tours .tour-card'),
+                footerText: document.getElementById('footer-text'),
+                footerName: document.querySelector('.footer-info p:nth-child(1)'),
+                footerRole: document.querySelector('.footer-info p:nth-child(2)'),
+                footerEmail: document.querySelector('.footer-info p:nth-child(3)'),
+                footerPhone: document.querySelector('.footer-info p:nth-child(4)'),
+                footerLocation: document.querySelector('.footer-info p:nth-child(5)')
+            };
 
-    // Toggle between the burger icon and the close icon
-    if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header is visible
-        console.log('Menu opened'); // Debugging log
-    } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header remains visible
-        console.log('Menu closed'); // Debugging log
-    }
-});
+            const translations = {
+                en: {
+                    pageTitle: 'Athens Tours',
+                    headerTitle: 'Attica Tours',
+                    navHome: 'Home',
+                    navTours: 'Tours',
+                    navAbout: 'About me',
+                    navContact: 'Contact',
+                    cards: [
+                        { title: 'Acropolis + Agora Tour', desc: 'Explore the iconic Acropolis and the ancient Agora, the heart of ancient Athens.' },
+                        { title: 'Walking Tour of the Center of Athens', desc: 'Discover the vibrant center of Athens on this walking tour.' },
+                        { title: 'Philosophical Walking Tour', desc: 'Walk in the footsteps of Socrates, Plato, and Aristotle on this immersive journey.' },
+                        { title: 'The National Archaeological Museum Tour', desc: 'Home to some of the greatest masterpieces of ancient Greek art, the National Archaeological Museum is a fascinating stop for any visitor to Athens.' },
+                        { title: 'Cape Sounio Tour', desc: 'Discover one of Greece’s most unforgettable views at Cape Sounio, where the ancient Temple of Poseidon overlooks the Aegean Sea.' }
+                    ],
+                    footerText: '&copy; 2025 Tour Guide. All rights reserved.',
+                    footerName: 'Elisavet Makri',
+                    footerRole: 'Art Historian - Licensed Tour Guide',
+                    footerEmail: 'elisavetmakri@hotmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Athens, Greece'
+                },
+                fr: {
+                    pageTitle: 'Visites d\'Athènes',
+                    headerTitle: 'Visites d\'Attique',
+                    navHome: 'Accueil',
+                    navTours: 'Visites',
+                    navAbout: 'À propos de moi',
+                    navContact: 'Contact',
+                    cards: [
+                        { title: 'Visite Acropole + Agora', desc: 'Explorez l’emblématique Acropole et l’ancienne Agora, cœur de l’Athènes antique.' },
+                        { title: 'Visite à pied du centre d’Athènes', desc: 'Découvrez le centre animé d’Athènes lors de cette visite à pied.' },
+                        { title: 'Visite philosophique à pied', desc: 'Marchez dans les pas de Socrate, Platon et Aristote lors de ce parcours immersif.' },
+                        { title: 'Visite du Musée archéologique national', desc: 'Abritant certains des plus grands chefs-d’œuvre de l’art grec ancien, le musée est une halte fascinante pour tout visiteur d’Athènes.' },
+                        { title: 'Excursion au cap Sounion', desc: 'Admirez l’une des vues les plus inoubliables de Grèce, où le Temple de Poséidon domine la mer Égée.' }
+                    ],
+                    footerText: '&copy; 2025 Guide touristique. Tous droits réservés.',
+                    footerName: 'Elisavet Makri',
+                    footerRole: 'Historienne de l\'art - Guide touristique licenciée',
+                    footerEmail: 'elisavetmakri@hotmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Athènes, Grèce'
+                },
+                el: {
+                    pageTitle: 'Ξεναγήσεις Αθήνας',
+                    headerTitle: 'Ξεναγήσεις Αττικής',
+                    navHome: 'Αρχική',
+                    navTours: 'Ξεναγήσεις',
+                    navAbout: 'Σχετικά με εμένα',
+                    navContact: 'Επικοινωνία',
+                    cards: [
+                        { title: 'Ξενάγηση Ακρόπολη + Αρχαία Αγορά', desc: 'Εξερευνήστε την εμβληματική Ακρόπολη και την Αρχαία Αγορά, την καρδιά της αρχαίας Αθήνας.' },
+                        { title: 'Περιπατητική ξενάγηση στο κέντρο της Αθήνας', desc: 'Ανακαλύψτε το ζωντανό κέντρο της Αθήνας σε αυτήν την περιήγηση με τα πόδια.' },
+                        { title: 'Φιλοσοφική περιπατητική ξενάγηση', desc: 'Περπατήστε στα χνάρια του Σωκράτη, του Πλάτωνα και του Αριστοτέλη σε αυτήν την βιωματική διαδρομή.' },
+                        { title: 'Ξενάγηση στο Εθνικό Αρχαιολογικό Μουσείο', desc: 'Φιλοξενεί μερικά από τα σπουδαιότερα αριστουργήματα της αρχαίας ελληνικής τέχνης και αποτελεί συναρπαστική στάση για κάθε επισκέπτη στην Αθήνα.' },
+                        { title: 'Ξενάγηση στο Σούνιο', desc: 'Απολαύστε μία από τις πιο αξέχαστες θέες της Ελλάδας, όπου ο Ναός του Ποσειδώνα δεσπόζει πάνω από το Αιγαίο.' }
+                    ],
+                    footerText: '&copy; 2025 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.',
+                    footerName: 'Ελισάβετ Μακρή',
+                    footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
+                    footerEmail: 'elisavetmakri@hotmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Αθήνα, Ελλάδα'
+                }
+            };
 
-// Add a click event listener to the "X" button (close icon)
-closeIcon.addEventListener('click', () => {
-    console.log('Close button clicked'); // Debugging log
+            function applyLanguage(lang) {
+                const content = translations[lang];
+                languageOptions.forEach(option => option.classList.toggle('active', option.dataset.lang === lang));
+                elements.pageTitle.textContent = content.pageTitle;
+                elements.headerTitle.textContent = content.headerTitle;
+                elements.navHome.forEach(link => link.textContent = content.navHome);
+                elements.navTours.forEach(link => link.textContent = content.navTours);
+                elements.navAbout.forEach(link => link.textContent = content.navAbout);
+                elements.navContact.forEach(link => link.textContent = content.navContact);
+                elements.cards.forEach((card, index) => {
+                    const data = content.cards[index];
+                    if (!data) return;
+                    const titleEl = card.querySelector('h2');
+                    const descEl = card.querySelector('p');
+                    if (titleEl) titleEl.textContent = data.title;
+                    if (descEl) descEl.textContent = data.desc;
+                });
+                elements.footerText.innerHTML = content.footerText;
+                elements.footerName.textContent = content.footerName;
+                elements.footerRole.textContent = content.footerRole;
+                elements.footerEmail.textContent = content.footerEmail;
+                elements.footerPhone.textContent = content.footerPhone;
+                elements.footerLocation.textContent = content.footerLocation;
+                localStorage.setItem('selectedLanguage', lang);
+            }
 
-    // Close the menu by removing the 'active' class
-    burgerMenu.classList.remove('hidden');
+            languageOptions.forEach(option => option.addEventListener('click', () => applyLanguage(option.dataset.lang)));
+            applyLanguage(savedLanguage);
 
-    // Show the burger icon (menu.png)
-    burgerIcon.style.display = 'block';
+            // Burger menu
+            const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+            const burgerMenu = document.querySelector('.burger-menu');
+            const burgerIcon = document.querySelector('.burger-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const header = document.querySelector('header');
 
-    // Hide the "X" icon (x.png)
-    closeIcon.style.display = 'none';
+            burgerMenuBtn.addEventListener('click', () => {
+                const isMenuOpen = burgerMenu.classList.toggle('active');
+                burgerIcon.style.display = isMenuOpen ? 'none' : 'block';
+                closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+                header.style.display = 'block';
+            });
 
-    // Ensure the header is visible
-    header.style.display = 'block';
-});
+            closeIcon.addEventListener('click', () => {
+                burgerMenu.classList.remove('hidden');
+                burgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+                header.style.display = 'block';
+            });
+        });
     </script>
 </body>
 </html>

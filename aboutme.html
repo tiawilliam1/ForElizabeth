@@ -158,6 +158,7 @@
     });
     document.addEventListener("DOMContentLoaded", function () {
     const langOptions = document.querySelectorAll('.language-option');
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const elementsToTranslate = {
         headerTitle: document.querySelector('h1'),
         aboutMeText: document.querySelector('.about-me-text p'),
@@ -227,26 +228,30 @@
         }
     };
 
-    langOptions.forEach(option => {
-        option.addEventListener('click', () => {
-            const lang = option.dataset.lang;
-            const translation = translations[lang];
+    function applyLanguage(lang) {
+        const translation = translations[lang];
+        langOptions.forEach(option => option.classList.toggle('active', option.dataset.lang === lang));
+        elementsToTranslate.headerTitle.textContent = translation.headerTitle;
+        elementsToTranslate.aboutMeText.textContent = translation.aboutMeText;
+        elementsToTranslate.visionTitle.textContent = translation.visionTitle;
+        elementsToTranslate.visionText[0].textContent = translation.visionText[0];
+        elementsToTranslate.visionText[1].textContent = translation.visionText[1];
+        elementsToTranslate.footerQuote.textContent = translation.footerQuote;
+        elementsToTranslate.footerAuthor.textContent = translation.footerAuthor;
+        elementsToTranslate.navHome.forEach(link => link.textContent = translation.navHome);
+        elementsToTranslate.navTours.forEach(link => link.textContent = translation.navTours);
+        elementsToTranslate.navAbout.forEach(link => link.textContent = translation.navAbout);
+        elementsToTranslate.navContact.forEach(link => link.textContent = translation.navContact);
+        elementsToTranslate.footerName.textContent = translation.footerName;
+        elementsToTranslate.footerTitle.textContent = translation.footerTitle;
+        localStorage.setItem('selectedLanguage', lang);
+    }
 
-            elementsToTranslate.headerTitle.textContent = translation.headerTitle;
-            elementsToTranslate.aboutMeText.textContent = translation.aboutMeText;
-            elementsToTranslate.visionTitle.textContent = translation.visionTitle;
-            elementsToTranslate.visionText[0].textContent = translation.visionText[0];
-            elementsToTranslate.visionText[1].textContent = translation.visionText[1];
-            elementsToTranslate.footerQuote.textContent = translation.footerQuote;
-            elementsToTranslate.footerAuthor.textContent = translation.footerAuthor;
-            elementsToTranslate.navHome.forEach(link => link.textContent = translation.navHome);
-            elementsToTranslate.navTours.forEach(link => link.textContent = translation.navTours);
-            elementsToTranslate.navAbout.forEach(link => link.textContent = translation.navAbout);
-            elementsToTranslate.navContact.forEach(link => link.textContent = translation.navContact);
-            elementsToTranslate.footerName.textContent = translation.footerName;
-            elementsToTranslate.footerTitle.textContent = translation.footerTitle;
-        });
+    langOptions.forEach(option => {
+        option.addEventListener('click', () => applyLanguage(option.dataset.lang));
     });
+
+    applyLanguage(savedLanguage);
 });
 
 

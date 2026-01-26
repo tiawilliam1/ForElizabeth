@@ -89,57 +89,123 @@
             <p id="footer-text">&copy; 2025 Tour Guide. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageOptions = document.querySelectorAll('.language-option');
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+
+            const elements = {
+                pageTitle: document.querySelector('title'),
+                headerTitle: document.getElementById('header-title'),
+                contactHeading: document.querySelector('.contact-text h2'),
+                contactLocation: document.querySelector('.contact-text ul li:nth-child(1)'),
+                navHome: document.querySelectorAll('.nav-home'),
+                navTours: document.querySelectorAll('.nav-tours'),
+                navAbout: document.querySelectorAll('.nav-about'),
+                navContact: document.querySelectorAll('.nav-contact'),
+                footerName: document.querySelector('.footer-info p:nth-child(1)'),
+                footerRole: document.querySelector('.footer-info p:nth-child(2)'),
+                footerEmail: document.querySelector('.footer-info p:nth-child(3)'),
+                footerPhone: document.querySelector('.footer-info p:nth-child(4)'),
+                footerLocation: document.querySelector('.footer-info p:nth-child(5)'),
+                footerText: document.getElementById('footer-text')
+            };
+
+            const translations = {
+                en: {
+                    pageTitle: 'Contact',
+                    headerTitle: 'Contact',
+                    contactHeading: 'Ready to explore Greece?',
+                    contactLocation: 'Athens, Greece',
+                    navHome: 'Home',
+                    navTours: 'Tours',
+                    navAbout: 'About me',
+                    navContact: 'Contact',
+                    footerName: 'Elisavet Makri',
+                    footerRole: 'Art Historian - Licensed Tour Guide',
+                    footerEmail: 'elisavetmakri@hotmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Athens, Greece',
+                    footerText: '&copy; 2025 Tour Guide. All rights reserved.'
+                },
+                fr: {
+                    pageTitle: 'Contact',
+                    headerTitle: 'Contact',
+                    contactHeading: 'Prêt à explorer la Grèce ?',
+                    contactLocation: 'Athènes, Grèce',
+                    navHome: 'Accueil',
+                    navTours: 'Visites',
+                    navAbout: 'À propos de moi',
+                    navContact: 'Contact',
+                    footerName: 'Elisavet Makri',
+                    footerRole: 'Historienne de l\'art - Guide touristique licenciée',
+                    footerEmail: 'elisavetmakri@hotmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Athènes, Grèce',
+                    footerText: '&copy; 2025 Guide touristique. Tous droits réservés.'
+                },
+                el: {
+                    pageTitle: 'Επικοινωνία',
+                    headerTitle: 'Επικοινωνία',
+                    contactHeading: 'Έτοιμοι να εξερευνήσετε την Ελλάδα;',
+                    contactLocation: 'Αθήνα, Ελλάδα',
+                    navHome: 'Αρχική',
+                    navTours: 'Ξεναγήσεις',
+                    navAbout: 'Σχετικά με εμένα',
+                    navContact: 'Επικοινωνία',
+                    footerName: 'Ελισάβετ Μακρή',
+                    footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
+                    footerEmail: 'elisavetmakri@hotmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Αθήνα, Ελλάδα',
+                    footerText: '&copy; 2025 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.'
+                }
+            };
+
+            function applyLanguage(lang) {
+                const content = translations[lang];
+                languageOptions.forEach(option => option.classList.toggle('active', option.dataset.lang === lang));
+                elements.pageTitle.textContent = content.pageTitle;
+                elements.headerTitle.textContent = content.headerTitle;
+                elements.contactHeading.textContent = content.contactHeading;
+                elements.contactLocation.textContent = content.contactLocation;
+                elements.navHome.forEach(link => link.textContent = content.navHome);
+                elements.navTours.forEach(link => link.textContent = content.navTours);
+                elements.navAbout.forEach(link => link.textContent = content.navAbout);
+                elements.navContact.forEach(link => link.textContent = content.navContact);
+                elements.footerName.textContent = content.footerName;
+                elements.footerRole.textContent = content.footerRole;
+                elements.footerEmail.textContent = content.footerEmail;
+                elements.footerPhone.textContent = content.footerPhone;
+                elements.footerLocation.textContent = content.footerLocation;
+                elements.footerText.innerHTML = content.footerText;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            languageOptions.forEach(option => option.addEventListener('click', () => applyLanguage(option.dataset.lang)));
+            applyLanguage(savedLanguage);
+
+            // Burger menu toggle
+            const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+            const burgerMenu = document.querySelector('.burger-menu');
+            const burgerIcon = document.querySelector('.burger-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const header = document.querySelector('header');
+
+            burgerMenuBtn.addEventListener('click', () => {
+                const isMenuOpen = burgerMenu.classList.toggle('active');
+                burgerIcon.style.display = isMenuOpen ? 'none' : 'block';
+                closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+                header.style.display = 'block';
+            });
+
+            closeIcon.addEventListener('click', () => {
+                burgerMenu.classList.remove('hidden');
+                burgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+                header.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
-
-<script>
-
-const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
-const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
-const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
-const closeIcon = document.querySelector('.close-icon'); // The x.png icon
-const header = document.querySelector('header'); // The header element
-
-// Add a click event listener to the burger menu button
-burgerMenuBtn.addEventListener('click', () => {
-    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
-
-    // Toggle between the burger icon and the close icon
-    if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header is visible
-        console.log('Menu opened'); // Debugging log
-    } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header remains visible
-        console.log('Menu closed'); // Debugging log
-    }
-});
-
-// Add a click event listener to the "X" button (close icon)
-closeIcon.addEventListener('click', () => {
-    console.log('Close button clicked'); // Debugging log
-
-    // Close the menu by removing the 'active' class
-    burgerMenu.classList.remove('hidden');
-
-    // Show the burger icon (menu.png)
-    burgerIcon.style.display = 'block';
-
-    // Hide the "X" icon (x.png)
-    closeIcon.style.display = 'none';
-
-    // Ensure the header is visible
-    header.style.display = 'block';
-});
-
-
-
-</script>
-
-</body>
-</html>
-
-</script>
