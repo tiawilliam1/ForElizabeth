@@ -633,7 +633,6 @@ body {
     background-color: #fff; /* Solid white background */
     padding: 20px; /* Add padding inside the text box */
     border-radius: 0; /* Ensure sharp edges */
-   
     text-align: left; /* Align text to the left */
 }
 
@@ -4391,9 +4390,10 @@ margin-top: 10%;
 .why-choose-description {
     font-size: 1.3rem;
     color: #000000;
-    max-width: 700px;
+    max-width: 96%;
     margin: auto;
     font: didot; 
+    text-align: justify;
 }
 
 .why-choose-features {
@@ -4456,10 +4456,10 @@ margin-top: 10%;
 .why-choose-description {
     font-size: 1.3rem;
     color: #000000;
-    max-width: 700px;
+    max-width: 96%;
     margin: auto;
-    margin-bottom: 40px;
-    font-family: 'Didot', serif; /* Use Didot for headings */
+    font: didot; 
+    text-align: justify;
 }
 
 .why-choose-features {

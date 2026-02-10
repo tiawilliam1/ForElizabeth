@@ -223,8 +223,11 @@
             image.addEventListener('click', () => {
                 fullscreenImage.src = image.src;
                 fullscreenContainer.style.display = 'flex';
-            });
+            
         });
+        });
+    });
+    
         fullscreenContainer.addEventListener('click', () => fullscreenContainer.style.display = 'none');
 
         // Scroll animation
@@ -239,7 +242,7 @@
                 if (isInViewport(img)) img.classList.add('animated');
             });
         });
-
+    
         // Language handling
         const languageOptions = document.querySelectorAll('.language-option');
         const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
@@ -379,3 +382,6 @@
                     'Nous commençons sur la colline Philopappos, dite colline des Muses. Avec sa vue sur Athènes et la mer, c’est l’endroit idéal pour réfléchir aux débuts de la philosophie. Nous évoquons les penseurs présocratiques — Thalès, pour qui tout vient de l’eau, et Héraclite, qui voit tout en perpétuel changement. Ces premiers philosophes cherchaient les principes cachés de la nature en usant de la raison plutôt que du mythe.',
                     'Nous passons ensuite à Socrate, qui déplaça la philosophie vers l’âme. Condamné à mort pour avoir corrompu la jeunesse et remis en cause les dieux, il accepta calmement le verdict, préférant mourir que renoncer à la vérité. Nous visitons le site de la « Prison de Socrate » puis gravissons la colline de la Pnyx, berceau de la démocratie où les citoyens débataient et votaient.',
                     'Dans le calme du cimetière du Céramique, nous réfléchissons à Platon et Aristote. Platon pensait que nos âmes appartiennent au monde des Formes éternelles — des vérités pures derrière tout ce que nous voyons. Aristote, plus pratique, croyait ότι αρετή? nope?'
+            ]
+                }
+            }
