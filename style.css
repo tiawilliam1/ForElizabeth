@@ -944,7 +944,7 @@ html, body {
 }
 
 .tour-card img {
-    width: 143%;
+    width: 100%;
     height: 300px; /* Set a fixed height for the images to make them square */
     object-fit: cover; /* Ensure the image covers the entire area */
     border-radius: 10px;
@@ -4272,17 +4272,17 @@ margin-left: -10%;
 
 .peloponnese-image {
     content: url('acorinth.jpeg');
-    margin-left: -15%;
+    
 }
 
 .central-greece-image {
     content: url('central.jpg');
-    margin-left: -34%;
+    
 }
 
 .saronic-gulf-image {
     content: url('spetses1.jpg');
-    margin-left:-22%;
+    
 }
 
 .cyclades-image {
@@ -4634,10 +4634,3 @@ margin-top: -3%;
 }
 
 
-.tour-card img {
-    width: 203%;
-    height: 300px; /* Set a fixed height for the images to make them square */
-    object-fit: cover; /* Ensure the image covers the entire area */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
