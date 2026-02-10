@@ -4267,27 +4267,7 @@ margin-left: -10%;
 
 
 
-/* Default Images for Larger Screens */
-.attica-image {
-    content: url('attica.jpg');
-}
-
-.peloponnese-image {
-    content: url('acorinth.jpeg');
-}
-
-.central-greece-image {
-    content: url('central.jpg');
-}
-
-.saronic-gulf-image {
-    content: url('spetses1.jpg');
-}
-
-.cyclades-image {
-    content: url('cyc1.jpg');
-}
-
+/* Default Images for Larger Screens *
 
 
 /* Media Query for Smaller Screens */
