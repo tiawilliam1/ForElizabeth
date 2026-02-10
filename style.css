@@ -1544,6 +1544,14 @@ footer {
     margin-bottom: 20px; /* Add space below the header */
 }
 
+.about-subtitle {
+    font-size: 1.4rem;
+    color: #6a6a6a;
+    letter-spacing: 0.02em;
+    margin-top: -8px;
+    margin-right: -4%;
+}
+
 .about-me-header h1::after {
     content: ""; /* Add an empty pseudo-element */
     position: absolute; /* Position it relative to the h1 */
@@ -1622,6 +1630,7 @@ footer {
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Start slightly below their final position */
     animation: fadeInUp 1.5s ease-out forwards; /* Apply the fade-in animation */
+    margin-bottom: 8%;
 }
 
 /* Keyframes for the fade-in and slide-up effect */
@@ -4635,5 +4644,4 @@ margin-top: -3%;
     height: auto;
     margin-top: -4%;
 }
-
 
