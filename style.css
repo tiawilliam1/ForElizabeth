@@ -4269,6 +4269,10 @@ margin-left: -10%;
 
 /* Default Images for Larger Screens */
 
+.attica-image {
+    content: url('attica\ copy\ 2.jpg');
+    
+}
 
 .peloponnese-image {
     content: url('acorinth.jpeg');
