@@ -944,7 +944,7 @@ html, body {
 }
 
 .tour-card img {
-    width: 100%;
+    width: 143%;
     height: 300px; /* Set a fixed height for the images to make them square */
     object-fit: cover; /* Ensure the image covers the entire area */
     border-radius: 10px;
@@ -4267,7 +4267,27 @@ margin-left: -10%;
 
 
 
-/* Default Images for Larger Screens *
+/* Default Images for Larger Screens */
+.attica-image {
+    content: url('attica.jpg');
+}
+
+.peloponnese-image {
+    content: url('acorinth.jpeg');
+}
+
+.central-greece-image {
+    content: url('central.jpg');
+}
+
+.saronic-gulf-image {
+    content: url('spetses1.jpg');
+}
+
+.cyclades-image {
+    content: url('cyc1.jpg');
+}
+
 
 
 /* Media Query for Smaller Screens */
