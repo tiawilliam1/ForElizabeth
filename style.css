@@ -4268,9 +4268,7 @@ margin-left: -10%;
 
 
 /* Default Images for Larger Screens */
-.attica-image {
-    content: url('attica.jpg');
-}
+
 
 .peloponnese-image {
     content: url('acorinth.jpeg');
@@ -4634,7 +4632,7 @@ margin-top: -3%;
 
 
 .tour-card img {
-    width: 200%;
+    width: 203%;
     height: 300px; /* Set a fixed height for the images to make them square */
     object-fit: cover; /* Ensure the image covers the entire area */
     border-radius: 10px;
