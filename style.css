@@ -633,7 +633,7 @@ body {
     background-color: #fff; /* Solid white background */
     padding: 20px; /* Add padding inside the text box */
     border-radius: 0; /* Ensure sharp edges */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+   
     text-align: left; /* Align text to the left */
 }
 
