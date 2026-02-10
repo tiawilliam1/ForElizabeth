@@ -4393,7 +4393,6 @@ margin-top: 10%;
     max-width: 96%;
     margin: auto;
     font: didot; 
-    text-align: justify;
 }
 
 .why-choose-features {
@@ -4456,10 +4455,10 @@ margin-top: 10%;
 .why-choose-description {
     font-size: 1.3rem;
     color: #000000;
-    max-width: 96%;
+    max-width: 700px;
     margin: auto;
-    font: didot; 
-    text-align: justify;
+    margin-bottom: 40px;
+    font-family: 'Didot', serif; /* Use Didot for headings */
 }
 
 .why-choose-features {
