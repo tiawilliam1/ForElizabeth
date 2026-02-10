@@ -4633,3 +4633,10 @@ margin-top: -3%;
 }
 
 
+.tour-card img {
+    width: 143%;
+    height: 300px; /* Set a fixed height for the images to make them square */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
