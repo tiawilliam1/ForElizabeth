@@ -115,10 +115,12 @@ nav ul li a:hover {
     margin-bottom: -5%;
 }
 #homepage-title {
-    font-family: 'Didot', serif; /* Use Didot for the title */
+    font-family: 'Didot', serif;
     letter-spacing: 0.07em;
-    font-size: 2.2em; /* Adjust the font size to make it smaller */
-    margin-left:-12%
+    font-size: 2.2em;
+    text-align: center;
+    margin-left: -14%;
+    margin-bottom: 14%;
 }
 
 .homepage-content {
