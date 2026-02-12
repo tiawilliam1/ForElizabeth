@@ -195,7 +195,10 @@
             const navTourLinks = document.querySelectorAll('.nav-tours');
             const navAboutLinks = document.querySelectorAll('.nav-about');
             const navContactLinks = document.querySelectorAll('.nav-contact');
-    
+            const viewDetailsButtons = document.querySelectorAll('.view-details-button');
+            const footerInfo = document.querySelectorAll('.footer-info1 p');
+            const footerCopy = document.getElementById('footer-text1');
+
             if (lang === 'en') {
                 pageTitle.textContent = 'Athens Tours';
                 headerTitle.textContent = 'Our Tours';
@@ -203,6 +206,7 @@
                 navTourLinks.forEach(link => link.textContent = 'Tours');
                 navAboutLinks.forEach(link => link.textContent = 'About me');
                 navContactLinks.forEach(link => link.textContent = 'Contact');
+                viewDetailsButtons.forEach(button => button.textContent = 'View Tours →');
                 atticaTours.textContent = 'Attica';
                 atticaList[0].textContent = '-> Acropolis & Ancient Agora Tour';
                 atticaList[1].textContent = '-> Walking Tour of the Center of Athens';
@@ -223,6 +227,14 @@
                 cycladesTours.textContent = 'Cyclades';
                 cycladesList[0].textContent = '-> Mykonos';
                 cycladesList[1].textContent = '-> Santorini';
+                if (footerInfo.length >=5) {
+                    footerInfo[0].textContent = 'Elisavet Makri';
+                    footerInfo[1].textContent = 'Art Historian - Licensed Tour Guide';
+                    footerInfo[2].textContent = 'elisavetmakri@hotmail.com';
+                    footerInfo[3].textContent = '+30 6942919085';
+                    footerInfo[4].textContent = 'Athens, Greece';
+                }
+                if (footerCopy) footerCopy.textContent = '© 2025 Tour Guide. All rights reserved.';
             } else if (lang === 'fr') {
                 pageTitle.textContent = 'Tours d\'Athènes';
                 headerTitle.textContent = 'Nos Tours';
@@ -231,6 +243,7 @@
                 navAboutLinks.forEach(link => link.textContent = 'À propos de moi');
                 navContactLinks.forEach(link => link.textContent = 'Contact');
                 atticaTours.textContent = 'Attique';
+                viewDetailsButtons.forEach(button => button.textContent = 'Découvrir les visites →');
                 atticaList[0].textContent = '-> Visite de l\'Acropole et de l\'Agora Antique';
                 atticaList[1].textContent = '-> Visite à pied du centre d\'Athènes';
                 atticaList[2].textContent = '-> Promenade Philosophique';
@@ -250,6 +263,15 @@
                 cycladesTours.textContent = 'Cyclades';
                 cycladesList[0].textContent = '-> Mykonos';
                 cycladesList[1].textContent = '-> Santorin';
+                if (footerInfo.length >=5) {
+                    footerInfo[0].textContent = 'Elisavet Makri';
+                    footerInfo[1].textContent = 'Historienne de l\'art - Guide-conférencière';
+                    footerInfo[2].textContent = 'elisavetmakri@hotmail.com';
+                    footerInfo[3].textContent = '+30 6942919085';
+                    footerInfo[4].textContent = 'Athènes, Grèce';
+                }
+                if (footerCopy) footerCopy.textContent = '© 2025 Guide touristique. Tous droits réservés.';
+                
             } else if (lang === 'el') {
                 pageTitle.textContent = 'Ξεναγήσεις στην Αθήνα';
                 headerTitle.textContent = 'Οι Ξεναγήσεις μας';
@@ -257,6 +279,7 @@
                 navTourLinks.forEach(link => link.textContent = 'Ξεναγήσεις');
                 navAboutLinks.forEach(link => link.textContent = 'Σχετικά με εμένα');
                 navContactLinks.forEach(link => link.textContent = 'Επικοινωνία');
+                viewDetailsButtons.forEach(button => button.textContent = 'Découvrir les visites →');
                 atticaTours.textContent = 'Αττική';
                 atticaList[0].textContent = '-> Ξενάγηση στην Ακρόπολη και την Αρχαία Αγορά';
                 atticaList[1].textContent = '-> Περιπατητική Ξενάγηση στο Κέντρο της Αθήνας';
@@ -277,6 +300,14 @@
                 cycladesTours.textContent = 'Κυκλάδες';
                 cycladesList[0].textContent = '-> Μύκονος';
                 cycladesList[1].textContent = '-> Σαντορίνη';
+                if (footerInfo.length >=5) {
+                    footerInfo[0].textContent = 'Ελισάβετ Μακρή';
+                    footerInfo[1].textContent = 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός';
+                    footerInfo[2].textContent = 'elisavetmakri@hotmail.com';
+                    footerInfo[3].textContent = '+30 6942919085';
+                    footerInfo[4].textContent = 'Αθήνα, Ελλάδα';
+                }
+                if (footerCopy) footerCopy.textContent = '© 2025 Ξεναγός. Με επιφύλαξη παντός δικαιώματος.';
             }
         }
     
