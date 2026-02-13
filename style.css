@@ -1826,6 +1826,7 @@ footer {
 .hero-text p {
     font-size: 1.2rem;
     color: #555;
+    margin-right: 10%;
 }
 
 .hero-image {

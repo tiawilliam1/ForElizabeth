@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophical Tour</title>
+    <title>Philosophical Walking Tour of Athens</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,20 +11,43 @@
         <div class="logo-container">
             <img src="logo1.jpg" alt="Logo" class="logo">
         </div>
-        <h1 id="header-title">Attica Tours</h1>
+        <h1 id="header-title">Greece Local Guide</h1>
         <div class="language-selector">
             <span class="language-option" data-lang="en">EN</span> /
             <span class="language-option" data-lang="fr">FR</span> /
             <span class="language-option" data-lang="el">GR</span>
         </div>
-        <nav>
+    
+        <div class="burger-menu-btn" aria-label="Toggle Navigation">
+            <img src="menu.png" alt="Open Menu" class="burger-icon">
+            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
+        </div>
+    
+    
+        <!-- Navigation Menu -->
+        <nav class="burger-menu">
             <ul>
                 <li><a href="index.html" class="nav-home">Home</a></li>
                 <li><a href="tours.html" class="nav-tours">Tours</a></li>
                 <li><a href="aboutme.html" class="nav-about">About me</a></li>
                 <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                
+                <li class="language-selector">
+                            <span class="language-option" data-lang="en">EN</span> /
+                            <span class="language-option" data-lang="fr">FR</span> /
+                            <span class="language-option" data-lang="el">GR</span>
+                </li>
             </ul>
+    
         </nav>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home" class="nav-home">Home</a></li>
+            <li><a href="tours.html" id="nav-tours" class="nav-tours">Tours</a></li>
+            <li><a href="aboutme.html" id="nav-about" class="nav-about">About me</a></li>
+            <li><a href="contact.html" id="nav-contact" class="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     <section class="hero-section">
         <section class="back-button-container1">
@@ -36,7 +59,7 @@
             <!-- Left: Title and Subtitle -->
             <div class="hero-text">
                 <h2 id="tour-title">Philosophical Walking Tour of Athens</h2>
-                <p id="tour-subtitle"><strong>Explore Athens from Presocratics to Diogenes.</strong></p>
+                <p id="tour-subtitle"><strong>Explore Athens from Presocratics to Diogenes..</strong></p>
             </div>
             <!-- Right: Image -->
             <div class="hero-image">
@@ -72,7 +95,7 @@
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426972/philosophy22_wghq4g.jpg" alt="Venue 2" class="gallery-image">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426990/philosophy32_va11us.jpg" alt="Venue 3" class="gallery-image">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769427009/philo1_copy_k9yvvs.jpg" alt="Venue 4" class="gallery-image">
-
+            
             </div>
         </div>
         
@@ -91,38 +114,19 @@
                     <h3 class="desc-title">Tour Description</h3>
                     <p class="desc-intro"><strong>Explore the Foundations of Ancient Athens.</strong></p>
                     <p class="desc-1">
-                        We begin on <strong>Philopappos Hill</strong>, also known as <strong>the Hill of the Muses</strong>. 
-                        With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. 
-                        Here we recall the <strong>Presocratic thinkers</strong>—like <strong>Thales</strong>, who believed everything comes from water, 
-                        and <strong>Heraclitus</strong>, who saw all things in constant change. 
-                        These early philosophers searched for the hidden principles behind nature, using reason rather than myth.
-                    </p>
+                        We begin on Philopappos Hill, also known as the Hill of the Muses. With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. Here we recall the Presocratic thinkers—like Thales, who believed everything comes from water, and Heraclitus, who saw all things in constant change. These early philosophers searched for the hidden principles behind nature, using reason rather than myth.</p>
                     <p class="desc-2">
-                        From here, we turn to <strong>Socrates</strong>, who shifted philosophy inward, from the cosmos to the soul. 
-                        He was sentenced to death for corrupting the youth and questioning the gods, but he accepted the verdict calmly, 
-                        choosing to die rather than abandon his pursuit of truth. 
-                        We visit the site known as <strong>the Prison of Socrates</strong>, where we reflect on his final days. 
-                        Then we climb <strong>Pnyka Hill</strong>, the birthplace of democracy, where citizens once gathered to speak and vote.
+                        From here, we turn to Socrates, who shifted philosophy inward, from the cosmos to the soul. He was sentenced to death for corrupting the youth and questioning the gods, but he accepted the verdict calmly, choosing to die rather than abandon his pursuit of truth. We visit the site known as the Prison of Socrates, where we reflect on his final days. Then we climb Pnyka Hill, the birthplace of democracy, where citizens once gathered to speak and vote.
                     </p>
                     <p class="desc-3">
-                        In the quiet of <strong>Kerameikos Cemetery</strong>, we consider the teachings of <strong>Plato</strong> and <strong>Aristotle</strong>. 
-                        <strong>Plato</strong> believed our souls belong to a world of eternal <strong>Forms</strong>—pure and perfect truths behind everything we see. 
-                        <strong>Aristotle</strong>, more practical, believed virtue is found through reason and purposeful action in daily life.
-                    </p>
+                        In the quiet of Kerameikos Cemetery, we consider the teachings of Plato and Aristotle. Plato believed our souls belong to a world of eternal Forms—pure and perfect truths behind everything we see. Aristotle, more practical, believed virtue is found through reason and purposeful action in daily life.      </p>
                     <p class="desc-4">
-                        We continue to <strong>the Ancient Agora</strong>, the old center of public life. 
-                        Among its ruins is the site of <strong>the Painted Stoa</strong>, where <strong>Zeno of Citium</strong> founded the Stoic school. 
-                        The <strong>Stoics</strong> taught that peace of mind comes from accepting what we cannot control and living with wisdom, courage, and self-discipline—even in the middle of the city’s chaos.
-                    </p>
+                        We continue to the Ancient Agora, the old center of public life. Among its ruins is the site of the Painted Stoa, where Zeno of Citium founded the Stoic school. The Stoics taught that peace of mind comes from accepting what we cannot control and living with wisdom, courage, and self-discipline—even in the middle of the city’s chaos.</p>
                     <p class="desc-5">
-                        We end at <strong>the Square of Diogenes</strong>. 
-                        <strong>Diogenes the Cynic</strong> was the boldest of them all. He lived simply—some say in a barrel—and challenged society by example. 
-                        With biting wit and radical honesty, he showed that true freedom means needing nothing and fearing no one.
-                    </p>
+                        
+We end at the Square of Diogenes. Diogenes the Cynic was the boldest of them all. He lived simply—some say in a barrel—and challenged society by example. With biting wit and radical honesty, he showed that true freedom means needing nothing and fearing no one.   </p>
                     <p class="desc-6">
-                        This walk through Athens is more than a journey through ruins—it’s an invitation to <strong>think differently</strong>, 
-                        to <strong>question deeply</strong>, and to <strong>live more wisely</strong>.
-                    </p>
+                        This walk through Athens is more than a journey through ruins—it’s an invitation to think differently, to question deeply, and to live more wisely.  </p>
                 </div>
                 <div class="divider"></div>
 
@@ -135,21 +139,23 @@
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5 class="itinerary-1-title">Philopappos Hill (Hill of the Muses)</h5>
+                            <h5 class="itinerary-1-title">
+                                Philopappos Hill (Hill of the Muses)</h5>
                             <p class="itinerary-1-text">Begin your journey with wide views over Athens and the sea, reflecting on the Presocratic thinkers.</p>
-                        </div>
+                           </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
                             <h5 class="itinerary-2-title">Prison of Socrates</h5>
                             <p class="itinerary-2-text">Visit the site where Socrates spent his final days, reflecting on his pursuit of truth and philosophy.</p>
-                        </div>
+                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5 class="itinerary-3-title">Pnyka Hill</h5>
+                            <h5 class="itinerary-3-title">
+                                Pnyka Hill</h5>
                             <p class="itinerary-3-text">Explore the birthplace of democracy, where citizens gathered to speak and vote in ancient Athens.</p>
                         </div>
                     </div>
@@ -157,7 +163,7 @@
                         <div class="step-icon"></div>
                         <div class="step-content">
                             <h5 class="itinerary-4-title">Kerameikos Cemetery</h5>
-                            <p class="itinerary-4-text">Reflect on the teachings of Plato and Aristotle in this serene and historic burial ground.</p>
+                            <p class="itinerary-4-text">Reflect on the teachings of Plato and Aristotle in this serene and historic burial ground..</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
@@ -184,11 +190,7 @@
                 <h4 class="included-title">Included</h4>
                 <p class="included-text">Private licensed guide</p>
             </div>
-            <div class="info-item">
-                <h4 class="cancel-title">Cancellation Fee</h4>
-                <li class="cancel-1">Free cancellation up to 24 hours before the tour.</li>
-                <li class="cancel-2">You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid</li>
-            </div>
+
             <div class="contact-me">
                 <h3 class="contact-me-title">Contact Me</h3>
                 <p class="contact-me-text">If you have any questions or would like to book this tour, feel free to reach out:</p>
@@ -199,15 +201,34 @@
         
             </div>
     </section>
-    
+
     
     <footer>
         <div class="footer-info">
+            
             <p class="footer-name">Elisavet Makri</p>
             <p class="footer-role">Art Historian - Licensed Tour Guide</p>
             <p class="footer-email">elisavetmakri@hotmail.com</p>
             <p class="footer-phone">+30 6942919085</p>
             <p class="footer-location">Athens, Greece</p>
+        </div>
+        <div class="footer-sitemap">
+            <h4 class="sitemap-title">Site Map</h4>
+            <ul>
+                <li><a href="index.html" class="sitemap-home">Home</a></li>
+                <li>
+                    <a href="tours.html" class="sitemap-tours">Tours</a>
+                    <ul>
+                        <li><a href="athens-tours.html" class="sitemap-athens">Athens Tours</a></li>
+                        <li><a href="Peloponnese.html" class="sitemap-pelop">Peloponnese Tour</a></li>
+                        <li><a href="centralgreece.html" class="sitemap-central">Central Greece Tours</a></li>
+                        <li><a href="saronic-gulf-tours.html" class="sitemap-saronic">Saronic Gulf Tours</a></li>
+                        <li><a href="Cyclades.html" class="sitemap-cyclades">Cyclades Tours</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutme.html" class="sitemap-about">About Me</a></li>
+                <li><a href="contact.html" class="sitemap-contact">Contact</a></li>
+            </ul>
         </div>
         <div class="footer-logo">
             <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
@@ -223,11 +244,8 @@
             image.addEventListener('click', () => {
                 fullscreenImage.src = image.src;
                 fullscreenContainer.style.display = 'flex';
-            
+            });
         });
-        });
-    });
-    
         fullscreenContainer.addEventListener('click', () => fullscreenContainer.style.display = 'none');
 
         // Scroll animation
@@ -242,7 +260,7 @@
                 if (isInViewport(img)) img.classList.add('animated');
             });
         });
-    
+
         // Language handling
         const languageOptions = document.querySelectorAll('.language-option');
         const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
@@ -270,7 +288,8 @@
                 document.querySelector('.desc-3'),
                 document.querySelector('.desc-4'),
                 document.querySelector('.desc-5'),
-                document.querySelector('.desc-6')
+                document.querySelector('.desc-6'),
+                document.querySelector('.desc-7')
             ],
             additionalTitle: document.querySelector('.additional-title'),
             itineraryTitle: document.querySelector('.itinerary-title'),
@@ -295,18 +314,34 @@
             contactText: document.querySelector('.contact-me-text'),
             contactEmail: document.querySelector('.contact-email'),
             contactPhone: document.querySelector('.contact-phone'),
+            recommendedTitle: document.querySelector('.recommended-title'),
+            recTitles: [
+                document.querySelector('.rec-1-title a'),
+                document.querySelector('.rec-2-title a'),
+                document.querySelector('.rec-3-title a')
+            ],
             footerText: document.getElementById('footer-text'),
             footerName: document.querySelector('.footer-name'),
             footerRole: document.querySelector('.footer-role'),
             footerEmail: document.querySelector('.footer-email'),
             footerPhone: document.querySelector('.footer-phone'),
-            footerLocation: document.querySelector('.footer-location')
+            footerLocation: document.querySelector('.footer-location'),
+            sitemapTitle: document.querySelector('.sitemap-title'),
+            sitemapHome: document.querySelector('.sitemap-home'),
+            sitemapTours: document.querySelector('.sitemap-tours'),
+            sitemapAthens: document.querySelector('.sitemap-athens'),
+            sitemapPelop: document.querySelector('.sitemap-pelop'),
+            sitemapCentral: document.querySelector('.sitemap-central'),
+            sitemapSaronic: document.querySelector('.sitemap-saronic'),
+            sitemapCyclades: document.querySelector('.sitemap-cyclades'),
+            sitemapAbout: document.querySelector('.sitemap-about'),
+            sitemapContact: document.querySelector('.sitemap-contact')
         };
 
         const translations = {
             en: {
                 pageTitle: 'Philosophical Walking Tour of Athens',
-                headerTitle: 'Attica Tours',
+                headerTitle: 'Greece Local Guide',
                 navHome: 'Home',
                 navTours: 'Tours',
                 navAbout: 'About me',
@@ -321,13 +356,13 @@
                 infoMeetingText: 'Rovertou Galli 43',
                 galleryHeading: 'Photos & Highlights',
                 descTitle: 'Tour Description',
-                descIntro: 'Explore the Foundations of Ancient Athens.',
+                descIntro: 'Explore the <strong>foundations</strong> of ancient thought across Athens.',
                 descParas: [
-                    'We begin on Philopappos Hill, also known as the Hill of the Muses. With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. Here we recall the Presocratic thinkers—like Thales, who believed everything comes from water, and Heraclitus, who saw all things in constant change. These early philosophers searched for the hidden principles behind nature, using reason rather than myth.',
-                    'From here, we turn to Socrates, who shifted philosophy inward, from the cosmos to the soul. He was sentenced to death for corrupting the youth and questioning the gods, but he accepted the verdict calmly, choosing to die rather than abandon his pursuit of truth. We visit the site known as the Prison of Socrates, where we reflect on his final days. Then we climb Pnyka Hill, the birthplace of democracy, where citizens once gathered to speak and vote.',
-                    'In the quiet of Kerameikos Cemetery, we consider the teachings of Plato and Aristotle. Plato believed our souls belong to a world of eternal Forms—pure and perfect truths behind everything we see. Aristotle, more practical, believed virtue is found through reason and purposeful action in daily life.',
-                    'We continue to the Ancient Agora, the old center of public life. Among its ruins is the site of the Painted Stoa, where Zeno of Citium founded the Stoic school. The Stoics taught that peace of mind comes from accepting what we cannot control and living with wisdom, courage, and self-discipline—even in the middle of the city’s chaos.',
-                    'We end at the Square of Diogenes. Diogenes the Cynic was the boldest of them all. He lived simply—some say in a barrel—and challenged society by example. With biting wit and radical honesty, he showed that true freedom means needing nothing and fearing no one.',
+                    'We begin on <strong>Philopappos Hill</strong>, also known as the <strong>Hill of the Muses</strong>. With wide views over Athens and the sea, it’s the perfect place to consider how philosophy began. Here we recall the <strong>Presocratic</strong> thinkers—like <strong>Thales</strong>, who believed everything comes from water, and <strong>Heraclitus</strong>, who saw all things in constant change. These early philosophers searched for the hidden principles behind nature, using reason rather than myth.',
+                    'From here, we turn to <strong>Socrates</strong>, who shifted philosophy inward, from the cosmos to the soul. He was sentenced to death for corrupting the youth and questioning the gods, but he accepted the verdict calmly, choosing to die rather than abandon his pursuit of truth. We visit the site known as the <strong>Prison of Socrates</strong>, where we reflect on his final days. Then we climb <strong>Pnyka Hill</strong>, the birthplace of democracy, where citizens once gathered to speak and vote.',
+                    'In the quiet of <strong>Kerameikos Cemetery</strong>, we consider the teachings of <strong>Plato</strong> and <strong>Aristotle</strong>. Plato believed our souls belong to a world of eternal <strong>Forms</strong>—pure and perfect truths behind everything we see. Aristotle, more practical, believed virtue is found through reason and purposeful action in daily life.',
+                    'We continue to the <strong>Ancient Agora</strong>, the old center of public life. Among its ruins is the site of the <strong>Painted Stoa</strong>, where <strong>Zeno of Citium</strong> founded the <strong>Stoic</strong> school. The Stoics taught that peace of mind comes from accepting what we cannot control and living with wisdom, courage, and self-discipline—even in the middle of the city’s chaos.',
+                    'We end at the <strong>Square of Diogenes</strong>. <strong>Diogenes the Cynic</strong> was the boldest of them all. He lived simply—some say in a barrel—and challenged society by example. With biting wit and radical honesty, he showed that true freedom means needing nothing and fearing no one.',
                     'This walk through Athens is more than a journey through ruins—it’s an invitation to think differently, to question deeply, and to live more wisely.'
                 ],
                 additionalTitle: 'Additional Information',
@@ -344,31 +379,42 @@
                 notIncludedText: 'Entrance fees to venues',
                 includedTitle: 'Included',
                 includedText: 'Private licensed guide',
-                cancelTitle: 'Cancellation Fee',
-                cancelLines: [
-                    'Free cancellation up to 24 hours before the tour.',
-                    'You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid'
-                ],
                 contactTitle: 'Contact Me',
                 contactText: 'If you have any questions or would like to book this tour, feel free to reach out:',
                 contactEmail: 'Email:',
                 contactPhone: 'Phone:',
+                recommendedTitle: 'Others Tours in Athens you may like...',
+                recTitles: [
+                    'Acropolis + Agora Tour',
+                    'Philosophical Walking Tour',
+                    'Cape Sounion Tour'
+                ],
                 footerText: '&copy; 2025 Tour Guide. All rights reserved.',
                 footerName: 'Elisavet Makri',
                 footerRole: 'Art Historian - Licensed Tour Guide',
                 footerEmail: 'elisavetmakri@hotmail.com',
                 footerPhone: '+30 6942919085',
-                footerLocation: 'Athens, Greece'
+                footerLocation: 'Athens, Greece',
+                sitemapTitle: 'Site Map',
+                sitemapHome: 'Home',
+                sitemapTours: 'Tours',
+                sitemapAthens: 'Athens Tours',
+                sitemapPelop: 'Peloponnese Tour',
+                sitemapCentral: 'Central Greece Tours',
+                sitemapSaronic: 'Saronic Gulf Tours',
+                sitemapCyclades: 'Cyclades Tours',
+                sitemapAbout: 'About Me',
+                sitemapContact: 'Contact'
             },
             fr: {
-                pageTitle: 'Visite philosophique à pied d’Athènes',
-                headerTitle: 'Visites d’Attique',
+                pageTitle: 'Une promenade philosophique à Athènes',
+                headerTitle: 'Votre guide en Grèce',
                 navHome: 'Accueil',
                 navTours: 'Visites',
                 navAbout: 'À propos de moi',
                 navContact: 'Contact',
-                tourTitle: 'Visite philosophique à pied d’Athènes',
-                tourSubtitle: 'Explorez Athènes des Présocratiques à Diogène.',
+                tourTitle: 'Une promenade philosophique à Athènes',
+                tourSubtitle: 'Des Présocratiques à Diogène.',
                 infoDurationLabel: 'Durée',
                 infoDurationText: '3-4 heures',
                 infoTypeLabel: 'Type',
@@ -377,11 +423,216 @@
                 infoMeetingText: 'Rovertou Galli 43',
                 galleryHeading: 'Photos & Points forts',
                 descTitle: 'Description de la visite',
-                descIntro: 'Explorez les fondations de l’Athènes antique.',
+                descIntro: 'Athènes à travers le prisme de la philosophie',
                 descParas: [
-                    'Nous commençons sur la colline Philopappos, dite colline des Muses. Avec sa vue sur Athènes et la mer, c’est l’endroit idéal pour réfléchir aux débuts de la philosophie. Nous évoquons les penseurs présocratiques — Thalès, pour qui tout vient de l’eau, et Héraclite, qui voit tout en perpétuel changement. Ces premiers philosophes cherchaient les principes cachés de la nature en usant de la raison plutôt que du mythe.',
-                    'Nous passons ensuite à Socrate, qui déplaça la philosophie vers l’âme. Condamné à mort pour avoir corrompu la jeunesse et remis en cause les dieux, il accepta calmement le verdict, préférant mourir que renoncer à la vérité. Nous visitons le site de la « Prison de Socrate » puis gravissons la colline de la Pnyx, berceau de la démocratie où les citoyens débataient et votaient.',
-                    'Dans le calme du cimetière du Céramique, nous réfléchissons à Platon et Aristote. Platon pensait que nos âmes appartiennent au monde des Formes éternelles — des vérités pures derrière tout ce que nous voyons. Aristote, plus pratique, croyait ότι αρετή? nope?'
-            ]
-                }
+                    'Nous commençons sur la <strong>colline de Philopappos</strong>, également appelée la <strong>colline des Muses</strong>. Offrant de vastes vues sur Athènes et la mer, c’est un lieu idéal pour réfléchir à la naissance de la philosophie. C’est ici que nous évoquons les <strong>penseurs présocratiques</strong> — tels que <strong>Thalès</strong>, pour qui tout provient de l’eau, ou <strong>Héraclite</strong>, qui voyait le monde comme un flux perpétuel. Ces premiers philosophes cherchaient les principes cachés de la nature en s’appuyant sur la raison plutôt que sur le mythe.',
+                    'Nous nous tournons ensuite vers <strong>Socrate</strong>, qui déplaça la philosophie du cosmos vers l’âme humaine. Accusé de corrompre la jeunesse et de remettre en question les dieux de la cité, il fut condamné à mort. Il accepta son destin avec sérénité, préférant mourir plutôt que renoncer à sa quête de vérité. Nous visitons la <strong>prison de Socrate</strong>, où nous évoquons ses derniers jours, avant de monter sur la <strong>colline de la Pnyx</strong>, berceau de la démocratie, où les citoyens se réunissaient pour débattre et voter.',
+                    'Dans le calme du <strong>cimetière du Céramique</strong>, nous abordons les enseignements de <strong>Platon</strong> et <strong>Aristote</strong>. Platon pensait que nos âmes appartiennent au monde des <strong>Formes éternelles</strong> — des vérités parfaites et immuables qui se cachent derrière les apparences. Aristote, plus ancré dans le réel, voyait la vertu comme le fruit de la raison et de l’action juste dans la vie quotidienne.',
+                    'Nous poursuivons vers l’<strong>Agora antique d’Athènes</strong>, ancien cœur de la vie publique. Parmi ses ruines se trouve l’emplacement de la <strong>Stoa Poikilè (Stoa Peinte)</strong>, où <strong>Zénon de Kition</strong> fonda l’<strong>école stoïcienne</strong>. Les <strong>Stoïciens</strong> enseignaient que la paix intérieure naît de l’acceptation de ce qui échappe à notre contrôle, et d’une vie guidée par la sagesse, le courage et la maîtrise de soi — même au cœur de l’agitation urbaine.',
+                    'La visite s’achève sur la <strong>place de Diogène</strong>, dédiée à <strong>Diogène</strong>, le plus radical de tous. Vivant dans un dénuement extrême — selon la tradition, dans un tonneau — il défiait les conventions sociales par l’exemple. Par son ironie mordante et son honnêteté radicale, il affirmait que la véritable liberté consiste à ne rien désirer et à ne rien craindre.',
+                    'Cette promenade à travers Athènes propose bien plus qu’une découverte des ruines : elle engage à <strong>penser</strong>, <strong>questionner</strong> et <strong>comprendre</strong> autrement.'
+                ],
+                additionalTitle: 'Informations complémentaires',
+                itineraryTitle: 'Itinéraire',
+                itineraryItems: [
+                    { title: 'Colline de Philopappos (colline des Muses)', text: 'Vues sur Athènes et réflexion autour des penseurs présocratiques.' },
+                    { title: 'Site associé à Socrate', text: 'Évocation de sa pensée et de ses derniers jours.' },
+                    { title: 'Colline de la Pnyx', text: 'Berceau de la démocratie athénienne.' },
+                    { title: 'Cimetière du Céramique', text: 'Réflexion autour de Platon et d’Aristote.' },
+                    { title: 'Agora antique d’Athènes', text: 'Ancien centre civique et lieu de naissance du stoïcisme.' },
+                    { title: 'Place de Diogène', text: 'Évocation de Diogène le Cynique et de son mode de vie radical.' }
+                ],
+                notIncludedTitle: 'Non inclus',
+                notIncludedText: 'Droits d’entrée',
+                includedTitle: 'Inclus',
+                includedText: 'Guide privé licencié',
+                contactTitle: 'Contactez-moi',
+                contactText: 'Pour toute question ou réservation, n’hésitez pas à me joindre :',
+                contactEmail: 'Email :',
+                contactPhone: 'Téléphone :',
+                recommendedTitle: 'Autres visites à Athènes que vous pourriez aimer...',
+                recTitles: [
+                    'Visite Acropole + Agora',
+                    'Visite philosophique à pied',
+                    'Excursion au cap Sounion'
+                ],
+                footerText: '&copy; 2025 Guide touristique. Tous droits réservés.',
+                footerName: 'Elisavet Makri',
+                footerRole: 'Historienne de l\'art - Guide-conférencière',
+                footerEmail: 'elisavetmakri@hotmail.com',
+                footerPhone: '+30 6942919085',
+                footerLocation: 'Athènes, Grèce',
+                sitemapTitle: 'Plan du site',
+                sitemapHome: 'Accueil',
+                sitemapTours: 'Visites',
+                sitemapAthens: 'Visites d’Athènes',
+                sitemapPelop: 'Visite du Péloponnèse',
+                sitemapCentral: 'Visites Grèce centrale',
+                sitemapSaronic: 'Visites Golfe Saronique',
+                sitemapCyclades: 'Visites Cyclades',
+                sitemapAbout: 'À propos de moi',
+                sitemapContact: 'Contact'
+            },
+            el: {
+                pageTitle: 'Φιλοσοφική περιπατητική ξενάγηση στην Αθήνα',
+                headerTitle: 'Ο ξεναγός σας στην Ελλάδα',
+                navHome: 'Αρχική',
+                navTours: 'Ξεναγήσεις',
+                navAbout: 'Σχετικά με εμένα',
+                navContact: 'Επικοινωνία',
+                tourTitle: 'Φιλοσοφική περιπατητική ξενάγηση στην Αθήνα',
+                tourSubtitle: 'Εξερευνήστε την Αθήνα από τους Προσωκρατικούς έως τον Διογένη.',
+                infoDurationLabel: 'Διάρκεια',
+                infoDurationText: '3-4 ώρες',
+                infoTypeLabel: 'Τύπος',
+                infoTypeText: 'Ιδιωτική περιπατητική ξενάγηση',
+                infoMeetingLabel: 'Σημείο συνάντησης',
+                infoMeetingText: 'Ροβέρτου Γκάλη 43',
+                galleryHeading: 'Φωτογραφίες & Στιγμιότυπα',
+                descTitle: 'Περιγραφή ξενάγησης',
+                descIntro: 'Εξερευνήστε τις ρίζες της αρχαίας <strong>σκέψης</strong> μέσα στην πόλη.',
+                descParas: [
+                    'Ξεκινάμε στον <strong>λόφο Φιλοπάππου</strong> (λόφος των Μουσών) για να μιλήσουμε για τους <strong>Προσωκρατικούς</strong> και την αναζήτησή τους για τα κρυμμένα θεμέλια της φύσης.',
+                    'Στρέφουμε το βλέμμα στον <strong>Σωκράτη</strong> — τη δίκη του, τη γαλήνια αποδοχή του θανάτου και την εστίαση στην ψυχή — κοντά στο σημείο που είναι γνωστό ως «<strong>φυλακή του Σωκράτη</strong>», έπειτα ανεβαίνουμε στην <strong>Πνύκα</strong>, το λίκνο της δημοκρατίας.',
+                    'Στο <strong>νεκροταφείο του Κεραμεικού</strong> συλλογιζόμαστε για τον κόσμο των <strong>Ιδεών</strong> του <strong>Πλάτωνα</strong> και την πρακτική αρετή του <strong>Αριστοτέλη</strong>, μέσα από στοχαστική δράση.',
+                    'Στην <strong>Αρχαία Αγορά</strong>, ανάμεσα στα ερείπια της <strong>Ζωγραφιστής Στοάς</strong>, συναντάμε τον <strong>Ζήνωνα</strong> και τους <strong>Στωικούς</strong>: σοφία, ανδρεία και αυτοπειθαρχία.',
+                    'Καταλήγουμε στην <strong>πλατεία του Διογένη</strong>, όπου η ριζική απλότητα και η αφοβία του <strong>Κυνικού</strong> ανατρέπουν τις συμβάσεις.',
+                    'Αυτή η διαδρομή είναι πρόσκληση να <strong>σκεφτούμε</strong> διαφορετικά, να <strong>ρωτάμε</strong> σε βάθος και να <strong>ζούμε</strong> πιο σοφά.'
+                ],
+                additionalTitle: 'Πρόσθετες πληροφορίες',
+                itineraryTitle: 'Πρόγραμμα',
+                itineraryItems: [
+                    { title: 'Λόφος Φιλοπάππου (λόφος των Μουσών)', text: 'Θέα στην Αθήνα και συζήτηση για τους Προσωκρατικούς φιλοσόφους.' },
+                    { title: 'Φυλακή του Σωκράτη', text: 'Σκέψεις για τις τελευταίες μέρες του Σωκράτη πριν την ανάβαση στην Πνύκα.' },
+                    { title: 'Πνύκα', text: 'Γενέτειρα της δημοκρατίας, χώρος δημόσιου λόγου και ψηφοφορίας.' },
+                    { title: 'Κεραμεικός', text: 'Στοχασμός πάνω στον Πλάτωνα και τον Αριστοτέλη σε έναν γαλήνιο χώρο μνήμης.' },
+                    { title: 'Αρχαία Αγορά', text: 'Κέντρο της αρχαίας πόλης και της Ζωγραφιστής Στοάς, απαρχή του Στωικισμού.' },
+                    { title: 'Πλατεία Διογένη', text: 'Λήξη με το παράδειγμα ελευθερίας και απλότητας του Διογένη.' }
+                ],
+                notIncludedTitle: 'Δεν περιλαμβάνονται',
+                notIncludedText: 'Εισιτήρια εισόδου',
+                includedTitle: 'Περιλαμβάνονται',
+                includedText: 'Ιδιωτικός αδειοδοτημένος ξεναγός',
+                cancelTitle: 'Πολιτική ακύρωσης',
+                cancelLines: [
+                    'Δωρεάν ακύρωση έως 24 ώρες πριν την ξενάγηση.',
+                    'Μπορείτε να επιλέξετε 3 ή 4 ώρες, αλλά χρεώνεται το πλήρες 4ωρο.'
+                ],
+                contactTitle: 'Επικοινωνία',
+                contactText: 'Για ερωτήσεις ή κρατήσεις, μη διστάσετε να επικοινωνήσετε:',
+                contactEmail: 'Email:',
+                contactPhone: 'Τηλέφωνο:',
+                recommendedTitle: 'Και άλλες ξεναγήσεις στην Αθήνα που μπορεί να σας αρέσουν...',
+                recTitles: [
+                    'Ξενάγηση Ακρόπολη + Αγορά',
+                    'Φιλοσοφική περιπατητική ξενάγηση',
+                    'Ξενάγηση στο Σούνιο'
+                ],
+                footerText: '&copy; 2025 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.',
+                footerName: 'Ελισάβετ Μακρή',
+                footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
+                footerEmail: 'elisavetmakri@hotmail.com',
+                footerPhone: '+30 6942919085',
+                footerLocation: 'Αθήνα, Ελλάδα',
+                sitemapTitle: 'Χάρτης ιστοσελίδας',
+                sitemapHome: 'Αρχική',
+                sitemapTours: 'Ξεναγήσεις',
+                sitemapAthens: 'Ξεναγήσεις Αθήνας',
+                sitemapPelop: 'Πελοπόννησος',
+                sitemapCentral: 'Κεντρική Ελλάδα',
+                sitemapSaronic: 'Σαρωνικός',
+                sitemapCyclades: 'Κυκλάδες',
+                sitemapAbout: 'Σχετικά με εμένα',
+                sitemapContact: 'Επικοινωνία'
             }
+        };
+        function applyLanguage(lang) {
+            const c = translations[lang];
+            languageOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+            elements.pageTitle.textContent = c.pageTitle;
+            elements.headerTitle.textContent = c.headerTitle;
+            elements.navHome.forEach(el => el.textContent = c.navHome);
+            elements.navTours.forEach(el => el.textContent = c.navTours);
+            elements.navAbout.forEach(el => el.textContent = c.navAbout);
+            elements.navContact.forEach(el => el.textContent = c.navContact);
+            elements.tourTitle.textContent = c.tourTitle;
+            elements.tourSubtitle.textContent = c.tourSubtitle;
+            elements.infoDurationLabel.textContent = c.infoDurationLabel;
+            elements.infoDurationText.textContent = c.infoDurationText;
+            elements.infoTypeLabel.textContent = c.infoTypeLabel;
+            elements.infoTypeText.textContent = c.infoTypeText;
+            elements.infoMeetingLabel.textContent = c.infoMeetingLabel;
+            elements.infoMeetingText.textContent = c.infoMeetingText;
+            elements.galleryHeading.textContent = c.galleryHeading;
+            elements.descTitle.textContent = c.descTitle;
+            elements.descIntro.innerHTML = c.descIntro;
+            elements.descParas.forEach((p, i) => { if (p) p.innerHTML = c.descParas[i] || ''; });
+            elements.additionalTitle.textContent = c.additionalTitle;
+            elements.itineraryTitle.textContent = c.itineraryTitle;
+            elements.itineraryItems.forEach((sel, i) => {
+                const data = c.itineraryItems[i];
+                const t = document.querySelector(sel.title);
+                const tx = document.querySelector(sel.text);
+                if (t) t.textContent = data.title;
+                if (tx) tx.textContent = data.text;
+            });
+            elements.notIncludedTitle.textContent = c.notIncludedTitle;
+            elements.notIncludedText.textContent = c.notIncludedText;
+            elements.includedTitle.textContent = c.includedTitle;
+            elements.includedText.textContent = c.includedText;
+            elements.cancelTitle.textContent = c.cancelTitle;
+            elements.cancelLines.forEach((li, i) => li.textContent = c.cancelLines[i]);
+            elements.contactTitle.textContent = c.contactTitle;
+            elements.contactText.textContent = c.contactText;
+            const emailStrong = elements.contactEmail.querySelector('strong');
+            const phoneStrong = elements.contactPhone.querySelector('strong');
+            if (emailStrong) emailStrong.textContent = c.contactEmail + ' ';
+            if (phoneStrong) phoneStrong.textContent = c.contactPhone + ' ';
+            elements.recommendedTitle.textContent = c.recommendedTitle;
+            elements.recTitles.forEach((el, i) => { if (el) el.textContent = c.recTitles[i]; });
+            elements.footerText.innerHTML = c.footerText;
+            elements.footerName.textContent = c.footerName;
+            elements.footerRole.textContent = c.footerRole;
+            elements.footerEmail.textContent = c.footerEmail;
+            elements.footerPhone.textContent = c.footerPhone;
+            elements.footerLocation.textContent = c.footerLocation;
+            elements.sitemapTitle.textContent = c.sitemapTitle;
+            elements.sitemapHome.textContent = c.sitemapHome;
+            elements.sitemapTours.textContent = c.sitemapTours;
+            elements.sitemapAthens.textContent = c.sitemapAthens;
+            elements.sitemapPelop.textContent = c.sitemapPelop;
+            elements.sitemapCentral.textContent = c.sitemapCentral;
+            elements.sitemapSaronic.textContent = c.sitemapSaronic;
+            elements.sitemapCyclades.textContent = c.sitemapCyclades;
+            elements.sitemapAbout.textContent = c.sitemapAbout;
+            elements.sitemapContact.textContent = c.sitemapContact;
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        languageOptions.forEach(opt => opt.addEventListener('click', () => applyLanguage(opt.dataset.lang)));
+        applyLanguage(savedLanguage);
+
+        // Burger menu
+        const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+        const burgerMenu = document.querySelector('.burger-menu');
+        const burgerIcon = document.querySelector('.burger-icon');
+        const closeIcon = document.querySelector('.close-icon');
+        const header = document.querySelector('header');
+
+        burgerMenuBtn.addEventListener('click', () => {
+            const isMenuOpen = burgerMenu.classList.toggle('active');
+            burgerIcon.style.display = isMenuOpen ? 'none' : 'block';
+            closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+            header.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', () => {
+            burgerMenu.classList.remove('hidden');
+            burgerIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            header.style.display = 'block';
+        });
+    });
+</script> 
+</body>
+</html>
