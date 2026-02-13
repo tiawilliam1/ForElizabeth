@@ -4180,7 +4180,7 @@ margin-left: -10%;
 /* Icon Styling */
 .footer-sitemap ul li::before {
     content: '•'; /* Add a bullet point as the icon */
-    color: #000000; /* Blue color for the bullet */
+    color: #ffffff;; /* Blue color for the bullet */
     font-size: 1.2rem; /* Adjust the size of the bullet */
 }
 
