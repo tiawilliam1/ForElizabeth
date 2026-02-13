@@ -3354,11 +3354,13 @@ display: none;
     }
 
     .hero-text h2 {
-       
-        font-size: 1.9rem;
-        
-        margin-top: 40%;
+        font-size: 1.95rem;
+margin-top: 40%;
 margin-bottom: 10%;
+margin-right: 10%;
+margin-left: -8%;
+       
+       
     }
 
     .hero-text p {
