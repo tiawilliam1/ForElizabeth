@@ -241,6 +241,23 @@
             <p>+30 6942919085</p>
             <p>Athens, Greece</p>
         </div>
+        <div class="footer-sitemap">
+            <ul>
+                <li><a href="index.html" class="sitemap-home">Home</a></li>
+                <li>
+                    <a href="tours.html" class="sitemap-tours">Tours</a>
+                    <ul>
+                        <li><a href="athens-tours.html" class="sitemap-athens">Athens Tours</a></li>
+                        <li><a href="Peloponnese.html" class="sitemap-pelop">Peloponnese Tour</a></li>
+                        <li><a href="centralgreece.html" class="sitemap-central">Central Greece Tours</a></li>
+                        <li><a href="saronic-gulf-tours.html" class="sitemap-saronic">Saronic Gulf Tours</a></li>
+                        <li><a href="Cyclades.html" class="sitemap-cyclades">Cyclades Tours</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutme.html" class="sitemap-about">About Me</a></li>
+                <li><a href="contact.html" class="sitemap-contact">Contact</a></li>
+            </ul>
+        </div>
         <div class="footer-logo">
             <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
             <p id="footer-text">&copy; 2025 Tour Guide. All rights reserved.</p>
@@ -330,6 +347,8 @@
             footerEmail: document.querySelector('.footer-info p:nth-child(3)'),
             footerPhone: document.querySelector('.footer-info p:nth-child(4)'),
             footerLocation: document.querySelector('.footer-info p:nth-child(5)')
+
+    
         };
 
         const translations = {
@@ -435,7 +454,7 @@
                     'Vous pouvez choisir 3 ou 4 heures, mais la facturation couvre les 4 heures complètes.'
                 ],
                 contactTitle: 'Contactez-moi',
-                contactText: 'Pour toute question ou réservation, n’hésitez pas à me joindre :',
+                contactText: 'Pour toute question ou pour réserver cette visite, n’hésitez pas à me contacter :',
                 contactEmail: 'Email :',
                 contactPhone: 'Téléphone :',
                 footerText: '&copy; 2025 Guide touristique. Tous droits réservés.',
@@ -491,7 +510,7 @@
                     'Μπορείτε να επιλέξετε διάρκεια 3 ή 4 ωρών, αλλά χρεώνεται το πλήρες 4ωρο.'
                 ],
                 contactTitle: 'Επικοινωνήστε μαζί μου',
-                contactText: 'Για ερωτήσεις ή κράτηση, μη διστάσετε να επικοινωνήσετε:',
+                contactText: 'Για οποιαδήποτε ερώτηση ή για να κλείσετε την ξενάγηση, μη διστάσετε να επικοινωνήσετε:',
                 contactEmail: 'Email:',
                 contactPhone: 'Τηλέφωνο:',
                 footerText: '&copy; 2025 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.',
@@ -524,8 +543,8 @@
             elements.descTitle.textContent = c.descTitle;
             elements.descIntro.textContent = c.descIntro;
             elements.descParas.forEach((p, i) => p.textContent = c.descParas[i] || '');
-            elements.additionalTitle.textContent = c.additionalTitle;
-            elements.itineraryTitle.textContent = c.itineraryTitle;
+            if (elements.additionalTitle) elements.additionalTitle.textContent = c.additionalTitle;
+            if (elements.itineraryTitle) elements.itineraryTitle.textContent = c.itineraryTitle;
             elements.itineraryItems.forEach((sel, i) => {
                 const data = c.itineraryItems[i];
                 const t = document.querySelector(sel.title);
@@ -533,24 +552,26 @@
                 if (t) t.textContent = data.title;
                 if (tx) tx.textContent = data.text;
             });
-            elements.notIncludedTitle.textContent = c.notIncludedTitle;
-            elements.notIncludedText.textContent = c.notIncludedText;
-            elements.includedTitle.textContent = c.includedTitle;
-            elements.includedText.textContent = c.includedText;
-            elements.cancelTitle.textContent = c.cancelTitle;
-            elements.cancelLines.forEach((li, i) => li.textContent = c.cancelLines[i]);
-            elements.contactTitle.textContent = c.contactTitle;
-            elements.contactText.textContent = c.contactText;
-            const emailStrong = elements.contactEmail.querySelector('strong');
-            const phoneStrong = elements.contactPhone.querySelector('strong');
+            if (elements.notIncludedTitle) elements.notIncludedTitle.textContent = c.notIncludedTitle;
+            if (elements.notIncludedText) elements.notIncludedText.textContent = c.notIncludedText;
+            if (elements.includedTitle) elements.includedTitle.textContent = c.includedTitle;
+            if (elements.includedText) elements.includedText.textContent = c.includedText;
+            if (elements.cancelTitle) elements.cancelTitle.textContent = c.cancelTitle;
+            elements.cancelLines.forEach((li, i) => {
+                if (li) li.textContent = c.cancelLines[i];
+            });
+            if (elements.contactTitle) elements.contactTitle.textContent = c.contactTitle;
+            if (elements.contactText) elements.contactText.textContent = c.contactText;
+            const emailStrong = elements.contactEmail ? elements.contactEmail.querySelector('strong') : null;
+            const phoneStrong = elements.contactPhone ? elements.contactPhone.querySelector('strong') : null;
             if (emailStrong) emailStrong.textContent = c.contactEmail + ' ';
             if (phoneStrong) phoneStrong.textContent = c.contactPhone + ' ';
-            elements.footerText.innerHTML = c.footerText;
-            elements.footerName.textContent = c.footerName;
-            elements.footerRole.textContent = c.footerRole;
-            elements.footerEmail.textContent = c.footerEmail;
-            elements.footerPhone.textContent = c.footerPhone;
-            elements.footerLocation.textContent = c.footerLocation;
+            if (elements.footerText) elements.footerText.innerHTML = c.footerText;
+            if (elements.footerName) elements.footerName.textContent = c.footerName;
+            if (elements.footerRole) elements.footerRole.textContent = c.footerRole;
+            if (elements.footerEmail) elements.footerEmail.textContent = c.footerEmail;
+            if (elements.footerPhone) elements.footerPhone.textContent = c.footerPhone;
+            if (elements.footerLocation) elements.footerLocation.textContent = c.footerLocation;
             localStorage.setItem('selectedLanguage', lang);
         }
 
