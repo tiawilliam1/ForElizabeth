@@ -2764,7 +2764,7 @@ html, body {
 
     /* Header Title for French */
     html[lang="fr"] #header-title {
-        font-size: 1.4rem; /* Adjust font size for French */
+        font-size: 1.0em; /* Adjust font size for French */
         margin-top: -60px; /* Adjust spacing */
     }
 
@@ -3161,7 +3161,9 @@ margin-top: -4%;
 
 
 
-
+        .about-me-header h1{
+            margin-right: 3%;
+        }
 
 
 
@@ -3313,6 +3315,15 @@ display: none;
             font-size: 0.7rem; /* Reduce font size for footer copyright text */
             margin-bottom: 10%;
             margin-right: 15%;
+        }
+
+        /* Center about page subtitle on phones */
+        .about-subtitle {
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            font-size: 1.2rem;
+            max-width: 90%;
         }
 
 /* Media Query for Screens Smaller than 768px */
