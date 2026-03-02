@@ -1344,6 +1344,43 @@ main {
     position: relative; /* Allow positioning of the button */
 }
 
+<<<<<<< ours
+=======
+/* Override for tours landing page only */
+.tours-home .tour-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0;
+}
+
+.tours-home .tour-card .image-container {
+    flex: 1;
+    margin: 0;
+    transform: none;
+    height: 100%;
+<<<<<<< ours
+=======
+    display: flex;
+    align-items: center;
+>>>>>>> theirs
+}
+
+.tours-home .tour-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+.tours-home .tour-card .text-container {
+    flex: 1;
+    max-width: none;
+    padding: 30px;
+}
+
+>>>>>>> theirs
 .athens-tours-page .tour-card .text-container p {
     font-size: 1rem; /* Adjust the font size */
     line-height: 1.6; /* Improve readability */
@@ -3317,15 +3354,6 @@ display: none;
             margin-right: 15%;
         }
 
-        /* Center about page subtitle on phones */
-        .about-subtitle {
-            margin: 0 auto;
-            text-align: center;
-            display: block;
-            font-size: 1.2rem;
-            max-width: 90%;
-        }
-
 /* Media Query for Screens Smaller than 768px */
     /* General Section Styling */
 
@@ -4351,6 +4379,8 @@ margin-left: -10%;
         height: auto;
         border-radius: 10px;
         margin-bottom: 0px;
+        margin-right:10%;
+        
         }
 
         .tour-card h2 {
