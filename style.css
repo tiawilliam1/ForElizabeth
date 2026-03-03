@@ -436,7 +436,7 @@ body {
 
 .carousel-title {
     font-size: 2rem;
-    margin-top: 50px; /* Add more space above the title */
+    margin-top: 5%; /* Add more space above the title */
     margin-bottom: 20px; /* Keep the spacing below the title */
     color: #333;
     text-align: center;
@@ -4380,7 +4380,7 @@ margin-left: -10%;
         border-radius: 10px;
         margin-bottom: 0px;
         margin-right:10%;
-        
+
         }
 
         .tour-card h2 {
