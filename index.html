@@ -462,7 +462,7 @@ function initLanguageSwitcher() {
             },
             fr: {
                 headerTitle: 'Votre Guide-conférencière en Grèce',
-                homepageTitle: 'Visites privées en Grèce avec Guide-conférencière',
+                homepageTitle: 'Visites privées en Grèce',
                 homepageDescription: `<span class='cursive-name'> Guide-conférencière agréée par l’État grec</span>, basée à Athènes, je propose depuis plus de 10 ans des visites privées à pied, des visites de musées ainsi que des découvertes de sites archéologiques anciens à travers toute la Grèce — toutes soigneusement adaptées à vos centres d’intérêt.
 Mon objectif est de vous offrir des visites approfondies, engageantes et personnalisées, afin de vous permettre de profiter pleinement de votre séjour en Grèce.`,
                 navHome: 'Accueil',
@@ -566,6 +566,7 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
         const footer = document.getElementById('footer-text'); if (footer) footer.innerHTML = content.footerText;
         const fInfo = document.querySelectorAll('.footer-info p');
         if (fInfo.length >=5) { setText(fInfo[0], content.footerName); setText(fInfo[1], content.footerRole); setText(fInfo[2], content.footerEmail); setText(fInfo[3], content.footerPhone); setText(fInfo[4], content.footerLocation); }
+        
     }
     function changeLanguage(lang) {
         localStorage.setItem('selectedLanguage', lang);
