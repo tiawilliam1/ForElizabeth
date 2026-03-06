@@ -11,16 +11,21 @@
         <div class="logo-container">
             <img src="logo1.jpg" alt="Logo" class="logo">
         </div>
-        <h1>Attica Tours</h1>
+        <h1 id="header-title">Attica Tours</h1>
+        <div class="language-selector">
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
+        </div>
         <div class="logo-container">
             <img src="logo.jpg" alt="Logo" class="logo">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-home">Home</a></li>
+                <li><a href="tours.html" class="nav-tours">Tours</a></li>
+                <li><a href="aboutme.html" class="nav-about">About me</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,8 +38,8 @@
         <div class="hero-content">
             <!-- Left: Title and Subtitle -->
             <div class="hero-text">
-                <h2>Sounion</h2>
-                <p><strong>Watch the sun set over the Aegean at Sounion, beneath the ancient columns of Poseidon's Temple.</strong></p>
+                <h2 id="tour-title">Sounion</h2>
+                <p id="tour-subtitle"><strong>Watch the sun set over the Aegean at Sounion, beneath the ancient columns of Poseidon's Temple.</strong></p>
             </div>
             <!-- Right: Image -->
             <div class="hero-image">
@@ -48,16 +53,16 @@
             <!-- First Row: Three Boxes -->
             <div class="info-row">
                 <div class="acropolis-info-box">
-                    <h3>Duration</h3>
-                    <p>3-4 hours</p>
+                    <h3 class="info-duration-label">Duration</h3>
+                    <p class="info-duration-text">3-4 hours</p>
                 </div>
                 <div class="acropolis-info-box">
-                    <h3>Type</h3>
-                    <p>Private Tour</p>
+                    <h3 class="info-type-label">Type</h3>
+                    <p class="info-type-text">Private Tour</p>
                 </div>
                 <div class="acropolis-info-box">
-                    <h3>Meeting Point</h3>
-                    <p>Custom pick-up point</p>
+                    <h3 class="info-meeting-label">Meeting Point</h3>
+                    <p class="info-meeting-text">Custom pick-up point</p>
                 </div>
             </div>
             
@@ -86,12 +91,12 @@
             <div class="tour-content">
                 <!-- Left: Text Content -->
                 <div class="tour-text">
-                    <h3>Tour Description</h3>
+                    <h3 class="desc-title">Tour Description</h3>
                     
-                    <p>
+                    <p class="desc-1">
                         This memorable half-day trip from Athens takes you to <strong>Cape Sounion</strong>, located at the southernmost tip of the <strong>Attica Peninsula</strong> and one of the most stunning coastal destinations in Greece. Traveling along the scenic <strong>Athenian Riviera</strong>, you’ll visit the ancient <strong>Temple of Poseidon</strong>, dramatically perched on a cliff overlooking the <strong>Aegean Sea</strong>. Built in the 5th century BC, the temple honors <strong>Poseidon</strong>, god of the sea, and offers breathtaking panoramic views of the coastline and nearby islands. While exploring the site, fascinating stories about its history and mythology come to life, including the legend of <strong>King Aegeus</strong> and how the <strong>Aegean Sea</strong> got its name.
                     </p>
-                    <p>
+                    <p class="desc-2">
                         If timed for the late afternoon, the tour offers the chance to experience one of the most spectacular sunsets in Greece, as the sun sets behind the temple’s doric columns. Along the way, enjoy a relaxing drive through the <strong>Athens Riviera</strong> with an optional stop for coffee or refreshments by the sea or the <strong>Lake of Vouliagmeni</strong>.
                     </p>
                 </div>
@@ -99,68 +104,60 @@
 
         <!-- Right: Additional Information -->
         <div class="tour-extra-info">
-            <h3>Additional Information</h3>
+            <h3 class="additional-title">Additional Information</h3>
             <div class="info-item">
-                <h4>Itinerary</h4>
+                <h4 class="itinerary-title">Itinerary</h4>
                 <div class="itinerary">
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Athenian Riviera</h5>
-                            <p>Enjoy a scenic drive along the Athenian Riviera, with stunning coastal views and optional stops for refreshments.</p>
+                            <h5 class="itinerary-1-title">Athenian Riviera</h5>
+                            <p class="itinerary-1-text">Enjoy a scenic drive along the Athenian Riviera, with stunning coastal views and optional stops for refreshments.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Lake of Vouliagmeni</h5>
-                            <p>Optionally stop at this natural thermal lake, surrounded by lush greenery, for a relaxing experience.</p>
+                            <h5 class="itinerary-2-title">Lake of Vouliagmeni</h5>
+                            <p class="itinerary-2-text">Optionally stop at this natural thermal lake, surrounded by lush greenery, for a relaxing experience.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Cape Sounion</h5>
-                            <p>Arrive at the southernmost tip of the Attica Peninsula, offering breathtaking views of the Aegean Sea.</p>
+                            <h5 class="itinerary-3-title">Cape Sounion</h5>
+                            <p class="itinerary-3-text">Arrive at the southernmost tip of the Attica Peninsula, offering breathtaking views of the Aegean Sea.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Temple of Poseidon</h5>
-                            <p>Explore this ancient temple dedicated to Poseidon, perched on a cliff overlooking the sea.</p>
+                            <h5 class="itinerary-4-title">Temple of Poseidon</h5>
+                            <p class="itinerary-4-text">Explore this ancient temple dedicated to Poseidon, perched on a cliff overlooking the sea.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Sunset at Sounion</h5>
-                            <p>Experience one of the most spectacular sunsets in Greece, with the temple silhouetted against the sky.</p>
+                            <h5 class="itinerary-5-title">Sunset at Sounion</h5>
+                            <p class="itinerary-5-text">Experience one of the most spectacular sunsets in Greece, with the temple silhouetted against the sky.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="info-item">
-                <h4>Not Included</h4>
-                <p>Entrance fees to venues</p>
+                <h4 class="not-included-title">Not Included</h4>
+                <p class="not-included-text">Entrance fees to venues</p>
             </div>
             <div class="info-item">
-                <h4>Included</h4>
-                <p>Private licensed guide &
-                     Swim (optional)
-                
-                </p>
-            </div>
-            <div class="info-item">
-                <h4>Cancellation Fee</h4>
-                <li>Free cancellation up to 24 hours before the tour.</li>
-                <li>You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid</li>
+                <h4 class="included-title">Included</h4>
+                <p class="included-text">Private licensed guide &amp; Swim (optional)</p>
             </div>
             <div class="contact-me">
-                <h3>Contact Me</h3>
-                <p>If you have any questions or would like to book this tour, feel free to reach out:</p>
-                <p><strong>Email:</strong> <a href="mailto:elisavetmakri@hotmail.com">elisavetmakri@hotmail.com</a></p>
-                <p><strong>Phone:</strong> +30 6942919085</p>
+                <h3 class="contact-me-title">Contact Me</h3>
+                <p class="contact-me-text">If you have any questions or would like to book this tour, feel free to reach out:</p>
+                <p class="contact-email"><strong>Email:</strong> <a href="mailto:elisavetmakri@hotmail.com">elisavetmakri@hotmail.com</a></p>
+                <p class="contact-phone"><strong>Phone:</strong> +30 6942919085</p>
             </div>
         </div>
         
@@ -170,11 +167,28 @@
     
     <footer>
         <div class="footer-info">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>elisavetmakri@hotmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
+            <p class="footer-name">Elisavet Makri</p>
+            <p class="footer-role">Art Historian - Licensed Tour Guide</p>
+            <p class="footer-email">elisavetmakri@hotmail.com</p>
+            <p class="footer-phone">+30 6942919085</p>
+            <p class="footer-location">Athens, Greece</p>
+        </div>
+             <div class="footer-sitemap">
+            <ul>
+                <li><a href="index.html" class="sitemap-home">Home</a></li>
+                <li>
+                    <a href="tours.html" class="sitemap-tours">Tours</a>
+                    <ul>
+                        <li><a href="athens-tours.html" class="sitemap-athens">Athens Tours</a></li>
+                        <li><a href="Peloponnese.html" class="sitemap-pelop">Peloponnese Tour</a></li>
+                        <li><a href="centralgreece.html" class="sitemap-central">Central Greece Tours</a></li>
+                        <li><a href="saronic-gulf-tours.html" class="sitemap-saronic">Saronic Gulf Tours</a></li>
+                        <li><a href="Cyclades.html" class="sitemap-cyclades">Cyclades Tours</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutme.html" class="sitemap-about">About Me</a></li>
+                <li><a href="contact.html" class="sitemap-contact">Contact</a></li>
+            </ul>
         </div>
         <div class="footer-logo">
             <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
@@ -185,6 +199,268 @@
 </html>
 
 <script>
+    // Language toggle + translations
+    (function() {
+        const languageOptions = document.querySelectorAll('.language-option');
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        const elements = {
+            pageTitle: document.querySelector('title'),
+            headerTitle: document.getElementById('header-title'),
+            navHome: document.querySelectorAll('.nav-home'),
+            navTours: document.querySelectorAll('.nav-tours'),
+            navAbout: document.querySelectorAll('.nav-about'),
+            navContact: document.querySelectorAll('.nav-contact'),
+            tourTitle: document.getElementById('tour-title'),
+            tourSubtitle: document.getElementById('tour-subtitle'),
+            infoDurationLabel: document.querySelector('.info-duration-label'),
+            infoDurationText: document.querySelector('.info-duration-text'),
+            infoTypeLabel: document.querySelector('.info-type-label'),
+            infoTypeText: document.querySelector('.info-type-text'),
+            infoMeetingLabel: document.querySelector('.info-meeting-label'),
+            infoMeetingText: document.querySelector('.info-meeting-text'),
+            galleryHeading: document.querySelector('.gallery-heading'),
+            descTitle: document.querySelector('.desc-title'),
+            descParas: [
+                document.querySelector('.desc-1'),
+                document.querySelector('.desc-2'),
+            ],
+            additionalTitle: document.querySelector('.additional-title'),
+            itineraryTitle: document.querySelector('.itinerary-title'),
+            itineraryItems: [
+                { title: '.itinerary-1-title', text: '.itinerary-1-text' },
+                { title: '.itinerary-2-title', text: '.itinerary-2-text' },
+                { title: '.itinerary-3-title', text: '.itinerary-3-text' },
+                { title: '.itinerary-4-title', text: '.itinerary-4-text' },
+                { title: '.itinerary-5-title', text: '.itinerary-5-text' }
+            ],
+            notIncludedTitle: document.querySelector('.not-included-title'),
+            notIncludedText: document.querySelector('.not-included-text'),
+            includedTitle: document.querySelector('.included-title'),
+            includedText: document.querySelector('.included-text'),
+            cancelTitle: document.querySelector('.cancel-title'),
+            cancelLines: [
+                document.querySelector('.cancel-1'),
+                document.querySelector('.cancel-2')
+            ],
+            contactTitle: document.querySelector('.contact-me-title'),
+            contactText: document.querySelector('.contact-me-text'),
+            contactEmail: document.querySelector('.contact-email'),
+            contactPhone: document.querySelector('.contact-phone'),
+            footerText: document.getElementById('footer-text'),
+            footerName: document.querySelector('.footer-name'),
+            footerRole: document.querySelector('.footer-role'),
+            footerEmail: document.querySelector('.footer-email'),
+            footerPhone: document.querySelector('.footer-phone'),
+            footerLocation: document.querySelector('.footer-location')
+        };
+
+        const translations = {
+            en: {
+                pageTitle: 'Sounion',
+                headerTitle: 'Attica Tours',
+                navHome: 'Home',
+                navTours: 'Tours',
+                navAbout: 'About me',
+                navContact: 'Contact',
+                tourTitle: 'Sounion',
+                tourSubtitle: 'Watch the sun set over the Aegean at Sounion, beneath the ancient columns of Poseidon\'s Temple.',
+                infoDurationLabel: 'Duration',
+                infoDurationText: '3-4 hours',
+                infoTypeLabel: 'Type',
+                infoTypeText: 'Private Tour',
+                infoMeetingLabel: 'Meeting Point',
+                infoMeetingText: 'Custom pick-up point',
+                galleryHeading: 'Photos & Highlights',
+                descTitle: 'Tour Description',
+                descParas: [
+                    'This memorable half-day trip from Athens takes you to Cape Sounion, located at the southernmost tip of the Attica Peninsula and one of the most stunning coastal destinations in Greece. Traveling along the scenic Athenian Riviera, you’ll visit the ancient Temple of Poseidon, dramatically perched on a cliff overlooking the Aegean Sea. Built in the 5th century BC, the temple honors Poseidon, god of the sea, and offers breathtaking panoramic views of the coastline and nearby islands. While exploring the site, fascinating stories about its history and mythology come to life, including the legend of King Aegeus and how the Aegean Sea got its name.',
+                    'If timed for the late afternoon, the tour offers the chance to experience one of the most spectacular sunsets in Greece, as the sun sets behind the temple’s doric columns. Along the way, enjoy a relaxing drive through the Athens Riviera with an optional stop for coffee or refreshments by the sea or the Lake of Vouliagmeni.'
+                ],
+                additionalTitle: 'Additional Information',
+                itineraryTitle: 'Itinerary',
+                itineraryItems: [
+                    { title: 'Athenian Riviera', text: 'Enjoy a scenic drive along the Athenian Riviera, with stunning coastal views and optional stops for refreshments.' },
+                    { title: 'Lake of Vouliagmeni', text: 'Optionally stop at this natural thermal lake, surrounded by lush greenery, for a relaxing experience.' },
+                    { title: 'Cape Sounion', text: 'Arrive at the southernmost tip of the Attica Peninsula, offering breathtaking views of the Aegean Sea.' },
+                    { title: 'Temple of Poseidon', text: 'Explore this ancient temple dedicated to Poseidon, perched on a cliff overlooking the sea.' },
+                    { title: 'Sunset at Sounion', text: 'Experience one of the most spectacular sunsets in Greece, with the temple silhouetted against the sky.' }
+                ],
+                notIncludedTitle: 'Not Included',
+                notIncludedText: 'Entrance fees to venues',
+                includedTitle: 'Included',
+                includedText: 'Private licensed guide & Swim (optional)',
+                cancelTitle: 'Cancellation Fee',
+                cancelLines: [
+                    'Free cancellation up to 24 hours before the tour.',
+                    'You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid'
+                ],
+                contactTitle: 'Contact Me',
+                contactText: 'If you have any questions or would like to book this tour, feel free to reach out:',
+                contactEmail: 'Email:',
+                contactPhone: 'Phone:',
+                footerText: '&copy; 2025 Tour Guide. All rights reserved.',
+                footerName: 'Elisavet Makri',
+                footerRole: 'Art Historian - Licensed Tour Guide',
+                footerEmail: 'elisavetmakri@hotmail.com',
+                footerPhone: '+30 6942919085',
+                footerLocation: 'Athens, Greece'
+            },
+            fr: {
+                pageTitle: 'Cap Sounion',
+                headerTitle: 'Votre guide en Grèce',
+                navHome: 'Accueil',
+                navTours: 'Visites',
+                navAbout: 'À propos de moi',
+                navContact: 'Contact',
+                tourTitle: 'Cap Sounion',
+                tourSubtitle: 'Admirez le coucher du soleil sur la mer Égée au cap Sounion, sous les colonnes antiques du temple de Poséidon.',
+                infoDurationLabel: 'Durée',
+                infoDurationText: '3-4 heures',
+                infoTypeLabel: 'Type',
+                infoTypeText: 'Visite privée',
+                infoMeetingLabel: 'Point de rendez-vous',
+                infoMeetingText: 'Lieu de prise en charge personnalisé',
+                galleryHeading: 'Photos & Points forts',
+                descTitle: 'Description de la visite',
+                descParas: [
+                    'Cette excursion d’une demi-journée au départ d’Athènes vous conduit au cap Sounion, situé à l’extrémité sud de la péninsule de l’Attique et comptant parmi les plus beaux sites côtiers de Grèce. En longeant la pittoresque Riviera athénienne, vous visiterez l’antique temple de Poséidon, majestueusement perché sur une falaise dominant la mer Égée. Construit au Ve siècle av. J.-C., le temple rend hommage à Poséidon, dieu de la mer, et offre des vues panoramiques spectaculaires sur le littoral et les îles environnantes. Tout au long de la visite, récits historiques et mythologiques prennent vie, notamment la légende du roi Égée, à l’origine du nom de la mer Égée.',
+                    'Programmée en fin d’après-midi, l’excursion permet d’assister à l’un des couchers de soleil les plus saisissants de Grèce, lorsque le soleil disparaît derrière les colonnes doriques du temple. Le trajet inclut une agréable traversée de la Riviera d’Athènes, avec la possibilité d’un arrêt pour un café ou une boisson rafraîchissante en bord de mer ou au lac de Vouliagmeni.'
+                ],
+                additionalTitle: 'Informations complémentaires',
+                itineraryTitle: 'Itinéraire',
+                itineraryItems: [
+                    { title: 'Riviera athénienne', text: 'Trajet panoramique le long de la côte.' },
+                    { title: 'Lac de Vouliagmeni', text: 'Arrêt optionnel au lac thermal.' },
+                    { title: 'Cap Sounion', text: 'Vues sur la mer Égée à l’extrémité sud de l’Attique..' },
+                    { title: 'Temple de Poséidon', text: 'Temple antique perché sur une falaise.' },
+                    { title: 'Coucher de soleil à Sounion', text: 'Vue du coucher de soleil face au temple.' }
+                ],
+                notIncludedTitle: 'Non inclus',
+                notIncludedText: 'Billets d’entrée',
+                includedTitle: 'Inclus',
+                includedText: 'Guide privé licencié et baignade (en option)',
+                cancelTitle: 'Frais d’annulation',
+                cancelLines: [
+                    'Annulation gratuite jusqu’à 24 heures avant la visite.',
+                    'Vous pouvez choisir 3 ou 4 heures, mais le tarif de 4 heures s’applique.'
+                ],
+                contactTitle: 'Contactez-moi',
+                contactText: 'Pour toute question ou pour réserver cette visite, n’hésitez pas à me contacter :',
+                contactEmail: 'Email :',
+                contactPhone: 'Téléphone :',
+                footerText: '&copy; 2025 Guide touristique. Tous droits réservés.',
+                footerName: 'Elisavet Makri',
+                footerRole: 'Historienne de l\'art - Guide-conférencière',
+                footerEmail: 'elisavetmakri@hotmail.com',
+                footerPhone: '+30 6942919085',
+                footerLocation: 'Athènes, Grèce'
+            },
+            el: {
+                pageTitle: 'Σούνιο',
+                headerTitle: 'Ο ξεναγός σας στην Ελλάδα',
+                navHome: 'Αρχική',
+                navTours: 'Ξεναγήσεις',
+                navAbout: 'Σχετικά με εμένα',
+                navContact: 'Επικοινωνία',
+                tourTitle: 'Σούνιο',
+                tourSubtitle: 'Απολαύστε το ηλιοβασίλεμα στο Αιγαίο, κάτω από τις αρχαίες κολόνες του ναού του Ποσειδώνα.',
+                infoDurationLabel: 'Διάρκεια',
+                infoDurationText: '3-4 ώρες',
+                infoTypeLabel: 'Τύπος',
+                infoTypeText: 'Ιδιωτική ξενάγηση',
+                infoMeetingLabel: 'Σημείο συνάντησης',
+                infoMeetingText: 'Προσαρμοσμένο σημείο παραλαβής',
+                galleryHeading: 'Φωτογραφίες & Κορυφαία σημεία',
+                descTitle: 'Περιγραφή ξενάγησης',
+                descParas: [
+                    'Αυτή η αξέχαστη εκδρομή μισής ημέρας από την Αθήνα σας οδηγεί στο Σούνιο, στο νοτιότερο άκρο της Αττικής. Διασχίζοντας τη Ριβιέρα της Αθήνας, επισκέπτεστε τον αρχαίο Ναό του Ποσειδώνα, που δεσπόζει σε γκρεμό πάνω από το Αιγαίο. Χτισμένος τον 5ο αι. π.Χ., τιμά τον θεό της θάλασσας και προσφέρει πανοραμικές θέες ακτογραμμής και νησιών. Εκεί ζωντανεύουν μύθοι όπως του βασιλιά Αιγέα και η ονομασία της θάλασσας.',
+                    'Στο δειλινό μπορείτε να απολαύσετε ένα από τα πιο θεαματικά ηλιοβασιλέματα της Ελλάδας, με τον ήλιο να δύει πίσω από τις δωρικές κολόνες. Στη διαδρομή, χαρείτε μια χαλαρή βόλτα στη Ριβιέρα με προαιρετική στάση για καφέ δίπλα στη θάλασσα ή στη λίμνη Βουλιαγμένης.'
+                ],
+                additionalTitle: 'Πρόσθετες πληροφορίες',
+                itineraryTitle: 'Διαδρομή',
+                itineraryItems: [
+                    { title: 'Αθηναϊκή Ριβιέρα', text: 'Διαδρομή με θέα τη θάλασσα και προαιρετικές στάσεις για ξεκούραση.' },
+                    { title: 'Λίμνη Βουλιαγμένης', text: 'Προαιρετική στάση στη φυσική θερμή λίμνη, μέσα σε καταπράσινο τοπίο.' },
+                    { title: 'Σούνιο', text: 'Άφιξη στο νοτιότερο άκρο της Αττικής με πανοραμική θέα στο Αιγαίο.' },
+                    { title: 'Ναός Ποσειδώνα', text: 'Εξερεύνηση του αρχαίου ναού του θεού της θάλασσας, χτισμένου σε βράχο πάνω από τη θάλασσα.' },
+                    { title: 'Ηλιοβασίλεμα στο Σούνιο', text: 'Απολαύστε ένα από τα ωραιότερα ηλιοβασιλέματα της Ελλάδας με φόντο τον ναό.' }
+                ],
+                notIncludedTitle: 'Δεν περιλαμβάνονται',
+                notIncludedText: 'Εισιτήρια εισόδου',
+                includedTitle: 'Περιλαμβάνεται',
+                includedText: 'Ιδιωτικός αδειοδοτημένος ξεναγός & προαιρετικό κολύμπι',
+                cancelTitle: 'Πολιτική ακύρωσης',
+                cancelLines: [
+                    'Δωρεάν ακύρωση έως 24 ώρες πριν την ξενάγηση.',
+                    'Μπορείτε να επιλέξετε 3 ή 4 ώρες, αλλά χρεώνεται το πλήρες 4ωρο.'
+                ],
+                contactTitle: 'Επικοινωνήστε μαζί μου',
+                contactText: 'Για ερωτήσεις ή κράτηση, μη διστάσετε να επικοινωνήσετε:',
+                contactEmail: 'Email:',
+                contactPhone: 'Τηλέφωνο:',
+                footerText: '&copy; 2025 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.',
+                footerName: 'Ελισάβετ Μακρή',
+                footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
+                footerEmail: 'elisavetmakri@hotmail.com',
+                footerPhone: '+30 6942919085',
+                footerLocation: 'Αθήνα, Ελλάδα'
+            }
+        };
+
+        function applyLanguage(lang) {
+            const c = translations[lang];
+            languageOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+            elements.pageTitle.textContent = c.pageTitle;
+            elements.headerTitle.textContent = c.headerTitle;
+            elements.navHome.forEach(el => el.textContent = c.navHome);
+            elements.navTours.forEach(el => el.textContent = c.navTours);
+            elements.navAbout.forEach(el => el.textContent = c.navAbout);
+            elements.navContact.forEach(el => el.textContent = c.navContact);
+            elements.tourTitle.textContent = c.tourTitle;
+            elements.tourSubtitle.textContent = c.tourSubtitle;
+            elements.infoDurationLabel.textContent = c.infoDurationLabel;
+            elements.infoDurationText.textContent = c.infoDurationText;
+            elements.infoTypeLabel.textContent = c.infoTypeLabel;
+            elements.infoTypeText.textContent = c.infoTypeText;
+            elements.infoMeetingLabel.textContent = c.infoMeetingLabel;
+            elements.infoMeetingText.textContent = c.infoMeetingText;
+            elements.galleryHeading.textContent = c.galleryHeading;
+            elements.descTitle.textContent = c.descTitle;
+            elements.descParas.forEach((p, i) => { if (p) p.textContent = c.descParas[i] || ''; });
+            elements.additionalTitle.textContent = c.additionalTitle;
+            elements.itineraryTitle.textContent = c.itineraryTitle;
+            elements.itineraryItems.forEach((sel, i) => {
+                const data = c.itineraryItems[i];
+                const t = document.querySelector(sel.title);
+                const tx = document.querySelector(sel.text);
+                if (t) t.textContent = data.title;
+                if (tx) tx.textContent = data.text;
+            });
+            elements.notIncludedTitle.textContent = c.notIncludedTitle;
+            elements.notIncludedText.textContent = c.notIncludedText;
+            elements.includedTitle.textContent = c.includedTitle;
+            elements.includedText.textContent = c.includedText;
+            elements.cancelTitle.textContent = c.cancelTitle;
+            elements.cancelLines.forEach((li, i) => li.textContent = c.cancelLines[i]);
+            elements.contactTitle.textContent = c.contactTitle;
+            elements.contactText.textContent = c.contactText;
+            const emailStrong = elements.contactEmail.querySelector('strong');
+            const phoneStrong = elements.contactPhone.querySelector('strong');
+            if (emailStrong) emailStrong.textContent = c.contactEmail + ' ';
+            if (phoneStrong) phoneStrong.textContent = c.contactPhone + ' ';
+            elements.footerText.innerHTML = c.footerText;
+            elements.footerName.textContent = c.footerName;
+            elements.footerRole.textContent = c.footerRole;
+            elements.footerEmail.textContent = c.footerEmail;
+            elements.footerPhone.textContent = c.footerPhone;
+            elements.footerLocation.textContent = c.footerLocation;
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        languageOptions.forEach(opt => opt.addEventListener('click', () => applyLanguage(opt.dataset.lang)));
+        applyLanguage(savedLanguage);
+    })();
+
     // Get the fullscreen container and image elements
     const fullscreenContainer = document.getElementById('fullscreen-container');
     const fullscreenImage = document.getElementById('fullscreen-image');

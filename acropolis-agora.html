@@ -99,9 +99,9 @@
             <h3 class="gallery-heading">Photos & Highlights</h3>
             <!-- Second Row: Four Images -->
             <div class="gallery-row">
-                <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426425/acro12_q8mn3f.jpg" alt="Venue 1" class="gallery-image" loading="lazy">
+                <img src="acro22 copy.jpg" alt="Venue 1" class="gallery-image" loading="lazy">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426434/acro22_l3gq6u.jpg" alt="Venue 2" class="gallery-image" loading="lazy">
-                <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426442/acro3_fwpiwv.jpg" alt="Venue 3" class="gallery-image" loading="lazy">
+                <img src="here2.jpg" alt="Venue 3" class="gallery-image" loading="lazy">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426477/acro4_beuqhx.jpg" alt="Venue 4" class="gallery-image" loading="lazy">
 
             </div>
@@ -346,7 +346,18 @@
             footerRole: document.querySelector('.footer-info p:nth-child(2)'),
             footerEmail: document.querySelector('.footer-info p:nth-child(3)'),
             footerPhone: document.querySelector('.footer-info p:nth-child(4)'),
-            footerLocation: document.querySelector('.footer-info p:nth-child(5)')
+            footerLocation: document.querySelector('.footer-info p:nth-child(5)'),
+            sitemapHome: document.querySelector('.sitemap-home'),
+            sitemapTours: document.querySelector('.sitemap-tours'), 
+            sitemapAthens: document.querySelector('.sitemap-athens'),
+            sitemapPelop: document.querySelector('.sitemap-pelop'),
+            sitemapCentral: document.querySelector('.sitemap-central'),
+            sitemapSaronic: document.querySelector('.sitemap-saronic'),
+            sitemapCyclades: document.querySelector('.sitemap-cyclades'),
+            sitemapAbout: document.querySelector('.sitemap-about'),
+            sitemapContact: document.querySelector('.sitemap-contact')
+            
+            
 
     
         };
@@ -406,7 +417,16 @@
                 footerRole: 'Art Historian - Licensed Tour Guide',
                 footerEmail: 'elisavetmakri@hotmail.com',
                 footerPhone: '+30 6942919085',
-                footerLocation: 'Athens, Greece'
+                footerLocation: 'Athens, Greece' ,
+                sitemapHome: 'Home',
+                sitemapTours: 'Tours',
+                sitemapAthens: 'Athens Tours',
+                sitemapPelop: 'Peloponnese Tour',
+                sitemapCentral: 'Central Greece Tours',
+                sitemapSaronic: 'Saronic Gulf Tours',
+                sitemapCyclades: 'Cyclades Tours',
+                sitemapAbout: 'About Me',
+                sitemapContact: 'Contact'
             },
             fr: {
                 pageTitle: 'Visite Acropole & Agora antique',
@@ -447,7 +467,7 @@
                 notIncludedTitle: 'Non inclus',
                 notIncludedText: 'Billets d’entrée aux sites',
                 includedTitle: 'Inclus',
-                includedText: 'Guide-conférencier',
+                includedText: 'Guide-conférencière',
                 cancelTitle: 'Conditions d’annulation',
                 cancelLines: [
                     'Annulation gratuite jusqu’à 24 h avant la visite.',
@@ -462,7 +482,16 @@
                 footerRole: 'Historienne de l\'art - Guide-conférencière',
                 footerEmail: 'elisavetmakri@hotmail.com',
                 footerPhone: '+30 6942919085',
-                footerLocation: 'Athènes, Grèce'
+                footerLocation: 'Athènes, Grèce',
+                sitemapHome: 'Accueil',
+                sitemapTours: 'Visites',
+                sitemapAthens: 'Visites d’Athènes',
+                sitemapPelop: 'Visite du Péloponnèse',
+                sitemapCentral: 'Visites Grèce centrale',
+                sitemapSaronic: 'Visites Golfe Saronique',
+                sitemapCyclades: 'Visites Cyclades',
+                sitemapAbout: 'À propos de moi',
+                sitemapContact: 'Contact'
             },
             el: {
                 pageTitle: 'Ξενάγηση Ακρόπολη & Αρχαία Αγορά',
@@ -518,7 +547,16 @@
                 footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
                 footerEmail: 'elisavetmakri@hotmail.com',
                 footerPhone: '+30 6942919085',
-                footerLocation: 'Αθήνα, Ελλάδα'
+                footerLocation: 'Αθήνα, Ελλάδα',
+                sitemapHome: 'Αρχική',
+                sitemapTours: 'Ξεναγήσεις',
+                sitemapAthens: 'Ξεναγήσεις Αθήνας',
+                sitemapPelop: 'Πελοπόννησος',
+                sitemapCentral: 'Κεντρική Ελλάδα',
+                sitemapSaronic: 'Σαρωνικός',
+                sitemapCyclades: 'Κυκλάδες',
+                sitemapAbout: 'Σχετικά με εμένα',
+                sitemapContact: 'Επικοινωνία'
             }
         };
 
@@ -572,6 +610,15 @@
             if (elements.footerEmail) elements.footerEmail.textContent = c.footerEmail;
             if (elements.footerPhone) elements.footerPhone.textContent = c.footerPhone;
             if (elements.footerLocation) elements.footerLocation.textContent = c.footerLocation;
+            if (elements.sitemapHome) elements.sitemapHome.textContent = c.sitemapHome;
+            if (elements.sitemapTours) elements.sitemapTours.textContent = c.sitemapTours;
+            if (elements.sitemapAthens) elements.sitemapAthens.textContent = c.sitemapAthens;
+            if (elements.sitemapPelop) elements.sitemapPelop.textContent = c.sitemapPelop;
+            if (elements.sitemapCentral) elements.sitemapCentral.textContent = c.sitemapCentral;
+            if (elements.sitemapSaronic) elements.sitemapSaronic.textContent = c.sitemapSaronic;
+            if (elements.sitemapCyclades) elements.sitemapCyclades.textContent = c.sitemapCyclades;
+            if (elements.sitemapAbout) elements.sitemapAbout.textContent = c.sitemapAbout;
+            if (elements.sitemapContact) elements.sitemapContact.textContent = c.sitemapContact;
             localStorage.setItem('selectedLanguage', lang);
         }
 
