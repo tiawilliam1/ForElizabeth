@@ -559,6 +559,17 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
         content.carouselItems.forEach((item, i) => {
             setText(document.querySelector(`.carousel-h3-${i+1}`), item.title);
             setText(document.querySelector(`.carousel-p-${i+1}`), item.desc);
+        setText(document.querySelector(`.sitemap-tours`), content.navTours);
+        setText(document.querySelector(`.sitemap-home`), content.navHome);
+        setText(document.querySelector(`.sitemap-about`), content.navAbout);
+        setText(document.querySelector(`.sitemap-contact`), content.navContact);
+        setText(document.querySelector(`.sitemap-athens`), content.carouselItems[0].title + ' Tours');
+        setText(document.querySelector(`.sitemap-pelop`), content.carouselItems[1].title + ' Tour');
+        setText(document.querySelector(`.sitemap-central`), content.carouselItems[2].title + ' Tours');
+        setText(document.querySelector(`.sitemap-saronic`), content.carouselItems[3].title + ' Tours');
+        setText(document.querySelector(`.sitemap-cyclades`), content.carouselItems[4].title + ' Tours');   
+        
+
         });
         content.regionTitles.forEach((txt, i) => setText(document.querySelector(`.region-title-${i+1}`), txt));
         content.quoteTexts.forEach((txt, i) => setText(document.querySelector(`.quote-${i+1}`), txt));
