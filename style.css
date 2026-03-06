@@ -1344,8 +1344,7 @@ main {
     position: relative; /* Allow positioning of the button */
 }
 
-<<<<<<< ours
-=======
+
 /* Override for tours landing page only */
 .tours-home .tour-card {
     display: flex;
@@ -1766,7 +1765,7 @@ footer {
 }
 
 .contact-text h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
 
     color: #333;
     margin-bottom: 200px;
@@ -1794,6 +1793,7 @@ footer {
     margin-bottom: 20px;
     color: #555;
     Margin-left: -50px;
+    margin-top: -2%;
 }
 
 .contact-text a {
@@ -2272,6 +2272,7 @@ footer {
     text-align: center; /* Center align the footer text */
     margin: 10px 0 0 0; /* Add margin to the top */
     margin-left: -200px;
+    margin-right: -10%;
 }
 
 .footer-info1 {
