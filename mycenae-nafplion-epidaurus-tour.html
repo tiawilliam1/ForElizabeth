@@ -12,16 +12,21 @@
         <div class="logo-container">
             <img src="logo1.jpg" alt="Logo" class="logo">
         </div>
-        <h1>Peloponnese Tours</h1>
+        <h1 id="header-title">Peloponnese Tours</h1>
+        <div class="language-selector">
+            <span class="language-option" data-lang="en">EN</span> /
+            <span class="language-option" data-lang="fr">FR</span> /
+            <span class="language-option" data-lang="el">GR</span>
+        </div>
         <div class="logo-container">
             <img src="logo.jpg" alt="Logo" class="logo">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="greece-private-tours.html">Tours</a></li>
-                <li><a href="about-elisavet-makri.html">About me</a></li>
-                <li><a href="contact-greece-local-guide.html">Contact</a></li>
+                <li><a href="index.html" class="nav-home">Home</a></li>
+                <li><a href="greece-private-tours.html" class="nav-tours">Tours</a></li>
+                <li><a href="about-elisavet-makri.html" class="nav-about">About me</a></li>
+                <li><a href="contact-greece-local-guide.html" class="nav-contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -35,8 +40,8 @@
         <div class="hero-content">
             <!-- Left: Title and Subtitle -->
             <div class="hero-text">
-                <h2>Mycenae, Nauplion & Epidaurus</h2>
-                <p><strong>Step Inside the History and Legends of Mycenae, Nafplion & Epidaurus.</strong></p>
+                <h2 id="tour-title">Mycenae, Nauplion & Epidaurus</h2>
+                <p id="tour-subtitle"><strong>Step Inside the History and Legends of Mycenae, Nafplion & Epidaurus.</strong></p>
             </div>
             <!-- Right: Image -->
             <div class="hero-image">
@@ -50,17 +55,16 @@
             <!-- First Row: Three Boxes -->
             <div class="info-row">
                 <div class="acropolis-info-box">
-                    <h3>Duration</h3>
-                    <p>10-12 hours</p>
+                    <h3 class="info-duration-label">Duration</h3>
+                    <p class="info-duration-text">10-12 hours</p>
                 </div>
                 <div class="acropolis-info-box">
-                    <h3>Type</h3>
-                    <p>
-                        Walking Tour</p>
+                    <h3 class="info-type-label">Type</h3>
+                    <p class="info-type-text">Walking Tour</p>
                 </div>
                 <div class="acropolis-info-box">
-                    <h3>Meeting Point</h3>
-                    <p>Custom pick-up</p>
+                    <h3 class="info-meeting-label">Meeting Point</h3>
+                    <p class="info-meeting-text">Custom pick-up</p>
                 </div>
             </div>
             
@@ -70,7 +74,7 @@
             <!-- Second Row: Four Images -->
             <div class="gallery-row">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769429297/liongate_fnebhs.jpg" alt="Venue 1" class="gallery-image">
-                <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769429337/myc4_qnay1p.jpg" alt="Venue 2" class="gallery-image">
+                <img src="myc2.jpg" alt="Venue 2" class="gallery-image">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769429330/myc3_nwlsmt.jpg" alt="Venue 3" class="gallery-image">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769429337/myc4_qnay1p.jpg" alt="Venue 4" class="gallery-image">
 
@@ -89,25 +93,25 @@
             <div class="tour-content">
                 <!-- Left: Text Content -->
                 <div class="tour-text">
-                    <h3>Tour Description</h3>
-                    <p><strong>Explore the highlights of Mycenae, Epidaurus & Nauplion.</strong></p>
-                    <p>
+                    <h3 class="desc-title">Tour Description</h3>
+                    <p class="desc-intro"><strong>Explore the highlights of Mycenae, Epidaurus & Nauplion.</strong></p>
+                    <p class="desc-1">
                         Discover the heart of the Argolis region in the Peloponnese on this full-day journey that seamlessly weaves together 
                         legendary tales, historic grandeur, and breathtaking landscapes.
                     </p>
-                    <p>
+                    <p class="desc-2">
                         Begin your adventure at <strong>Mycenae</strong>, a cradle of early Greek civilization and the legendary home of <strong>King Agamemnon</strong>. 
                         Walk through the iconic <strong>Lion Gate</strong>, the monumental entrance to the ancient citadel, and step back into a world of myth and power. 
                         Explore the royal tombs and gaze upon the massive <strong>cyclopean walls</strong>—testaments to a civilization that has endured for over three millennia. 
                         Nearby, the <strong>Treasury of Atreus</strong> awaits, a monumental beehive tomb renowned for its architectural mastery.
                     </p>
-                    <p>
+                    <p class="desc-3">
                         From the echoes of Bronze Age glory, travel to <strong>Nafplion</strong>, the romantic neoclassical seaport that served as the first capital of modern Greece. 
                         Stroll through its charming Old Town, where Venetian architecture blends with marble-paved squares and vibrant cafés. 
                         Admire the sea views framed by the fortress of <strong>Bourtzi</strong> and the imposing <strong>Palamidi Fortress</strong> perched above the city, 
                         symbols of Nafplion’s rich history and strategic importance.
                     </p>
-                    <p>
+                    <p class="desc-4">
                         After a relaxing lunch soaking in the coastal atmosphere, continue inland to the ancient sanctuary of <strong>Epidaurus</strong>, 
                         celebrated for its magnificent 4th-century BCE theater. Renowned as the most acoustically perfect ancient theater in the world, 
                         it once hosted performances honoring both gods and humanity. Nearby, explore the <strong>Sanctuary of Asclepius</strong>, 
@@ -118,51 +122,46 @@
 
         <!-- Right: Additional Information -->
         <div class="tour-extra-info">
-            <h3>Additional Information</h3>
+            <h3 class="additional-title">Additional Information</h3>
             <div class="info-item">
-                <h4>Itinerary</h4>
+                <h4 class="itinerary-title">Itinerary</h4>
                 <div class="itinerary">
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Mycenae</h5>
-                            <p>Explore the Lion Gate, Royal Tombs, Cyclopean Walls, and the Treasury of Atreus.</p>
+                            <h5 class="itinerary-1-title">Mycenae</h5>
+                            <p class="itinerary-1-text">Explore the Lion Gate, Royal Tombs, Cyclopean Walls, and the Treasury of Atreus.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Nafplion</h5>
-                            <p>Stroll through the Old Town, admire the Bourtzi Fortress, and visit the Palamidi Fortress.</p>
+                            <h5 class="itinerary-2-title">Nafplion</h5>
+                            <p class="itinerary-2-text">Stroll through the Old Town, admire the Bourtzi Fortress, and visit the Palamidi Fortress.</p>
                         </div>
                     </div>
                     <div class="itinerary-step">
                         <div class="step-icon"></div>
                         <div class="step-content">
-                            <h5>Epidaurus</h5>
-                            <p>Visit the Ancient Theater of Epidaurus and the Sanctuary of Asclepius.</p>
+                            <h5 class="itinerary-3-title">Epidaurus</h5>
+                            <p class="itinerary-3-text">Visit the Ancient Theater of Epidaurus and the Sanctuary of Asclepius.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="info-item">
-                <h4>Not Included</h4>
-                <p>Entrance fees to venues</p>
+                <h4 class="not-included-title">Not Included</h4>
+                <p class="not-included-text">Entrance fees to venues</p>
             </div>
             <div class="info-item">
-                <h4>Included</h4>
-                <p>Private licensed guide</p>
-            </div>
-            <div class="info-item">
-                <h4>Cancellation Fee</h4>
-                <li>Free cancellation up to 24 hours before the tour.</li>
-                <li>You are also welcome to decide between 3 & 4 hours but full 4 hours must be paid</li>
+                <h4 class="included-title">Included</h4>
+                <p class="included-text">Private licensed guide</p>
             </div>
             <div class="contact-me">
-                <h3>Contact Me</h3>
-                <p>If you have any questions or would like to book this tour, feel free to reach out:</p>
-                <p><strong>Email:</strong> <a href="mailto:greecelocalguide@gmail.com">greecelocalguide@gmail.com</a></p>
-                <p><strong>Phone:</strong> +30 6942919085</p>
+                <h3 class="contact-me-title">Contact Me</h3>
+                <p class="contact-me-text">If you have any questions or would like to book this tour, feel free to reach out:</p>
+                <p class="contact-email"><strong>Email:</strong> <a href="mailto:greecelocalguide@gmail.com">greecelocalguide@gmail.com</a></p>
+                <p class="contact-phone"><strong>Phone:</strong> +30 6942919085</p>
             </div>
         </div>
         
@@ -172,20 +171,306 @@
     
     <footer>
         <div class="footer-info">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>greecelocalguide@gmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
+            <p class="footer-name">Elisavet Makri</p>
+            <p class="footer-role">Art Historian - Licensed Tour Guide</p>
+            <p class="footer-email">greecelocalguide@gmail.com</p>
+            <p class="footer-phone">+30 6942919085</p>
+            <p class="footer-location">Athens, Greece</p>
+        </div>
+                <div class="footer-sitemap">
+            <ul>
+                <li><a href="index.html" class="sitemap-home">Home</a></li>
+                <li>
+                    <a href="greece-private-tours.html" class="sitemap-tours">Tours</a>
+                    <ul>
+                        <li><a href="private-athens-tours.html" class="sitemap-athens">Athens Tours</a></li>
+                        <li><a href="peloponnese-archaeological-tour.html" class="sitemap-pelop">Peloponnese Tour</a></li>
+                        <li><a href="central-greece-tours.html" class="sitemap-central">Central Greece Tours</a></li>
+                        <li><a href="saronic-gulf-island-tours.html" class="sitemap-saronic">Saronic Gulf Tours</a></li>
+                        <li><a href="Cyclades.html" class="sitemap-cyclades">Cyclades Tours</a></li>
+                    </ul>
+                </li>
+                <li><a href="about-elisavet-makri.html" class="sitemap-about">About Me</a></li>
+                <li><a href="contact-greece-local-guide.html" class="sitemap-contact">Contact</a></li>
+            </ul>
         </div>
         <div class="footer-logo">
             <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
             <p id="footer-text">&copy; 2026 Tour Guide. All rights reserved.</p>
         </div>
-    </footer>
+</footer>
 </body>
 </html>
 
+<script>
+// Language toggle and translations
+(function() {
+    const languageOptions = document.querySelectorAll('.language-option');
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    const elements = {
+        pageTitle: document.querySelector('title'),
+        headerTitle: document.getElementById('header-title'),
+        navHome: document.querySelectorAll('.nav-home'),
+        navTours: document.querySelectorAll('.nav-tours'),
+        navAbout: document.querySelectorAll('.nav-about'),
+        navContact: document.querySelectorAll('.nav-contact'),
+        tourTitle: document.getElementById('tour-title'),
+        tourSubtitle: document.getElementById('tour-subtitle'),
+        infoDurationLabel: document.querySelector('.info-duration-label'),
+        infoDurationText: document.querySelector('.info-duration-text'),
+        infoTypeLabel: document.querySelector('.info-type-label'),
+        infoTypeText: document.querySelector('.info-type-text'),
+        infoMeetingLabel: document.querySelector('.info-meeting-label'),
+        infoMeetingText: document.querySelector('.info-meeting-text'),
+        galleryHeading: document.querySelector('.gallery-heading'),
+        descTitle: document.querySelector('.desc-title'),
+        descIntro: document.querySelector('.desc-intro'),
+        descParas: [
+            document.querySelector('.desc-1'),
+            document.querySelector('.desc-2'),
+            document.querySelector('.desc-3'),
+            document.querySelector('.desc-4')
+        ],
+        additionalTitle: document.querySelector('.additional-title'),
+        itineraryTitle: document.querySelector('.itinerary-title'),
+        itineraryItems: [
+            { title: '.itinerary-1-title', text: '.itinerary-1-text' },
+            { title: '.itinerary-2-title', text: '.itinerary-2-text' },
+            { title: '.itinerary-3-title', text: '.itinerary-3-text' }
+        ],
+        notIncludedTitle: document.querySelector('.not-included-title'),
+        notIncludedText: document.querySelector('.not-included-text'),
+        includedTitle: document.querySelector('.included-title'),
+        includedText: document.querySelector('.included-text'),
+        cancelTitle: document.querySelector('.cancel-title'),
+        cancelLines: [
+            document.querySelector('.cancel-1'),
+            document.querySelector('.cancel-2')
+        ],
+        contactTitle: document.querySelector('.contact-me-title'),
+        contactText: document.querySelector('.contact-me-text'),
+        contactEmail: document.querySelector('.contact-email'),
+        contactPhone: document.querySelector('.contact-phone'),
+        footerText: document.getElementById('footer-text'),
+        footerName: document.querySelector('.footer-name'),
+        footerRole: document.querySelector('.footer-role'),
+        footerEmail: document.querySelector('.footer-email'),
+        footerPhone: document.querySelector('.footer-phone'),
+        footerLocation: document.querySelector('.footer-location')
+    };
+
+    const translations = {
+        en: {
+            pageTitle: 'Mycenae Nafplion & Epidaurus Tour | Greece Local Guide',
+            headerTitle: 'Peloponnese Tours',
+            navHome: 'Home',
+            navTours: 'Tours',
+            navAbout: 'About me',
+            navContact: 'Contact',
+            tourTitle: 'Mycenae, Nauplion & Epidaurus',
+            tourSubtitle: 'Step Inside the History and Legends of Mycenae, Nafplion & Epidaurus.',
+            infoDurationLabel: 'Duration',
+            infoDurationText: '10-12 hours',
+            infoTypeLabel: 'Type',
+            infoTypeText: 'Walking Tour',
+            infoMeetingLabel: 'Meeting Point',
+            infoMeetingText: 'Custom pick-up',
+            galleryHeading: 'Photos & Highlights',
+            descTitle: 'Tour Description',
+            descIntro: 'Explore the highlights of Mycenae, Epidaurus & Nauplion.',
+            descParas: [
+                'Discover the heart of the Argolis region in the Peloponnese on this full-day journey that seamlessly weaves together legendary tales, historic grandeur, and breathtaking landscapes.',
+                'Begin your adventure at Mycenae, a cradle of early Greek civilization and the legendary home of King Agamemnon. Walk through the iconic Lion Gate, the monumental entrance to the ancient citadel, and step back into a world of myth and power. Explore the royal tombs and gaze upon the massive cyclopean walls—testaments to a civilization that has endured for over three millennia. Nearby, the Treasury of Atreus awaits, a monumental beehive tomb renowned for its architectural mastery.',
+                'From the echoes of Bronze Age glory, travel to Nafplion, the romantic neoclassical seaport that served as the first capital of modern Greece. Stroll through its charming Old Town, where Venetian architecture blends with marble-paved squares and vibrant cafés. Admire the sea views framed by the fortress of Bourtzi and the imposing Palamidi Fortress perched above the city, symbols of Nafplion’s rich history and strategic importance.',
+                'After a relaxing lunch soaking in the coastal atmosphere, continue inland to the ancient sanctuary of Epidaurus, celebrated for its magnificent 4th-century BCE theater. Renowned as the most acoustically perfect ancient theater in the world, it once hosted performances honoring both gods and humanity. Nearby, explore the Sanctuary of Asclepius, a spiritual and healing center where pilgrims sought medical treatments from across the Greek world.'
+            ],
+            additionalTitle: 'Additional Information',
+            itineraryTitle: 'Itinerary',
+            itineraryItems: [
+                { title: 'Mycenae', text: 'Explore the Lion Gate, Royal Tombs, Cyclopean Walls, and the Treasury of Atreus.' },
+                { title: 'Nafplion', text: 'Stroll the Old Town, admire Bourtzi, and visit the Palamidi Fortress.' },
+                { title: 'Epidaurus', text: 'See the Ancient Theater and the Sanctuary of Asclepius.' }
+            ],
+            notIncludedTitle: 'Not Included',
+            notIncludedText: 'Entrance fees to venues',
+            includedTitle: 'Included',
+            includedText: 'Private licensed guide',
+            contactTitle: 'Contact Me',
+            contactText: 'If you have any questions or would like to book this tour, feel free to reach out:',
+            contactEmail: 'Email:',
+            contactPhone: 'Phone:',
+            footerText: '&copy; 2026 Tour Guide. All rights reserved.',
+            footerName: 'Elisavet Makri',
+            footerRole: 'Art Historian - Licensed Tour Guide',
+            footerEmail: 'greecelocalguide@gmail.com',
+            footerPhone: '+30 6942919085',
+            footerLocation: 'Athens, Greece'
+        },
+        fr: {
+            pageTitle: 'Visite Mycènes, Nauplie & Épidaure | Guide local Grèce',
+            headerTitle: 'Visites du Péloponnèse',
+            navHome: 'Accueil',
+            navTours: 'Visites',
+            navAbout: 'À propos de moi',
+            navContact: 'Contact',
+            tourTitle: 'Mycènes, Nauplie & Épidaure',
+            tourSubtitle: 'Plongez dans l’histoire et les légendes de Mycènes, Nauplie et Épidaure.',
+            infoDurationLabel: 'Durée',
+            infoDurationText: '10-12 heures',
+            infoTypeLabel: 'Type',
+            infoTypeText: 'Visite privée',
+            infoMeetingLabel: 'Point de rendez-vous',
+            infoMeetingText: 'Prise en charge personnalisée',
+            galleryHeading: 'Photos & Points forts',
+            descTitle: 'Description de la visite',
+            descIntro: 'Découvrez les incontournables de Mycènes, Épidaure et Nauplie.',
+            descParas: [
+                'Partez pour une excursion d’une journée au cœur de l’Argolide, dans le Péloponnèse, où se mêlent récits mythologiques, grandeur historique et paysages spectaculaires.',
+                'La visite commence à Mycènes, berceau de l’une des plus anciennes civilisations grecques et demeure légendaire du roi Agamemnon. Franchissez la célèbre Porte des Lionnes, entrée monumentale de l’ancienne citadelle, et plongez dans un univers de mythes et de pouvoir. Découvrez les tombes royales et admirez les impressionnantes murailles cyclopéennes, témoignages d’une civilisation vieille de plus de trois millénaires. À proximité, le Trésor d’Atrée, vaste tombe à tholos en forme de ruche, impressionne par la maîtrise architecturale de ses bâtisseurs.',
+                'Quittez ensuite l’âge du Bronze pour rejoindre Nauplie, romantique ville portuaire au style néoclassique et première capitale de la Grèce moderne. Promenez-vous dans la vieille ville, où l’architecture vénitienne se mêle aux places pavées de marbre et aux cafés animés. Profitez des vues sur la mer, encadrées par la forteresse de Bourtzi et l’imposante forteresse de Palamidi dominant la ville, symboles de son importance historique et stratégique.',
+                'Après un déjeuner détendu dans une atmosphère côtière, poursuivez vers l’intérieur des terres jusqu’au sanctuaire antique d’Épidaure, célèbre pour son théâtre du IVe siècle av. J.-C. Considéré comme le théâtre antique à l’acoustique la plus parfaite au monde, il accueillait des représentations dédiées aux dieux et aux hommes. À proximité, explorez le sanctuaire d’Asclépios, grand centre spirituel et médical de l’Antiquité, où affluaient des pèlerins venus de tout le monde grec en quête de guérison.'
+        ],
+            additionalTitle: 'Informations complémentaires',
+            itineraryTitle: 'Itinéraire',
+            itineraryItems: [
+                { title: 'Mycènes', text: 'Explorez la Porte des Lionnes, les tombes royales, les murailles cyclopéennes et le Trésor d’Atrée.' },
+                { title: 'Nauplie', text: 'Promenez-vous dans la vieille ville, admirez la forteresse de Bourtzi et visitez la forteresse de Palamidi.' },
+                { title: 'Épidaure', text: 'Visitez le théâtre antique d’Épidaure et le sanctuaire d’Asclépios.' }
+            ],
+            notIncludedTitle: 'Non inclus',
+            notIncludedText: 'Billets d’entrée aux sites',
+            includedTitle: 'Inclus',
+            includedText: 'Guide-conférencière',
+            cancelTitle: 'Frais d’annulation',
+            cancelLines: [
+                'Annulation gratuite jusqu’à 24 heures avant la visite.',
+                'Vous pouvez choisir 3 ou 4 heures, mais le tarif de 4 heures s’applique.'
+            ],
+            contactTitle: 'Contactez-moi',
+            contactText: 'Pour toute question ou pour réserver cette visite, n’hésitez pas à me contacter :',
+            contactEmail: 'Email :',
+            contactPhone: 'Téléphone :',
+            footerText: '&copy; 2026 Guide touristique. Tous droits réservés.',
+            footerName: 'Elisavet Makri',
+            footerRole: 'Historienne de l’art - Guide-conférencière',
+            footerEmail: 'greecelocalguide@gmail.com',
+            footerPhone: '+30 6942919085',
+            footerLocation: 'Athènes, Grèce'
+        },
+        el: {
+            pageTitle: 'Ξενάγηση Μυκήνες, Ναύπλιο & Επίδαυρος | Greece Local Guide',
+            headerTitle: 'Ξεναγήσεις Πελοποννήσου',
+            navHome: 'Αρχική',
+            navTours: 'Ξεναγήσεις',
+            navAbout: 'Σχετικά με εμένα',
+            navContact: 'Επικοινωνία',
+            tourTitle: 'Μυκήνες, Ναύπλιο & Επίδαυρος',
+            tourSubtitle: 'Ζήστε την ιστορία και τους μύθους των Μυκηνών, του Ναυπλίου και της Επιδαύρου.',
+            infoDurationLabel: 'Διάρκεια',
+            infoDurationText: '10-12 ώρες',
+            infoTypeLabel: 'Τύπος',
+            infoTypeText: 'Ιδιωτική ξενάγηση',
+            infoMeetingLabel: 'Σημείο συνάντησης',
+            infoMeetingText: 'Εξατομικευμένη παραλαβή',
+            galleryHeading: 'Φωτογραφίες & Κορυφαία σημεία',
+            descTitle: 'Περιγραφή ξενάγησης',
+            descIntro: 'Εξερευνήστε τα σημαντικότερα σημεία σε Μυκήνες, Επίδαυρο και Ναύπλιο.',
+            descParas: [
+                'Ανακαλύψτε την καρδιά της Αργολίδας σε μια ολοήμερη διαδρομή γεμάτη μύθους, ιστορία και τοπία.',
+                'Ξεκινήστε από τις Μυκήνες, πατρίδα του Αγαμέμνονα: Πύλη των Λεόντων, βασιλικοί τάφοι, κυκλώπεια τείχη και Θησαυρός του Ατρέα.',
+                'Συνεχίστε στο Ναύπλιο, ρομαντικό λιμάνι και πρώτη πρωτεύουσα της σύγχρονης Ελλάδας. Περπατήστε στην Παλιά Πόλη, δείτε το Μπούρτζι και το Παλαμήδι.',
+                'Καταλήξτε στην Επίδαυρο, με το θέατρο του 4ου αι. π.Χ. και το Ιερό του Ασκληπιού, παγκόσμιο κέντρο ίασης.'
+            ],
+            additionalTitle: 'Πρόσθετες πληροφορίες',
+            itineraryTitle: 'Πρόγραμμα',
+            itineraryItems: [
+                { title: 'Μυκήνες', text: 'Πύλη Λεόντων, βασιλικοί τάφοι, κυκλώπεια τείχη, Θησαυρός Ατρέα.' },
+                { title: 'Ναύπλιο', text: 'Παλιά Πόλη, Μπούρτζι, φρούριο Παλαμηδίου.' },
+                { title: 'Επίδαυρος', text: 'Αρχαίο θέατρο και Ιερό Ασκληπιού.' }
+            ],
+            notIncludedTitle: 'Δεν περιλαμβάνονται',
+            notIncludedText: 'Εισιτήρια εισόδου',
+            includedTitle: 'Περιλαμβάνονται',
+            includedText: 'Ιδιωτικός αδειοδοτημένος ξεναγός',
+            cancelTitle: 'Πολιτική ακύρωσης',
+            cancelLines: [
+                'Δωρεάν ακύρωση έως 24 ώρες πριν την ξενάγηση.',
+                'Μπορείτε να επιλέξετε 3 ή 4 ώρες, αλλά χρεώνεται το πλήρες 4ωρο.'
+            ],
+            contactTitle: 'Επικοινωνήστε μαζί μου',
+            contactText: 'Για ερωτήσεις ή κράτηση, μη διστάσετε να επικοινωνήσετε:',
+            contactEmail: 'Email:',
+            contactPhone: 'Τηλέφωνο:',
+            footerText: '&copy; 2026 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.',
+            footerName: 'Ελισάβετ Μακρή',
+            footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
+            footerEmail: 'greecelocalguide@gmail.com',
+            footerPhone: '+30 6942919085',
+            footerLocation: 'Αθήνα, Ελλάδα'
+        }
+    };
+
+    function applyLanguage(lang) {
+        const c = translations[lang];
+        languageOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+        elements.pageTitle.textContent = c.pageTitle;
+        elements.headerTitle.textContent = c.headerTitle;
+        elements.navHome.forEach(el => el.textContent = c.navHome);
+        elements.navTours.forEach(el => el.textContent = c.navTours);
+        elements.navAbout.forEach(el => el.textContent = c.navAbout);
+        elements.navContact.forEach(el => el.textContent = c.navContact);
+        elements.tourTitle.textContent = c.tourTitle;
+        elements.tourSubtitle.textContent = c.tourSubtitle;
+        elements.infoDurationLabel.textContent = c.infoDurationLabel;
+        elements.infoDurationText.textContent = c.infoDurationText;
+        elements.infoTypeLabel.textContent = c.infoTypeLabel;
+        elements.infoTypeText.textContent = c.infoTypeText;
+        elements.infoMeetingLabel.textContent = c.infoMeetingLabel;
+        elements.infoMeetingText.textContent = c.infoMeetingText;
+        elements.galleryHeading.textContent = c.galleryHeading;
+        elements.descTitle.textContent = c.descTitle;
+        elements.descIntro.textContent = c.descIntro;
+        elements.descParas.forEach((p, i) => { if (p) p.textContent = c.descParas[i] || ''; });
+        elements.additionalTitle.textContent = c.additionalTitle;
+        elements.itineraryTitle.textContent = c.itineraryTitle;
+        elements.itineraryItems.forEach((sel, i) => {
+            const data = c.itineraryItems[i];
+            const t = document.querySelector(sel.title);
+            const tx = document.querySelector(sel.text);
+            if (t) t.textContent = data.title;
+            if (tx) tx.textContent = data.text;
+        });
+        elements.notIncludedTitle.textContent = c.notIncludedTitle;
+        elements.notIncludedText.textContent = c.notIncludedText;
+        elements.includedTitle.textContent = c.includedTitle;
+        elements.includedText.textContent = c.includedText;
+        elements.cancelTitle.textContent = c.cancelTitle;
+        elements.cancelLines.forEach((li, i) => { if (li) li.textContent = c.cancelLines[i]; });
+        if (elements.contactTitle) elements.contactTitle.textContent = c.contactTitle;
+        if (elements.contactText) elements.contactText.textContent = c.contactText;
+        if (elements.contactEmail) {
+            const link = elements.contactEmail.querySelector('a');
+            const label = c.contactEmail || 'Email:';
+            const addr = link ? link.outerHTML : '';
+            elements.contactEmail.innerHTML = `<strong>${label}</strong> ${addr}`.trim();
+        }
+        if (elements.contactPhone) {
+            const current = elements.contactPhone.textContent.split(':').pop().trim();
+            elements.contactPhone.innerHTML = `<strong>${c.contactPhone}</strong> ${current}`;
+        }
+        elements.footerText.innerHTML = c.footerText;
+        elements.footerName.textContent = c.footerName;
+        elements.footerRole.textContent = c.footerRole;
+        elements.footerEmail.textContent = c.footerEmail;
+        elements.footerPhone.textContent = c.footerPhone;
+        elements.footerLocation.textContent = c.footerLocation;
+        localStorage.setItem('selectedLanguage', lang);
+    }
+
+    languageOptions.forEach(opt => opt.addEventListener('click', () => applyLanguage(opt.dataset.lang)));
+    applyLanguage(savedLanguage);
+})();
+</script>
 <script>
     // Get the fullscreen container and image elements
     const fullscreenContainer = document.getElementById('fullscreen-container');
