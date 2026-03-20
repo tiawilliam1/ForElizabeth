@@ -6,18 +6,23 @@
     <title>About Elisavet Makri | Greece Local Guide</title>
     <link rel="canonical" href="https://greecelocalguide.com/about-elisavet-makri">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .section-hero { background: #f9f9f9; padding: 90px 20px; text-align: center; }
+        .section-hero h1 { font-size: 42px; margin-bottom: 12px; }
+        .section-hero h2 { font-size: 22px; font-weight: 400; color: #555; }
+        .section-two, .section-three { padding: 70px 20px; }
+        .section-two { background: #ffffff; }
+        .section-three { background: #f4f4f4; }
+        .section-quote { background: #f9f9f9; padding: 70px 20px; text-align: center; }
+        .section-quote em { display: block; font-size: 18px; line-height: 1.6; max-width: 820px; margin: 0 auto; }
+        .section-quote p { margin-top: 16px; font-weight: 700; }
+        .section-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: center; text-align: center; }
+        .section-inner img { width: min(100%, 520px); border-radius: 8px; }
+        .section-inner .about-me-text, .section-inner .text-next-to-image { flex: 1 1 320px; }
+        .section-inner h2 { margin-bottom: 14px; }
+    </style>
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
     
         <header>
     
@@ -66,46 +71,47 @@
         </nav>
     </header>
     <h1 class="page-keyword" style="position:absolute;left:-9999px;">About Elisavet Makri</h1>
-    <section class="about-me-section">
-        <div class="about-me-header">
-            <h1>Elisavet Makri</h1>
-            <h2 class="about-subtitle">Art Historian - Licensed Tour Guide</h2>
-        </div>
-        <div class="about-me-content">
+    <!-- Hero -->
+    <section class="section-hero">
+        <h1>Elisavet Makri</h1>
+        <h2 class="about-subtitle">Art Historian - Licensed Tour Guide</h2>
+    </section>
+
+    <!-- Background & Education -->
+    <section class="section-two">
+        <div class="section-inner">
             <div class="about-me-text">
                 <h2>My background & Education</h2>
                 <p>
                     An officially licensed tourist guide since 2016, I conduct tours throughout Greece and in Athens, the city where I was born and raised. 
                     After completing my studies in History and Archaeology at the <strong>National and Kapodistrian University of Athens</strong>, I continued my education in France at <strong>Bordeaux Montaigne University</strong> (Management of Cultural Heritage), and at the <strong>Sorbonne-INHA Art Institute</strong> (Modern Art). Afterwards, I lived in France for eight years, gaining experience in art galleries, auction houses, and museums. 
-
                 </p>
-            
             </div>
-                <img src="IMG_23522.jpg" alt="Gallery Image" class="about-me-image-left" loading="lazy">
-            </div>
-            <div class="about-me-images">
-                <img src="elisavet2.jpg" alt="Elisavet Makri" class="about-me-image-right scroll-animate" loading="lazy">
-                
-                <div class="text-next-to-image scroll-animate">
-                    <h2>My Vision...</h2>
-                    <p>
-                        For me, discovering a place is a shared experience: you see the city through my eyes, and I see it through yours. Wandering is an art, and art is all around us in many forms. I enjoy connecting different periods and artists—whether it’s a <strong>Cycladic statue</strong> that reminds us of a <strong>Giacometti sculpture</strong>, or a <strong>Minoan bull</strong> from a Cretan fresco that evokes a <strong>Picasso drawing</strong>. Curiosity and imagination have no limits, and this is what I aim to inspire in my visitors.
-                    </p>
-                    <p>
-                        Whether you're interested in ancient ruins, modern art, or local cuisine, I can tailor a tour to suit your interests. 
-                        Let's explore Greece together and create unforgettable memories!
-                    </p>
-                </div>
+            <img src="IMG_23522.jpg" alt="Elisavet guiding" class="about-me-image-left" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="section-three">
+        <div class="section-inner">
+            <img src="elisavet2.jpg" alt="Elisavet Makri" class="about-me-image-right scroll-animate" loading="lazy">
+            <div class="text-next-to-image scroll-animate">
+                <h2>My Vision...</h2>
+                <p>
+                    For me, discovering a place is a shared experience: you see the city through my eyes, and I see it through yours. Wandering is an art, and art is all around us in many forms. I enjoy connecting different periods and artists—whether it’s a <strong>Cycladic statue</strong> that reminds us of a <strong>Giacometti sculpture</strong>, or a <strong>Minoan bull</strong> from a Cretan fresco that evokes a <strong>Picasso drawing</strong>. Curiosity and imagination have no limits, and this is what I aim to inspire in my visitors.
+                </p>
+                <p>
+                    Whether you're interested in ancient ruins, modern art, or local cuisine, I can tailor a tour to suit your interests. 
+                    Let's explore Greece together and create unforgettable memories!
+                </p>
             </div>
         </div>
-        <div class="about-me-footer">
-            <ul>
-                <li><em>“Cities also believe they are the work of the mind or of chance, but neither the one nor the other suffices to hold up their walls. You take delight not in a city's seven or seventy wonders, but in the answer it gives to a question of yours. or to the question it asks you, forcing you to answer, like Thebes through the mouth of the Sphinx”</em></li>
-            </ul>
-            <p>
-                <strong>Invisible Cities, Italo Calvino.</strong>
-            </p>
-        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section-quote">
+        <em>“Cities also believe they are the work of the mind or of chance, but neither the one nor the other suffices to hold up their walls. You take delight not in a city's seven or seventy wonders, but in the answer it gives to a question of yours. or to the question it asks you, forcing you to answer, like Thebes through the mouth of the Sphinx”</em>
+        <p><strong>Invisible Cities, Italo Calvino.</strong></p>
     </section>
     
     <footer>

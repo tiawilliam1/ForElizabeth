@@ -2803,18 +2803,39 @@ html, body {
 }
     
 
-    /* Header Title for French */
+
     html[lang="fr"] #header-title {
-        font-size: 1.0em; /* Adjust font size for French */
-        margin-top: -60px; /* Adjust spacing */
-    }
+        font-size: 1.3rem; /* Adjust font size for English */
+        margin-top: 0px;
+        margin-right: 30px;
+        margin-right: 28%;
+        margin-left: 20%;
+}
+
+  html[lang="fr"] .logo-container {
+    margin-top: 3%;
+}
+
+  html[lang="fr"] .burger-icon {
+    margin-right: -1700%;
+}
+
+ html[lang="el"] .burger-icon {
+    margin-right: -1700%;
+}
 
     /* Header Title for Greek */
     html[lang="el"] #header-title {
         font-size: 1.2rem; /* Adjust font size for Greek */
-        margin-top: -70px; /* Adjust spacing */
+       
+            margin-right: 30px;
+        margin-right: 28%;
+        margin-left: 20%;
     }
 
+     html[lang="el"] .logo-container {
+    margin-top: 3%;
+}
     
 
     .language-selector {

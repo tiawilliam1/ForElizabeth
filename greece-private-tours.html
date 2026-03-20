@@ -169,6 +169,7 @@
     <script>
         // Function to change language
         function changeLanguage(lang) {
+        document.documentElement.lang = lang;
             // Save the selected language in localStorage
             localStorage.setItem('selectedLanguage', lang);
     

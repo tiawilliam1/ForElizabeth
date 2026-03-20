@@ -446,6 +446,7 @@
         };
 
         function applyLanguage(lang) {
+        document.documentElement.lang = lang;
             const c = translations[lang];
             languageOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
             elements.pageTitle.textContent = c.pageTitle;

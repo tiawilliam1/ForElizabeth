@@ -30,10 +30,10 @@
         <!-- Navigation Menu -->
         <nav class="burger-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="greece-private-tours.html">Tours</a></li>
-                <li><a href="about-elisavet-makri.html">About me</a></li>
-                <li><a href="contact-greece-local-guide.html">Contact</a></li>
+                <li><a href="index.html" class="nav-home">Home</a></li>
+                <li><a href="greece-private-tours.html" class="nav-tours">Tours</a></li>
+                <li><a href="about-elisavet-makri.html" class="nav-about">About me</a></li>
+                <li><a href="contact-greece-local-guide.html" class="nav-contact">Contact</a></li>
                 
                 <li class="language-selector">
                             <span class="language-option" data-lang="en">EN</span> /
@@ -47,10 +47,10 @@
     
     <nav>
         <ul>
-            <li><a href="index.html" id="nav-home">Home</a></li>
-            <li><a href="greece-private-tours.html" id="nav-tours">Tours</a></li>
-            <li><a href="about-elisavet-makri.html" id="nav-about">About me</a></li>
-            <li><a href="contact-greece-local-guide.html" id="nav-contact">Contact</a></li>
+            <li><a href="index.html" id="nav-home" class="nav-home">Home</a></li>
+            <li><a href="greece-private-tours.html" id="nav-tours" class="nav-tours">Tours</a></li>
+            <li><a href="about-elisavet-makri.html" id="nav-about" class="nav-about">About me</a></li>
+            <li><a href="contact-greece-local-guide.html" id="nav-contact" class="nav-contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -63,14 +63,14 @@
     <section class="athens-tours">
         <a href="mycenae-nafplion-epidaurus-tour.html" class="tour-card">
             <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426038/nauf_ydl3cb.jpg" alt="Mycenae, Nafplion & Epidaurus: A One-Day Itinerary through Classical Greece">
-            <h2>Mycenae, Nafplion & Epidaurus</h2>
-            <p>A day through myth and beauty—ancient ruins, a seaside town, and a theater echoing with history.</p>
+            <h2 class="card-1-title">Mycenae, Nafplion & Epidaurus</h2>
+            <p class="card-1-text">A day through myth and beauty—ancient ruins, a seaside town, and a theater echoing with history.</p>
          </a>
         
         <a href="ancient-corinth-tour.html" class="tour-card">
             <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769426044/corinth2_copy_k0of4f.jpg" alt="Walking Tour of Athens">
-            <h2>Corinth & the Canal</h2>
-            <p>Marvel at the dramatic Corinth Canal, a feat of 19th-century engineering slicing through centuries of history and stone.</p>
+            <h2 class="card-2-title">Corinth & the Canal</h2>
+            <p class="card-2-text">Marvel at the dramatic Corinth Canal, a feat of 19th-century engineering slicing through centuries of history and stone.</p>
         </a>
         
     </section>
@@ -78,11 +78,28 @@
    
     <footer>
         <div class="footer-info">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>greecelocalguide@gmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
+            <p class="footer-name">Elisavet Makri</p>
+            <p class="footer-role">Art Historian - Licensed Tour Guide</p>
+            <p class="footer-email">greecelocalguide@gmail.com</p>
+            <p class="footer-phone">+30 6942919085</p>
+            <p class="footer-location">Athens, Greece</p>
+        </div>
+                <div class="footer-sitemap">
+            <ul>
+                <li><a href="index.html" class="sitemap-home">Home</a></li>
+                <li>
+                    <a href="greece-private-tours.html" class="sitemap-tours">Tours</a>
+                    <ul>
+                        <li><a href="private-athens-tours.html" class="sitemap-athens">Athens Tours</a></li>
+                        <li><a href="peloponnese-archaeological-tour.html" class="sitemap-pelop">Peloponnese Tour</a></li>
+                        <li><a href="central-greece-tours.html" class="sitemap-central">Central Greece Tours</a></li>
+                        <li><a href="saronic-gulf-island-tours.html" class="sitemap-saronic">Saronic Gulf Tours</a></li>
+                        <li><a href="Cyclades.html" class="sitemap-cyclades">Cyclades Tours</a></li>
+                    </ul>
+                </li>
+                <li><a href="about-elisavet-makri.html" class="sitemap-about">About Me</a></li>
+                <li><a href="contact-greece-local-guide.html" class="sitemap-contact">Contact</a></li>
+            </ul>
         </div>
         <div class="footer-logo">
             <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
@@ -93,6 +110,113 @@
         function goBack() {
             window.location.href = "greece-private-tours.html"; // Navigate back to greece-private-tours.html
         }
+
+        // Language toggle and translations
+        (function() {
+            const languageOptions = document.querySelectorAll('.language-option');
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const elements = {
+                pageTitle: document.querySelector('title'),
+                headerTitle: document.getElementById('header-title'),
+                navHome: document.querySelectorAll('.nav-home'),
+                navTours: document.querySelectorAll('.nav-tours'),
+                navAbout: document.querySelectorAll('.nav-about'),
+                navContact: document.querySelectorAll('.nav-contact'),
+                card1Title: document.querySelector('.card-1-title'),
+                card1Text: document.querySelector('.card-1-text'),
+                card2Title: document.querySelector('.card-2-title'),
+                card2Text: document.querySelector('.card-2-text'),
+                footerText: document.getElementById('footer-text'),
+                footerName: document.querySelector('.footer-name'),
+                footerRole: document.querySelector('.footer-role'),
+                footerEmail: document.querySelector('.footer-email'),
+                footerPhone: document.querySelector('.footer-phone'),
+                footerLocation: document.querySelector('.footer-location')
+            };
+
+            const translations = {
+                en: {
+                    pageTitle: 'Peloponnese Archaeological Tour | Greece Local Guide',
+                    headerTitle: 'Peloponnese Tours',
+                    navHome: 'Home',
+                    navTours: 'Tours',
+                    navAbout: 'About me',
+                    navContact: 'Contact',
+                    card1Title: 'Mycenae, Nafplion & Epidaurus',
+                    card1Text: 'A day through myth and beauty—ancient ruins, a seaside town, and a theater echoing with history.',
+                    card2Title: 'Corinth & the Canal',
+                    card2Text: 'Marvel at the dramatic Corinth Canal, a feat of 19th-century engineering slicing through centuries of history and stone.',
+                    footerText: '&copy; 2026 Tour Guide. All rights reserved.',
+                    footerName: 'Elisavet Makri',
+                    footerRole: 'Art Historian - Licensed Tour Guide',
+                    footerEmail: 'greecelocalguide@gmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Athens, Greece'
+                },
+                fr: {
+                    pageTitle: 'Circuit archéologique du Péloponnèse | Guide local Grèce',
+                    headerTitle: 'Visites du Péloponnèse',
+                    navHome: 'Accueil',
+                    navTours: 'Visites',
+                    navAbout: 'À propos de moi',
+                    navContact: 'Contact',
+                    card1Title: 'Mycènes, Nauplie & Épidaure',
+                    card1Text: 'Une journée entre mythe et beauté : ruines antiques, ville maritime et théâtre chargé d\'histoire.',
+                    card2Title: 'Corinthe & le canal',
+                    card2Text: 'Admirez le spectaculaire canal de Corinthe, prouesse du XIXe siècle taillant la pierre et l’histoire.',
+                    footerText: '&copy; 2026 Guide touristique. Tous droits réservés.',
+                    footerName: 'Elisavet Makri',
+                    footerRole: 'Historienne de l’art - Guide-conférencière',
+                    footerEmail: 'greecelocalguide@gmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Athènes, Grèce'
+                },
+                el: {
+                    pageTitle: 'Αρχαιολογική ξενάγηση Πελοποννήσου | Greece Local Guide',
+                    headerTitle: 'Ξεναγήσεις Πελοποννήσου',
+                    navHome: 'Αρχική',
+                    navTours: 'Ξεναγήσεις',
+                    navAbout: 'Σχετικά με εμένα',
+                    navContact: 'Επικοινωνία',
+                    card1Title: 'Μυκήνες, Ναύπλιο & Επίδαυρος',
+                    card1Text: 'Μια μέρα με μύθο και ομορφιά—αρχαία ερείπια, παραθαλάσσια πόλη και θέατρο γεμάτο ιστορία.',
+                    card2Title: 'Κόρινθος & Διώρυγα',
+                    card2Text: 'Θαυμάστε τη δραματική Διώρυγα της Κορίνθου, επίτευγμα του 19ου αιώνα που σχίζει την πέτρα και την ιστορία.',
+                    footerText: '&copy; 2026 Ξεναγός. Όλα τα δικαιώματα διατηρούνται.',
+                    footerName: 'Ελισάβετ Μακρή',
+                    footerRole: 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός',
+                    footerEmail: 'greecelocalguide@gmail.com',
+                    footerPhone: '+30 6942919085',
+                    footerLocation: 'Αθήνα, Ελλάδα'
+                }
+            };
+
+            function applyLanguage(lang) {
+        document.documentElement.lang = lang;
+                const c = translations[lang];
+                languageOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+                elements.pageTitle.textContent = c.pageTitle;
+                elements.headerTitle.textContent = c.headerTitle;
+                elements.navHome.forEach(el => el.textContent = c.navHome);
+                elements.navTours.forEach(el => el.textContent = c.navTours);
+                elements.navAbout.forEach(el => el.textContent = c.navAbout);
+                elements.navContact.forEach(el => el.textContent = c.navContact);
+                if (elements.card1Title) elements.card1Title.textContent = c.card1Title;
+                if (elements.card1Text) elements.card1Text.textContent = c.card1Text;
+                if (elements.card2Title) elements.card2Title.textContent = c.card2Title;
+                if (elements.card2Text) elements.card2Text.textContent = c.card2Text;
+                elements.footerText.innerHTML = c.footerText;
+                elements.footerName.textContent = c.footerName;
+                elements.footerRole.textContent = c.footerRole;
+                elements.footerEmail.textContent = c.footerEmail;
+                elements.footerPhone.textContent = c.footerPhone;
+                elements.footerLocation.textContent = c.footerLocation;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+
+            languageOptions.forEach(opt => opt.addEventListener('click', () => applyLanguage(opt.dataset.lang)));
+            applyLanguage(savedLanguage);
+        })();
 
                 // Select the burger menu button, navigation menu, icons, and header
 const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons

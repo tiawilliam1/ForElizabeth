@@ -420,6 +420,7 @@ function initLanguageSwitcher() {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
 
     function applyLanguage(lang) {
+        document.documentElement.lang = lang;
         languageOptions.forEach(option => {
             option.classList.toggle('active', option.dataset.lang === lang);
         });
@@ -586,6 +587,7 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
         
     }
     function changeLanguage(lang) {
+        document.documentElement.lang = lang;
         localStorage.setItem('selectedLanguage', lang);
         applyLanguage(lang);
     }
