@@ -3968,7 +3968,7 @@ padding-left: 20%;
 
 .carousel-title {
     padding-right: 20%;
-padding-left: 20%;
+padding-left: 21%;
 
 }
 
@@ -3980,6 +3980,7 @@ padding-left: 20%;
 
     background-color: #f1f1f1;
     margin-top: 10%;
+    margin-bottom: 3%;
 }
 
 .quote-slideshow-container {
@@ -4519,9 +4520,10 @@ margin-top: -4%;
     .quote-slideshow-section {
         margin: 0 auto;
         padding: 40px 24px;
-        background-color: #f9f9f9;
+        background-color: #f1f1f1;
         text-align: center;
-        margin-top: -13%;
+        margin-top: 9%;
+        
 
     }
 
