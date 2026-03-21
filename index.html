@@ -468,7 +468,7 @@ function initLanguageSwitcher() {
                 footerText: '&copy; 2026 Tour Guide. All rights reserved.'
             },
             fr: {
-                headerTitle: 'Votre Guide-conférencière en Grèce',
+                headerTitle: 'Guide-conférencière en Grèce',
                 homepageTitle: 'Visites privées en Grèce',
                 homepageDescription: `<span class='cursive-name'> Elisavet Makri</span>, Guide-conférencière agréée par l’État grec basée à Athènes, je propose depuis plus de 10 ans des visites privées à pied, des visites de musées ainsi que des découvertes de sites archéologiques anciens à travers toute la Grèce — toutes soigneusement adaptées à vos centres d’intérêt.
 Mon objectif est de vous offrir des visites approfondies, engageantes et personnalisées, afin de vous permettre de profiter pleinement de votre séjour en Grèce.`,
@@ -579,7 +579,7 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
 
         });
         content.regionTitles.forEach((txt, i) => setText(document.querySelector(`.region-title-${i+1}`), txt));
-        content.quoteTexts.forEach((txt, i) => setText(document.querySelector(`.quote-${i+1}`), txt));
+        (content.quoteTexts || []).forEach((txt, i) => setText(document.querySelector(`.quote-${i+1}`), txt));
         const cta = document.querySelector('.cta-link'); if (cta) cta.textContent = content.ctaText;
         const footer = document.getElementById('footer-text'); if (footer) footer.innerHTML = content.footerText;
         const fInfo = document.querySelectorAll('.footer-info p');
