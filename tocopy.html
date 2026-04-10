@@ -4,60 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The National Archaeological Musuem Tour</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css"></head>
 <body>
-    <header>
-
-   
-        <div class="logo-container">
-            <img src="logo1.jpg" alt="Logo" class="logo">
-        </div>
-        <h1 id="header-title">Attica Tours</h1>
-        <div class="language-selector">
-            <span class="language-option" data-lang="en">EN</span> /
-            <span class="language-option" data-lang="fr">FR</span> /
-            <span class="language-option" data-lang="el">GR</span>
-        </div>
-    
-        <div class="burger-menu-btn" aria-label="Toggle Navigation">
-            <img src="menu.png" alt="Open Menu" class="burger-icon">
-            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
-        </div>
-    
-    
-        <!-- Navigation Menu -->
-        <nav class="burger-menu">
-            <ul>
-                <li><a href="index.html" class="nav-home">Home</a></li>
-                <li><a href="greece-private-tours.html" class="nav-tours">Tours</a></li>
-                <li><a href="about-elisavet-makri.html" class="nav-about">About me</a></li>
-                <li><a href="contact-greece-local-guide.html" class="nav-contact">Contact</a></li>
-                
-                <li class="language-selector">
-                            <span class="language-option" data-lang="en">EN</span> /
-                            <span class="language-option" data-lang="fr">FR</span> /
-                            <span class="language-option" data-lang="el">GR</span>
-                </li>
-            </ul>
-    
-        </nav>
-  
-    
-    <nav>
-        <ul>
-            <li><a href="index.html" id="nav-home" class="nav-home">Home</a></li>
-            <li><a href="greece-private-tours.html" id="nav-tours" class="nav-tours">Tours</a></li>
-            <li><a href="about-elisavet-makri.html" id="nav-about" class="nav-about">About me</a></li>
-            <li><a href="contact-greece-local-guide.html" id="nav-contact" class="nav-contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <div id="site-header"></div>
+    <script src="components.js"></script>
 
     <section class="hero-section">
         <section class="back-button-container1">
             <a href="private-athens-tours.html">
-                <img src="backbutton3.png" alt="Back to Athens Tours" class="back-button1">
+                <img src="images/backbutton3.png" alt="Back to Athens Tours" class="back-button1">
             </a>
         </section>
         <div class="hero-content">
@@ -226,21 +181,10 @@
     </section>
     
     
-    <footer>
-        <div class="footer-info">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>greecelocalguide@gmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
-        </div>
-        <div class="footer-logo">
-            <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
-            <p id="footer-text">&copy; 2026 Tour Guide. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <div id="site-footer"></div>
+
 
 <script>
     // Get the fullscreen container and image elements
@@ -294,13 +238,13 @@ burgerMenuBtn.addEventListener('click', () => {
 
     // Toggle between the burger icon and the close icon
     if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
+        burgerIcon.style.display = 'none'; // Hide the burger icon (images/menu.png)
+        closeIcon.style.display = 'block'; // Show the "X" icon (images/x.png)
         header.style.display = 'block'; // Ensure the header is visible
         console.log('Menu opened'); // Debugging log
     } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
+        burgerIcon.style.display = 'block'; // Show the burger icon (images/menu.png)
+        closeIcon.style.display = 'none'; // Hide the "X" icon (images/x.png)
         header.style.display = 'block'; // Ensure the header remains visible
         console.log('Menu closed'); // Debugging log
     }
@@ -313,10 +257,10 @@ closeIcon.addEventListener('click', () => {
     // Close the menu by removing the 'active' class
     burgerMenu.classList.remove('hidden');
 
-    // Show the burger icon (menu.png)
+    // Show the burger icon (images/menu.png)
     burgerIcon.style.display = 'block';
 
-    // Hide the "X" icon (x.png)
+    // Hide the "X" icon (images/x.png)
     closeIcon.style.display = 'none';
 
     // Ensure the header is visible
@@ -611,3 +555,6 @@ closeIcon.addEventListener('click', () => {
 
 
 </script>
+
+</body>
+</html>

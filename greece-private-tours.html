@@ -5,52 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greece Private Tours | Greece Local Guide</title>
     <link rel="canonical" href="https://greecelocalguide.com/greece-private-tours">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css"></head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo1.jpg" alt="Logo" class="logo">
-        </div>
-        <h1 id="header-title">Greece Local Guide</h1>
-        <div class="language-selector">
-            <span class="language-option" data-lang="en">EN</span> /
-            <span class="language-option" data-lang="fr">FR</span> /
-            <span class="language-option" data-lang="el">GR</span>
-        </div>
-    
-        <div class="burger-menu-btn" aria-label="Toggle Navigation">
-            <img src="menu.png" alt="Open Menu" class="burger-icon">
-            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
-        </div>
-    
-    
-        <!-- Navigation Menu -->
-        <nav class="burger-menu">
-            <ul>
-                <li><a href="index.html" class="nav-home">Home</a></li>
-                <li><a href="greece-private-tours.html" class="nav-tours">Tours</a></li>
-                <li><a href="about-elisavet-makri.html" class="nav-about">About me</a></li>
-                <li><a href="contact-greece-local-guide.html" class="nav-contact">Contact</a></li>
-                
-                <li class="language-selector">
-                            <span class="language-option" data-lang="en">EN</span> /
-                            <span class="language-option" data-lang="fr">FR</span> /
-                            <span class="language-option" data-lang="el">GR</span>
-                </li>
-            </ul>
-    
-        </nav>
-    <nav>
-        <ul>
-            <li><a href="index.html" id="nav-home" class="nav-home">Home</a></li>
-            <li><a href="greece-private-tours.html" id="nav-tours" class="nav-tours">Tours</a></li>
-            <li><a href="about-elisavet-makri.html" id="nav-about" class="nav-about">About me</a></li>
-            <li><a href="contact-greece-local-guide.html" id="nav-contact" class="nav-contact">Contact</a></li>
-            
-        </ul>
-    </nav>
-    </header>
+    <div id="site-header"></div>
+    <script src="components.js"></script>
     <h1 class="page-keyword" style="position:absolute;left:-9999px;">Greece Private Tours</h1>
 
     <section class="athens-tours-page">
@@ -59,7 +17,7 @@
         <div class="tour-card">
             <div class="image-container">
                 <a href="private-athens-tours.html">
-                    <img src="attica copy 2.jpg" alt="Acropolis & Agora" class="attica-image" loading="lazy">
+                    <img src="images/attica copy 2.jpg" alt="Acropolis & Agora" class="attica-image" loading="lazy">
                 </a>
             </div>
             <div class="text-container">
@@ -79,7 +37,7 @@
         <div class="tour-card">
             <div class="image-container">
                 <a href="peloponnese-archaeological-tour.html">
-                <img src="acorinth copy.jpg" alt="Walking Tour of Athens" class="peloponnese-image" loading="lazy">
+                <img src="images/acorinth copy.jpg" alt="Walking Tour of Athens" class="peloponnese-image" loading="lazy">
             </a>
             </div>
 
@@ -97,7 +55,7 @@
         <div class="tour-card">
             <div class="image-container">
                 <a href="central-greece-tours.html">
-                <img src="central.jpg" alt="Philosophical Tour" class="central-greece-image" loading="lazy">
+                <img src="images/central.jpg" alt="Philosophical Tour" class="central-greece-image" loading="lazy">
                 </a>
             </div>
             <div class="text-container">
@@ -114,7 +72,7 @@
         <div class="tour-card">
             <div class="image-container">
                 <a href="saronic-gulf-island-tours.html">
-                <img src="spetses1 copy.jpg" alt="Walking Tour of Athens" class="saronic-gulf-image" loading="lazy">
+                <img src="images/spetses1 copy.jpg" alt="Walking Tour of Athens" class="saronic-gulf-image" loading="lazy">
                 </a>
             </div>
             <div class="text-container">
@@ -131,7 +89,7 @@
         <div class="tour-card">
             <div class="image-container">
                 <a href="cyclades-island-tours.html">
-                <img src="cyc1 copy.jpg" alt="Walking Tour of Athens" class="cyclades-image" loading="lazy">
+                <img src="images/cyc1 copy.jpg" alt="Walking Tour of Athens" class="cyclades-image" loading="lazy">
                 </a>
             </div>
             <div class="text-container">
@@ -145,21 +103,10 @@
             </div>
         </div>
     </section>
- 
-    <footer>
-        <div class="footer-info1">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>greecelocalguide@gmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
         </div>
-        
-        <div class="footer-logo1">
-            <img src="logo1.jpg" alt="Logo" class="footer-logo1-image">
-            <p id="footer-text1">&copy; 2026 Tour Guide. All rights reserved.</p>
-        </div>
-    </footer>
+    </section>
+
+    <div id="site-footer"></div>
 
     <script>
         function goBack() {
@@ -167,211 +114,208 @@
         }
     </script>
     <script>
-        // Function to change language
-        function changeLanguage(lang) {
-        document.documentElement.lang = lang;
-            // Save the selected language in localStorage
-            localStorage.setItem('selectedLanguage', lang);
-    
-            // Update active language
-            const languageOptions = document.querySelectorAll('.language-option');
-            languageOptions.forEach(option => {
-                option.classList.remove('active'); // Remove active class from all options
-                if (option.dataset.lang === lang) {
-                    option.classList.add('active'); // Add active class to the selected language
-                }
-            });
-    
-            // Translate content based on the selected language
-            const pageTitle = document.querySelector('title');
-            const headerTitle = document.querySelector('h1');
-            const atticaTours = document.querySelector('.athens-tours .text-container h2');
-            const atticaList = document.querySelectorAll('.athens-tours .text-container ul li');
-            const peloponneseTours = document.querySelector('.tour-card:nth-child(2) .text-container h2');
-            const peloponneseList = document.querySelectorAll('.tour-card:nth-child(2) .text-container ul li');
-            const centralGreeceTours = document.querySelector('.tour-card:nth-child(3) .text-container h2');
-            const centralGreeceList = document.querySelectorAll('.tour-card:nth-child(3) .text-container ul li');
-            const saronicGulfTours = document.querySelector('.tour-card:nth-child(4) .text-container h2');
-            const saronicGulfList = document.querySelectorAll('.tour-card:nth-child(4) .text-container ul li');
-            const cycladesTours = document.querySelector('.tour-card:nth-child(5) .text-container h2');
-            const cycladesList = document.querySelectorAll('.tour-card:nth-child(5) .text-container ul li');
-            const navHomeLinks = document.querySelectorAll('.nav-home');
-            const navTourLinks = document.querySelectorAll('.nav-tours');
-            const navAboutLinks = document.querySelectorAll('.nav-about');
-            const navContactLinks = document.querySelectorAll('.nav-contact');
-            const viewDetailsButtons = document.querySelectorAll('.view-details-button');
-            const footerInfo = document.querySelectorAll('.footer-info1 p');
-            const footerCopy = document.getElementById('footer-text1');
-
-            if (lang === 'en') {
-                pageTitle.textContent = 'Athens Tours';
-                headerTitle.textContent = 'Our Tours';
-                navHomeLinks.forEach(link => link.textContent = 'Home');
-                navTourLinks.forEach(link => link.textContent = 'Tours');
-                navAboutLinks.forEach(link => link.textContent = 'About me');
-                navContactLinks.forEach(link => link.textContent = 'Contact');
-                viewDetailsButtons.forEach(button => button.textContent = 'View Tours →');
-                atticaTours.textContent = 'Attica';
-                atticaList[0].textContent = '-> Acropolis & Ancient Agora Tour';
-                atticaList[1].textContent = '-> Walking Tour of the Center of Athens';
-                atticaList[2].textContent = '-> Philosophical Tour';
-                atticaList[3].textContent = '-> National Archaeological Museum Tour';
-                atticaList[4].textContent = '-> Cape Sounion Tour';
-                peloponneseTours.textContent = 'Peloponnese';
-                peloponneseList[0].textContent = '-> Mycenae, Epidaurus & Nauplio';
-                peloponneseList[1].textContent = '-> Corinth & the Canal';
-                centralGreeceTours.textContent = 'Central Greece';
-                centralGreeceList[0].textContent = '-> Delphi';
-                centralGreeceList[1].textContent = '-> Holy Monastery of Hosios Loukas';
-                centralGreeceList[2].textContent = '-> Thebes';
-                saronicGulfTours.textContent = 'Saronic Gulf Islands';
-                saronicGulfList[0].textContent = '-> Aegina';
-                saronicGulfList[1].textContent = '-> Hydra';
-                saronicGulfList[2].textContent = '-> Spetses';
-                cycladesTours.textContent = 'Cyclades';
-                cycladesList[0].textContent = '-> Mykonos';
-                cycladesList[1].textContent = '-> Santorini';
-                if (footerInfo.length >=5) {
-                    footerInfo[0].textContent = 'Elisavet Makri';
-                    footerInfo[1].textContent = 'Art Historian - Licensed Tour Guide';
-                    footerInfo[2].textContent = 'greecelocalguide@gmail.com';
-                    footerInfo[3].textContent = '+30 6942919085';
-                    footerInfo[4].textContent = 'Athens, Greece';
-                }
-                if (footerCopy) footerCopy.textContent = '© 2026 Tour Guide. All rights reserved.';
-            } else if (lang === 'fr') {
-                pageTitle.textContent = 'Tours d\'Athènes';
-                headerTitle.textContent = 'Nos Tours';
-                navHomeLinks.forEach(link => link.textContent = 'Accueil');
-                navTourLinks.forEach(link => link.textContent = 'Visites');
-                navAboutLinks.forEach(link => link.textContent = 'À propos de moi');
-                navContactLinks.forEach(link => link.textContent = 'Contact');
-                atticaTours.textContent = 'Attique';
-                viewDetailsButtons.forEach(button => button.textContent = 'Découvrir les visites →');
-                atticaList[0].textContent = '-> Visite de l\'Acropole et de l\'Agora Antique';
-                atticaList[1].textContent = '-> Visite à pied du centre d\'Athènes';
-                atticaList[2].textContent = '-> Promenade Philosophique';
-                atticaList[3].textContent = '-> Musée Archéologique National';
-                atticaList[4].textContent = '-> Excursion au Cap Sounion';
-                peloponneseTours.textContent = 'Péloponnèse';
-                peloponneseList[0].textContent = '-> Mycènes, Épidaure et Nauplie';
-                peloponneseList[1].textContent = '-> Corinthe et le Canal';
-                centralGreeceTours.textContent = 'Grèce Centrale';
-                centralGreeceList[0].textContent = '-> Delphes';
-                centralGreeceList[1].textContent = '-> Monastère Saint-Luc';
-                centralGreeceList[2].textContent = '-> Thèbes';
-                saronicGulfTours.textContent = 'Îles du Golfe Saronique';
-                saronicGulfList[0].textContent = '-> Égine';
-                saronicGulfList[1].textContent = '-> Hydra';
-                saronicGulfList[2].textContent = '-> Spetses';
-                cycladesTours.textContent = 'Cyclades';
-                cycladesList[0].textContent = '-> Mykonos';
-                cycladesList[1].textContent = '-> Santorin';
-                if (footerInfo.length >=5) {
-                    footerInfo[0].textContent = 'Elisavet Makri';
-                    footerInfo[1].textContent = 'Historienne de l\'art - Guide-conférencière';
-                    footerInfo[2].textContent = 'greecelocalguide@gmail.com';
-                    footerInfo[3].textContent = '+30 6942919085';
-                    footerInfo[4].textContent = 'Athènes, Grèce';
-                }
-                if (footerCopy) footerCopy.textContent = '© 2026 Guide touristique. Tous droits réservés.';
-                
-            } else if (lang === 'el') {
-                pageTitle.textContent = 'Ξεναγήσεις στην Αθήνα';
-                headerTitle.textContent = 'Οι Ξεναγήσεις μας';
-                navHomeLinks.forEach(link => link.textContent = 'Αρχική');
-                navTourLinks.forEach(link => link.textContent = 'Ξεναγήσεις');
-                navAboutLinks.forEach(link => link.textContent = 'Σχετικά με εμένα');
-                navContactLinks.forEach(link => link.textContent = 'Επικοινωνία');
-                viewDetailsButtons.forEach(button => button.textContent = 'Découvrir les visites →');
-                atticaTours.textContent = 'Αττική';
-                atticaList[0].textContent = '-> Ξενάγηση στην Ακρόπολη και την Αρχαία Αγορά';
-                atticaList[1].textContent = '-> Περιπατητική Ξενάγηση στο Κέντρο της Αθήνας';
-                atticaList[2].textContent = '-> Φιλοσοφική Ξενάγηση';
-                atticaList[3].textContent = '-> Ξενάγηση στο Εθνικό Αρχαιολογικό Μουσείο';
-                atticaList[4].textContent = '-> Ξενάγηση στο Σούνιο';
-                peloponneseTours.textContent = 'Πελοπόννησος';
-                peloponneseList[0].textContent = '-> Μυκήνες, Επίδαυρος και Ναύπλιο';
-                peloponneseList[1].textContent = '-> Κόρινθος και Διώρυγα';
-                centralGreeceTours.textContent = 'Κεντρική Ελλάδα';
-                centralGreeceList[0].textContent = '-> Δελφοί';
-                centralGreeceList[1].textContent = '-> Μονή Οσίου Λουκά';
-                centralGreeceList[2].textContent = '-> Θήβα';
-                saronicGulfTours.textContent = 'Νησιά Σαρωνικού';
-                saronicGulfList[0].textContent = '-> Αίγινα';
-                saronicGulfList[1].textContent = '-> Ύδρα';
-                saronicGulfList[2].textContent = '-> Σπέτσες';
-                cycladesTours.textContent = 'Κυκλάδες';
-                cycladesList[0].textContent = '-> Μύκονος';
-                cycladesList[1].textContent = '-> Σαντορίνη';
-                if (footerInfo.length >=5) {
-                    footerInfo[0].textContent = 'Ελισάβετ Μακρή';
-                    footerInfo[1].textContent = 'Ιστορικός τέχνης - Αδειοδοτημένη ξεναγός';
-                    footerInfo[2].textContent = 'greecelocalguide@gmail.com';
-                    footerInfo[3].textContent = '+30 6942919085';
-                    footerInfo[4].textContent = 'Αθήνα, Ελλάδα';
-                }
-                if (footerCopy) footerCopy.textContent = '© 2026 Ξεναγός. Με επιφύλαξη παντός δικαιώματος.';
-            }
-        }
-    
-        
-        // Add event listeners to language options
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', () => {
-                const lang = option.dataset.lang;
-                changeLanguage(lang); // Switch to the selected language
-            });
-        });
-    
-        // Set default or previously selected language on page load
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
-            changeLanguage(savedLanguage);
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const pageTitle = document.querySelector('title');
+            const tourCards = Array.from(document.querySelectorAll('.athens-tours .tour-card'));
+            const viewDetailsButtons = document.querySelectorAll('.view-details-button');
+
+            const translations = {
+                en: {
+                    pageTitle: 'Greece Private Tours | Greece Local Guide',
+                    buttonText: 'View Tours →',
+                    cards: [
+                        {
+                            title: 'Attica',
+                            items: [
+                                '-> Acropolis & Ancient Agora Tour',
+                                '-> Walking Tour of the Center of Athens',
+                                '-> Philosophical Tour',
+                                '-> National Archaeological Museum Tour',
+                                '-> Cape Sounion Tour'
+                            ]
+                        },
+                        {
+                            title: 'Peloponnese',
+                            items: [
+                                '-> Mycenae, Epidaurus & Nauplio',
+                                '-> Corinth & the Canal'
+                            ]
+                        },
+                        {
+                            title: 'Central Greece',
+                            items: [
+                                '-> Delphi',
+                                '-> Holy Monastery of Hosios Loukas',
+                                '-> Thebes'
+                            ]
+                        },
+                        {
+                            title: 'Saronic Gulf Islands',
+                            items: [
+                                '-> Aegina',
+                                '-> Hydra',
+                                '-> Spetses'
+                            ]
+                        },
+                        {
+                            title: 'Cyclades',
+                            items: [
+                                '-> Mykonos',
+                                '-> Santorini'
+                            ]
+                        }
+                    ]
+                },
+                fr: {
+                    pageTitle: 'Visites privées en Grèce | Greece Local Guide',
+                    buttonText: 'Découvrir les visites →',
+                    cards: [
+                        {
+                            title: 'Attique',
+                            items: [
+                                '-> Visite de l\'Acropole et de l\'Agora Antique',
+                                '-> Visite à pied du centre d\'Athènes',
+                                '-> Promenade philosophique',
+                                '-> Musée archéologique national',
+                                '-> Excursion au Cap Sounion'
+                            ]
+                        },
+                        {
+                            title: 'Péloponnèse',
+                            items: [
+                                '-> Mycènes, Épidaure et Nauplie',
+                                '-> Corinthe et le Canal'
+                            ]
+                        },
+                        {
+                            title: 'Grèce Centrale',
+                            items: [
+                                '-> Delphes',
+                                '-> Monastère Saint-Luc',
+                                '-> Thèbes'
+                            ]
+                        },
+                        {
+                            title: 'Îles du Golfe Saronique',
+                            items: [
+                                '-> Égine',
+                                '-> Hydra',
+                                '-> Spetses'
+                            ]
+                        },
+                        {
+                            title: 'Cyclades',
+                            items: [
+                                '-> Mykonos',
+                                '-> Santorin'
+                            ]
+                        }
+                    ]
+                },
+                el: {
+                    pageTitle: 'Ιδιωτικές ξεναγήσεις στην Ελλάδα | Greece Local Guide',
+                    buttonText: 'Δείτε τις ξεναγήσεις →',
+                    cards: [
+                        {
+                            title: 'Αττική',
+                            items: [
+                                '-> Ξενάγηση στην Ακρόπολη και την Αρχαία Αγορά',
+                                '-> Περιπατητική ξενάγηση στο κέντρο της Αθήνας',
+                                '-> Φιλοσοφική ξενάγηση',
+                                '-> Ξενάγηση στο Εθνικό Αρχαιολογικό Μουσείο',
+                                '-> Ξενάγηση στο Σούνιο'
+                            ]
+                        },
+                        {
+                            title: 'Πελοπόννησος',
+                            items: [
+                                '-> Μυκήνες, Επίδαυρος και Ναύπλιο',
+                                '-> Κόρινθος και Διώρυγα'
+                            ]
+                        },
+                        {
+                            title: 'Κεντρική Ελλάδα',
+                            items: [
+                                '-> Δελφοί',
+                                '-> Μονή Οσίου Λουκά',
+                                '-> Θήβα'
+                            ]
+                        },
+                        {
+                            title: 'Νησιά Σαρωνικού',
+                            items: [
+                                '-> Αίγινα',
+                                '-> Ύδρα',
+                                '-> Σπέτσες'
+                            ]
+                        },
+                        {
+                            title: 'Κυκλάδες',
+                            items: [
+                                '-> Μύκονος',
+                                '-> Σαντορίνη'
+                            ]
+                        }
+                    ]
+                }
+            };
+
+            function applyPageLanguage(lang) {
+                const safeLang = translations[lang] ? lang : 'en';
+                const content = translations[safeLang];
+                document.documentElement.lang = safeLang;
+                if (pageTitle) pageTitle.textContent = content.pageTitle;
+
+                viewDetailsButtons.forEach((button) => {
+                    button.textContent = content.buttonText;
+                });
+
+                tourCards.forEach((card, cardIndex) => {
+                    const cardContent = content.cards[cardIndex];
+                    if (!cardContent) return;
+
+                    const cardTitle = card.querySelector('.text-container h2');
+                    if (cardTitle) cardTitle.textContent = cardContent.title;
+
+                    const cardItems = card.querySelectorAll('.text-container ul li');
+                    cardItems.forEach((item, itemIndex) => {
+                        if (cardContent.items[itemIndex]) {
+                            item.textContent = cardContent.items[itemIndex];
+                        }
+                    });
+                });
+            }
+
+            window.addEventListener('shared-language-change', (event) => {
+                const lang = event.detail && event.detail.lang ? event.detail.lang : 'en';
+                applyPageLanguage(lang);
+            });
+
+            applyPageLanguage(savedLanguage);
+
+            const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+            const burgerMenu = document.querySelector('.burger-menu');
+            const burgerIcon = document.querySelector('.burger-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const header = document.querySelector('header');
+
+            if (burgerMenuBtn && burgerMenu && burgerIcon && closeIcon && header) {
+                burgerMenuBtn.addEventListener('click', () => {
+                    const isMenuOpen = burgerMenu.classList.toggle('active');
+                    burgerIcon.style.display = isMenuOpen ? 'none' : 'block';
+                    closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+                    header.style.display = 'block';
+                });
+
+                closeIcon.addEventListener('click', () => {
+                    burgerMenu.classList.remove('active');
+                    burgerIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    header.style.display = 'block';
+                });
+            }
         });
-
-
-        // Select the burger menu button, navigation menu, icons, and header
-const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
-const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
-const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
-const closeIcon = document.querySelector('.close-icon'); // The x.png icon
-const header = document.querySelector('header'); // The header element
-
-// Add a click event listener to the burger menu button
-burgerMenuBtn.addEventListener('click', () => {
-    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
-
-    // Toggle between the burger icon and the close icon
-    if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header is visible
-        console.log('Menu opened'); // Debugging log
-    } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
-        header.style.display = 'block'; // Ensure the header remains visible
-        console.log('Menu closed'); // Debugging log
-    }
-});
-
-// Add a click event listener to the "X" button (close icon)
-closeIcon.addEventListener('click', () => {
-    console.log('Close button clicked'); // Debugging log
-
-    // Close the menu by removing the 'active' class
-    burgerMenu.classList.remove('hidden');
-
-    // Show the burger icon (menu.png)
-    burgerIcon.style.display = 'block';
-
-    // Hide the "X" icon (x.png)
-    closeIcon.style.display = 'none';
-
-    // Ensure the header is visible
-    header.style.display = 'block';
-});
 
     </script>
 </body>

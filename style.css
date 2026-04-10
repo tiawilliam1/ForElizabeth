@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap');
+
 /* General styles */
 @font-face {
     font-family: 'Didot';
-    src: url('GFSDidot-Regular.ttf') format('truetype');
+    src: local('Didot'),
+         local('Didot LT STD'),
+         url('fonts/GFSDidot-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -3910,7 +3917,7 @@ margin-top: 60%;
 
 
 .attica-tour .image-container img {
-    content: url('attica1.jpg'); /* Replace with the Attica image */
+    content: url('images/attica1.jpg'); /* Replace with the Attica image */
 }
 
 .why-choose-description {
@@ -3996,15 +4003,15 @@ padding-left: 20%;
 
 
     .feature-box:nth-child(1) img.feature-image {
-        content: url('ally1.jpg'); /* Replace with the mobile-specific image */
+        content: url('images/ally1.jpg'); /* Replace with the mobile-specific image */
     }
 
     .feature-box:nth-child(2) img.feature-image {
-        content: url('ally2.jpg'); /* Replace with the mobile-specific image */
+        content: url('images/ally2.jpg'); /* Replace with the mobile-specific image */
     }
 
     .feature-box:nth-child(3) img.feature-image {
-        content: url('ally3.jpg'); /* Replace with the mobile-specific image */
+        content: url('images/ally3.jpg'); /* Replace with the mobile-specific image */
     }
 
     .feature-box img.feature-image {
@@ -4027,7 +4034,7 @@ padding-left: 21%;
 
 .horizontal-carousel-section {
 
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     margin-top: 10%;
     margin-bottom: 3%;
 }
@@ -4152,7 +4159,7 @@ margin-left: -10%;
 .step-icon {
     width: 40px; /* Set the width of the icon */
     height: 40px; /* Set the height of the icon */
-    background-image: url('swirl1.png'); /* Use swirl1.png as the background */
+    background-image: url('images/swirl1.png'); /* Use swirl1.png as the background */
     background-size: cover; /* Ensure the image covers the entire icon area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -4220,7 +4227,7 @@ margin-left: -10%;
     display: inline-block; /* Make it inline with the text */
     width: 40px; /* Set the width of the icon */
     height: 40px; /* Set the height of the icon */
-    background-image: url('swirl1.png'); /* Replace with your icon's path */
+    background-image: url('images/swirl1.png'); /* Replace with your icon's path */
     background-size: cover; /* Ensure the icon covers the area */
     background-position: center; /* Center the icon */
     background-repeat: no-repeat; /* Prevent the icon from repeating */
@@ -4399,27 +4406,27 @@ margin-left: -10%;
 /* Default Images for Larger Screens */
 
 .attica-image {
-    content: url('attica\ copy\ 2.jpg');
+    content: url('images/attica copy 2.jpg');
     
 }
 
 .peloponnese-image {
-    content: url('acorinth\ copy.jpg');
+    content: url('images/acorinth copy.jpg');
     
 }
 
 .central-greece-image {
-    content: url('central.jpg');
+    content: url('images/central.jpg');
     
 }
 
 .saronic-gulf-image {
-    content: url('spetses1\ copy.jpg');
+    content: url('images/spetses1 copy.jpg');
     
 }
 
 .cyclades-image {
-    content: url('cyc1\ copy.jpg');
+    content: url('images/cyc1 copy.jpg');
 }
 
 
@@ -4427,24 +4434,24 @@ margin-left: -10%;
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .attica-image {
-        content: url('attica.jpg'); /* Replace with the smaller image for Attica */
+        content: url('images/attica.jpg'); /* Replace with the smaller image for Attica */
     }
 
     .peloponnese-image {
-        content: url('acorinth-phone.jpg'); /* Replace with the smaller image for Peloponnese */
+        content: url('images/acorinth-phone.jpg'); /* Replace with the smaller image for Peloponnese */
 
     }
 
     .central-greece-image {
-        content: url('central-phone.jpg'); /* Replace with the smaller image for Central Greece */
+        content: url('images/central-phone.jpg'); /* Replace with the smaller image for Central Greece */
     }
 
     .saronic-gulf-image {
-        content: url('spetses1-phone.jpg'); /* Replace with the smaller image for Saronic Gulf */
+        content: url('images/spetses1-phone.jpg'); /* Replace with the smaller image for Saronic Gulf */
     }
 
     .cyclades-image {
-        content: url('cyc1-phone.jpg'); /* Replace with the smaller image for Cyclades */
+        content: url('images/cyc1-phone.jpg'); /* Replace with the smaller image for Cyclades */
     }
 
     .tour-card img {
@@ -4799,9 +4806,6 @@ margin-top: -3%;
     border-color: #0056b3; /* Darker border on hover */
 }
 
-/* Import the Dancing Script font */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
 /* Style for the cursive name */
 .cursive-name {
     font-family: 'Great Vibes', cursive; /* Apply the Great Vibes font */
@@ -4817,4 +4821,19 @@ margin-top: -3%;
     width: 60px;
     height: auto;
     margin-top: -4%;
+}
+
+/* Keep footer typography consistent across all pages */
+footer .footer-info,
+footer .footer-info1 {
+    font-size: 16px !important;
+}
+
+footer .footer-info p,
+footer .footer-info1 p,
+footer .footer-info a,
+footer .footer-info1 a,
+footer #footer-text,
+footer #footer-text1 {
+    font-size: 16px !important;
 }

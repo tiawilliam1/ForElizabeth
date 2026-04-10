@@ -5,56 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spetses Island Tour | Greece Local Guide</title>
     <link rel="canonical" href="https://greecelocalguide.com/spetses-island-tour">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css"></head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo1.jpg" alt="Logo" class="logo">
-        </div>
-        <h1 id="header-title">Greece Local Guide</h1>
-        <div class="language-selector">
-            <span class="language-option" data-lang="en">EN</span> /
-            <span class="language-option" data-lang="fr">FR</span> /
-            <span class="language-option" data-lang="el">GR</span>
-        </div>
-    
-        <div class="burger-menu-btn" aria-label="Toggle Navigation">
-            <img src="menu.png" alt="Open Menu" class="burger-icon">
-            <img src="x.png" alt="Close Menu" class="close-icon" style="display: none;">
-        </div>
-    
-    
-        <!-- Navigation Menu -->
-        <nav class="burger-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="greece-private-tours.html">Tours</a></li>
-                <li><a href="about-elisavet-makri.html">About me</a></li>
-                <li><a href="contact-greece-local-guide.html">Contact</a></li>
-                
-                <li class="language-selector">
-                            <span class="language-option" data-lang="en">EN</span> /
-                            <span class="language-option" data-lang="fr">FR</span> /
-                            <span class="language-option" data-lang="el">GR</span>
-                </li>
-            </ul>
-    
-        </nav>
-    <nav>
-        <ul>
-            <li><a href="index.html" id="nav-home">Home</a></li>
-            <li><a href="greece-private-tours.html" id="nav-tours">Tours</a></li>
-            <li><a href="about-elisavet-makri.html" id="nav-about">About me</a></li>
-            <li><a href="contact-greece-local-guide.html" id="nav-contact">Contact</a></li>
-        </ul>
-    </nav>
-    </header>
+    <div id="site-header"></div>
+    <script src="components.js"></script>
     <h1 class="page-keyword" style="position:absolute;left:-9999px;">Spetses Island Tour</h1>
     <section class="hero-section">
         <section class="back-button-container1">
             <a href="saronic-gulf-island-tours.html">
-                <img src="backbutton3.png" alt="Back to Athens Tours" class="back-button1">
+                <img src="images/backbutton3.png" alt="Back to Athens Tours" class="back-button1">
             </a>
         </section>
         <div class="hero-content">
@@ -93,7 +52,7 @@
             <h3 class="gallery-heading">Photos & Highlights</h3>
             <!-- Second Row: Four Images -->
             <div class="gallery-row">
-                <img src="spetsesmuseo.jpg" alt="Venue 1" class="gallery-image" loading="lazy">
+                <img src="images/spetsesmuseo.jpg" alt="Venue 1" class="gallery-image" loading="lazy">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769444305/spetses22_zmhoh9.jpg" alt="Venue 2" class="gallery-image" loading="lazy">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769444332/spetses32_wbgt5a.jpg" alt="Venue 3" class="gallery-image" loading="lazy">
                 <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1769444355/spetses42_zvearj.jpg" alt="Venue 4" class="gallery-image" loading="lazy">
@@ -230,21 +189,10 @@
     </section>
     
     
-    <footer>
-        <div class="footer-info">
-            <p>Elisavet Makri</p>
-            <p>Art Historian - Licensed Tour Guide</p>
-            <p>greecelocalguide@gmail.com</p>
-            <p>+30 6942919085</p>
-            <p>Athens, Greece</p>
-        </div>
-        <div class="footer-logo">
-            <img src="logo1.jpg" alt="Logo" class="footer-logo-image">
-            <p id="footer-text">&copy; 2026 Tour Guide. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+    </section>
+
+    <div id="site-footer"></div>
+
 
 <script>
     // Get the fullscreen container and image elements
@@ -297,13 +245,13 @@ burgerMenuBtn.addEventListener('click', () => {
 
     // Toggle between the burger icon and the close icon
     if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (x.png)
+        burgerIcon.style.display = 'none'; // Hide the burger icon (images/menu.png)
+        closeIcon.style.display = 'block'; // Show the "X" icon (images/x.png)
         header.style.display = 'block'; // Ensure the header is visible
         console.log('Menu opened'); // Debugging log
     } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (x.png)
+        burgerIcon.style.display = 'block'; // Show the burger icon (images/menu.png)
+        closeIcon.style.display = 'none'; // Hide the "X" icon (images/x.png)
         header.style.display = 'block'; // Ensure the header remains visible
         console.log('Menu closed'); // Debugging log
     }
@@ -316,13 +264,16 @@ closeIcon.addEventListener('click', () => {
     // Close the menu by removing the 'active' class
     burgerMenu.classList.remove('hidden');
 
-    // Show the burger icon (menu.png)
+    // Show the burger icon (images/menu.png)
     burgerIcon.style.display = 'block';
 
-    // Hide the "X" icon (x.png)
+    // Hide the "X" icon (images/x.png)
     closeIcon.style.display = 'none';
 
     // Ensure the header is visible
     header.style.display = 'block';
 });
 </script>
+
+</body>
+</html>
