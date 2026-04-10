@@ -953,7 +953,7 @@ html, body {
 
 .tour-card img {
     width: 100%;
-    height: 300px; /* Set a fixed height for the images to make them square */
+    height: 316px; /* Set a fixed height for the images to make them square */
     object-fit: cover; /* Ensure the image covers the entire area */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -4406,7 +4406,7 @@ margin-left: -10%;
 /* Default Images for Larger Screens */
 
 .attica-image {
-    content: url('images/attica copy 2.jpg');
+    content: url('images/attica copy3.jpg');
     
 }
 

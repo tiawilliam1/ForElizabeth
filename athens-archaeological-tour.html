@@ -385,15 +385,15 @@
                 infoMeetingText: 'Station de métro Victoria',
                 galleryHeading: 'Photos & Points forts',
                 descTitle: 'Description de la visite',
-                descIntro: 'Explorer les racines de l’histoire à travers les vestiges de l’Antiquité.',
+                descIntro: 'À la découverte des origines de l’art grec.',
                 descParas: [
-                    'Le Musée national archéologique d’Athènes est le principal conservatoire de l’art antique en Grèce et l’un des grands musées mondiaux. Sa collection retrace la civilisation grecque de l’âge du Bronze à l’époque romaine.',
-                    'La visite commence par les trésors mycéniens (XVIe–XIIIe siècle av. J.-C.) : masques funéraires en or, armes et bijoux qui révèlent la richesse de cette culture. Le célèbre masque d’Agamemnon se distingue, tandis que les idoles cycladiques épurées (XXVIIe–XXIIIe siècle av. J.-C.) offrent un contraste saisissant.',
-                    'La période géométrique est illustrée par le monumental vase du peintre du Dipylon (VIIIe siècle av. J.-C.) avec ses scènes funéraires détaillées. La période archaïque apparaît avec des statues comme la Korè de Frasikleia et la Korè de Naxos (VIe siècle av. J.-C.).',
-                    'Parmi les chefs-d’œuvre classiques figure la statue en bronze de Zeus ou Poséidon (Ve siècle av. J.-C.), captée en plein mouvement. Le Mécanisme d’Anticythère (IIe siècle av. J.-C.), véritable calculateur astronomique, témoigne de l’ingéniosité grecque.',
-                    'Les monuments funéraires (Ve–IVe siècle av. J.-C.) offrent des aperçus intimes de la vie antique, tandis que le Cavalier de l’Artémision (IIe siècle av. J.-C.) incarne le dynamisme de l’art hellénistique.',
-                    'Les fresques de Santorin (XVIIe siècle av. J.-C.), préservées par les cendres volcaniques, décrivent la vie dans l’Égée de l’âge du Bronze. La statue de Persée (IIe siècle av. J.-C., copie romaine) et le groupe d’Aphrodite, Pan et Éros (IIe siècle av. J.-C.) clôturent cette célébration du mythe et de l’art.',
-                    'Visiter le Musée national archéologique, c’est rencontrer l’esprit et la créativité de la Grèce antique : chaque objet raconte une histoire encore vibrante aujourd’hui.'
+                    'Le <strong>Musée national archéologique d’Athènes</strong> est le principal conservatoire de l’art antique en Grèce et l’un des grands musées mondiaux. Sa collection retrace la civilisation grecque de l’<strong>âge du Bronze</strong> à l’époque romaine.',
+                    'La visite commence par les <strong>trésors mycéniens</strong> (XVIe–XIIIe siècle av. J.-C.) : <strong>masques funéraires en or</strong>, armes et bijoux qui révèlent la richesse de cette culture. Le célèbre <strong>masque d’Agamemnon</strong> se distingue, tandis que les <strong>idoles cycladiques</strong> épurées (XXVIIe–XXIIIe siècle av. J.-C.) offrent un contraste saisissant.',
+                    'La période géométrique est illustrée par le monumental <strong>vase du peintre du Dipylon</strong> (VIIIe siècle av. J.-C.) avec ses scènes funéraires détaillées. La période archaïque apparaît avec des statues comme la <strong>Korè de Frasikleia</strong> et la <strong>Korè de Naxos</strong> (VIe siècle av. J.-C.).',
+                    'Parmi les chefs-d’œuvre classiques figure la statue en bronze de <strong>Zeus ou Poséidon</strong> (Ve siècle av. J.-C.), captée en plein mouvement. Le <strong>Mécanisme d’Anticythère</strong> (IIe siècle av. J.-C.), véritable calculateur astronomique, témoigne de l’ingéniosité grecque.',
+                    'Les monuments funéraires (Ve–IVe siècle av. J.-C.) offrent des aperçus intimes de la vie antique, tandis que le <strong>Cavalier de l’Artémision</strong> (IIe siècle av. J.-C.) incarne le dynamisme de l’art hellénistique.',
+                    'Les <strong>fresques de Santorin</strong> (XVIIe siècle av. J.-C.), préservées par les cendres volcaniques, décrivent la vie dans l’Égée de l’âge du Bronze. La statue de <strong>Persée</strong> (IIe siècle av. J.-C., copie romaine) et le groupe d’<strong>Aphrodite, Pan et Éros</strong> (IIe siècle av. J.-C.) clôturent cette célébration du mythe et de l’art.',
+                    'Visiter le <strong>Musée national archéologique</strong>, c’est rencontrer l’esprit et la créativité de la Grèce antique : chaque objet raconte une histoire encore vibrante aujourd’hui.'
                 ],
                 additionalTitle: 'Informations complémentaires',
                 itineraryTitle: 'Itinéraire',
@@ -417,7 +417,7 @@
                     'Vous pouvez choisir 3 ou 4 heures, mais le tarif de 4 heures s’applique.'
                 ],
                 contactTitle: 'Contactez-moi',
-                contactText: 'Pour toute question ou réservation, n’hésitez pas à me joindre :',
+                contactText: 'Pour toute question ou pour réserver cette visite, n’hésitez pas à me contacter :',
                 contactEmail: 'Email :',
                 contactPhone: 'Téléphone :',
                 recommendedTitle: 'Autres visites à Athènes que vous pourriez aimer...',
@@ -540,8 +540,8 @@
             elements.infoMeetingText.textContent = c.infoMeetingText;
             elements.galleryHeading.textContent = c.galleryHeading;
             elements.descTitle.textContent = c.descTitle;
-            elements.descIntro.textContent = c.descIntro;
-            elements.descParas.forEach((p, i) => { if (p) p.textContent = c.descParas[i] || ''; });
+            elements.descIntro.innerHTML = c.descIntro;
+            elements.descParas.forEach((p, i) => { if (p) p.innerHTML = c.descParas[i] || ''; });
             elements.additionalTitle.textContent = c.additionalTitle;
             elements.itineraryTitle.textContent = c.itineraryTitle;
             elements.itineraryItems.forEach((sel, i) => {

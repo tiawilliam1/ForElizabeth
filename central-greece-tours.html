@@ -37,47 +37,87 @@
         function goBack() {
             window.location.href = "greece-private-tours.html"; // Navigate back to greece-private-tours.html
         }
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const cards = Array.from(document.querySelectorAll('.athens-tours .tour-card'));
+            const pageTitle = document.querySelector('title');
+            const pageKeyword = document.querySelector('.page-keyword');
+            const backButton = document.querySelector('.back-button');
 
-                // Select the burger menu button, navigation menu, icons, and header
-const burgerMenuBtn = document.querySelector('.burger-menu-btn'); // The container for the icons
-const burgerMenu = document.querySelector('.burger-menu'); // The navigation menu
-const burgerIcon = document.querySelector('.burger-icon'); // The menu.png icon
-const closeIcon = document.querySelector('.close-icon'); // The x.png icon
-const header = document.querySelector('header'); // The header element
+            const translations = {
+                en: {
+                    pageTitle: 'Central Greece Tours | Greece Local Guide',
+                    pageKeyword: 'Central Greece Tours',
+                    backAlt: 'Back to Tours',
+                    cards: [
+                        {
+                            title: 'Holy Monastery of Hosios Loukas',
+                            desc: 'Discover the UNESCO-listed Monastery of Hosios Loukas, a masterpiece of Byzantine art and architecture.'
+                        },
+                        {
+                            title: 'Delphi',
+                            desc: 'Journey to the navel of the ancient world, where the Oracle once spoke and the ruins still echo with myth and prophecy.'
+                        }
+                    ]
+                },
+                fr: {
+                    pageTitle: 'Visites en Grèce centrale | Greece Local Guide',
+                    pageKeyword: 'Visites en Grèce centrale',
+                    backAlt: 'Retour aux visites',
+                    cards: [
+                        {
+                            title: 'Saint Monastère d’Hosios Loukas',
+                            desc: 'Découvrez le monastère d’Hosios Loukas, classé à l’UNESCO, chef-d’œuvre de l’art et de l’architecture byzantins.'
+                        },
+                        {
+                            title: 'Delphes',
+                            desc: 'Voyagez jusqu’au nombril du monde antique, où parlait l’Oracle et où les ruines résonnent encore de mythes et de prophéties.'
+                        }
+                    ]
+                },
+                el: {
+                    pageTitle: 'Ξεναγήσεις στην Κεντρική Ελλάδα | Greece Local Guide',
+                    pageKeyword: 'Ξεναγήσεις στην Κεντρική Ελλάδα',
+                    backAlt: 'Επιστροφή στις ξεναγήσεις',
+                    cards: [
+                        {
+                            title: 'Ιερά Μονή Οσίου Λουκά',
+                            desc: 'Ανακαλύψτε τη Μονή Οσίου Λουκά, μνημείο UNESCO και αριστούργημα βυζαντινής τέχνης και αρχιτεκτονικής.'
+                        },
+                        {
+                            title: 'Δελφοί',
+                            desc: 'Ταξιδέψτε στον ομφαλό του αρχαίου κόσμου, όπου μιλούσε το Μαντείο και τα ερείπια αντηχούν ακόμη από μύθους και προφητείες.'
+                        }
+                    ]
+                }
+            };
 
-    burgerMenuBtn.addEventListener('click', () => {
-    const isMenuOpen = burgerMenu.classList.toggle('active'); // Toggle the menu visibility
+            function applyPageLanguage(lang) {
+                const safeLang = translations[lang] ? lang : 'en';
+                const content = translations[safeLang];
+                document.documentElement.lang = safeLang;
 
-    // Toggle between the burger icon and the close icon
-    if (isMenuOpen) {
-        burgerIcon.style.display = 'none'; // Hide the burger icon (images/menu.png)
-        closeIcon.style.display = 'block'; // Show the "X" icon (images/x.png)
-        header.style.display = 'block'; // Ensure the header is visible
-        console.log('Menu opened'); // Debugging log
-    } else {
-        burgerIcon.style.display = 'block'; // Show the burger icon (images/menu.png)
-        closeIcon.style.display = 'none'; // Hide the "X" icon (images/x.png)
-        header.style.display = 'block'; // Ensure the header remains visible
-        console.log('Menu closed'); // Debugging log
-    }
-});
+                if (pageTitle) pageTitle.textContent = content.pageTitle;
+                if (pageKeyword) pageKeyword.textContent = content.pageKeyword;
+                if (backButton) backButton.alt = content.backAlt;
 
-// Add a click event listener to the "X" button (close icon)
-closeIcon.addEventListener('click', () => {
-    console.log('Close button clicked'); // Debugging log
+                cards.forEach((card, index) => {
+                    const cardContent = content.cards[index];
+                    if (!cardContent) return;
+                    const cardTitle = card.querySelector('h2');
+                    const cardDesc = card.querySelector('p');
+                    if (cardTitle) cardTitle.textContent = cardContent.title;
+                    if (cardDesc) cardDesc.textContent = cardContent.desc;
+                });
+            }
 
-    // Close the menu by removing the 'active' class
-    burgerMenu.classList.remove('hidden');
+            window.addEventListener('shared-language-change', (event) => {
+                const lang = event.detail && event.detail.lang ? event.detail.lang : 'en';
+                applyPageLanguage(lang);
+            });
 
-    // Show the burger icon (images/menu.png)
-    burgerIcon.style.display = 'block';
-
-    // Hide the "X" icon (images/x.png)
-    closeIcon.style.display = 'none';
-
-    // Ensure the header is visible
-    header.style.display = 'block';
-});
+            applyPageLanguage(savedLanguage);
+        });
     </script>
 </body>
 </html>

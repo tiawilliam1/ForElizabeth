@@ -1,3 +1,13 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.wait": 1000,
+    "liveServer.settings.ignoreFiles": [
+        "**/.git/**",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/*.tmp",
+        "**/*.swp",
+        "**/*.heic",
+        "**/*.HEIC"
+    ]
 }
