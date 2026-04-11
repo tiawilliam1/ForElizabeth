@@ -2865,7 +2865,7 @@ html, body {
 }
 
   html[lang="fr"] .logo-container {
-    margin-top: 3%;
+    margin-top: 0%;
 }
 
     /* Header Title for Greek */
@@ -2878,7 +2878,7 @@ html, body {
     }
 
      html[lang="el"] .logo-container {
-    margin-top: 3%;
+    margin-top: 0%;
 }
     
 
@@ -3274,7 +3274,9 @@ margin-top: -4%;
 
 
 
-
+.tour-details h3 {
+    margin-top: 25px;
+}
 
 
 
@@ -3554,7 +3556,7 @@ margin-top: -10%;
         padding: 10px;
         margin-right: 35%;
         margin-left: -12%;
-        margin-top: -5%;
+        margin-top: -9%;
 
         }
     
@@ -4618,6 +4620,11 @@ margin-top: -4%;
         margin: 0;
         margin-top: 10%;
     }
+
+    footer .footer-info,
+footer .footer-info1 {
+    margin-right:10%;
+}
 }
 
 
