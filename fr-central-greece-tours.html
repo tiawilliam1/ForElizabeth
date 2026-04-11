@@ -43,7 +43,7 @@
             window.location.href = "greece-private-tours.html"; // Navigate back to greece-private-tours.html
         }
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
             const cards = Array.from(document.querySelectorAll('.athens-tours .tour-card'));
             const pageTitle = document.querySelector('title');
             const pageKeyword = document.querySelector('.page-keyword');
