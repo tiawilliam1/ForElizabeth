@@ -262,10 +262,26 @@
     }
   };
 
-  function currentPage() {
+  function currentPageRaw() {
     const path = window.location.pathname;
     const file = path.split("/").pop();
     return file || "index.html";
+  }
+
+  function stripLanguagePrefix(file) {
+    return file.replace(/^fr-/, "");
+  }
+
+  function currentPage() {
+    return stripLanguagePrefix(currentPageRaw());
+  }
+
+  function isFrenchPage() {
+    return /^fr-/.test(currentPageRaw());
+  }
+
+  function localizedHref(file) {
+    return isFrenchPage() ? ("fr-" + stripLanguagePrefix(file)) : stripLanguagePrefix(file);
   }
 
   function getConfig() {
@@ -286,6 +302,7 @@
   }
 
   function getStoredLanguage() {
+    if (isFrenchPage()) return "fr";
     const lang = localStorage.getItem("selectedLanguage") || "en";
     return LANG_TEXT[lang] ? lang : "en";
   }
@@ -317,10 +334,10 @@
 
   <nav class="burger-menu">
     <ul>
-      <li><a href="index.html" class="nav-home ${navClass("home", config.activeNav)}">Home</a></li>
-      <li><a href="greece-private-tours.html" class="nav-tours ${navClass("tours", config.activeNav)}">Tours</a></li>
-      <li><a href="about-elisavet-makri.html" class="nav-about ${navClass("about", config.activeNav)}">About me</a></li>
-      <li><a href="contact-greece-local-guide.html" class="nav-contact ${navClass("contact", config.activeNav)}">Contact</a></li>
+      <li><a href="${localizedHref("index.html")}" class="nav-home ${navClass("home", config.activeNav)}">Home</a></li>
+      <li><a href="${localizedHref("greece-private-tours.html")}" class="nav-tours ${navClass("tours", config.activeNav)}">Tours</a></li>
+      <li><a href="${localizedHref("about-elisavet-makri.html")}" class="nav-about ${navClass("about", config.activeNav)}">About me</a></li>
+      <li><a href="${localizedHref("contact-greece-local-guide.html")}" class="nav-contact ${navClass("contact", config.activeNav)}">Contact</a></li>
       <li class="language-selector">
         <span class="language-option" data-lang="en">EN</span> /
         <span class="language-option" data-lang="fr">FR</span> /
@@ -331,10 +348,10 @@
 
   <nav>
     <ul>
-      <li><a href="index.html" id="nav-home" class="nav-home ${navClass("home", config.activeNav)}">Home</a></li>
-      <li><a href="greece-private-tours.html" id="nav-tours" class="nav-tours ${navClass("tours", config.activeNav)}">Tours</a></li>
-      <li><a href="about-elisavet-makri.html" id="nav-about" class="nav-about ${navClass("about", config.activeNav)}">About me</a></li>
-      <li><a href="contact-greece-local-guide.html" id="nav-contact" class="nav-contact ${navClass("contact", config.activeNav)}">Contact</a></li>
+      <li><a href="${localizedHref("index.html")}" id="nav-home" class="nav-home ${navClass("home", config.activeNav)}">Home</a></li>
+      <li><a href="${localizedHref("greece-private-tours.html")}" id="nav-tours" class="nav-tours ${navClass("tours", config.activeNav)}">Tours</a></li>
+      <li><a href="${localizedHref("about-elisavet-makri.html")}" id="nav-about" class="nav-about ${navClass("about", config.activeNav)}">About me</a></li>
+      <li><a href="${localizedHref("contact-greece-local-guide.html")}" id="nav-contact" class="nav-contact ${navClass("contact", config.activeNav)}">Contact</a></li>
     </ul>
   </nav>
 </header>`;
@@ -352,19 +369,19 @@
   </div>
   <div class="footer-sitemap">
     <ul>
-      <li><a href="index.html" class="sitemap-home">Home</a></li>
+      <li><a href="${localizedHref("index.html")}" class="sitemap-home">Home</a></li>
       <li>
-        <a href="greece-private-tours.html" class="sitemap-tours">Tours</a>
+        <a href="${localizedHref("greece-private-tours.html")}" class="sitemap-tours">Tours</a>
         <ul>
-          <li><a href="private-athens-tours.html" class="sitemap-athens">Athens Tours</a></li>
-          <li><a href="peloponnese-archaeological-tour.html" class="sitemap-pelop">Peloponnese Tour</a></li>
-          <li><a href="central-greece-tours.html" class="sitemap-central">Central Greece Tours</a></li>
-          <li><a href="saronic-gulf-island-tours.html" class="sitemap-saronic">Saronic Gulf Tours</a></li>
-          <li><a href="cyclades-island-tours.html" class="sitemap-cyclades">Cyclades Tours</a></li>
+          <li><a href="${localizedHref("private-athens-tours.html")}" class="sitemap-athens">Athens Tours</a></li>
+          <li><a href="${localizedHref("peloponnese-archaeological-tour.html")}" class="sitemap-pelop">Peloponnese Tour</a></li>
+          <li><a href="${localizedHref("central-greece-tours.html")}" class="sitemap-central">Central Greece Tours</a></li>
+          <li><a href="${localizedHref("saronic-gulf-island-tours.html")}" class="sitemap-saronic">Saronic Gulf Tours</a></li>
+          <li><a href="${localizedHref("cyclades-island-tours.html")}" class="sitemap-cyclades">Cyclades Tours</a></li>
         </ul>
       </li>
-      <li><a href="about-elisavet-makri.html" class="sitemap-about">About Me</a></li>
-      <li><a href="contact-greece-local-guide.html" class="sitemap-contact">Contact</a></li>
+      <li><a href="${localizedHref("about-elisavet-makri.html")}" class="sitemap-about">About Me</a></li>
+      <li><a href="${localizedHref("contact-greece-local-guide.html")}" class="sitemap-contact">Contact</a></li>
     </ul>
   </div>
   <div class="footer-logo">
@@ -433,6 +450,15 @@
       option.dataset.sharedLangBound = "1";
       option.addEventListener("click", function () {
         const lang = option.dataset.lang || "en";
+        const basePage = currentPage();
+        const targetPage = lang === "fr" ? ("fr-" + basePage) : basePage;
+        localStorage.setItem("selectedLanguage", lang);
+
+        if (currentPageRaw() !== targetPage) {
+          window.location.href = targetPage;
+          return;
+        }
+
         applySharedTranslations(lang);
         window.dispatchEvent(new CustomEvent("shared-language-change", { detail: { lang: lang } }));
       });
