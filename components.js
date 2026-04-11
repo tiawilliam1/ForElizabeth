@@ -383,7 +383,8 @@
 
     const headerTitle = document.getElementById("header-title");
     if (headerTitle) {
-      headerTitle.textContent = resolveHeaderTitle(config, safeLang);
+      const isBurgerOpen = document.documentElement.classList.contains("burger-open") && window.innerWidth <= 600;
+      headerTitle.textContent = isBurgerOpen ? "Greece Local Guide" : resolveHeaderTitle(config, safeLang);
     }
 
     document.querySelectorAll(".nav-home").forEach(function (el) { el.textContent = text.nav_home; });
@@ -438,11 +439,23 @@
     });
   }
 
+  function syncHeaderTitleForMenuState(isOpen) {
+    const headerTitle = document.getElementById("header-title");
+    if (!headerTitle) return;
+    if (window.innerWidth <= 600 && isOpen) {
+      headerTitle.textContent = "Greece Local Guide";
+      return;
+    }
+    headerTitle.textContent = resolveHeaderTitle(getConfig(), getStoredLanguage());
+  }
+
   function setBurgerState(isOpen, burgerMenu, burgerIcon, closeIcon) {
     if (!burgerMenu) return;
     burgerMenu.classList.toggle("active", isOpen);
     if (burgerIcon) burgerIcon.style.display = isOpen ? "none" : "block";
     if (closeIcon) closeIcon.style.display = isOpen ? "block" : "none";
+    document.documentElement.classList.toggle("burger-open", isOpen);
+    syncHeaderTitleForMenuState(isOpen);
   }
 
   function bindBurgerMenu() {

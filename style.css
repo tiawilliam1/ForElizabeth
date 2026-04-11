@@ -2530,6 +2530,7 @@ html, body {
     display: none; /* Hide the menu by default */
 }
 
+
 .burger-menu-btn {
     display: none; /* Hide the burger button on larger screens */
     position: relative;
@@ -2626,9 +2627,9 @@ html, body {
         z-index: 900;
     }
 
-    .burger-menu.active {
-        display: flex; /* Show the menu when active */
-    }
+	    .burger-menu.active {
+	        display: flex; /* Show the menu when active */
+	    }
 
     .burger-menu ul {
         list-style: none;
@@ -2757,7 +2758,7 @@ html, body {
             display: flex;
             flex-direction: column; /* Stack items vertically */
             gap: 20px; /* Add spacing between menu items */
-            margin-top: -20px;
+            margin-top: -60%;
 
         }
     
@@ -2849,9 +2850,11 @@ html, body {
     }
 
     html[lang="en"] #header-title {
-        font-size: 1.3rem; /* Adjust font size for English */
+      font-size: 1.3rem; /* Adjust font size for English */
         margin-top: 0px;
         margin-right: 30px;
+        margin-right: 26%;
+        margin-left: 20%;
 }
     
 
@@ -2860,7 +2863,7 @@ html, body {
         font-size: 1.3rem; /* Adjust font size for English */
         margin-top: 0px;
         margin-right: 30px;
-        margin-right: 28%;
+        margin-right: 26%;
         margin-left: 20%;
 }
 
@@ -2870,10 +2873,10 @@ html, body {
 
     /* Header Title for Greek */
     html[lang="el"] #header-title {
-        font-size: 1.2rem; /* Adjust font size for Greek */
-       
-            margin-right: 30px;
-        margin-right: 28%;
+      font-size: 1.3rem; /* Adjust font size for English */
+        margin-top: 0px;
+        margin-right: 30px;
+        margin-right: 26%;
         margin-left: 20%;
     }
 
@@ -2907,13 +2910,13 @@ html, body {
     /* Navigation for French */
     html[lang="fr"] nav ul li a {
         font-family: 'Playfair Display', serif; /* Font for French */
-        font-size: 1.1rem; /* Adjust font size for French */
+        font-size: 1.9rem; /* Adjust font size for French */
     }
 
     /* Navigation for Greek */
     html[lang="el"] nav ul li a {
         font-family: 'Georgia', serif; /* Font for Greek */
-        font-size: 1rem; /* Adjust font size for Greek */
+        font-size: 1.9rem; /* Adjust font size for Greek */
     }
 
     nav ul {
