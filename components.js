@@ -284,6 +284,46 @@
     return isFrenchPage() ? ("fr-" + stripLanguagePrefix(file)) : stripLanguagePrefix(file);
   }
 
+  function normalizePathname(pathname) {
+    let value = pathname || "/";
+    try {
+      value = decodeURIComponent(value);
+    } catch (_error) {
+      // Keep original pathname when decoding fails.
+    }
+    value = value.replace(/\/+$/, "");
+    return value || "/";
+  }
+
+  function resolveAlternateLanguageHref(lang) {
+    const targetLang = lang === "fr" ? "fr" : "en";
+    const link = document.querySelector('link[rel="alternate"][hreflang="' + targetLang + '"]');
+    if (!link) return null;
+
+    const href = link.getAttribute("href");
+    if (!href) return null;
+
+    try {
+      const url = new URL(href, window.location.href);
+      const targetPath = url.pathname + url.search + url.hash;
+      const targetHref = window.location.protocol === "file:" ? targetPath.replace(/^\/+/, "") : targetPath;
+      return {
+        href: targetHref || "index.html",
+        pathname: url.pathname
+      };
+    } catch (_error) {
+      return {
+        href: href,
+        pathname: href.split(/[?#]/)[0]
+      };
+    }
+  }
+
+  function withHtmlExtension(file) {
+    if (!file) return "index.html";
+    return /\.[a-z0-9]+$/i.test(file) ? file : (file + ".html");
+  }
+
   function getConfig() {
     const file = currentPage();
     const defaults = {
@@ -450,11 +490,24 @@
       option.dataset.sharedLangBound = "1";
       option.addEventListener("click", function () {
         const lang = option.dataset.lang || "en";
-        const basePage = currentPage();
-        const targetPage = lang === "fr" ? ("fr-" + basePage) : basePage;
         localStorage.setItem("selectedLanguage", lang);
 
-        if (currentPageRaw() !== targetPage) {
+        const alternateTarget = resolveAlternateLanguageHref(lang);
+        if (alternateTarget) {
+          const currentPath = normalizePathname(window.location.pathname);
+          const targetPath = normalizePathname(alternateTarget.pathname);
+          if (currentPath !== targetPath) {
+            window.location.href = alternateTarget.href;
+            return;
+          }
+        }
+
+        const basePage = withHtmlExtension(currentPage());
+        const targetPage = lang === "fr" ? ("fr-" + basePage) : basePage;
+        const currentFile = currentPageRaw();
+        const normalizedCurrentFile = withHtmlExtension(currentFile);
+
+        if (normalizedCurrentFile !== targetPage) {
           window.location.href = targetPage;
           return;
         }
