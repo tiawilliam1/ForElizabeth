@@ -95,21 +95,24 @@
                     <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1767102818/naomi1_gfwl6f.png" alt="Illustration of Attica landmarks" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption carousel-h3-1">Attica</h3>
-                    <p class="carousel-caption carousel-p-1">Visit the Acropolis, take a Walking Tour or a Philosphical Tour .</p>
+                    <p class="carousel-caption carousel-description carousel-p-1">Visit the Acropolis, take a Walking Tour or a Philosphical Tour .</p>
+                    <a href="fr-private-athens-tours.html" class="carousel-cta carousel-cta-1">View Tours</a>
                 </div>
                 <div class="carousel-item">
                     <a href="fr-peloponnese-archaeological-tour.html"> 
                     <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1767102846/naomifixed_xbicg9.png" alt="Illustration of Peloponnese highlights" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption carousel-h3-2">Peloponnese</h3>
-                    <p class="carousel-caption carousel-p-2">Take a tour to Mycenae, Nauplio & Epidaurus Or Visit Corinth.</p>
+                    <p class="carousel-caption carousel-description carousel-p-2">Take a tour to Mycenae, Nauplio & Epidaurus Or Visit Corinth.</p>
+                    <a href="fr-peloponnese-archaeological-tour.html" class="carousel-cta carousel-cta-2">View Tours</a>
                 </div>
                 <div class="carousel-item">
                     <a href="fr-central-greece-tours.html"> 
                     <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1767102892/centralgreecej_enmmeg.png" alt="Illustration of Central Greece scenery" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption carousel-h3-3">Central Greece</h3>
-                    <p class="carousel-caption carousel-p-3"> Visit Delphi or the Holy Monastery of Hosios Loukas</p>
+                    <p class="carousel-caption carousel-description carousel-p-3"> Visit Delphi or the Holy Monastery of Hosios Loukas</p>
+                    <a href="fr-central-greece-tours.html" class="carousel-cta carousel-cta-3">View Tours</a>
                
                 </div>
                 <div class="carousel-item">
@@ -117,26 +120,28 @@
                     <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1767102968/boat-removebg-preview_dhc0hf.png" alt="Boat icon for Saronic Gulf islands" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption carousel-h3-4">Saronic Gulf</h3>
-                    <p class="carousel-caption carousel-p-4">Visit Aegina, Spetses or Hydra.</p>
+                    <p class="carousel-caption carousel-description carousel-p-4">Visit Aegina, Spetses or Hydra.</p>
+                    <a href="fr-saronic-gulf-island-tours.html" class="carousel-cta carousel-cta-4">View Tours</a>
                 </div>
                 <div class="carousel-item">
                     <a href="fr-cyclades-island-tours.html"> 
                     <img src="https://res.cloudinary.com/de74f3wze/image/upload/v1767103014/naomifixed2_eajb0c.png" alt="Illustration of Cyclades islands" class="carousel-image" loading="lazy">
                 </a>
                     <h3 class="carousel-caption carousel-h3-5">Cyclades</h3>
-                    <p class="carousel-caption carousel-p-5">Visit Mykonos or Santorini.</p>
+                    <p class="carousel-caption carousel-description carousel-p-5">Visit Mykonos or Santorini.</p>
+                    <a href="fr-cyclades-island-tours.html" class="carousel-cta carousel-cta-5">View Tours</a>
                 </div>
             </div>
         </div>
 
         <div class="carousel-navigation">
-            <button class="carousel-button left" onclick="scrollCarousel(-1, event)">
+            <button class="carousel-button left">
                 <img src="images/arrowr copy.png" alt="Scroll carousel left" class="arrow-image">
             </button>
             <div class="progress-bar">
                 <div class="progress-indicator"></div>
             </div>
-            <button class="carousel-button right" onclick="scrollCarousel(1, event)">
+            <button class="carousel-button right">
                 <img src="images/arrowr.png" alt="Scroll carousel right" class="arrow-image">
             </button>
         </div>
@@ -245,6 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFeatureAnimations();
     initSlideshow();
     initCarousel();
+    initCarouselRevealOnScroll();
     initQuoteSlideshow();
     initLanguageSwitcher();
     initBurgerMenu();
@@ -287,12 +293,30 @@ function initCarousel() {
     let currentIndex = 0;
     const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
+    const iconImages = Array.from(items).slice(0, 3).map((item) => item.querySelector('.carousel-image')).filter(Boolean);
     const progressIndicator = document.querySelector('.progress-indicator');
     const visibleItems = 3;
+    const maxIndex = Math.max(0, items.length - visibleItems);
+    const previewTimeouts = [];
+    let userInteracted = false;
+    let previewStarted = false;
 
-    function scrollCarousel(direction, event) {
-        if (event) event.preventDefault();
-        currentIndex = Math.max(0, Math.min(currentIndex + direction, items.length - visibleItems));
+    if (!carousel || !progressIndicator || items.length === 0) return;
+
+    function clearPreviewTimeouts() {
+        while (previewTimeouts.length) {
+            clearTimeout(previewTimeouts.pop());
+        }
+    }
+
+    function markUserInteracted() {
+        userInteracted = true;
+        clearPreviewTimeouts();
+        iconImages.forEach((img) => img.classList.remove('carousel-icon-pulse'));
+    }
+
+    function updateCarouselPosition(index) {
+        currentIndex = Math.max(0, Math.min(index, maxIndex));
         const offset = -currentIndex * (100 / visibleItems);
         carousel.style.transform = `translateX(${offset}%)`;
 
@@ -302,12 +326,98 @@ function initCarousel() {
         progressIndicator.style.left = `${progressLeft}%`;
     }
 
+    function scrollCarousel(direction, event) {
+        if (event) event.preventDefault();
+        updateCarouselPosition(currentIndex + direction);
+    }
+
+    function runAutoPreview() {
+        if (previewStarted || userInteracted || maxIndex === 0) return;
+        previewStarted = true;
+
+        const stepMs = 460;
+        let delayMs = 320;
+
+        for (let i = 1; i <= maxIndex; i += 1) {
+            previewTimeouts.push(window.setTimeout(() => {
+                if (!userInteracted) updateCarouselPosition(i);
+            }, delayMs));
+            delayMs += stepMs;
+        }
+
+        for (let i = maxIndex - 1; i >= 0; i -= 1) {
+            previewTimeouts.push(window.setTimeout(() => {
+                if (!userInteracted) updateCarouselPosition(i);
+            }, delayMs));
+            delayMs += stepMs;
+        }
+
+        const pulseStartMs = delayMs + 180;
+        const pulseGapMs = 220;
+        const pulseDurationMs = 460;
+
+        iconImages.forEach((img, index) => {
+            const startAt = pulseStartMs + (index * pulseGapMs);
+            previewTimeouts.push(window.setTimeout(() => {
+                if (userInteracted) return;
+                img.classList.remove('carousel-icon-pulse');
+                void img.offsetWidth;
+                img.classList.add('carousel-icon-pulse');
+            }, startAt));
+
+            previewTimeouts.push(window.setTimeout(() => {
+                img.classList.remove('carousel-icon-pulse');
+            }, startAt + pulseDurationMs));
+        });
+    }
+
     document.querySelectorAll('.carousel-button').forEach(button => {
         button.addEventListener('click', (event) => {
             const direction = button.classList.contains('left') ? -1 : 1;
+            markUserInteracted();
             scrollCarousel(direction, event);
         });
     });
+
+    if (window.innerWidth > 900 && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+        const carouselSection = document.querySelector('.horizontal-carousel-section');
+        if (carouselSection) {
+            const previewObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        runAutoPreview();
+                        previewObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.35 });
+            previewObserver.observe(carouselSection);
+        }
+    }
+}
+
+function initCarouselRevealOnScroll() {
+    const section = document.querySelector('.horizontal-carousel-section');
+    const items = section ? section.querySelectorAll('.carousel-item') : null;
+
+    if (!section || !items || items.length === 0) return;
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        section.classList.add('carousel-in-view');
+        return;
+    }
+
+    section.classList.add('carousel-reveal-ready');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                section.classList.add('carousel-in-view');
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.25 });
+
+    observer.observe(section);
 }
 
 // Function to initialize the quote slideshow
@@ -368,6 +478,7 @@ function initLanguageSwitcher() {
                     { title: 'Saronic Gulf', desc: 'Visit Aegina, Spetses or Hydra.' },
                     { title: 'Cyclades', desc: 'Visit Mykonos or Santorini.' }
                 ],
+                carouselButtonText: 'View Tours',
                 regionTitles: ['Attica', 'Peloponnese', 'Saronic Gulf', 'Cyclades', 'Central Greece'],
                 quoteTexts: [
                     '“…travel must be an extravagance, a sacrifice to the rules of chance, of daily life to the extraordinary ; it must represent the most intimate and original form of our taste.” -  Stefan Zweig',
@@ -410,6 +521,7 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
                     { title: 'Golfe Saronique', desc: 'Visitez Égine, Spetses ou Hydra.' },
                     { title: 'Cyclades', desc: 'Visitez Mykonos ou Santorin.' }
                 ],
+                carouselButtonText: 'Voir les visites',
                 regionTitles: ['Attique', 'Péloponnèse', 'Golfe Saronique', 'Cyclades', 'Grèce centrale'],
             
                 ctaText: '| DÉCOUVREZ NOS VISITES |',
@@ -447,6 +559,7 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
                     { title: 'Σαρωνικός', desc: 'Επισκεφθείτε την Αίγινα, τις Σπέτσες ή την Ύδρα.' },
                     { title: 'Κυκλάδες', desc: 'Επισκεφθείτε τη Μύκονο ή τη Σαντορίνη.' }
                 ],
+                carouselButtonText: 'Δείτε ξεναγήσεις',
                 regionTitles: ['Αττική', 'Πελοπόννησος', 'Σαρωνικός', 'Κυκλάδες', 'Κεντρική Ελλάδα'],
                 
                 ctaText: '| ΔΕΙΤΕ ΤΙΣ ΞΕΝΑΓΗΣΕΙΣ ΜΑΣ |',
@@ -481,6 +594,9 @@ Mon objectif est de vous offrir des visites approfondies, engageantes et personn
         content.carouselItems.forEach((item, i) => {
             setText(document.querySelector(`.carousel-h3-${i+1}`), item.title);
             setText(document.querySelector(`.carousel-p-${i+1}`), item.desc);
+        });
+        document.querySelectorAll('.carousel-cta').forEach((el) => {
+            setText(el, content.carouselButtonText || 'View Tours');
         });
         content.regionTitles.forEach((txt, i) => setText(document.querySelector(`.region-title-${i+1}`), txt));
         (content.quoteTexts || []).forEach((txt, i) => setText(document.querySelector(`.quote-${i+1}`), txt));

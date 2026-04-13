@@ -67,6 +67,49 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/* Homepage-only header intro: title first (letters from left), then nav items from below */
+header.home-header-intro #header-title {
+    white-space: nowrap;
+}
+
+header.home-header-intro #header-title .header-title-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-18px);
+    animation: headerTitleLetterSlideIn 0.45s ease forwards;
+    animation-delay: calc(var(--letter-index, 0) * 0.055s);
+}
+
+header.home-header-intro > nav:not(.burger-menu) ul li {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: headerNavItemRiseIn 0.55s ease forwards;
+    animation-delay: var(--home-nav-delay, 0s);
+}
+
+@keyframes headerTitleLetterSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes headerNavItemRiseIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header.home-header-intro #header-title .header-title-letter,
+    header.home-header-intro > nav:not(.burger-menu) ul li {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
 #homepage h2, #homepage h3, #homepage p, #homepage-description, section h2, .tour-option h2, .about-me h2, .contact-box h2, .contact-box h3 {
     font-family: 'Didot', serif; /* Use Didot for headings */
     letter-spacing: 0.07em;
@@ -152,11 +195,89 @@ nav ul li a:hover {
     padding-right: 20px;
     max-width: 50%;
     margin-right: 0px; /* Add space between the text and the image */
-    border-top: 2px solid #333; /* Add a thick line on top */
-    border-bottom: 2px solid #333; /* Add a thick line under the body of text */
     margin-top: 20px;
     margin-left: -100px;
     padding-left: 100px;
+}
+
+#homepage .text-content {
+    position: relative;
+    margin-top: 4%;
+}
+
+#homepage .text-content::before,
+#homepage .text-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0.001);
+    will-change: transform;
+    height: 1px;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(35, 35, 35, 0.12) 0%,
+            rgba(34, 34, 34, 0.92) 16%,
+            rgba(57, 57, 57, 0.96) 50%,
+            rgba(34, 34, 34, 0.92) 84%,
+            rgba(35, 35, 35, 0.12) 100%
+        ),
+        linear-gradient(
+            105deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 44%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(255, 255, 255, 0) 56%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 250% 100%;
+    background-position: 0 0, 140% 0;
+}
+
+#homepage .text-content::before {
+    top: 0;
+    transform-origin: left center;
+}
+
+#homepage .text-content::after {
+    bottom: 0;
+    transform-origin: right center;
+}
+
+#homepage .text-content.animated::before {
+    animation: homepageHeroLineGrow 1s ease-out forwards,
+               homepageHeroLightSweepLtr 1s ease-out forwards;
+}
+
+#homepage .text-content.animated::after {
+    animation: homepageHeroLineGrow 1s ease-out forwards,
+               homepageHeroLightSweepRtl 1s ease-out forwards;
+}
+
+@keyframes homepageHeroLineGrow {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes homepageHeroLightSweepLtr {
+    0% {
+        background-position: 0 0, -140% 0;
+    }
+    100% {
+        background-position: 0 0, 140% 0;
+    }
+}
+
+@keyframes homepageHeroLightSweepRtl {
+    0% {
+        background-position: 0 0, 140% 0;
+    }
+    100% {
+        background-position: 0 0, -140% 0;
+    }
 }
 
 .image-content {
@@ -2783,6 +2904,11 @@ html, body {
             border-bottom: none; /* Remove the bottom border */
         }
 
+        #homepage .text-content::before,
+        #homepage .text-content::after {
+            display: none;
+        }
+
         .language-selector {
             display: none;
         }
@@ -4847,4 +4973,172 @@ footer .footer-info1 a,
 footer #footer-text,
 footer #footer-text1 {
     font-size: 16px !important;
+}
+
+/* Homepage destinations refresh: dividers, compact description cards, and per-card CTA */
+@media (min-width: 901px) {
+    .horizontal-carousel-section .carousel {
+        align-items: stretch;
+    }
+
+    .horizontal-carousel-section .carousel-title {
+        color: #000;
+    }
+
+    .horizontal-carousel-section .carousel-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 14px 10px 30px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.62s ease, transform 0.62s ease;
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready .carousel-item {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item:nth-child(1) {
+        transition-delay: 0.06s;
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item:nth-child(2) {
+        transition-delay: 0.18s;
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item:nth-child(3) {
+        transition-delay: 0.30s;
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item:nth-child(4) {
+        transition-delay: 0.42s;
+    }
+
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item:nth-child(5) {
+        transition-delay: 0.54s;
+    }
+
+    .horizontal-carousel-section .carousel-item::after {
+        content: "";
+        position: absolute;
+        top: 4%;
+        bottom: 6%;
+        right: 0;
+        width: 1px;
+        background: #e4dccf;
+    }
+
+    .horizontal-carousel-section .carousel-item:last-child::after {
+        display: none;
+    }
+
+    .horizontal-carousel-section .carousel-item > a:first-child {
+        width: 100%;
+        max-width: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .horizontal-carousel-section .carousel-item > a:first-child .carousel-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .horizontal-carousel-section .carousel-item > a:first-child .carousel-image.carousel-icon-pulse {
+        animation: carouselIconPulse 0.46s ease-in-out;
+        transform-origin: center center;
+    }
+
+    .horizontal-carousel-section .carousel-item h3.carousel-caption {
+        margin: 20px 0 12px;
+        font-family: 'Didot', serif;
+        font-size: 1.95rem;
+        letter-spacing: 0.02em;
+        color: #000;
+        font-weight: 400;
+    }
+
+    .horizontal-carousel-section .carousel-description {
+        width: min(275px, 90%);
+        margin: 0 auto 22px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: #000;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.03rem;
+        line-height: 1.45;
+        display: block;
+        text-align: center;
+    }
+
+    .horizontal-carousel-section .carousel-cta {
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 28px;
+        border: 1px solid #cdbda7;
+        border-radius: 6px;
+        background: transparent;
+        color: #000;
+        text-decoration: none;
+        font-family: 'Didot', serif;
+        font-size: 1.25rem;
+        letter-spacing: 0.02em;
+        transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .horizontal-carousel-section .carousel-cta::after {
+        content: "→";
+        font-size: 1.05em;
+        line-height: 1;
+        transition: transform 0.25s ease;
+    }
+
+    .horizontal-carousel-section .carousel-cta:hover {
+        background-color: #f5f1ea;
+        border-color: #b8a17f;
+        transform: translateY(-1px);
+    }
+
+    .horizontal-carousel-section .carousel-cta:hover::after {
+        transform: translateX(3px);
+    }
+}
+
+@keyframes carouselIconPulse {
+    0% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .horizontal-carousel-section .carousel-item,
+    .horizontal-carousel-section.carousel-reveal-ready .carousel-item,
+    .horizontal-carousel-section.carousel-reveal-ready.carousel-in-view .carousel-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .horizontal-carousel-section .carousel-item > a:first-child .carousel-image.carousel-icon-pulse {
+        animation: none;
+    }
 }

@@ -592,6 +592,45 @@
     }
   }
 
+  function isHomepage() {
+    return currentPage() === "index.html";
+  }
+
+  function runHomepageHeaderIntro() {
+    if (!isHomepage()) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const header = document.querySelector("#site-header header");
+    if (!header) return;
+    if (header.dataset.homeHeaderIntroRan === "1") return;
+
+    const headerTitle = header.querySelector("#header-title");
+    if (!headerTitle) return;
+
+    const titleText = (headerTitle.textContent || "").trim();
+    if (!titleText) return;
+
+    header.dataset.homeHeaderIntroRan = "1";
+    header.classList.add("home-header-intro");
+    headerTitle.setAttribute("aria-label", titleText);
+    headerTitle.textContent = "";
+
+    Array.from(titleText).forEach(function (char, index) {
+      const letter = document.createElement("span");
+      letter.className = "header-title-letter";
+      letter.style.setProperty("--letter-index", String(index));
+      letter.textContent = char === " " ? "\u00A0" : char;
+      headerTitle.appendChild(letter);
+    });
+
+    const titleAnimationDuration = (titleText.length * 0.055) + 0.50;
+    const navItems = header.querySelectorAll("nav:not(.burger-menu) ul li");
+    navItems.forEach(function (item, index) {
+      const delay = titleAnimationDuration + (index * 0.12);
+      item.style.setProperty("--home-nav-delay", delay.toFixed(3) + "s");
+    });
+  }
+
   function injectLayout() {
     const headerHost = document.getElementById("site-header");
     const footerHost = document.getElementById("site-footer");
@@ -616,6 +655,11 @@
 
   injectLayout();
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", injectLayout);
+    document.addEventListener("DOMContentLoaded", function () {
+      injectLayout();
+      runHomepageHeaderIntro();
+    });
+  } else {
+    runHomepageHeaderIntro();
   }
 })();
