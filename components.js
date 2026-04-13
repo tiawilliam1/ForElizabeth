@@ -361,6 +361,7 @@
     <img src="images/logo1.jpg" alt="Greece Local Guide logo" class="logo">
   </div>
   <h1 id="header-title">${resolveHeaderTitle(config, "en")}</h1>
+  <p class="header-signature">by Elisavet Makri</p>
   <div class="language-selector">
     <span class="language-option" data-lang="en">EN</span> /
     <span class="language-option" data-lang="fr">FR</span> /

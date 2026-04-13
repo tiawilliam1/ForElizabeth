@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Allura&display=swap');
 
 /* General styles */
 @font-face {
@@ -38,6 +38,15 @@ header h1 {
     border-image-slice: 1;
     font-family: 'Didot', serif; /* Use Didot for the header */
     margin-top: -10px;
+}
+
+.header-signature {
+    margin: 2px auto 0;
+    font-family: 'Allura', 'Great Vibes', cursive;
+    font-size: 1.25rem;
+    color: #4a4a4a;
+    line-height: 1;
+    letter-spacing: 0.02em;
 }
 
 nav {
@@ -202,7 +211,7 @@ nav ul li a:hover {
 
 #homepage .text-content {
     position: relative;
-    margin-top: 4%;
+    margin-top: 0%;
 }
 
 #homepage .text-content::before,
@@ -234,6 +243,7 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-size: 100% 100%, 250% 100%;
     background-position: 0 0, 140% 0;
+    margin-bottom: 8%;
 }
 
 #homepage .text-content::before {
@@ -284,7 +294,7 @@ nav ul li a:hover {
     flex: 1;
     text-align: right;
     padding-left: 70px;
-    margin-top: 20px;
+    margin-top: -2px;
 }
 
 .homepage-image {
@@ -530,10 +540,12 @@ margin-left: 10%;
 }
 .carousel-button.left {
     left: 10px;
+    margin-top:-1%;
 }
 
 .carousel-button.right {
     right: 10px;
+     margin-top:-1%;
 }
 
 .carousel-button:hover {
@@ -689,7 +701,7 @@ body {
     height: 3px; /* Adjust the height of the progress bar */
     background-color: #ddd; /* Static line color */
     border-radius: 3px;
-    margin: 40px auto 20px auto; /* Add 20px of space below the progress bar */
+    margin: 3px auto 20px auto; /* Add 20px of space below the progress bar */
 }
 
 /* Progress indicator (moving line) */
@@ -3006,6 +3018,14 @@ html, body {
         margin-left: 20%;
     }
 
+    .header-signature {
+        font-size: 0.95rem;
+        margin-top: 0;
+        margin-right: 26%;
+        margin-left: 20%;
+        text-align: center;
+    }
+
      html[lang="el"] .logo-container {
     margin-top: 0%;
 }
@@ -4900,6 +4920,19 @@ margin-left: -5%;
 }
 
 
+@keyframes ctaIconFadeInLeftToRight {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transform: translateX(-24px);
+    }
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0);
+    }
+}
+
 
 
 /* CTA Container Styling */
@@ -4908,7 +4941,7 @@ margin-left: -5%;
     align-items: center; /* Vertically center the items */
     justify-content: center; /* Center the content horizontally */
     gap: 10px; /* Add spacing between the icon and the button */
-    margin-top: 20px; /* Add spacing above the CTA container */
+    margin-top: -110px; /* Add spacing above the CTA container */
     margin-bottom: -5%;
 }
 
@@ -4919,6 +4952,10 @@ margin-left: -5%;
 height: auto;
 margin-right: 0%;
 margin-left: -60%;
+opacity: 0;
+clip-path: inset(0 100% 0 0);
+animation: ctaIconFadeInLeftToRight 1s ease-out 0.2s forwards;
+will-change: clip-path, transform, opacity;
 }
 
 /* CTA Button Styling */
@@ -4943,9 +4980,18 @@ margin-top: -3%;
     border-color: #0056b3; /* Darker border on hover */
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .cta-icon {
+        animation: none;
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: none;
+    }
+}
+
 /* Style for the cursive name */
 .cursive-name {
-    font-family: 'Great Vibes', cursive; /* Apply the Great Vibes font */
+    font-family: 'Allura', 'Great Vibes', cursive; /* Match the header signature font */
     font-size: 1.5rem; /* Adjust the font size */
     font-weight: 400; /* Use normal weight for a delicate look */
     color: #000000; /* Black color for the text */
