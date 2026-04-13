@@ -317,6 +317,7 @@ nav ul li a:hover {
     border-radius: 0; /* Remove the circular border */
     border: none; /* Remove the white border */
     object-fit: cover; /* Ensure the image covers the entire area */
+    margin-top: 11%;
 }
 
 .slideshow-container {
