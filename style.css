@@ -5189,3 +5189,12 @@ footer #footer-text1 {
         animation: none;
     }
 }
+
+/* Homepage hero slideshow: class-based visibility for stable LCP */
+.slideshow-container .homepage-image {
+    display: none;
+}
+
+.slideshow-container .homepage-image.is-active {
+    display: block;
+}
