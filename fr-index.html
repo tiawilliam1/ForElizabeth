@@ -282,35 +282,66 @@ function initSlideshow() {
     if (slides.length === 0) return;
 
     const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobileViewport = window.innerWidth <= 900;
-    const slideshowDelayMs = 5000;
+    const slideshowDelayMs = 3000;
     let slideIndex = 0;
 
     function hydrateSlide(slide) {
-        if (!slide || !slide.dataset || !slide.dataset.src || slide.dataset.loaded === '1') return;
+        if (!slide) return Promise.resolve();
+        if (!slide.dataset || !slide.dataset.src || slide.dataset.loaded === '1') return Promise.resolve();
+
         slide.src = slide.dataset.src;
         slide.dataset.loaded = '1';
+
+        if (typeof slide.decode === 'function') {
+            return slide.decode().catch(() => {});
+        }
+
+        if (slide.complete) return Promise.resolve();
+
+        return new Promise((resolve) => {
+            slide.addEventListener('load', resolve, { once: true });
+            slide.addEventListener('error', resolve, { once: true });
+        });
     }
 
     slides.forEach((slide, index) => {
         slide.classList.toggle('is-active', index === 0);
-        if (index === 0) hydrateSlide(slide);
+        if (index === 0) {
+            slide.dataset.loaded = '1';
+            hydrateSlide(slide);
+        }
     });
 
-    // Keep the mobile hero static for better LCP and lower image payload.
-    if (isMobileViewport || prefersReducedMotion || slides.length === 1) return;
+    if (prefersReducedMotion || slides.length === 1) return;
 
-    window.setTimeout(() => {
-        if (slides[1]) hydrateSlide(slides[1]);
-    }, 1500);
+    const preloadQueue = slides.slice(1);
+    let preloadIndex = 0;
 
-    window.setInterval(() => {
-        const nextIndex = (slideIndex + 1) % slides.length;
-        hydrateSlide(slides[nextIndex]);
-        slides[slideIndex].classList.remove('is-active');
-        slides[nextIndex].classList.add('is-active');
-        slideIndex = nextIndex;
-    }, slideshowDelayMs);
+    function preloadNextSlide() {
+        if (preloadIndex >= preloadQueue.length) return;
+        hydrateSlide(preloadQueue[preloadIndex]);
+        preloadIndex += 1;
+        window.setTimeout(preloadNextSlide, 900);
+    }
+
+    window.setTimeout(preloadNextSlide, 1200);
+
+    function cycleSlides() {
+        window.setTimeout(() => {
+            const nextIndex = (slideIndex + 1) % slides.length;
+            const currentSlide = slides[slideIndex];
+            const nextSlide = slides[nextIndex];
+
+            hydrateSlide(nextSlide).finally(() => {
+                nextSlide.classList.add('is-active');
+                currentSlide.classList.remove('is-active');
+                slideIndex = nextIndex;
+                cycleSlides();
+            });
+        }, slideshowDelayMs);
+    }
+
+    cycleSlides();
 }
 
 // Function to initialize the carousel
