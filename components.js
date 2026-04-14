@@ -632,6 +632,91 @@
     });
   }
 
+  function trackLeadEvent(eventName, params) {
+    const payload = Object.assign({
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    }, params || {});
+
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, payload);
+        return;
+      }
+    } catch (_error) {
+      // Ignore analytics errors on static pages.
+    }
+
+    try {
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push(Object.assign({ event: eventName }, payload));
+      }
+    } catch (_error) {
+      // Ignore analytics errors on static pages.
+    }
+  }
+
+  function bindContactClickTracking() {
+    if (document.documentElement.dataset.contactTrackingBound === "1") return;
+    document.documentElement.dataset.contactTrackingBound = "1";
+
+    document.addEventListener("click", function (event) {
+      const link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      if (!link) return;
+      const href = (link.getAttribute("href") || "").trim();
+      if (!href) return;
+
+      if (href.indexOf("tel:") === 0) {
+        trackLeadEvent("contact_click", {
+          contact_type: "phone",
+          contact_href: href
+        });
+      } else if (href.indexOf("mailto:") === 0) {
+        trackLeadEvent("contact_click", {
+          contact_type: "email",
+          contact_href: href
+        });
+      } else if (/wa\.me|api\.whatsapp\.com/i.test(href)) {
+        trackLeadEvent("contact_click", {
+          contact_type: "whatsapp",
+          contact_href: href
+        });
+      }
+    });
+  }
+
+  function normalizePhoneForHref(value) {
+    return (value || "").replace(/[^\d+]/g, "");
+  }
+
+  function linkPhoneParagraph(node) {
+    if (!node || node.querySelector("a[href^='tel:']")) return;
+    const rawText = node.textContent || "";
+    const match = rawText.match(/(\+\d[\d\s]{6,}\d)/);
+    if (!match) return;
+
+    const visiblePhone = match[1].trim();
+    const telPhone = normalizePhoneForHref(visiblePhone);
+    if (!telPhone) return;
+
+    const strong = node.querySelector("strong");
+    const labelHTML = strong ? strong.outerHTML + " " : "";
+    node.innerHTML = labelHTML + '<a href="tel:' + telPhone + '">' + visiblePhone + "</a>";
+  }
+
+  function linkInlinePhoneNumbers() {
+    document.querySelectorAll(".contact-phone").forEach(linkPhoneParagraph);
+
+    document.querySelectorAll("p").forEach(function (node) {
+      const strong = node.querySelector("strong");
+      if (!strong) return;
+      const label = (strong.textContent || "").toLowerCase();
+      const isPhoneLabel = label.indexOf("phone") !== -1 || label.indexOf("téléphone") !== -1 || label.indexOf("τηλέφωνο") !== -1;
+      if (!isPhoneLabel) return;
+      linkPhoneParagraph(node);
+    });
+  }
+
   function injectLayout() {
     const headerHost = document.getElementById("site-header");
     const footerHost = document.getElementById("site-footer");
@@ -651,6 +736,8 @@
 
     bindLanguageSelectors();
     bindBurgerMenu();
+    bindContactClickTracking();
+    linkInlinePhoneNumbers();
     applySharedTranslations(getStoredLanguage());
   }
 
