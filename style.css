@@ -2892,7 +2892,7 @@ html, body {
             display: flex;
             flex-direction: column; /* Stack items vertically */
             gap: 20px; /* Add spacing between menu items */
-            margin-top: -60%;
+        margin-top: -26%;
 
         }
     
@@ -4049,7 +4049,8 @@ margin-left: 0%;
         max-width: 350px;
         height: auto;
         border-radius: 10px;
-        margin-bottom: 10%;
+        margin-bottom: 3%;
+        margin-top: 10%;
         
         
     }
@@ -5213,4 +5214,57 @@ footer #footer-text1 {
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
+}
+
+/* Contact page mobile-only spacing and alignment */
+@media (max-width: 900px) {
+    .contact-section {
+        padding: clamp(108px, 18vh, 148px) 12px 24px;
+    }
+
+    .contact-content {
+        width: 100%;
+        max-width: 470px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .contact-text {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .contact-text h2 {
+        margin: 0 0 8px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        text-align: center;
+        line-height: 1.08;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .contact-text ul {
+        margin: 0;
+        margin-right: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+    }
+
+    .contact-text li {
+        margin: 0;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 1.18;
+        font-size: clamp(1.28rem, 6.5vw, 1.95rem);
+    }
 }
