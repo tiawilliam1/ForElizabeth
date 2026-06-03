@@ -236,14 +236,6 @@
       },
       activeNav: "about"
     },
-    "about-elisavet-makri copy.html": {
-      headerTitle: {
-        en: "About me",
-        fr: "À propos de moi",
-        el: "Σχετικά με εμένα"
-      },
-      activeNav: "about"
-    },
     "contact-greece-local-guide.html": {
       headerTitle: {
         en: "Contact",
@@ -251,14 +243,6 @@
         el: "Επικοινωνία"
       },
       activeNav: "contact"
-    },
-    "tocopy.html": {
-      headerTitle: {
-        en: "Attica Tours",
-        fr: "Visites en Attique",
-        el: "Ξεναγήσεις στην Αττική"
-      },
-      activeNav: "tours"
     }
   };
 
