@@ -265,7 +265,12 @@
   }
 
   function localizedHref(file) {
-    return isFrenchPage() ? ("fr-" + stripLanguagePrefix(file)) : stripLanguagePrefix(file);
+    const baseFile = stripLanguagePrefix(file);
+    if (baseFile === "index.html") {
+      if (isFrenchPage()) return "fr-index.html";
+      return window.location.protocol === "file:" ? "index.html" : "/";
+    }
+    return isFrenchPage() ? ("fr-" + baseFile) : baseFile;
   }
 
   function normalizePathname(pathname) {
@@ -388,8 +393,8 @@
   <div class="footer-info">
     <p>Elisavet Makri</p>
     <p>Art Historian - Licensed Tour Guide</p>
-    <p>greecelocalguide@gmail.com</p>
-    <p>+30 6942919085</p>
+    <p><a href="mailto:greecelocalguide@gmail.com">greecelocalguide@gmail.com</a></p>
+    <p><a href="tel:+306942919085">+30 6942919085</a></p>
     <p>Athens, Greece</p>
   </div>
   <div class="footer-sitemap">
@@ -665,6 +670,11 @@
           contact_type: "whatsapp",
           contact_href: href
         });
+      } else if (/contact-greece-local-guide\.html(?:[?#]|$)/i.test(href)) {
+        trackLeadEvent("tour_inquiry_start", {
+          link_text: (link.textContent || "").trim(),
+          source_page: window.location.pathname
+        });
       }
     });
   }
@@ -701,6 +711,21 @@
     });
   }
 
+  function linkFooterContactDetails() {
+    const footerInfo = document.querySelectorAll(".footer-info p");
+    if (footerInfo.length < 4) return;
+
+    const email = (footerInfo[2].textContent || "").trim();
+    const phone = (footerInfo[3].textContent || "").trim();
+    if (email && !footerInfo[2].querySelector("a")) {
+      footerInfo[2].innerHTML = '<a href="mailto:' + email + '">' + email + "</a>";
+    }
+    if (phone && !footerInfo[3].querySelector("a")) {
+      const phoneHref = normalizePhoneForHref(phone);
+      footerInfo[3].innerHTML = '<a href="tel:' + phoneHref + '">' + phone + "</a>";
+    }
+  }
+
   function injectLayout() {
     const headerHost = document.getElementById("site-header");
     const footerHost = document.getElementById("site-footer");
@@ -722,10 +747,15 @@
     bindBurgerMenu();
     bindContactClickTracking();
     linkInlinePhoneNumbers();
+    linkFooterContactDetails();
     applySharedTranslations(getStoredLanguage());
+    window.setTimeout(linkFooterContactDetails, 0);
   }
 
   injectLayout();
+  window.addEventListener("shared-language-change", function () {
+    window.setTimeout(linkFooterContactDetails, 0);
+  });
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       injectLayout();
